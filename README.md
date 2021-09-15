@@ -15,3 +15,14 @@
 - Christian Boldt
 - Saimye Dennis
 - Riley Rorrer
+- Trey Floto
+- Jason Lara
+- Tyler Rich
+- Dylan Martin
+- Aidan Hamme
+- Jacob Smith
+- Tyler Siegmund
+- seth martin
+- Will Shealer
+- John Eckert
+
