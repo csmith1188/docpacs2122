@@ -6,19 +6,46 @@ app.set("view engine", "ejs")
 app.use(express.urlencoded({ extended: true}));
 
 
-
-
-glob("*.csv", function(er,files){
-  console.log(files);
-  for (var i = 0; i < files.length; i++) {
-
-    csv().fromFile(files[i]).then(function(jsonObj){
-      console.log(jsonObj);
-
-    })
-  }
+app.get('/', function(req,res){
+  res.render('search', {
+    error:""
+  })
 })
 
+app.post('/', function(req,res){
+
+
+  if (req.body.search){
+    console.log(req.body.search);
+
+
+    glob("*.csv", function(er,files){
+      console.log(files);
+      for (var i = 0; i < files.length; i++) {
+
+        csv().fromFile(files[i]).then(function(jsonObj){
+          for (var i = 0; i < jsonObj.length; i++) {
+            for (var data in jsonObj[i]) {
+              console.log(data);
+            }
+
+
+          }
+          console.log(jsonObj);
+
+        })
+      }
+    })
+
+
+
+    res.render('search', {
+      error:""
+    })} else {
+      res.render('search', {
+        error:" you forgot the imput "
+      })
+    }})
 
 
 app.listen(8000)
