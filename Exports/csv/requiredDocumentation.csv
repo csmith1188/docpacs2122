@@ -1,0 +1,86 @@
+docPacDate,type,name
+aug27,Print,Signed Syllabus
+aug27,Print,JS Initial Assessment
+sep3,Review,Build A Webserver Using nodejs (pg. 2)
+sep3,Review,Github practice assignment
+sep3,Review+Print,[data missing]
+sep10,Print,Notebook 1: Intialize NodeJS Project
+sep10,Print,Notebook 2: NodeJS HTTP Server
+sep10,Print,Portfolio 1: NodeJS HTTP Server
+sep17,Print,Express Middleware (pg.2)
+sep17,Review,ExpressJS team Website (pg.2)
+sep17,Print,Updated Version of this DocPac
+sep24,Review,Upgrade Team Website with EJS
+sep24,Manual,"Codecademy “Learn Javascript” course, “Introduction” Chapter
+Includes both Lessons, both Projects, the Quiz, and Article"
+oct1,Print,“Notebook 1: Initializing NodeJS Project”
+oct1,Print,Notebook 2: NodeJS HTTP Server”
+oct1,Print,“Notebook 3: Using ExpressJS with NodeJS”
+oct1,Print,“Notebook 4: Using EJS with ExpressJS”
+oct1,Review,Team Trello Board
+oct1,Manual,"Codecademy “Learn Javascript” course, “Conditionals” Chapter
+Includes the Lesson, both Projects, and the Quiz"
+oct8,Print,Team Documentation: Notebook Entry Format
+oct8,Print,Analysis: Team Composition
+oct8,Review,Team Website Upgrade: Load Team Profiles from JSON
+oct8,Review,Team Website Upgrade: Save Query Params to JSON
+oct8,Manual,"Codecademy “Learn Javascript” course, “Functions” Chapter
+Includes the Lesson, both Projects, and the Quiz"
+oct15,Print,Notebook 5: HTML Submit Form Data
+oct15,Print,Notebook 6: ExpressJS POST Requests
+oct15,Review,Team Website Upgrade: Record Comments with HTML Form
+oct15,Manual,Codecademy: Everything assigned in previous DocPacs
+oct22,Print,Cover Letter (pg. 2)
+oct22,Print,Your Resume (pg. 2)
+oct22,Manual,"Codecademy: Learn Javascript, Scopes. Lesson, Project, and Quiz"
+oct22,Review,Upgrade Team Website: Comments Section (pg. 2)
+oct29,Print,Notebooks 1 - 6
+oct29,Print,DocPacs Aug17 – Oct29
+oct29,Review+Print,"Codecademy: Learn Javascript, all chapters up to Scopes"
+nov5,Print,Personal Improvement Plan
+nov5,Manual,"Codecademy: Learn Javascript, Arrays. Lesson, Project, and Quiz"
+nov12,Print,Exam Preparation Plan
+nov12,Manual,"Codecademy: Learn Javascript, Loops. Lesson, Project, and Quiz"
+nov19,pg. 2,Exam Preparation Progress Report (pg. 2)
+nov19,Manual,"Codecademy: Learn Javascript, Iterators. Lesson, Lesson, Project, and Quiz"
+dec3,Print,JS Bootcamp Key Take-Aways
+dec3,Online,All four days of JS Bootcamp 2122 accepted as pull requests into csmith1188/jsbootcamp2122 on GitHub.com
+dec3,Manual,"Codecademy: Learn Javascript, Objects. Lesson, Lesson, Project, Project, and Quiz"
+dec10,pg. 3,Reflection (pg. 3)
+dec10,pg. 2,Exam Preparation Progress Report (pg. 2)
+dec10,pg. 2,Team Project Goal (pg. 2)
+dec10,Print,JS Challenge Pt. 1
+dec10,Review,Show instructor your Team Project’s goal being met
+dec10,Online,Get your JS Bootcamp fork accepted as a Pull Request to the upstream
+dec10,Manual,Codecademy: All Codecademy complete (DocPac rejected if not complete!)
+dec17,pg. 3,Reflection (pg. 3)
+dec17,pg. 4,Exam Preparation Progress Report (pg. 2)
+dec17,pg. 5,Team Project Goal (pg. 2)
+dec17,pg. 6,JS Challenge Pt. 2
+dec17,pg. 7,JS Bootcamp (Dec15) Canvas + Iterators
+dec22,pg. 8,Reflection (pg. 3)
+dec22,pg. 9,Exam Preparation Progress Report (pg. 2)
+dec22,pg. 10,Team Project Goal (pg. 2)
+dec22,pg. 11,JS Bootcamp Flow Chart (Dec21)
+dec22,pg. 12,Winter Break Schedule
+jan07,pg. 13,Reflection (pg. 3)
+jan07,pg. 14,Exam Preparation Progress Report (pg. 2)
+jan07,pg. 15,Team Project Goal (pg. 2)
+jan07,pg. 16,Lesson Key Takeaways x 3
+jan07,pg. 17,JS Challenges Pt. 3
+jan14,pg. 18,Exam Preparation Progress Report (pg. 2)
+jan14,pg. 19,Reflection (pg. 3)
+jan14,pg. 20,Design a Routine
+jan14,pg. 21,Lesson Key Takeaways x 3
+jan14,pg. 22,JS Challenges Pt. 4
+jan14,pg. 23,JS Challenges Pt. 5
+jan14,pg. 24,Team Project Presentation
+jan21,pg. 25,Reflection (pg. 3)
+jan28,pg. 26,Lesson Key Take-aways
+jan28,pg. 27,Reward System Brainstorm
+jan28,pg. 28,Reflection (pg. 3)
+feb4,pg. 29,Single: Nocti Flowchart Preparation (pg. 2)
+feb4,pg. 30,Teams: DocPac Digitalization (pg. 2)
+feb4,pg. 31,Pairs: Javascript Challenge #7
+feb4,pg. 32,Pairs: Javascript Challenge #8
+feb4,pg. 33,Reflection (pg. 3)

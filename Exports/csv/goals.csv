@@ -1,0 +1,85 @@
+docPacDate,goal
+aug27,Establish classroom expectations for Year ‘21-‘22
+aug27,Review knowledge of basic programming
+aug27,Assess knowledge of Javascript
+sep3,Understand different ways of sharing files and data with teammates
+sep3,Review using github to complete projects together
+sep3,Understand how basic nodejs applications work
+sep10,"Successfully fork, clone, edit, commit, push, and pull request the DocPac git repository on GitHub"
+sep10,Begin compiling notebook by writing instructions for initializing a Nodejs project and creating an HTTP server in Nodejs
+sep10,Begin compiling your portfolio by printing out your Nodejs HTTP Server code
+sep17,Import ExpressJS middleware into your Nodejs HTTP server project
+sep17,Create “endpoints” users can navigate to in ExpressJS
+sep17,Serve HTML files with CSS stylesheets and Javascript files from ExpressJS
+sep17,Create a complete website using ExpressJS and the goals above
+sep17,"Learn how to update, replace missing, and print DocPacs"
+sep17,Create a schedule and track it over time
+sep24,Successfully use EJS to create templates to serve with ExpressJS (Change the output of a webpage before sending to the user)
+sep24,Use repository branching to organize complex Git projects
+sep24,Review the basics of Javascript and prepare to study the language
+oct1,Consolidate and organize all Notebook tutorials to this point
+oct1,Learn how to use KanBan boards to manage projects
+oct1,Be able to create an ExpressJS HTTP server from memory
+oct8,Establish and document standards for Notebook entries for your team.
+oct8,Establish and document standards for Notebook entries for your team.
+oct8,Read JSON files in NodeJS as parse into a Javascript Object
+oct8,Convert Javascript Objects to a string to save in a JSON file
+oct8,Use data from a JSON file to populate EJS Templates with data
+oct8,Read Query Parameters with ExpressJS
+oct8,Save data passed by Query Parameters to a JSON file
+oct15,Ensure your Codecademy is up to date
+oct15,Analyze Meritocracy and Team Composition
+oct15,Understand the difference between HTTP GET and HTTP POST requests
+oct15,Accept and handle POST requests and parameters in ExpressJS
+oct15,Send POST requests w/ parameters via Postman
+oct15,Create an HTML form that can submit form data as a POST request
+oct22,Prepare a Cover Letter and Resumes for your team
+oct22,Prepare for a group interview to receive your choice of team project
+oct22,Complete the “Scope” chapter of Codecademy “Learn Javascript” course
+oct22,Upgrade Team Website for show comments left by others
+oct29,Prepare for DocPac Binder Audit
+oct29,Prepare for Team Project Interviews
+oct29,Prepare for nodeJS/ExpressJS/EJS exam
+nov5,Learn to send professional Emails
+nov5,Develop a Personal Improvement Plan
+nov5,Learn about Contracts
+nov5,Pass the ExpressJS Exam
+nov5,Continue Codecademy
+nov12,Receive projects and sign contracts
+nov12,Analyze project requirements and design an MVP
+nov12,"Break plans down into smaller pieces, set goals and timelines"
+nov12,Begin preparing for Quarter 2 Exam
+nov19,Design an MVP
+nov19,Break MVP down into steps and assign on a KanBan board
+nov19,Schedule meetings
+nov19,Continue Codecademy
+nov19,Progress Exam Preparation Plan
+nov19,Produce First Prototype
+dec3,Bootcamp Javascript every day to build coding skills
+dec10,Use the skills you built in JS Bootcamp to hit your first Team Project goal
+dec10,Practice writing JS syntax to solve problems
+dec10,Finish Codecademy
+dec10,Wrap up JS Bootcamp git repos
+dec17,Submit Codecademy screenshots in Schoology
+dec17,Analyze comments and code review on issues and Pull Requests
+dec17,Submit a Pull Request to your team project that completes a set goal
+dec17,Configure .gitignore and readme.md
+dec17,"Determine when to use for, forin, forof, foreach()"
+dec17,Learn basic Javascript graphics generation
+dec22,Print and submit/resubmit all missing DocPacs or DocPacs with missing documents
+dec22,Break JS Bootcamp Game down into a flow chart
+jan7,Examine requirements for the NOCTI
+jan7,Develop a plan to pass the performance NOCTI
+jan7,Practiced the skills required in our plan
+jan14,Develop a Daily Routine
+jan14,Design a flow chart for the Exam
+jan14,Practice the skills required to pass the Exam
+jan14,Present Team Projects to Teacher
+jan21,Prepare for Exam
+jan21,Pass Exam
+jan28,Review Reading/Writing to JSON files for Exam
+jan28,Pass Exam
+jan28,Prepare DocPac Binders for grading and review
+feb4,Understand requirements for flow charts for NOCTI
+feb4,Solve a variety of Javascript problems that may appear on the NOCTI
+feb4,Prepare DocPac Data for analysis
