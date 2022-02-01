@@ -25,11 +25,9 @@ app.post('/', function(req,res){
 
         csv().fromFile(files[i]).then(function(jsonObj){
           for (var i = 0; i < jsonObj.length; i++) {
-            for (var data in jsonObj[i]) {
-              console.log(data);
-            }
-
-
+            console.log("start");
+          console.log(jsonObj[i]);
+          console.log("end");
           }
           console.log(jsonObj);
 
