@@ -2,6 +2,7 @@
 
 ## Students:
 - Mr. Smith
+- Riley Rorrer
 - Jenna Mellen
 - Oley Birkeland
 - Christopher Mooney
@@ -25,3 +26,4 @@
 - seth martin
 - Will Shealer
 - John Eckert
+
