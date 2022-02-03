@@ -8,42 +8,58 @@ app.use(express.urlencoded({ extended: true}));
 
 app.get('/', function(req,res){
   res.render('search', {
-    error:""
+    error:"",
+    found:""
   })
 })
 
+
+
 app.post('/', function(req,res){
-
-
+  var found = 0
+  var founddata = []
   if (req.body.search){
     console.log(req.body.search);
 
 
     glob("*.csv", function(er,files){
       console.log(files);
+
       for (var i = 0; i < files.length; i++) {
 
         csv().fromFile(files[i]).then(function(jsonObj){
-          for (var i = 0; i < jsonObj.length; i++) {
+          for (var x = 0; x < jsonObj.length; x++) {
             console.log("start");
-          console.log(jsonObj[i]);
+          console.log(jsonObj[x]);
           console.log("end");
+          console.log(files);
+
+          if (jsonObj[x].Date.includes(req.body.search)) {
+              console.log("HEY I FOUND IT");
+               founddata.push(jsonObj[x])
           }
-          console.log(jsonObj);
+
+          }
+
+          console.log(founddata);
+          
 
         })
       }
-    })
+
+})
 
 
+
+
+  } else {
 
     res.render('search', {
-      error:""
-    })} else {
-      res.render('search', {
-        error:" you forgot the imput "
-      })
-    }})
+      error:" you forgot the imput ",
+      found:""
+    })
+    }
+  })
 
 
 app.listen(8000)
