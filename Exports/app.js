@@ -42,14 +42,15 @@ app.post('/', function(req,res){
           }
 
           console.log(founddata);
-          
+
+         
 
         })
       }
 
 })
 
-
+res.render('search', {error:"",  found:founddata  });
 
 
   } else {
