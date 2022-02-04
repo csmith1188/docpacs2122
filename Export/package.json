@@ -1,0 +1,17 @@
+{
+  "name": "export",
+  "version": "1.0.0",
+  "main": "window.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "convert-csv-to-json": "^1.3.3",
+    "express": "^4.17.2",
+    "node-csv": "^0.1.2"
+  },
+  "keywords": [],
+  "description": ""
+}
