@@ -4,6 +4,7 @@ const glob = require('glob');
 const app = express()
 app.set("view engine", "ejs")
 app.use(express.urlencoded({ extended: true}));
+app.use(express.static(__dirname + '/public'));
 
 
 app.get('/', function(req,res){
@@ -43,7 +44,7 @@ app.post('/', function(req,res){
 
           console.log(founddata);
 
-         
+
 
         })
       }
