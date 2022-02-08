@@ -1,5 +1,6 @@
 const csv = require('csvtojson')
 const fs = require('fs');
+const sqlite3 = require('sqlite3').verbose();
 
 var alldata = {}
 
@@ -29,9 +30,7 @@ fs.readdir(__dirname + '/data', async (err, files) => {
 
   function typeSearch(typeName) {
     for (var x in alldata) {
-      //console.log(alldata[x]);
       for (var y in x) {
-        //console.log(alldata[x][y]);
         if (alldata[x][y]["Type"] == typeName) {
           console.log(alldata[x][y]);
         }
@@ -39,7 +38,21 @@ fs.readdir(__dirname + '/data', async (err, files) => {
     }
   }
   // Search by docpac date (ex: Dec03)
-  docpacSearch('Sep03')
+  //docpacSearch('Sep03')
   // Search by type of assignment (ex: Print or pg.2)
-  typeSearch("pg.2")
+  //typeSearch("pg.2")
+
+  function dbCreate() {
+    // insert one row into the langs table
+    db.run(`INSERT INTO goals(date) VALUES(?)`, ['C'], function(err) {
+      if (err) {
+        return console.log(err.message);
+      }
+      // get the last insert id
+      console.log(`A row has been inserted with rowid ${this.lastID}`);
+    });
+
+    // close the database connection
+    db.close();
+  }
 });
