@@ -10,6 +10,9 @@
   "description": "",
   "dependencies": {
     "csvtojson": "^2.0.10",
-    "fs": "^0.0.1-security"
+    "ejs": "^3.1.6",
+    "express": "^4.17.2",
+    "fs": "^0.0.1-security",
+    "sqlite3": "^5.0.2"
   }
 }
