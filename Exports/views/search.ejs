@@ -12,11 +12,15 @@
       <input type="submit" name="" value="submit">
 
     </form>
-    <p>
     <%=error%>
-    <% for (var data in found) { %>
-    <%= data %> <%} %>
+    <% for (var data of found) { %>
+      <p>
+      Date:  <%= data.date %>
+      <br>
+  Goal: <%= data.goal %>
 
+  event: <%= data.Event %>
 </p>
+<%} %>
   </body>
 </html>

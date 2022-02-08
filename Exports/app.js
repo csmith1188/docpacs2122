@@ -34,10 +34,10 @@ app.post('/', function(req,res){
 
 
 
-console.log(db.all("SELECT * FROM Goals", function(err, rows) {
+console.log(db.all("SELECT * FROM Goals NATURAL JOIN Events  ", function(err, rows) {
   rows.forEach(function (row) {
-    console.log(row.date);
-    if (row.date.includes('Sep17')){
+    console.log(row);
+    if (row.date.includes(req.body.search)){
       search.push(row)
 
     }
@@ -46,6 +46,7 @@ console.log(db.all("SELECT * FROM Goals", function(err, rows) {
   })
   console.log(search);
   res.render('search', {error:"",  found:search  });
+  search = []
 }));
   } else {
 
