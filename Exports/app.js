@@ -5,6 +5,7 @@ const sqlite3 = require('sqlite3').verbose();
 const app = express()
 app.set("view engine", "ejs")
 app.use(express.urlencoded({ extended: true}));
+app.use(express.static(__dirname + '/public'));
 
 let db = new sqlite3.Database('sql.db', (err) => {
  console.log('Connected to the db database.');
@@ -49,7 +50,7 @@ console.log(db.all("SELECT * FROM Goals", function(err, rows) {
   } else {
 
     res.render('search', {
-      error:" you forgot the imput ",
+      error:" you forgot the input ",
       found:""
     })
     }

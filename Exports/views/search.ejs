@@ -2,17 +2,18 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="\css\search.css">
     <title></title>
   </head>
-  <h1> DOCCLE </h1>
   <body>
+    <h1> DOCCLE </h1>
     <form action="/" method="post">
       <input type="text" name="search">
       <input type="submit" name="" value="submit">
 
     </form>
-    <%=error%>
     <p>
+    <%=error%>
     <% for (var data in found) { %>
     <%= data %> <%} %>
 
