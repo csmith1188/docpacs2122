@@ -57,7 +57,7 @@ res.render('search', {error:"",  found:founddata  });
   } else {
 
     res.render('search', {
-      error:" you forgot the imput ",
+      error:" you forgot the input ",
       found:""
     })
     }
