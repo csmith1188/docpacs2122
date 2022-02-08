@@ -2,9 +2,20 @@ const csv=require('csvtojson')
 const express = require('express');
 const glob = require('glob');
 const app = express()
+const sqlite3 = require('sqlite3').verbose();
 app.set("view engine", "ejs")
 app.use(express.urlencoded({ extended: true}));
 
+let db = new sqlite3.Database('sqlDataBase.sqlite3', (err) => {
+  console.log('Connected to the db database.');
+});
+
+console.log(db.all("SELECT * FROM Goals", function(err, rows) {
+        rows.forEach(function (row) {
+            console.log(row.date, row.goal);
+        })}));
+
+db.close();
 
 app.get('/', function(req,res){
   res.render('search', {
@@ -14,7 +25,6 @@ app.get('/', function(req,res){
 })
 
 
-
 app.post('/', function(req,res){
   var found = 0
   var founddata = []
@@ -22,33 +32,6 @@ app.post('/', function(req,res){
     console.log(req.body.search);
 
 
-    glob("*.csv", function(er,files){
-      console.log(files);
-
-      for (var i = 0; i < files.length; i++) {
-
-        csv().fromFile(files[i]).then(function(jsonObj){
-          for (var x = 0; x < jsonObj.length; x++) {
-            console.log("start");
-          console.log(jsonObj[x]);
-          console.log("end");
-          console.log(files);
-
-          if (jsonObj[x].Date.includes(req.body.search)) {
-              console.log("HEY I FOUND IT");
-               founddata.push(jsonObj[x])
-          }
-
-          }
-
-          console.log(founddata);
-
-         
-
-        })
-      }
-
-})
 
 res.render('search', {error:"",  found:founddata  });
 
