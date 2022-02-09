@@ -1,9 +1,9 @@
 DocPac Date,Type,Assignment Name
 Aug27,View,Signed Syllabus
 Aug27,Print,Javascript Inital Assessment (js_assess.js)
-Sep3,View,Build a Webserver Using nodejs
-Sep3,View,Sep1st Github practice assignment (assigned in-class)
-Sep3,View,Data missing
+Sep03,View,Build a Webserver Using nodejs
+Sep03,View,Sep1st Github practice assignment (assigned in-class)
+Sep03,View,Data missing
 Sep10,Print,Notebook 1 Initialize Nodejs Project
 Sep10,Print,Notebook 2 Nodejs HTTP Server
 Sep10,Print,Portfolio 1 Nodejs HTTP Server
@@ -13,14 +13,14 @@ Sep17,Print,Updated Version of this DocPac
 Sep24,View,Upgrade Team Website with EJS
 Sep24,Print,�Notebook 4: ReactJS (pg. 2)�
 Sep24,Graded Manualy,"Codecademy �Learn Javascript� course, �Introduction� Chapter Includes both Lessons, both Projects, the Quiz, and Article"
-Oct1,Print,�Notebook 1: Initializing NodeJS Project�
-Oct1,Print,�Notebook 2: NodeJS HTTP Server�
-Oct1,Print,�Notebook 3: Using ExpressJS with NodeJS�
-Oct1,Print,�Notebook 4: Using EJS with ExpressJS�
-Oct1,View,Team Trello Board
-Oct1,Graded Manualy,"Lesson Codecademy �Learn Javascript� course, �Conditionals� Chapter. Includes the, both Projects, and the Quiz", 
-Oct8,Print,Team Documentation: Notebook Entry Format
-Oct8,Print,Analysis: Team Composition
+Oct01,Print,�Notebook 1: Initializing NodeJS Project�
+Oct01,Print,�Notebook 2: NodeJS HTTP Server�
+Oct01,Print,�Notebook 3: Using ExpressJS with NodeJS�
+Oct01,Print,�Notebook 4: Using EJS with ExpressJS�
+Oct01,View,Team Trello Board
+Oct01,Graded Manualy,"Lesson Codecademy �Learn Javascript� course, �Conditionals� Chapter. Includes the, both Projects, and the Quiz",
+Oct08,Print,Team Documentation: Notebook Entry Format
+Oct08,Print,Analysis: Team Composition
 Oct8,View,Team Website Upgrade: Load Team Profiles from JSON
 Oct8,View,Team Website Upgrade: Save Query Params to JSON
 Oct8 ,Graded Manualy,"Codecademy �Learn Javascript� course, �Functions� Chapter"

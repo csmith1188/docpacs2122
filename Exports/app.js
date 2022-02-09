@@ -10,8 +10,9 @@ app.use(express.urlencoded({
 app.set('view engine', 'ejs')
 app.listen(8000)
 
+console.log("Listening on port " + port);
 var alldata = {}
-var docpacDate = []
+let docpacDate = []
 
 fs.readdir(__dirname + '/data', async (err, files) => {
   if (err) console.log(err)
@@ -28,10 +29,10 @@ fs.readdir(__dirname + '/data', async (err, files) => {
   function docpacSearch(docpacName) {
     for (var x in alldata) {
       //console.log(alldata[x]);
-      for (var y in x) {
+      for (var y in alldata[x]) {
         //console.log(alldata[x][y]);
         if (alldata[x][y]["DocPac Date"] == docpacName) {
-          //console.log(alldata[x][y]);
+          console.log(alldata[x][y]);
           docpacDate.push(alldata[x][y]);
         }
       }
@@ -41,10 +42,10 @@ fs.readdir(__dirname + '/data', async (err, files) => {
   function typeSearch(typeName) {
     for (var x in alldata) {
       //console.log(alldata[x]);
-      for (var y in x) {
+      for (var y in alldata[x]) {
         //console.log(alldata[x][y]);
         if (alldata[x][y]["Type"] == typeName) {
-          console.log(alldata[x][y]);
+          //console.log(alldata[x][y]);
         }
       }
     }
@@ -55,8 +56,12 @@ fs.readdir(__dirname + '/data', async (err, files) => {
   // typeSearch("pg.2")
 
   // Website Code
+
   app.get('/', (req, res) => {
     res.render('index')
+  });
+  app.get('/cleared', (req, res) => {
+    res.render('cleared')
   });
 
   app.post('/', (req, res) => {
@@ -64,7 +69,13 @@ fs.readdir(__dirname + '/data', async (err, files) => {
       date: req.body.date
     }
     docpacSearch(date.date)
+    res.render('info', {
+      docpacDate: docpacDate
+    })
+  });
+  app.post('/cleared', (req, res) => {
+    docpacDate = []
     console.log(docpacDate);
-    res.render('info', docpacDate)
+    res.render("cleared")
   });
 });
