@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<style media="screen">
+  .goal {
+    border-color: black;
+    border-style: double;
+  }
+
+  .type {
+    border-color: black;
+    border-style: double;
+  }
+
+  .change {
+    border-color: black;
+    border-style: double;
+  }
+
+  .assignment {
+    border-color: white;
+    border-style: double;
+  }
+</style>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+  <div class="info">
+    <h1>Docpac Changes:</h1>
+    <div class="change">
+      <% docpacDate.forEach(docpacDate => { %>
+      <div class="changes">
+        <%- docpacDate.Changes %>
+      </div>
+      <%})%>
+    </div>
+    <br>
+    <br>
+    <h1>Assignment Type:</h1>
+    <div class="type">
+      <% for (var date in docpacDate) { %>
+      <div class="types">
+        <%if(docpacDate[date].Type && docpacDate[date]["Assignment Name"]) {%>
+        <div class="assignment">
+          Type: <%- docpacDate[date].Type %>
+          <br>
+          Assignment: <%- docpacDate[date]["Assignment Name"] %>
+        </div>
+        <%}%>
+      </div>
+      <%}%>
+        </div>
+        <br>
+        <br>
+        <h1>Docpac Goals:</h1>
+        <div class="goal">
+          <% docpacDate.forEach(docpacDate => { %>
+          <div class="goals">
+            <%- docpacDate.Goals %>
+          </div>
+          <%})%>
+        </div>
+      </div>
+</body>
+
+</html>
