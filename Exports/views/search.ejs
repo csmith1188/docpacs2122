@@ -10,7 +10,13 @@
     <form action="/" method="post">
       <input type="text" name="search">
       <input type="submit" name="" value="submit">
-
+      <select id="cars" name="cars">
+        <option value="changes">Changes</option>
+        <option value="events">Events</option>
+        <option value="goals">Goals</option>
+        <option value="incdoc">Included Documentation</option>
+        <option value="reqdoc">Required Documentation</option>
+ </select>
     </form>
     <%=error%>
     <% for (var data of found) { %>
