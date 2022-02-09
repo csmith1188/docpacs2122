@@ -34,7 +34,7 @@ app.post('/', function(req,res){
 
 
 
-console.log(db.all("SELECT * FROM Goals NATURAL JOIN Events  ", function(err, rows) {
+console.log(db.all("SELECT * FROM Goals   ", function(err, rows) {
   rows.forEach(function (row) {
     console.log(row);
     if (row.date.includes(req.body.search)){
