@@ -114,7 +114,40 @@ fs.readdir(__dirname + '/data', async (err, files) => {
       }
     }
   }
-
+  function search(location) {
+      let sql = "";
+      if (location == "goals" || location == "changes") {
+        sql = `SELECT
+                        date date,
+                        text text
+                  FROM ${location}`;
+      } else if (location == "included" || location == "required") {
+        sql = `SELECT
+                        date date,
+                        type type,
+                        name name
+                  FROM ${location}`;
+      } else if (location == "events") {
+        sql = `SELECT
+                        date date,
+                        event event,
+                        type type,
+                        text text
+                  FROM ${location}`;
+      }
+      let db = new sqlite3.Database('db/database.db');
+      db.all(sql, (err, row) => {
+        //console.log(row);
+        docpacDate.push(row)
+        //console.log(docpacDate);
+        if (err) {
+          throw err;
+        }
+      });
+      //console.log(docpacDate);
+      return docpacDate
+      db.close()
+    }
 
   // close the database connection
 
