@@ -19,13 +19,17 @@
         <option value="goals">Goals</option>
         <option value="incdoc">Included Documentation</option>
         <option value="reqdoc">Required Documentation</option>
+        <option value="all"> All </option>
  </select>
     </form>
-    <%=error%>
-    <p> <%= found[0].date %> </p>
+
+    <p>
+      <%=error%>
+      <%= date %> </p>
 
 
-    <% if (found[0].goal) { %>
+    <% if (found) { %>
+      <% if (found[0].goal) { %>
       <p> GOALS </p>
     <% for (var data of found) { %>
       <p>
@@ -33,6 +37,6 @@
   <%= data.goal %>
 
 </p>
-<% } } %>
+<% } } } %>
   </body>
 </html>

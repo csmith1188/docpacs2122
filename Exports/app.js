@@ -19,7 +19,9 @@ console.log("last");
 app.get('/', function(req,res){
   res.render('search', {
     error:"",
-    found:""
+    found:"",
+    date:""
+
   })
 })
 
@@ -45,14 +47,15 @@ console.log(db.all("SELECT * FROM Goals   ", function(err, rows) {
 
   })
   console.log(search);
-  res.render('search', {error:"",  found:search  });
+  res.render('search', {error:"",  found:search, date: req.body.search });
   search = []
 }));
   } else {
 
     res.render('search', {
       error:" you forgot the input ",
-      found:""
+      found:"",
+      date:""
     })
     }
   })
