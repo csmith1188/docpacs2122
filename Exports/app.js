@@ -11,10 +11,7 @@ let db = new sqlite3.Database('sql.db', (err) => {
  console.log('Connected to the db database.');
 });
 var search = []
-
-
 //db.close();
-
 console.log("last");
 app.get('/', function(req,res){
   res.render('search', {
@@ -24,13 +21,11 @@ app.get('/', function(req,res){
 
   })
 })
-
-
-
 app.post('/', function(req,res){
   var found = 0
   var founddata = []
   if (req.body.search || req.body.dropdown != 'all'){
+<<<<<<< HEAD
 
 
 
@@ -64,28 +59,46 @@ console.log(db.all("SELECT * FROM Goals   ", function(err, rows) {
     if (row.date.includes(req.body.search)){
       search.push(row)
 
+=======
+    if (req.body.dropdown == 'goals'){
+      console.log(db.all("SELECT * FROM Goals   ", function(err, rows) {
+        rows.forEach(function (row) {
+          console.log(row);
+          if (req.body.search){
+            if (row.date.includes(req.body.search)){
+              search.push(row)
+            }
+          } else {
+            search.push(row)
+          }
+        })
+        console.log(search);
+        res.render('search', {error:"",  found:search, date: req.body.search });
+        search = []
+      }));
     }
-
-
-  })
-  console.log(search);
-  res.render('search', {error:"",  found:search, date: req.body.search });
-  search = []
-}));}
-
-
-
-
-
+    if (req.body.dropdown == 'goals'){
+      console.log(db.all("SELECT * FROM Goals   ", function(err, rows) {
+        rows.forEach(function (row) {
+          console.log(row);
+            if (row.date.includes(req.body.search)){
+              search.push(row)
+            }
+        })
+          console.log(search);
+          res.render('search', {error:"",  found:search, date: req.body.search });
+          search = []
+      }));
+>>>>>>> pr/8
+    }
   } else {
-
-    res.render('search', {
-      error:" you forgot the input ",
-      found:"",
-      date:""
-    })
+      res.render('search', {
+        error:" you forgot the input ",
+        found:"",
+        date:""
+      })
     }
-  })
+})
 
 
 app.listen(8000)

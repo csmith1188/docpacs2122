@@ -9,18 +9,15 @@
     <h1> DOCCLE </h1>
     <form action="/" method="post">
       <input type="text" name="search">
-
-
-
-      <input type="submit" name="" value="submit">
       <select id="drop" name="dropdown">
         <option value="changes">Changes</option>
         <option value="events">Events</option>
         <option value="goals">Goals</option>
         <option value="incdoc">Included Documentation</option>
         <option value="reqdoc">Required Documentation</option>
-    <!--    <option value="all"> All </option> -->
- </select>
+        <option value="all"> All </option>
+      </select>
+      <input type="submit" name="" value="submit">
     </form>
 
     <h2>
@@ -30,13 +27,12 @@
 
     <% if (found) { %>
       <% if (found) { %>
-      <h3> GOALS </h3>
-    <% for (var data of found) { %>
-      <p>
-
-  <%= data.goal %>
-
-</p>
+        <h3> GOALS </h3>
+        <% for (var data of found) { %>
+          <p>
+            <%= data.date %>:
+            <%= data.goal %>
+          </p>
 <% } } } %>
   </body>
 </html>
