@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="\css\search.css">
+    <title></title>
+  </head>
+  <body>
+    <h1> DOCCLE </h1>
+    <form action="/" method="post">
+      <input type="text" name="search">
+
+
+
+      <input type="submit" name="" value="submit">
+      <select id="drop" name="dropdown">
+        <option value="changes">Changes</option>
+        <option value="events">Events</option>
+        <option value="goals">Goals</option>
+        <option value="incdoc">Included Documentation</option>
+        <option value="reqdoc">Required Documentation</option>
+        <option value="all"> All </option>
+ </select>
+    </form>
+
+    <h2>
+      <%=error%>
+      <%= date %> </h2>
+
+
+    <% if (found) { %>
+      <% if (found) { %>
+      <h3> GOALS </h3>
+    <% for (var data of found) { %>
+      <p>
+
+  <%= data.goal %>
+
+</p>
+<% } } } %>
+  </body>
+</html>
