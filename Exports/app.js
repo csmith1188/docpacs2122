@@ -10,6 +10,7 @@ app.use(express.static(__dirname + '/public'));
 let db = new sqlite3.Database('sql.db', (err) => {
  console.log('Connected to the db database.');
 });
+
 var search = []
 
 
