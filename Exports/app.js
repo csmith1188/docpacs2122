@@ -30,11 +30,11 @@ app.get('/', function(req,res){
 app.post('/', function(req,res){
   var found = 0
   var founddata = []
-  if (req.body.search){
+  if (req.body.search || req.body.cars != 'All'){
 
 
 
-
+if (req.body.cars == 'goals'){
 
 console.log(db.all("SELECT * FROM Goals   ", function(err, rows) {
   rows.forEach(function (row) {
@@ -49,7 +49,31 @@ console.log(db.all("SELECT * FROM Goals   ", function(err, rows) {
   console.log(search);
   res.render('search', {error:"",  found:search, date: req.body.search });
   search = []
-}));
+}));}
+
+
+
+if (req.body.cars == 'goals'){
+
+console.log(db.all("SELECT * FROM Goals   ", function(err, rows) {
+  rows.forEach(function (row) {
+    console.log(row);
+    if (row.date.includes(req.body.search)){
+      search.push(row)
+
+    }
+
+
+  })
+  console.log(search);
+  res.render('search', {error:"",  found:search, date: req.body.search });
+  search = []
+}));}
+
+
+
+
+
   } else {
 
     res.render('search', {
