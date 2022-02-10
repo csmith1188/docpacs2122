@@ -56,7 +56,7 @@ console.log(db.all("SELECT * FROM Goals   ", function(err, rows) {
 
 
 
-if (req.body.cars == 'goals'){
+if (req.body.dropdown == 'goals'){
 
 console.log(db.all("SELECT * FROM Goals   ", function(err, rows) {
   rows.forEach(function (row) {
