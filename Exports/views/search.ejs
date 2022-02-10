@@ -9,14 +9,34 @@
     <h1> DOCCLE </h1>
     <form action="/" method="post">
       <input type="text" name="search">
-      <input type="submit" name="" value="submit">
 
+
+
+      <input type="submit" name="" value="submit">
+      <select id="cars" name="cars">
+        <option value="changes">Changes</option>
+        <option value="events">Events</option>
+        <option value="goals">Goals</option>
+        <option value="incdoc">Included Documentation</option>
+        <option value="reqdoc">Required Documentation</option>
+        <option value="all"> All </option>
+ </select>
     </form>
+
     <p>
-    <%=error%>
-    <% for (var data in found) { %>
-    <%= data %> <%} %>
+      <%=error%>
+      <%= date %> </p>
+
+
+    <% if (found) { %>
+      <% if (found[0].goal) { %>
+      <p> GOALS </p>
+    <% for (var data of found) { %>
+      <p>
+
+  <%= data.goal %>
 
 </p>
+<% } } } %>
   </body>
 </html>
