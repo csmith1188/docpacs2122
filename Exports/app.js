@@ -46,8 +46,10 @@ app.post('/', function(req,res){
       console.log(db.all("SELECT * FROM Events   ", function(err, rows) {
         rows.forEach(function (row) {
           console.log(row);
+          if (req.body.search){
             if (row.date.includes(req.body.search)){
               search.push(row)
+            }
             } else{ search.push(row) }
         })
           console.log(search);
