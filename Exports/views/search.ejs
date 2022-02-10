@@ -15,7 +15,7 @@
         <option value="goals">Goals</option>
         <option value="incdoc">Included Documentation</option>
         <option value="reqdoc">Required Documentation</option>
-        <option value="all"> All </option>
+    <!--    <option value="all"> All </option> -->
       </select>
       <input type="submit" name="" value="submit">
     </form>
@@ -26,7 +26,7 @@
 
 
     <% if (found) { %>
-      <% if (found) { %>
+      <% if (found[0].goal) { %>
         <h3> GOALS </h3>
         <% for (var data of found) { %>
           <p>
@@ -34,5 +34,54 @@
             <%= data.goal %>
           </p>
 <% } } } %>
+
+<% if (found) { %>
+  <% if (found[0].EventData) { %>
+    <h3> Events </h3>
+    <% for (var data of found) { %>
+      <p>
+        <%= data.date %>:
+        <%= data.EventData %>
+        <%= data.Type %>
+        <%= data.Event %>
+      </p>
+<% } } } %>
+
+<% if (found) { %>
+  <% if (found[0].Changes) { %>
+    <h3> Changes </h3>
+    <% for (var data of found) { %>
+      <p>
+        <%= data.date %>:
+        <%= data.Changes %>
+      </p>
+<% } } } %>
+
+<% if (found) { %>
+  <% if (found[0].AssignmentNamei) { %>
+    <h3> Included Documentation </h3>
+    <% for (var data of found) { %>
+      <p>
+        <%= data.date %>:
+        <%= data.Type %>
+        <%= data.AssignmentNamei %>
+      </p>
+<% } } } %>
+
+<% if (found) { %>
+  <% if (found[0].AssingmentName) { %>
+    <h3> Required Documentation </h3>
+    <% for (var data of found) { %>
+      <p>
+        <%= data.date %>:
+        <%= data.Type %>
+        <%= data.AssingmentName %>
+
+      </p>
+<% } } } %>
+
+
+
+
   </body>
 </html>
