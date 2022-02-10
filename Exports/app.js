@@ -23,6 +23,7 @@ fs.readdir(__dirname + '/csv/', async (err, files) => {
 	})
 });
 
+
 let jsonData = fs.readFileSync(__dirname + '/data.json', 'utf8');
 jsonData = JSON.parse(jsonData);
 
@@ -60,15 +61,25 @@ const db = new sqlite3.Database('./data.db', sqlite3.OPEN_READWRITE, (err) => {
 });
 
 for (let table in jsonData) {
-	let fields = "";
-	//console.log(jsonData[table]);
-	for (let field in jsonData[table][0]) fields += field + ", ";
-	console.log(`CREATE TABLE ${table}(${fields})`);
-	db.run(`CREATE TABLE ${table}(${fields})`)
-};
-
-// db.run(`CREATE TABLE `)
-
+	jsonData[table].forEach(row => {
+		let columns = ``;
+		let values = ``;
+		for (let key in row) {
+			columns += `"${key}", `;
+			values += `"${row[key]}", `;
+		};
+		columns = columns.slice(0, -2);
+		values = values.slice(0, -2);
+		console.log(`
+			INSERT INTO ${table} (${columns})
+			VALUES (${values})
+		`);
+		db.run(`
+			INSERT INTO ${table} (${columns})
+			VALUES (${values})
+		`);
+	});
+}
 db.close((err) =>{
 	if (err) return console.error(err.message);
-})
+});
