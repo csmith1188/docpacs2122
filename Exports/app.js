@@ -13,7 +13,7 @@ app.listen(8000)
 
 console.log("Listening on port " + port);
 var alldata = {}
-let docpacDate = []
+var docpacDate = []
 
 
 fs.readdir(__dirname + '/data', async (err, files) => {
@@ -39,12 +39,11 @@ fs.readdir(__dirname + '/data', async (err, files) => {
   function docpacSearch(docpacName) {
     for (var x in alldata) {
       //console.log(alldata[x]);
-
       for (var y in alldata[x]) {
         //console.log(alldata[x][y]);
         if (alldata[x][y]["DocPac Date"] == docpacName) {
           console.log(alldata[x][y]);
-          docpacDate.push(alldata[x][y]);
+          //docpacDate.push(alldata[x][y]);
 
         }
       }
@@ -53,13 +52,12 @@ fs.readdir(__dirname + '/data', async (err, files) => {
 
   function typeSearch(typeName) {
     for (var x in alldata) {
-
       //console.log(alldata[x]);
       for (var y in alldata[x]) {
         //console.log(alldata[x][y]);
         if (alldata[x][y]["Type"] == typeName) {
           //console.log(alldata[x][y]);
- }
+        }
       }
     }
   }
@@ -117,6 +115,9 @@ fs.readdir(__dirname + '/data', async (err, files) => {
     }
   }
 
+
+  // close the database connection
+
   // // Search by docpac date (ex: Dec03)
   //docpacSearch('Sep03')
   // // Search by type of assignment (ex: Print or pg.2)
@@ -133,11 +134,13 @@ fs.readdir(__dirname + '/data', async (err, files) => {
 
   app.post('/', (req, res) => {
     let date = {
-      date: req.body.date
+      info: req.body.info
     }
-    docpacSearch(date.date)
+    var docPacDate = search(date.info)
+    //console.log(docPacDate);
     res.render('info', {
-      docpacDate: docpacDate
+      docpacDate: docPacDate,
+      info: date.info
     })
   });
   app.post('/cleared', (req, res) => {

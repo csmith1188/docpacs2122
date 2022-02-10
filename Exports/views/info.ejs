@@ -10,11 +10,19 @@
   .type {
     border-color: black;
     border-style: double;
+    width: 25%;
+    float: left;
+    padding: 20px;
+    overflow-y: scroll;
+    height: 55px;
+
   }
 
-  .change {
-    border-color: black;
+  .info {
+    border-color: white;
     border-style: double;
+    margin: auto;
+    padding-left: 15%;
   }
 
   .assignment {
@@ -30,41 +38,35 @@
 
 <body>
   <div class="info">
-    <h1>Docpac Changes:</h1>
-    <div class="change">
-      <% docpacDate.forEach(docpacDate => { %>
-      <div class="changes">
-        <%- docpacDate.Changes %>
-      </div>
-      <%})%>
-    </div>
-    <br>
-    <br>
-    <h1>Assignment Type:</h1>
+    <% for (var x in docpacDate) {%>
+    <% for (var y in docpacDate[x]) {%>
     <div class="type">
-      <% for (var date in docpacDate) { %>
-      <div class="types">
-        <%if(docpacDate[date].Type && docpacDate[date]["Assignment Name"]) {%>
-        <div class="assignment">
-          Type: <%- docpacDate[date].Type %>
-          <br>
-          Assignment: <%- docpacDate[date]["Assignment Name"] %>
-        </div>
-        <%}%>
-      </div>
+      <% if (info == "goals" || info == "changes") {%>
+      Date: <%-JSON.stringify(docpacDate[x][y]['date'])%>
+      <br>
+      Text: <%-JSON.stringify(docpacDate[x][y]['text'])%>
       <%}%>
-        </div>
-        <br>
-        <br>
-        <h1>Docpac Goals:</h1>
-        <div class="goal">
-          <% docpacDate.forEach(docpacDate => { %>
-          <div class="goals">
-            <%- docpacDate.Goals %>
-          </div>
-          <%})%>
-        </div>
+      <% if (info == "included" || info == "required") {%>
+      Date: <%-JSON.stringify(docpacDate[x][y]['date'])%>
+      <br>
+      Type: <%-JSON.stringify(docpacDate[x][y]['type'])%>
+      <br>
+      Text: <%-JSON.stringify(docpacDate[x][y]['name'])%>
+      <%}%>
+      <% if (info == "events") {%>
+      Date: <%-JSON.stringify(docpacDate[x][y]['date'])%>
+      <br>
+      Event: <%-JSON.stringify(docpacDate[x][y]['event'])%>
+      <br>
+      Type: <%-JSON.stringify(docpacDate[x][y]['type'])%>
+      <br>
+      Text: <%-JSON.stringify(docpacDate[x][y]['text'])%>
+      <%}%>
       </div>
+    <%}%>
+      <%}%>
+  </div>
+
 </body>
 
 </html>
