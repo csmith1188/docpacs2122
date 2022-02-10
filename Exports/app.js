@@ -169,6 +169,7 @@ fs.readdir(__dirname + '/data', async (err, files) => {
     let date = {
       info: req.body.info
     }
+    console.log(date.info);
     var docPacDate = search(date.info)
     //console.log(docPacDate);
     res.render('info', {
