@@ -49,7 +49,7 @@ app.post('/', function(req,res){
             if (row.date.includes(req.body.search)){
               search.push(row)
             }
-        })
+          })
           console.log(search);
           res.render('search', {error:"",  found:search, date: req.body.search });
           search = []
