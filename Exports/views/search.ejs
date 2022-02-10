@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="\css\search.css">
+    <title></title>
+  </head>
+  <body>
+    <h1> DOCCLE </h1>
+    <form action="/" method="post">
+      <input type="text" name="search">
+      <select id="drop" name="dropdown">
+        <option value="changes">Changes</option>
+        <option value="events">Events</option>
+        <option value="goals">Goals</option>
+        <option value="incdoc">Included Documentation</option>
+        <option value="reqdoc">Required Documentation</option>
+    <!--    <option value="all"> All </option> -->
+      </select>
+      <input type="submit" name="" value="submit">
+    </form>
+
+    <h2>
+      <%=error%>
+      <%= date %> </h2>
+
+
+    <% if (found) { %>
+      <% if (found[0].goal) { %>
+        <h3> GOALS </h3>
+        <% for (var data of found) { %>
+          <p>
+            <%= data.date %>:
+            <%= data.goal %>
+          </p>
+<% } } } %>
+
+<% if (found) { %>
+  <% if (found[0].EventData) { %>
+    <h3> Events </h3>
+    <% for (var data of found) { %>
+      <p>
+        <%= data.date %>:
+        <%= data.EventData %>:
+        <%= data.Type %> -
+        <%= data.Event %>
+      </p>
+<% } } } %>
+
+<% if (found) { %>
+  <% if (found[0].Changes) { %>
+    <h3> Changes </h3>
+    <% for (var data of found) { %>
+      <p>
+        <%= data.date %>:
+        <%= data.Changes %>
+      </p>
+<% } } } %>
+
+<% if (found) { %>
+  <% if (found[0].AssignmentNamei) { %>
+    <h3> Included Documentation </h3>
+    <% for (var data of found) { %>
+      <p>
+        <%= data.date %>:
+        <%= data.Type %> -
+        <%= data.AssignmentNamei %>
+      </p>
+<% } } } %>
+
+<% if (found) { %>
+  <% if (found[0].AssingmentName) { %>
+    <h3> Required Documentation </h3>
+    <% for (var data of found) { %>
+      <p>
+        <%= data.date %>:
+        <%= data.Type %> -
+        <%= data.AssingmentName %>
+
+      </p>
+<% } } } %>
+
+
+
+
+  </body>
+</html>
