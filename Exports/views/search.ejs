@@ -13,7 +13,7 @@
 
 
       <input type="submit" name="" value="submit">
-      <select id="cars" name="cars">
+      <select id="drop" name="dropdown">
         <option value="changes">Changes</option>
         <option value="events">Events</option>
         <option value="goals">Goals</option>
@@ -23,14 +23,14 @@
  </select>
     </form>
 
-    <p>
+    <h2>
       <%=error%>
-      <%= date %> </p>
+      <%= date %> </h2>
 
 
     <% if (found) { %>
-      <% if (found[0].goal) { %>
-      <p> GOALS </p>
+      <% if (found) { %>
+      <h3> GOALS </h3>
     <% for (var data of found) { %>
       <p>
 
