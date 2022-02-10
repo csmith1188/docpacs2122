@@ -30,19 +30,22 @@ app.get('/', function(req,res){
 app.post('/', function(req,res){
   var found = 0
   var founddata = []
-  if (req.body.search || req.body.cars != 'All'){
+  if (req.body.search || req.body.dropdown != 'all'){
 
 
 
-if (req.body.cars == 'goals'){
+if (req.body.dropdown == 'goals'){
 
 console.log(db.all("SELECT * FROM Goals   ", function(err, rows) {
   rows.forEach(function (row) {
     console.log(row);
+    if (req.body.search){
     if (row.date.includes(req.body.search)){
       search.push(row)
-
-    }
+}
+} else {
+  search.push(row)
+}
 
 
   })
