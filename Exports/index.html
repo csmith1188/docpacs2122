@@ -3,11 +3,47 @@
   <head>
     <meta charset="utf-8">
     <title>DocPac Web Interface</title>
+<style media="screen">
+.dropbtn {
+background-color: red;
+color: white;
+padding: 16px;
+font-size: 16px;
+border: none;
+}
+.dropdown {
+position: relative;
+display: inline-block;
+}
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: #F1F1F1;
+min-width: 160px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 1;
+}
+.dropdown-content a {
+color: black;
+padding: 12px 16px;
+text-decoration: none;
+display: block;
+}
+.dropdown-content a:hover {background-color: #ddd;}
+.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropbtn {background-color: orange;}
+</style>
   </head>
   <body>
-
+    <div class="dropdown">
+     <button class="dropbtn">Dropdown</button>
+     <div class="dropdown-content">
+     <button class="btn">Example</button>
+     <button class="btn">Example</button>
+     <button class="btn">Example</button>
+     </div>
+   </div>
   </body>
   <script>
-
   </script>
 </html>
