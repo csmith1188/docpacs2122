@@ -2,6 +2,7 @@ const csv = require('csvtojson')
 const fs = require('fs');
 const sqlite3 = require('sqlite3').verbose();
 
+
 var data = {};
 
 fs.readdir(__dirname + '/csv/', async (err, files) => {
