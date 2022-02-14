@@ -23,17 +23,16 @@ app.post('/create',(req, res) => {
     categories.forEach(category => {
       if (req.body[category + "Type"] && !req.body[category]) {
         res.send("Error: Not enough data");
-      } else {
-        db.serialize(() => {
-          db.run(`INSERT INTO changes ("date, "type", "text") VALUES ("${req.body.date}", "${req.body.changesType}", "${req.body.changes}")`);
-          db.run(`INSERT INTO events ("date, "type", "text") VALUES ("${req.body.date}", "${req.body.eventsType}", "${req.body.events}")`);
-          db.run(`INSERT INTO goals ("date, "type", "text") VALUES ("${req.body.date}", "${req.body.goalsType}", "${req.body.goals}")`);
-          db.run(`INSERT INTO includedDocumentation ("date, "type", "text") VALUES ("${req.body.date}", "${req.body.includedType}", "${req.body.included}")`);
-          db.run(`INSERT INTO requiredDocumentation ("date, "type", "text") VALUES ("${req.body.date}", "${req.body.requiredType}", "${req.body.required}")`);
-        });
-        res.send("Inserted into database.");
       }
     });
+    db.serialize(() => {
+      db.run(`INSERT INTO changes ("docPacDate", "text") VALUES ("${req.body.date}", "${req.body.changes}")`);
+      db.run(`INSERT INTO events ("docPacDate", "eventDate", "type", "text") VALUES ("${req.body.date}", "${req.body.eventDate}", "${req.body.eventsType}", "${req.body.events}")`);
+      db.run(`INSERT INTO goals ("docPacDate", "goal") VALUES ("${req.body.date}", "${req.body.goals}")`);
+      db.run(`INSERT INTO includedDocumentation ("docPacDate", "type", "assignmentName") VALUES ("${req.body.date}", "${req.body.includedType}", "${req.body.included}")`);
+      db.run(`INSERT INTO requiredDocumentation ("docPacDate", "type", "name") VALUES ("${req.body.date}", "${req.body.requiredType}", "${req.body.required}")`);
+    });
+    res.send("Inserted into database.");
   }
 })
 app.post('/search', (req, res) => {
