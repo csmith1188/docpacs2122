@@ -22,6 +22,11 @@ app.get('/', function(req,res){
 
   })
 })
+
+app.get('/create', function(req,res){
+  res.render('create')
+})
+
 app.post('/', function(req,res){
   var found = 0
   var founddata = []
