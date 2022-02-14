@@ -164,6 +164,9 @@ fs.readdir(__dirname + '/data', async (err, files) => {
   app.get('/cleared', (req, res) => {
     res.render('cleared')
   });
+  app.get('/insert', (req, res) => {
+    res.render('insert')
+  });
 
   app.post('/', (req, res) => {
     let date = {
