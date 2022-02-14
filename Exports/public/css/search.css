@@ -37,11 +37,3 @@ input[type=button], input[type=submit], input[type=reset] {
   font-weight: bold;
     border-radius: 5px;
 }
-#entry{
-  height: 30px;
-  width: 150px;
-  color: white;
-  background-color: #404040;
-  border-radius: 5px;
-  border-style: inset;
-}
