@@ -37,9 +37,10 @@ app.post('/create', function(req,res){
 if (req.body.dateBox) {
   if (req.body.goalBox) {
     let goalvalue = [req.body.dateBox,req.body.goalBox]
-    db.serialize(function () {db.run('INSERT INTO Goals(date,goal) VALUES(?,?)', goalvalue )})
-  }
+    db.serialize(function () {db.run(goallo, goalvalue )})
+  } /*
   if (req.body.incdocType) {
+
     if (req.body.incdocBox) {
 
     } else {
@@ -63,7 +64,7 @@ if (req.body.dateBox) {
       }
     } else { error.push("event does not have all the data")
   }
-  }
+} */
 } else {
 error.push("no date")
 
@@ -79,6 +80,9 @@ if (error) {
   res.render('create',
   { error: ""})
 }
+console.log(error);
+error = []
+
 })
 
 
