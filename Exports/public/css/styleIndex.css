@@ -1,0 +1,11 @@
+body {
+    text-align: center;
+    background-color: coral;
+}
+form {
+    display: inline-block;
+}
+.create{
+
+  padding-top: 30px;
+}

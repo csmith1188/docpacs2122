@@ -3,6 +3,9 @@ const express = require('express');
 const app = express();
 const port = 5600;
 const fs = require('fs');
+
+app.use(express.static(__dirname + '/public'));
+
 app.use(express.urlencoded({
   extended: true
 }));
