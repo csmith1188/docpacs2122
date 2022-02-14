@@ -11,7 +11,9 @@ let db = new sqlite3.Database('sql.db', (err) => {
  console.log('Connected to the db database.');
 });
 
+var error = []
 var search = []
+let goallo = 'INSERT INTO Goals(date,goal) VALUES(?,?)';
 //db.close();
 console.log("last");
 app.get('/', function(req,res){
@@ -24,8 +26,61 @@ app.get('/', function(req,res){
 })
 
 app.get('/create', function(req,res){
-  res.render('create')
+  res.render('create',
+          {error: ""  })
 })
+
+
+
+app.post('/create', function(req,res){
+
+if (req.body.dateBox) {
+  if (req.body.goalBox) {
+    let goalvalue = [req.body.dateBox,req.body.goalBox]
+    db.serialize(function () {db.run('INSERT INTO Goals(date,goal) VALUES(?,?)', goalvalue )})
+  }
+  if (req.body.incdocType) {
+    if (req.body.incdocBox) {
+
+    } else {
+      error.push(" included documentation does not have all data")
+    }
+  }
+  if (req.body.reqdocType) {
+    if (req.body.reqdocBox) {
+
+    } else {error.push("required documentation does not have all data ")
+  }
+}
+  if (req.body.changeBox) {
+
+  }
+  if (req.body.eventDate) {
+    if (req.body.eventType) {
+        if (req.body.eventBox) {
+
+        } else { error.push("event does not have all the data")
+      }
+    } else { error.push("event does not have all the data")
+  }
+  }
+} else {
+error.push("no date")
+
+}
+
+
+if (error) {
+  res.render('create',
+  { error: error})
+
+  }
+ else {
+  res.render('create',
+  { error: ""})
+}
+})
+
 
 app.post('/', function(req,res){
   var found = 0
