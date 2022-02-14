@@ -114,40 +114,41 @@ fs.readdir(__dirname + '/data', async (err, files) => {
       }
     }
   }
+
   function search(location) {
-      let sql = "";
-      if (location == "goals" || location == "changes") {
-        sql = `SELECT
+    let sql = "";
+    if (location == "goals" || location == "changes") {
+      sql = `SELECT
                         date date,
                         text text
                   FROM ${location}`;
-      } else if (location == "included" || location == "required") {
-        sql = `SELECT
+    } else if (location == "included" || location == "required") {
+      sql = `SELECT
                         date date,
                         type type,
                         name name
                   FROM ${location}`;
-      } else if (location == "events") {
-        sql = `SELECT
+    } else if (location == "events") {
+      sql = `SELECT
                         date date,
                         event event,
                         type type,
                         text text
                   FROM ${location}`;
-      }
-      let db = new sqlite3.Database('db/database.db');
-      db.all(sql, (err, row) => {
-        //console.log(row);
-        docpacDate.push(row)
-        //console.log(docpacDate);
-        if (err) {
-          throw err;
-        }
-      });
-      //console.log(docpacDate);
-      return docpacDate
-      db.close()
     }
+    let db = new sqlite3.Database('db/database.db');
+    db.all(sql, (err, row) => {
+      //console.log(row);
+      docpacDate.push(row)
+      //console.log(docpacDate);
+      if (err) {
+        throw err;
+      }
+    });
+    //console.log(docpacDate);
+    return docpacDate
+    db.close()
+  }
 
   // close the database connection
 
@@ -167,7 +168,7 @@ fs.readdir(__dirname + '/data', async (err, files) => {
 
 
 
-  
+
 
   app.post('/', (req, res) => {
     let date = {
@@ -191,6 +192,20 @@ fs.readdir(__dirname + '/data', async (err, files) => {
       if (req.body.goals) {
         let db = new sqlite3.Database('db/database.db');
         db.run(`INSERT INTO "goals" (date, text) VALUES("${req.body.date}", "${req.body.goals}")`, function(err) {
+          if (err) {
+            return console.log(err.message);
+          }
+          // get the last insert id
+          console.log(`A row has been inserted with rowid ${this.changes}`);
+        });
+        // close the database connection
+        db.close();
+        res.render('insertpost', {
+          mainbody: `You successfully inserted data to the table.`
+        })
+      } else if (req.body.changes) {
+        let db = new sqlite3.Database('db/database.db');
+        db.run(`INSERT INTO "changes" (date, text) VALUES("${req.body.date}", "${req.body.changes}")`, function(err) {
           if (err) {
             return console.log(err.message);
           }
@@ -249,10 +264,10 @@ fs.readdir(__dirname + '/data', async (err, files) => {
           mainbody: "Error: Not enough information"
         })
       }
-    res.render('insertpost', {
-      mainbody: "Error: No date provided"
-    })
-  }
+      res.render('insertpost', {
+        mainbody: "Error: No date provided"
+      })
+    }
   });
 
 });
