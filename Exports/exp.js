@@ -24,7 +24,10 @@ app.post('/create',(req, res) => {
       if (req.body[category + "Type"] && !req.body[category]) {
         res.send("Error: Not enough data");
       } else {
-        
+        db.serialize(() => {
+          db.run(`INSERT INTO `);
+        });
+        res.send("Inserted into database.");
       }
     });
   }
