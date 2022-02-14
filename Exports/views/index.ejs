@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
-    <title></title>
+    <link href="/css/styleIndex.css" rel="stylesheet">
   </head>
-  <style>
-    body {background-color: #abcdef;}
-  </style>
   <body>
-    <h1>Worse Company DocPac Search System</h1>
-    <p id="link" style="font-size: 20px;"><a href="http://localhost:5600/create">Create New Entry</a></p>
-    <label for="category">Choose a category:</label>
-    <form class="" action="search" method="post">
+    <header>
+    <h1>DocPac Digital Database</h1>
+    </header>
+    <div class="centerAll">
+      <label for="category">Choose a category:</label>
+      <form class="" action="search" method="post">
 
-    <select id="category" name="category">
-      <option value="changes">Changes</option>
-      <option value="events">Events</option>
-      <option value="goals">Goals</option>
-      <option value="includedDocumentation">Included documentation</option>
-      <option value="requiredDocumentation">Required documentation</option>
-   <input type="submit" name="" value="submit">
-    </select>
+        <select id="category" name="category">
+          <option value="changes">Changes</option>
+          <option value="events">Events</option>
+          <option value="goals">Goals</option>
+          <option value="includedDocumentation">Included documentation</option>
+          <option value="requiredDocumentation">Required documentation</option>
+          <input type="submit" name="" value="Go To Data">
+        </select>
+      </form>
+
+    </div>
+<div class="create">
+  <form action="http://localhost:5600/create">
+    <input type="submit" value="Create A DocPac" />
   </form>
-      <p style="font-style: italic;">"We may be Worse Company, but we're not the worst company." ⒸWorse Company 2021</p>
+</div>
   </body>
 </html>
