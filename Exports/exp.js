@@ -16,7 +16,18 @@ app.get('/create',(req, res) => {
   res.render('create')
 })
 app.post('/create',(req, res) => {
-  
+  if (!req.body.date) {
+    res.send("Error: No DocPac date");
+  } else {
+    let categories = ["changes", "events", "goals", "included", "required"];
+    categories.forEach(category => {
+      if (req.body[category + "Type"] && !req.body[category]) {
+        res.send("Error: Not enough data");
+      } else {
+        
+      }
+    });
+  }
 })
 app.post('/search', (req, res) => {
   let tableName= req.body.category;
