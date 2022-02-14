@@ -3,10 +3,18 @@
   <head>
     <meta charset="utf-8">
     <title>Create DocPac Entries</title>
+    <style>
+      input[placeholder="Type"], input[name="date"] {
+        width: 75px;
+      }
+    </style>
   </head>
   <body>
     <form>
       <h1>Create DocPac Entries</h1>
+
+      <h2>Date</h2>
+      <input type="text" name="date">
 
       <h2>Changes</h2>
       <input type="text" name="changesType" placeholder="Type">
@@ -27,6 +35,7 @@
       <h2>Required documentation</h2>
       <input type="text" name="requiredType" placeholder="Type">
       <input type="text" name="required">
+      <br><br>
 
       <input type="submit">
     </form>
