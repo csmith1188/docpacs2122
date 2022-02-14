@@ -165,10 +165,9 @@ fs.readdir(__dirname + '/data', async (err, files) => {
   app.get('/cleared', (req, res) => {
     res.render('cleared')
   });
-
-
-
-
+  app.get('/insert', (req, res) => {
+    res.render('insert')
+  });
 
   app.post('/', (req, res) => {
     let date = {
@@ -261,13 +260,10 @@ fs.readdir(__dirname + '/data', async (err, files) => {
         })
       } else {
         res.render('insertpost', {
-          mainbody: "Error: Not enough information"
+          mainbody: "Error: No date provided"
         })
       }
-      res.render('insertpost', {
-        mainbody: "Error: No date provided"
-      })
-    }
+
   });
 
 });
