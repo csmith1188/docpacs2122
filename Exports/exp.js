@@ -16,7 +16,7 @@ app.get('/create',(req, res) => {
   res.render('create')
 })
 app.post('/create',(req, res) => {
-  res.render('create')
+  
 })
 app.post('/search', (req, res) => {
   let tableName= req.body.category;
