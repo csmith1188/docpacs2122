@@ -25,7 +25,11 @@ app.post('/create',(req, res) => {
         res.send("Error: Not enough data");
       } else {
         db.serialize(() => {
-          db.run(`INSERT INTO `);
+          db.run(`INSERT INTO changes ("date, "type", "text") VALUES ("${req.body.date}", "${req.body.changesType}", "${req.body.changes}")`);
+          db.run(`INSERT INTO events ("date, "type", "text") VALUES ("${req.body.date}", "${req.body.eventsType}", "${req.body.events}")`);
+          db.run(`INSERT INTO goals ("date, "type", "text") VALUES ("${req.body.date}", "${req.body.goalsType}", "${req.body.goals}")`);
+          db.run(`INSERT INTO includedDocumentation ("date, "type", "text") VALUES ("${req.body.date}", "${req.body.includedType}", "${req.body.included}")`);
+          db.run(`INSERT INTO requiredDocumentation ("date, "type", "text") VALUES ("${req.body.date}", "${req.body.requiredType}", "${req.body.required}")`);
         });
         res.send("Inserted into database.");
       }
