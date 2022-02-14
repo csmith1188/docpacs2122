@@ -199,10 +199,8 @@ fs.readdir(__dirname + '/data', async (err, files) => {
         });
         // close the database connection
         db.close();
-        res.render('insertpost', {
-          mainbody: `You successfully inserted data to the table.`
-        })
-      } else if (req.body.changes) {
+      }
+      if (req.body.changes) {
         let db = new sqlite3.Database('db/database.db');
         db.run(`INSERT INTO "changes" (date, text) VALUES("${req.body.date}", "${req.body.changes}")`, function(err) {
           if (err) {
@@ -213,10 +211,8 @@ fs.readdir(__dirname + '/data', async (err, files) => {
         });
         // close the database connection
         db.close();
-        res.render('insertpost', {
-          mainbody: `You successfully inserted data to the table.`
-        })
-      } else if (req.body.event && req.body.event_type && req.body.event_text) {
+      }
+      if (req.body.event && req.body.event_type && req.body.event_text) {
         let db = new sqlite3.Database('db/database.db');
         db.run(`INSERT INTO "events" (date, event, type, text) VALUES("${req.body.date}", "${req.body.event}", "${req.body.event_type}", "${req.body.event_text}")`, function(err) {
           if (err) {
@@ -227,10 +223,8 @@ fs.readdir(__dirname + '/data', async (err, files) => {
         });
         // close the database connection
         db.close();
-        res.render('insertpost', {
-          mainbody: `You successfully inserted data to the table.`
-        })
-      } else if (req.body.included_type && req.body.included_text) {
+      }
+      if (req.body.included_type && req.body.included_text) {
         let db = new sqlite3.Database('db/database.db');
         db.run(`INSERT INTO "included" (date, type, name) VALUES("${req.body.date}", "${req.body.included_type}", "${req.body.included_text}")`, function(err) {
           if (err) {
@@ -241,10 +235,8 @@ fs.readdir(__dirname + '/data', async (err, files) => {
         });
         // close the database connection
         db.close();
-        res.render('insertpost', {
-          mainbody: `You successfully inserted data to the table.`
-        })
-      } else if (req.body.required_type && req.body.required_text) {
+      }
+      if (req.body.required_type && req.body.required_text) {
         let db = new sqlite3.Database('db/database.db');
         db.run(`INSERT INTO "required" (date, type, name) VALUES("${req.body.date}", "${req.body.required_type}", "${req.body.required_text}")`, function(err) {
           if (err) {
@@ -255,15 +247,15 @@ fs.readdir(__dirname + '/data', async (err, files) => {
         });
         // close the database connection
         db.close();
-        res.render('insertpost', {
-          mainbody: `You successfully inserted data to the table.`
-        })
-      } else {
-        res.render('insertpost', {
-          mainbody: "Error: No date provided"
-        })
       }
-
+      res.render('insertpost', {
+        mainbody: `You successfully inserted data to the table.`
+      })
+    } else {
+      res.render('insertpost', {
+        mainbody: "Error: No date provided"
+      })
+    }
   });
 
 });
