@@ -15,20 +15,21 @@ app.get('/',(req, res) => {
 app.get('/create',(req, res) => {
   res.render('create')
 })
+app.post('/create',(req, res) => {
+  res.render('create')
+})
 app.post('/search', (req, res) => {
-let tableName= req.body.category
-    db.all(`SELECT * from ${tableName}`, [], (err, rows) => {
-      if (err) {
-        throw err;
-      } else {
-console.log(rows);
-          res.render('search', {
-            data: rows
-          })
-        };
-
+  let tableName= req.body.category;
+  db.all(`SELECT * from ${tableName}`, [], (err, rows) => {
+    if (err) {
+      throw err;
+    } else {
+      console.log(rows);
+      res.render('search', {
+        data: rows
+      });
+    }
   });
-
 })
 
 

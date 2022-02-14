@@ -5,9 +5,12 @@
     <title></title>
   </head>
   <body>
-    <p><% for (var i = 0; i < data.length; i++) { %>
-  <%-  data[i].id %>
-  <% } %>
-  </p>
+    <p>
+      <% for (let item of data) { %>
+        <% for (let column in item) { %>
+          <%- column %>: <%- item[column] %><br>
+        <% } %><br>
+      <% } %>
+    </p>
   </body>
 </html>
