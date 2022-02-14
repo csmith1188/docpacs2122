@@ -2,69 +2,33 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="\css\create.css">
-    <title>Doccle Input</title>
+    <title></title>
   </head>
   <body>
-    <h1>Create a DOCCLE Entry</h1>
-    <br>
     <form action="create" method="post">
-      DATE:
+      Date: <br>
       <input type="text" name="dateBox"> <br>
-      <br>
-      GOALS:
+      Goals: <br>
       <input type="text" name="goalBox"> <br>
-      <br>
-      INCLUDED DOCUMENTATION:
-      Type -
-      <select id="drop" name="dropdown">
-        <option value="blank"></option>
-        <option value="incna">N/A</option>
-        <option value="incprint">Printed</option>
-        <option value="inc2">Page 2</option>
-        <option value="inc3">Page 3</option>
-        <option value="incupload">Upload</option>
-      </select>
-      Assingment Name -
+      Included Documentation: <br>
+      Type
+      <input type="text" name="incdocType">
+      Assingment Name
       <input type="text" name="incdocBox"> <br>
-      <br>
-      REQUIRED DOCUMENTATION:
-      Type -
-      <select id="drop" name="dropdown">
-        <option value="blank2"></option>
-        <option value="reqna">N/A</option>
-        <option value="reqprint">Printed</option>
-        <option value="view">Viewed</option>
-        <option value="write">Written</option>
-        <option value="req2">Page 2</option>
-        <option value="req3">Page 3</option>
-        <option value="requpload">Upload</option>
-      </select>
-      Assingment Name -
+      Required Documentation: <br>
+      Type
+      <input type="text" name="reqdocType">
+      Assingment Name
       <input type="text" name="reqdocBox"> <br>
-      <br>
-      CHANGES:
+      Changes: <br>
       <input type="text" name="changeBox"> <br>
-      <br>
-      EVENTS:
-      Event Date -
+      Events: <br>
+      Event Date
       <input type="text" name="eventDate">
-      Type -
-      <select id="drop" name="dropdown">
-        <option value="blank3"></option>
-        <option value="eventna">N/A</option>
-        <option value="lesson">Lesson</option>
-        <option value="vid">Video</option>
-        <option value="tutorial">Live Tutorial</option>
-        <option value="assess">Assessment</option>
-        <option value="discuss">Discussion</option>
-        <option value="present">Presentation</option>
-        <option value="camp">Bootcamp</option>
-        <option value="opt">Optional</option>
-      </select>
-      Event -
+      Type
+      <input type="text" name="eventType">
+      Event
       <input type="text" name="eventBox"> <br>
-      <br>
       <input type="submit" name="" value="Add">
     </form>
   </body>
