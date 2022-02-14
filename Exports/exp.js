@@ -20,14 +20,14 @@ app.post('/create',(req, res) => {
     res.send("Error: No DocPac date");
   } else {
     let categories = ["changes", "events", "goals", "included", "required"];
-    missingData = false;
+    missingInfo = false;
     categories.forEach(category => {
       if (req.body[category + "Type"] && !req.body[category]) {
-        missingData = true;
-        res.send("Error: Not enough data");
+        missingInfo = true;
+        res.send("Error: Not enough info");
       }
     });
-    if (!missingData) {
+    if (!missingInfo) {
       db.serialize(() => {
         if (req.body.changes) db.run(`INSERT INTO changes ("docPacDate", "text") VALUES ("${req.body.date}", "${req.body.changes}")`);
         if (req.body.events) db.run(`INSERT INTO events ("docPacDate", "eventDate", "type", "text") VALUES ("${req.body.date}", "${req.body.eventDate}", "${req.body.eventsType}", "${req.body.events}")`);
