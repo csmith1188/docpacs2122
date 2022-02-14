@@ -13,7 +13,7 @@ app.listen(8000)
 
 console.log("Listening on port " + port);
 var alldata = {}
-let docpacDate = []
+var docpacDate = []
 
 
 fs.readdir(__dirname + '/data', async (err, files) => {
@@ -39,12 +39,11 @@ fs.readdir(__dirname + '/data', async (err, files) => {
   function docpacSearch(docpacName) {
     for (var x in alldata) {
       //console.log(alldata[x]);
-
       for (var y in alldata[x]) {
         //console.log(alldata[x][y]);
         if (alldata[x][y]["DocPac Date"] == docpacName) {
           console.log(alldata[x][y]);
-          docpacDate.push(alldata[x][y]);
+          //docpacDate.push(alldata[x][y]);
 
         }
       }
@@ -53,13 +52,12 @@ fs.readdir(__dirname + '/data', async (err, files) => {
 
   function typeSearch(typeName) {
     for (var x in alldata) {
-
       //console.log(alldata[x]);
       for (var y in alldata[x]) {
         //console.log(alldata[x][y]);
         if (alldata[x][y]["Type"] == typeName) {
           //console.log(alldata[x][y]);
- }
+        }
       }
     }
   }
@@ -116,6 +114,42 @@ fs.readdir(__dirname + '/data', async (err, files) => {
       }
     }
   }
+  function search(location) {
+      let sql = "";
+      if (location == "goals" || location == "changes") {
+        sql = `SELECT
+                        date date,
+                        text text
+                  FROM ${location}`;
+      } else if (location == "included" || location == "required") {
+        sql = `SELECT
+                        date date,
+                        type type,
+                        name name
+                  FROM ${location}`;
+      } else if (location == "events") {
+        sql = `SELECT
+                        date date,
+                        event event,
+                        type type,
+                        text text
+                  FROM ${location}`;
+      }
+      let db = new sqlite3.Database('db/database.db');
+      db.all(sql, (err, row) => {
+        //console.log(row);
+        docpacDate.push(row)
+        //console.log(docpacDate);
+        if (err) {
+          throw err;
+        }
+      });
+      //console.log(docpacDate);
+      return docpacDate
+      db.close()
+    }
+
+  // close the database connection
 
   // // Search by docpac date (ex: Dec03)
   //docpacSearch('Sep03')
@@ -133,11 +167,14 @@ fs.readdir(__dirname + '/data', async (err, files) => {
 
   app.post('/', (req, res) => {
     let date = {
-      date: req.body.date
+      info: req.body.info
     }
-    docpacSearch(date.date)
+    console.log(date.info);
+    var docPacDate = search(date.info)
+    //console.log(docPacDate);
     res.render('info', {
-      docpacDate: docpacDate
+      docpacDate: docPacDate,
+      info: date.info
     })
   });
   app.post('/cleared', (req, res) => {
