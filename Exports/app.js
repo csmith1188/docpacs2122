@@ -187,9 +187,10 @@ fs.readdir(__dirname + '/data', async (err, files) => {
     res.render("cleared")
   });
   app.post('/insert', (req, res) => {
+    let db = new sqlite3.Database('db/database.db');
+    db.serialize(() => {
     if (req.body.date) {
       if (req.body.goals) {
-        let db = new sqlite3.Database('db/database.db');
         db.run(`INSERT INTO "goals" (date, text) VALUES("${req.body.date}", "${req.body.goals}")`, function(err) {
           if (err) {
             return console.log(err.message);
@@ -198,10 +199,8 @@ fs.readdir(__dirname + '/data', async (err, files) => {
           console.log(`A row has been inserted with rowid ${this.changes}`);
         });
         // close the database connection
-        db.close();
       }
       if (req.body.changes) {
-        let db = new sqlite3.Database('db/database.db');
         db.run(`INSERT INTO "changes" (date, text) VALUES("${req.body.date}", "${req.body.changes}")`, function(err) {
           if (err) {
             return console.log(err.message);
@@ -210,10 +209,8 @@ fs.readdir(__dirname + '/data', async (err, files) => {
           console.log(`A row has been inserted with rowid ${this.changes}`);
         });
         // close the database connection
-        db.close();
       }
       if (req.body.event && req.body.event_type && req.body.event_text) {
-        let db = new sqlite3.Database('db/database.db');
         db.run(`INSERT INTO "events" (date, event, type, text) VALUES("${req.body.date}", "${req.body.event}", "${req.body.event_type}", "${req.body.event_text}")`, function(err) {
           if (err) {
             return console.log(err.message);
@@ -222,10 +219,8 @@ fs.readdir(__dirname + '/data', async (err, files) => {
           console.log(`A row has been inserted with rowid ${this.changes}`);
         });
         // close the database connection
-        db.close();
       }
       if (req.body.included_type && req.body.included_text) {
-        let db = new sqlite3.Database('db/database.db');
         db.run(`INSERT INTO "included" (date, type, name) VALUES("${req.body.date}", "${req.body.included_type}", "${req.body.included_text}")`, function(err) {
           if (err) {
             return console.log(err.message);
@@ -234,10 +229,8 @@ fs.readdir(__dirname + '/data', async (err, files) => {
           console.log(`A row has been inserted with rowid ${this.changes}`);
         });
         // close the database connection
-        db.close();
       }
       if (req.body.required_type && req.body.required_text) {
-        let db = new sqlite3.Database('db/database.db');
         db.run(`INSERT INTO "required" (date, type, name) VALUES("${req.body.date}", "${req.body.required_type}", "${req.body.required_text}")`, function(err) {
           if (err) {
             return console.log(err.message);
@@ -246,7 +239,6 @@ fs.readdir(__dirname + '/data', async (err, files) => {
           console.log(`A row has been inserted with rowid ${this.changes}`);
         });
         // close the database connection
-        db.close();
       }
       res.render('insertpost', {
         mainbody: `You successfully inserted data to the table.`
@@ -256,6 +248,8 @@ fs.readdir(__dirname + '/data', async (err, files) => {
         mainbody: "Error: No date provided"
       })
     }
+  })
+  db.close()
   });
 
 });
