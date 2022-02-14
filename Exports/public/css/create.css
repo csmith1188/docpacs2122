@@ -2,3 +2,20 @@ h1 {
   text-align: center;
   font-size: 70px;
 }
+form {
+  margin-left: 450px;
+  font-size: 30px
+}
+input[type=button], input[type=submit], input[type=reset] {
+  height: 50px;
+  width: 100px;
+  color: white;
+  background-color: #404040;
+  border-radius: 5px;
+  border-style: inset;
+  margin-left: 900px;
+  font-size: 25px;
+}
+input[type=text] {
+  height: 25px;
+  border-radius: 5px;
