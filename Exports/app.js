@@ -11,7 +11,13 @@ let db = new sqlite3.Database('sql.db', (err) => {
  console.log('Connected to the db database.');
 });
 
+var error = []
 var search = []
+let goallo = 'INSERT INTO Goals(date,goal) VALUES(?,?)';
+let includedDoclo = 'INSERT INTO IncludedDocumentation(date,Type,AssignmentNamei) VALUES(?,?,?)';
+let requiredDoclo = 'INSERT INTO IncludedDocumentation(date,Type,AssingmentName) VALUES(?,?,?)';
+let eventlo = 'INSERT INTO Events(date,EventData,Type,Event) VALUES(?,?,?,?)';
+let changelo = 'INSERT INTO Changes(date,Changes) VALUES(?,?)';
 //db.close();
 console.log("last");
 app.get('/', function(req,res){
@@ -24,8 +30,64 @@ app.get('/', function(req,res){
 })
 
 app.get('/create', function(req,res){
-  res.render('create')
+  res.render('create',
+          {error: ""  })
 })
+
+
+
+app.post('/create', function(req,res){
+
+if (req.body.dateBox) {
+  if (req.body.goalBox) {
+    let goalvalue = [req.body.dateBox,req.body.goalBox]
+    db.serialize(function () {db.run(goallo, goalvalue )})
+  } /*
+  if (req.body.incdocType || req.body.incdocBox) {
+
+    if (req.body.incdocBox && req.body.incdocType) {
+      let incdocvalue = [req.body.dateBox,req.body.incdocType,req.body.incdocBox]
+      db.serialize(function () {db.run(includedDoclo, incdocvalue )})
+    } else {
+      error.push(" included documentation does not have all data")
+    }
+  }
+  if (req.body.reqdocType || req.body.reqdocBox) {
+    if (req.body.reqdocBox && req.body.reqdocType) {
+    let reqdocvalue = [req.body.dateBox,req.body.reqdocType,req.body.reqdocBox]
+    db.serialize(function () {db.run(requiredDoclo, reqdocvalue )})
+    } else {error.push("required documentation does not have all data ")}
+}
+  if (req.body.changeBox) {
+  let changevalue = [req.body.dateBox,req.body.changeBox]
+  db.serialize(function () {db.run(changelo, changevalue )})
+  }
+  if (req.body.eventDate || req.body.eventType || req.body.eventBox) {
+    if (req.body.eventType && req.body.eventBox && req.body.eventDate) {
+    let eventvalue = [req.body.dateBox,req.body.eventDate,req.body.eventType,req.body.eventBox]
+    db.serialize(function () {db.run(eventlo, eventvalue )})
+    } else { error.push("event does not have all the data") }
+} */
+} else {
+error.push("no date")
+
+}
+
+
+if (error) {
+  res.render('create',
+  { error: error})
+
+  }
+ else {
+  res.render('create',
+  { error: ""})
+}
+console.log(error);
+error = []
+
+})
+
 
 app.post('/', function(req,res){
   var found = 0
