@@ -15,7 +15,7 @@ var error = []
 var search = []
 let goallo = 'INSERT INTO Goals(date,goal) VALUES(?,?)';
 let includedDoclo = 'INSERT INTO IncludedDocumentation(date,Type,AssignmentNamei) VALUES(?,?,?)';
-let requiredDoclo = 'INSERT INTO IncludedDocumentation(date,Type,AssingmentName) VALUES(?,?,?)';
+let requiredDoclo = 'INSERT INTO RequiredDocumentation(date,Type,AssingmentName) VALUES(?,?,?)';
 let eventlo = 'INSERT INTO Events(date,EventData,Type,Event) VALUES(?,?,?,?)';
 let changelo = 'INSERT INTO Changes(date,Changes) VALUES(?,?)';
 //db.close();
@@ -42,7 +42,7 @@ if (req.body.dateBox) {
   if (req.body.goalBox) {
     let goalvalue = [req.body.dateBox,req.body.goalBox]
     db.serialize(function () {db.run(goallo, goalvalue )})
-  } /*
+  }
   if (req.body.incdocType || req.body.incdocBox) {
 
     if (req.body.incdocBox && req.body.incdocType) {
@@ -67,7 +67,7 @@ if (req.body.dateBox) {
     let eventvalue = [req.body.dateBox,req.body.eventDate,req.body.eventType,req.body.eventBox]
     db.serialize(function () {db.run(eventlo, eventvalue )})
     } else { error.push("event does not have all the data") }
-} */
+}
 } else {
 error.push("no date")
 
