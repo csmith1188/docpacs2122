@@ -1,18 +1,26 @@
 <!DOCTYPE html>
 <style media="screen">
 body {
-background-color: #737737;
-color: black;
+background-color: black;
+color: #39FF14;
+
 }
 
 h1 {
-background-color: grey;
-color: black;
+background-color: black;
+color: #39FF14;
 }
 
 div {
 background-color: black;
-color: white;
+border-color: #39FF14;
+color: #39FF14;
+}
+#submit{
+  background-color: black;
+  border-color: #39FF14;
+  color: #39FF14;
+  display: inline-block;
 }
 
 form  { display: table;      }
@@ -22,6 +30,19 @@ input { display: table-cell; }
 
 </style>
 <html lang="en" dir="ltr">
+<style media="screen">
+  input:invalid {
+    border: 2px dashed red;
+  }
+
+  input:invalid:required {
+    background-image: linear-gradient(to right, pink, lightgreen);
+  }
+
+  input:valid {
+    border: 2px solid black;
+  }
+</style>
 
 <head>
   <meta charset="utf-8">
@@ -32,7 +53,7 @@ input { display: table-cell; }
 <body>
   <form action="/insert" method="post">
     Date:
-    <td align="right"><input id="a" type="text" name="date"></td>
+    <input type="text" name="date" required maxlength="5">
     <br>
     <br>
     Goals:

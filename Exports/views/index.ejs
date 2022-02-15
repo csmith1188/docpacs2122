@@ -1,18 +1,30 @@
 <!DOCTYPE html>
 <style media="screen">
 body {
-background-color: grey;
-color: black;
+background-color: black;
+color: #39FF14;
 }
 
 h1 {
-background-color: grey;
-color: black;
+background-color: black;
+color: #39FF14;
 }
 
 div {
 background-color: black;
 color: white;
+}
+#submit{
+  background-color: black;
+  border-color: #39FF14;
+  color: #39FF14;
+  display: inline-block;
+}
+#nfo{
+  background-color: black;
+  border-color: #39FF14;
+  color: #39FF14;
+  display: inline-block;
 }
 </style>
 <html lang="en" dir="ltr">
@@ -44,15 +56,15 @@ color: white;
       <!-- Info: <input type="text" name="info"> (Changes, Events, Goals, Included, Required) -->
       <br>
       <br>
-      <input type="submit" name="Submit" value="Submit">
+      <input type="submit" name="Submit" value="Submit" id="submit">
     </form>
     <form action="/cleared" method="post">
-      <input type="submit" name="Clear Cache" value="Clear Cache">
+      <input type="submit" name="Clear Cache" value="Clear Cache" id="submit">
     </form>
     <div class="items">
     </div>
     <br>
-    <button type="button" name="Insert"><a href="insert">Insert</a></button>
+    <button type="button" name="Insert" id="submit"><a id="submit" href="insert">Insert</a></button>
 </body>
 
 </html>
