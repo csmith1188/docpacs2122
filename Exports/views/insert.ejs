@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <style media="screen">
 body {
-background-color: grey;
+background-color: #737737;
 color: black;
 }
 
@@ -14,6 +14,12 @@ div {
 background-color: black;
 color: white;
 }
+
+form  { display: table;      }
+p     { display: table-row;  }
+label { display: table-cell; }
+input { display: table-cell; }
+
 </style>
 <html lang="en" dir="ltr">
 
@@ -26,7 +32,7 @@ color: white;
 <body>
   <form action="/insert" method="post">
     Date:
-    <input type="text" name="date">
+    <td align="right"><input id="a" type="text" name="date"></td>
     <br>
     <br>
     Goals:
@@ -42,9 +48,9 @@ color: white;
     <br>
     Event Date: <input type="text" name="event" value="">
     <br>
-    Type: <input type="text" name="event_type" value="">
+    Type:  <input type="text" name="event_type" value="">
     <br>
-    Text: <input type="text" name="event_text" value="">
+    Text:  <input type="text" name="event_text" value="">
     <br>
     <br>
     Included Documentation:
