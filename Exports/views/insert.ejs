@@ -23,6 +23,19 @@ color: #39FF14;
 }
 </style>
 <html lang="en" dir="ltr">
+<style media="screen">
+  input:invalid {
+    border: 2px dashed red;
+  }
+
+  input:invalid:required {
+    background-image: linear-gradient(to right, pink, lightgreen);
+  }
+
+  input:valid {
+    border: 2px solid black;
+  }
+</style>
 
 <head>
   <meta charset="utf-8">
@@ -33,7 +46,7 @@ color: #39FF14;
 <body>
   <form action="/insert" method="post">
     Date:
-    <input type="text" name="date">
+    <input type="text" name="date" required maxlength="5">
     <br>
     <br>
     Goals:
