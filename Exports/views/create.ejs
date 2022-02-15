@@ -17,7 +17,7 @@
       <br>
       INCLUDED DOCUMENTATION:
       Type -
-      <select id="drop" name="dropdown">
+      <select id="drop" name="incdocType">
         <option value="blank"></option>
         <option value="incna">N/A</option>
         <option value="incprint">Printed</option>
@@ -30,7 +30,7 @@
       <br>
       REQUIRED DOCUMENTATION:
       Type -
-      <select id="drop" name="dropdown">
+      <select id="drop" name="reqdocType">
         <option value="blank2"></option>
         <option value="reqna">N/A</option>
         <option value="reqprint">Printed</option>
@@ -50,7 +50,7 @@
       Event Date -
       <input type="text" name="eventDate">
       Type -
-      <select id="drop" name="dropdown">
+      <select id="drop" name="eventType">
         <option value="blank3"></option>
         <option value="eventna">N/A</option>
         <option value="lesson">Lesson</option>
@@ -65,7 +65,9 @@
       Event -
       <input type="text" name="eventBox"> <br>
       <br>
+      <%= error %>
       <input type="submit" name="" value="Add">
+
     </form>
   </body>
 </html>
