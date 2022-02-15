@@ -11,6 +11,9 @@ let db = new sqlite3.Database('sql.db', (err) => {
  console.log('Connected to the db database.');
 });
 
+
+var month = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+var day = [31,28,31,30,31,30,31,31,30,31,30,31]
 var error = []
 var search = []
 let goallo = 'INSERT INTO Goals(date,goal) VALUES(?,?)';
@@ -18,6 +21,7 @@ let includedDoclo = 'INSERT INTO IncludedDocumentation(date,Type,AssignmentNamei
 let requiredDoclo = 'INSERT INTO RequiredDocumentation(date,Type,AssingmentName) VALUES(?,?,?)';
 let eventlo = 'INSERT INTO Events(date,EventData,Type,Event) VALUES(?,?,?,?)';
 let changelo = 'INSERT INTO Changes(date,Changes) VALUES(?,?)';
+let valid = false
 //db.close();
 console.log("last");
 app.get('/', function(req,res){
@@ -35,10 +39,31 @@ app.get('/create', function(req,res){
 })
 
 
-
 app.post('/create', function(req,res){
 
-if (req.body.dateBox) {
+
+
+for (var i = 0; i < month.length; i++) {
+
+if (req.body.dateBox.length == 5){
+  if (req.body.dateBox.slice(0,3) == month[i]){
+    console.log("MONTH TEST COMPLETE AND WORKING");
+    if(Number(req.body.dateBox.slice(3,5)) <= day[i] && Number(req.body.dateBox.slice(3,5)) != 0 ){
+      console.log(Number(req.body.dateBox.slice(3,5)));
+      valid = true
+    }
+
+  }
+}
+}
+
+
+
+
+
+
+if (req.body.dateBox && valid) {
+  console.log("valid test ");
   if (req.body.goalBox) {
     let goalvalue = [req.body.dateBox,req.body.goalBox]
     db.serialize(function () {db.run(goallo, goalvalue )})
@@ -73,7 +98,7 @@ error.push("no date")
 
 }
 
-
+valid = false
 if (error) {
   res.render('create',
   { error: error})
