@@ -211,6 +211,7 @@ fs.readdir(__dirname + '/data', async (err, files) => {
         // close the database connection
       }
       if (req.body.event && req.body.event_type && req.body.event_text) {
+        var errorCodeEvent = ""
         db.run(`INSERT INTO "events" (date, event, type, text) VALUES("${req.body.date}", "${req.body.event}", "${req.body.event_type}", "${req.body.event_text}")`, function(err) {
           if (err) {
             return console.log(err.message);
@@ -219,8 +220,11 @@ fs.readdir(__dirname + '/data', async (err, files) => {
           console.log(`A row has been inserted with rowid ${this.changes}`);
         });
         // close the database connection
+      } else if (req.body.event || req.body.event_type || req.body.event_text) {
+        var errorCodeEvent = "Error: Event section wasn't filled out correctly"
       }
       if (req.body.included_type && req.body.included_text) {
+        var errorCodeIncluded = ""
         db.run(`INSERT INTO "included" (date, type, name) VALUES("${req.body.date}", "${req.body.included_type}", "${req.body.included_text}")`, function(err) {
           if (err) {
             return console.log(err.message);
@@ -229,8 +233,11 @@ fs.readdir(__dirname + '/data', async (err, files) => {
           console.log(`A row has been inserted with rowid ${this.changes}`);
         });
         // close the database connection
+      } else if (req.body.included_type || req.body.included_text) {
+        var errorCodeIncluded = "Error: Included section wasn't filled out correctly"
       }
       if (req.body.required_type && req.body.required_text) {
+        var errorCodeRequired = ""
         db.run(`INSERT INTO "required" (date, type, name) VALUES("${req.body.date}", "${req.body.required_type}", "${req.body.required_text}")`, function(err) {
           if (err) {
             return console.log(err.message);
@@ -239,10 +246,26 @@ fs.readdir(__dirname + '/data', async (err, files) => {
           console.log(`A row has been inserted with rowid ${this.changes}`);
         });
         // close the database connection
+      } else if (req.body.required_type || req.body.required_text) {
+        var errorCodeRequired = "Error: Required section wasn't filled out correctly"
       }
+      if (errorCodeEvent || errorCodeIncluded || errorCodeRequired) {
+        var errorCode = ""
+        if (errorCodeEvent) {
+           errorCode = errorCodeEvent
+        } else if (errorCodeIncluded) {
+           errorCode = errorCodeIncluded
+        } else if (errorCodeRequired) {
+           errorCode = errorCodeRequired
+        }
+        res.render('insertpost', {
+          mainbody: errorCode
+        })
+      } else {
       res.render('insertpost', {
         mainbody: `You successfully inserted data to the table.`
       })
+    }
     } else {
       res.render('insertpost', {
         mainbody: "Error: No date provided"
