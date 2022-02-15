@@ -39,31 +39,26 @@ if (req.body.dateBox) {
     let goalvalue = [req.body.dateBox,req.body.goalBox]
     db.serialize(function () {db.run(goallo, goalvalue )})
   } /*
-  if (req.body.incdocType) {
+  if (req.body.incdocType || req.body.incdocBox) {
 
-    if (req.body.incdocBox) {
+    if (req.body.incdocBox && req.body.incdocType) {
 
     } else {
       error.push(" included documentation does not have all data")
     }
   }
-  if (req.body.reqdocType) {
-    if (req.body.reqdocBox) {
+  if (req.body.reqdocType || req.body.reqdocBox) {
+    if (req.body.reqdocBox && req.body.reqdocType) {
 
-    } else {error.push("required documentation does not have all data ")
-  }
+    } else {error.push("required documentation does not have all data ")}
 }
   if (req.body.changeBox) {
 
   }
-  if (req.body.eventDate) {
-    if (req.body.eventType) {
-        if (req.body.eventBox) {
+  if (req.body.eventDate || req.body.eventType || req.body.eventBox) {
+    if (req.body.eventType && req.body.eventBox && req.body.eventDate) {
 
-        } else { error.push("event does not have all the data")
-      }
-    } else { error.push("event does not have all the data")
-  }
+    } else { error.push("event does not have all the data") }
 } */
 } else {
 error.push("no date")
