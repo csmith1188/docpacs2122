@@ -1,11 +1,30 @@
 <!DOCTYPE html>
+<style media="screen">
+body {
+background-color: grey;
+color: black;
+}
+
+h1 {
+background-color: grey;
+color: black;
+}
+
+div {
+background-color: black;
+color: white;
+}
+</style>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    <h1>Hello</h1>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+  <h1>Must Reload Next Page to see Info</h1>
+  <h1>Must be lowercase</h2>
     <form action="/" method="post">
       <p1>Docpac Search</p1>
       <br>
@@ -13,7 +32,16 @@
       <!-- Docpac Date?: <input type="text" name="date"> (MMMDD)
       <br>
       <br> -->
-      Info: <input type="text" name="info"> (Changes, Events, Goals, Included, Required)
+
+      <label for="info">Choose your Info</label>
+      <select name="info" id="nfo">
+        <option value="goals">Goals</option>
+        <option value="changes">Changes</option>
+        <option value="included">Included</option>
+        <option value="required">Required</option>
+        <option value="events">Events</option>
+      </select>
+      <!-- Info: <input type="text" name="info"> (Changes, Events, Goals, Included, Required) -->
       <br>
       <br>
       <input type="submit" name="Submit" value="Submit">
@@ -23,5 +51,8 @@
     </form>
     <div class="items">
     </div>
-  </body>
+    <br>
+    <button type="button" name="Insert"><a href="insert">Insert</a></button>
+</body>
+
 </html>

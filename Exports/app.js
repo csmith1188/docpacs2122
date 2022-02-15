@@ -114,40 +114,41 @@ fs.readdir(__dirname + '/data', async (err, files) => {
       }
     }
   }
+
   function search(location) {
-      let sql = "";
-      if (location == "goals" || location == "changes") {
-        sql = `SELECT
+    let sql = "";
+    if (location == "goals" || location == "changes") {
+      sql = `SELECT
                         date date,
                         text text
                   FROM ${location}`;
-      } else if (location == "included" || location == "required") {
-        sql = `SELECT
+    } else if (location == "included" || location == "required") {
+      sql = `SELECT
                         date date,
                         type type,
                         name name
                   FROM ${location}`;
-      } else if (location == "events") {
-        sql = `SELECT
+    } else if (location == "events") {
+      sql = `SELECT
                         date date,
                         event event,
                         type type,
                         text text
                   FROM ${location}`;
-      }
-      let db = new sqlite3.Database('db/database.db');
-      db.all(sql, (err, row) => {
-        //console.log(row);
-        docpacDate.push(row)
-        //console.log(docpacDate);
-        if (err) {
-          throw err;
-        }
-      });
-      //console.log(docpacDate);
-      return docpacDate
-      db.close()
     }
+    let db = new sqlite3.Database('db/database.db');
+    db.all(sql, (err, row) => {
+      //console.log(row);
+      docpacDate.push(row)
+      //console.log(docpacDate);
+      if (err) {
+        throw err;
+      }
+    });
+    //console.log(docpacDate);
+    return docpacDate
+    db.close()
+  }
 
   // close the database connection
 
@@ -164,11 +165,15 @@ fs.readdir(__dirname + '/data', async (err, files) => {
   app.get('/cleared', (req, res) => {
     res.render('cleared')
   });
+  app.get('/insert', (req, res) => {
+    res.render('insert')
+  });
 
   app.post('/', (req, res) => {
     let date = {
       info: req.body.info
     }
+    console.log(date.info);
     var docPacDate = search(date.info)
     //console.log(docPacDate);
     res.render('info', {
@@ -180,6 +185,71 @@ fs.readdir(__dirname + '/data', async (err, files) => {
     docpacDate = []
     console.log(docpacDate);
     res.render("cleared")
+  });
+  app.post('/insert', (req, res) => {
+    let db = new sqlite3.Database('db/database.db');
+    db.serialize(() => {
+    if (req.body.date) {
+      if (req.body.goals) {
+        db.run(`INSERT INTO "goals" (date, text) VALUES("${req.body.date}", "${req.body.goals}")`, function(err) {
+          if (err) {
+            return console.log(err.message);
+          }
+          // get the last insert id
+          console.log(`A row has been inserted with rowid ${this.changes}`);
+        });
+        // close the database connection
+      }
+      if (req.body.changes) {
+        db.run(`INSERT INTO "changes" (date, text) VALUES("${req.body.date}", "${req.body.changes}")`, function(err) {
+          if (err) {
+            return console.log(err.message);
+          }
+          // get the last insert id
+          console.log(`A row has been inserted with rowid ${this.changes}`);
+        });
+        // close the database connection
+      }
+      if (req.body.event && req.body.event_type && req.body.event_text) {
+        db.run(`INSERT INTO "events" (date, event, type, text) VALUES("${req.body.date}", "${req.body.event}", "${req.body.event_type}", "${req.body.event_text}")`, function(err) {
+          if (err) {
+            return console.log(err.message);
+          }
+          // get the last insert id
+          console.log(`A row has been inserted with rowid ${this.changes}`);
+        });
+        // close the database connection
+      }
+      if (req.body.included_type && req.body.included_text) {
+        db.run(`INSERT INTO "included" (date, type, name) VALUES("${req.body.date}", "${req.body.included_type}", "${req.body.included_text}")`, function(err) {
+          if (err) {
+            return console.log(err.message);
+          }
+          // get the last insert id
+          console.log(`A row has been inserted with rowid ${this.changes}`);
+        });
+        // close the database connection
+      }
+      if (req.body.required_type && req.body.required_text) {
+        db.run(`INSERT INTO "required" (date, type, name) VALUES("${req.body.date}", "${req.body.required_type}", "${req.body.required_text}")`, function(err) {
+          if (err) {
+            return console.log(err.message);
+          }
+          // get the last insert id
+          console.log(`A row has been inserted with rowid ${this.changes}`);
+        });
+        // close the database connection
+      }
+      res.render('insertpost', {
+        mainbody: `You successfully inserted data to the table.`
+      })
+    } else {
+      res.render('insertpost', {
+        mainbody: "Error: No date provided"
+      })
+    }
+  })
+  db.close()
   });
 
 });
