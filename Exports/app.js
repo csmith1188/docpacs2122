@@ -47,7 +47,6 @@ for (var i = 0; i < month.length; i++) {
 
 if (req.body.dateBox.length == 5){
   if (req.body.dateBox.slice(0,3) == month[i]){
-    console.log("MONTH TEST COMPLETE AND WORKING");
     if(Number(req.body.dateBox.slice(3,5)) <= day[i] && Number(req.body.dateBox.slice(3,5)) != 0 ){
       console.log(Number(req.body.dateBox.slice(3,5)));
       valid = true
@@ -97,18 +96,18 @@ if (req.body.dateBox && valid) {
 
 valid = false
 if (error.length >= 1) {
-  console.log("error")
+
   res.render('create',
   { error: error})
 
   }
  else {
-console.log("is it working");
+
 
 if (goalvalue) {
   db.serialize(function () {db.run(goallo, goalvalue )})
   goalvalue = []
-  console.log("is it working");
+
 }
 
 if (incdocvalue) {
