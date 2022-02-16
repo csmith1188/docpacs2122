@@ -65,13 +65,13 @@ if (req.body.dateBox.length == 5){
 if (req.body.dateBox && valid) {
   console.log("valid test ");
   if (req.body.goalBox) {
-    let goalvalue = [req.body.dateBox,req.body.goalBox]
+    var goalvalue = [req.body.dateBox,req.body.goalBox]
 
   }
   if (req.body.incdocType || req.body.incdocBox) {
 
     if (req.body.incdocBox && req.body.incdocType) {
-      let incdocvalue = [req.body.dateBox,req.body.incdocType,req.body.incdocBox]
+      var incdocvalue = [req.body.dateBox,req.body.incdocType,req.body.incdocBox]
 
     } else {
       error.push(" included documentation does not have all data")
@@ -79,16 +79,16 @@ if (req.body.dateBox && valid) {
   }
   if (req.body.reqdocType || req.body.reqdocBox) {
     if (req.body.reqdocBox && req.body.reqdocType) {
-    let reqdocvalue = [req.body.dateBox,req.body.reqdocType,req.body.reqdocBox]
+    var reqdocvalue = [req.body.dateBox,req.body.reqdocType,req.body.reqdocBox]
 
     } else {error.push("required documentation does not have all data ")}
 }
   if (req.body.changeBox) {
-  let changevalue = [req.body.dateBox,req.body.changeBox]
+  var changevalue = [req.body.dateBox,req.body.changeBox]
   }
   if (req.body.eventDate || req.body.eventType || req.body.eventBox) {
     if (req.body.eventType && req.body.eventBox && req.body.eventDate) {
-    let eventvalue = [req.body.dateBox,req.body.eventDate,req.body.eventType,req.body.eventBox]
+    var eventvalue = [req.body.dateBox,req.body.eventDate,req.body.eventType,req.body.eventBox]
 
     } else { error.push("event does not have all the data") }
 }
@@ -101,17 +101,19 @@ if (req.body.dateBox && valid) {
 }
 
 valid = false
-if (error) {
+if (error.length >= 1) {
+  console.log("error")
   res.render('create',
   { error: error})
 
   }
  else {
-
+console.log("is it working");
 
 if (goalvalue) {
   db.serialize(function () {db.run(goallo, goalvalue )})
   goalvalue = []
+  console.log("is it working");
 }
 
 if (incdocvalue) {
