@@ -56,11 +56,6 @@ if (req.body.dateBox.length == 5){
 }
 }
 
-
-
-
-
-
 if (req.body.dateBox && valid) {
   console.log("valid test ");
   if (req.body.goalBox) {
