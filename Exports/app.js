@@ -66,13 +66,13 @@ if (req.body.dateBox && valid) {
   console.log("valid test ");
   if (req.body.goalBox) {
     let goalvalue = [req.body.dateBox,req.body.goalBox]
-    db.serialize(function () {db.run(goallo, goalvalue )})
+
   }
   if (req.body.incdocType || req.body.incdocBox) {
 
     if (req.body.incdocBox && req.body.incdocType) {
       let incdocvalue = [req.body.dateBox,req.body.incdocType,req.body.incdocBox]
-      db.serialize(function () {db.run(includedDoclo, incdocvalue )})
+
     } else {
       error.push(" included documentation does not have all data")
     }
@@ -80,21 +80,23 @@ if (req.body.dateBox && valid) {
   if (req.body.reqdocType || req.body.reqdocBox) {
     if (req.body.reqdocBox && req.body.reqdocType) {
     let reqdocvalue = [req.body.dateBox,req.body.reqdocType,req.body.reqdocBox]
-    db.serialize(function () {db.run(requiredDoclo, reqdocvalue )})
+
     } else {error.push("required documentation does not have all data ")}
 }
   if (req.body.changeBox) {
   let changevalue = [req.body.dateBox,req.body.changeBox]
-  db.serialize(function () {db.run(changelo, changevalue )})
   }
   if (req.body.eventDate || req.body.eventType || req.body.eventBox) {
     if (req.body.eventType && req.body.eventBox && req.body.eventDate) {
     let eventvalue = [req.body.dateBox,req.body.eventDate,req.body.eventType,req.body.eventBox]
-    db.serialize(function () {db.run(eventlo, eventvalue )})
+
     } else { error.push("event does not have all the data") }
 }
 } else {
-error.push("no date")
+  if (valid == false) {
+    error.push("Need to be in a MMMDD format")
+  } else {error.push("no date") }
+
 
 }
 
@@ -105,6 +107,38 @@ if (error) {
 
   }
  else {
+
+
+if (goalvalue) {
+  db.serialize(function () {db.run(goallo, goalvalue )})
+  goalvalue = []
+}
+
+if (incdocvalue) {
+  db.serialize(function () {db.run(includedDoclo, incdocvalue )})
+  incdocvalue = []
+}
+
+
+if (reqdocvalue) {
+  db.serialize(function () {db.run(requiredDoclo, reqdocvalue )})
+  reqdocvalue = []
+}
+
+
+
+if (changevalue) {
+  db.serialize(function () {db.run(changelo, changevalue )})
+changevalue = []
+}
+
+if (eventvalue) {
+  db.serialize(function () {db.run(eventlo, eventvalue )})
+  eventvalue = []
+}
+
+
+
   res.render('create',
   { error: ""})
 }
@@ -213,5 +247,5 @@ app.post('/', function(req,res){
     }
 })
 
-
+console.log("listing at port 8000");
 app.listen(8000)
