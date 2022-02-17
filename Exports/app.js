@@ -95,7 +95,7 @@ if (req.body.dateBox && valid) {
         }
       }
       }
-      if (eventvalid){
+      if (eventvalid && req.body.eventDate){
         var eventvalue = [req.body.dateBox,req.body.eventDate,req.body.eventType,req.body.eventBox];
         eventvalid = false
       } else {error.push("eventDate is not in MMMDD format" )}
@@ -116,7 +116,7 @@ if (req.body.dateBox && valid) {
       }
       }
 
-      if (eventvalid && req.body.eventDate){
+      if (eventvalid){
         error.push("event does not have all the data")
         eventvalid = false
       } else {error.push("eventDate is not in MMMDD format and event does not have all the data" )}
