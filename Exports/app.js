@@ -22,6 +22,7 @@ let requiredDoclo = 'INSERT INTO RequiredDocumentation(date,Type,AssingmentName)
 let eventlo = 'INSERT INTO Events(date,EventData,Type,Event) VALUES(?,?,?,?)';
 let changelo = 'INSERT INTO Changes(date,Changes) VALUES(?,?)';
 let valid = false
+var eventvalid = false
 //db.close();
 console.log("last");
 app.get('/', function(req,res){
@@ -82,12 +83,50 @@ if (req.body.dateBox && valid) {
   }
   if (req.body.eventDate || req.body.eventType || req.body.eventBox) {
     if (req.body.eventType && req.body.eventBox && req.body.eventDate) {
-    var eventvalue = [req.body.dateBox,req.body.eventDate,req.body.eventType,req.body.eventBox]
+      for (var i = 0; i < month.length; i++) {
 
-    } else { error.push("event does not have all the data") }
+      if (req.body.eventDate.length == 5){
+        if (req.body.eventDate.slice(0,3) == month[i]){
+          if(Number(req.body.eventDate.slice(3,5)) <= day[i] && Number(req.body.eventDate.slice(3,5)) != 0 ){
+
+            eventvalid = true
+          }
+
+        }
+      }
+      }
+      if (eventvalid && req.body.eventDate){
+        var eventvalue = [req.body.dateBox,req.body.eventDate,req.body.eventType,req.body.eventBox];
+        eventvalid = false
+      } else {error.push("eventDate is not in MMMDD format" )}
+
+
+    } else {
+      if (req.body.eventDate){
+      for (var i = 0; i < month.length; i++) {
+
+      if (req.body.eventDate.length == 5){
+        if (req.body.eventDate.slice(0,3) == month[i]){
+          if(Number(req.body.eventDate.slice(3,5)) <= day[i] && Number(req.body.eventDate.slice(3,5)) != 0 ){
+
+            eventvalid = true
+          }
+
+        }
+      }
+      }
+    }
+      if (eventvalid == false){
+        error.push("event does not have all the data")
+        eventvalid = false
+      } else {error.push("eventDate is not in MMMDD format and event does not have all the data" )}
+
+
+
+     }
 }
 } else {
-  if (valid == false) {
+  if (valid == false && req.body.dateBox) {
     error.push("Need to be in a MMMDD format")
   } else {error.push("no date") }
 
@@ -95,6 +134,7 @@ if (req.body.dateBox && valid) {
 }
 
 valid = false
+eventvalid = false
 if (error.length >= 1) {
 
   res.render('create',
