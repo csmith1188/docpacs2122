@@ -102,7 +102,7 @@ if (req.body.dateBox && valid) {
 
 
     } else {
-      if (req.body.eventDate){}
+      if (req.body.eventDate){
       for (var i = 0; i < month.length; i++) {
 
       if (req.body.eventDate.length == 5){
@@ -115,8 +115,8 @@ if (req.body.dateBox && valid) {
         }
       }
       }
-
-      if (eventvalid){
+    }
+      if (eventvalid == false){
         error.push("event does not have all the data")
         eventvalid = false
       } else {error.push("eventDate is not in MMMDD format and event does not have all the data" )}
