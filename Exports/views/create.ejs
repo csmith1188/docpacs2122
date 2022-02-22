@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="\css\create.css">
+    <title>Doccle Input</title>
+  </head>
+  <body>
+    <h1>Create a DOCCLE Entry</h1>
+    <br>
+    <form action="/create" method="post">
+      DATE:
+      <input type="text" name="dateBox"> <br>
+      <br>
+      GOALS:
+      <input type="text" name="goalBox"> <br>
+      <br>
+      INCLUDED DOCUMENTATION:
+      Type -
+      <select id="drop" name="incdocType">
+        <option value=""></option>
+        <option value="N/A">N/A</option>
+        <option value="Printed">Printed</option>
+        <option value="Page 2">Page 2</option>
+        <option value="Page 3">Page 3</option>
+        <option value="Upload">Upload</option>
+      </select>
+      Assingment Name -
+      <input type="text" name="incdocBox"> <br>
+      <br>
+      REQUIRED DOCUMENTATION:
+      Type -
+      <select id="drop" name="reqdocType">
+        <option value=""></option>
+        <option value="N/A">N/A</option>
+        <option value="Printed">Printed</option>
+        <option value="Viewed">Viewed</option>
+        <option value="Written">Written</option>
+        <option value="Page 2">Page 2</option>
+        <option value="Page 3">Page 3</option>
+        <option value="Upload">Upload</option>
+      </select>
+      Assingment Name -
+      <input type="text" name="reqdocBox"> <br>
+      <br>
+      CHANGES:
+      <input type="text" name="changeBox"> <br>
+      <br>
+      EVENTS:
+      Event Date -
+      <input type="text" name="eventDate">
+      Type -
+      <select id="drop" name="eventType">
+        <option value=""></option>
+        <option value="N/A">N/A</option>
+        <option value="Lesson">Lesson</option>
+        <option value="Video">Video</option>
+        <option value="Live Tutorial">Live Tutorial</option>
+        <option value="Assessment">Assessment</option>
+        <option value="Discussion">Discussion</option>
+        <option value="Presentation">Presentation</option>
+        <option value="Bootcamp">Bootcamp</option>
+        <option value="Optional">Optional</option>
+      </select>
+      Event -
+      <input type="text" name="eventBox"> <br>
+      <br>
+      <%= error %>
+      <input type="submit" name="" value="Add">
+
+    </form>
+  </body>
+</html>
