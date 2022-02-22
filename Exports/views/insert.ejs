@@ -3,6 +3,7 @@
 body {
 background-color: black;
 color: #39FF14;
+
 }
 
 h1 {
@@ -21,15 +22,21 @@ color: #39FF14;
   color: #39FF14;
   display: inline-block;
 }
+
+form  { display: table;      }
+p     { display: table-row;  }
+label { display: table-cell; }
+input { display: table-cell; }
+
 </style>
 <html lang="en" dir="ltr">
 <style media="screen">
   input:invalid {
-    border: 2px dashed red;
+    border: 2px solid black;
   }
 
   input:invalid:required {
-    background-image: linear-gradient(to right, pink, lightgreen);
+    background-image: linear-gradient(to right, #39FF14, cyan);
   }
 
   input:valid {
@@ -62,9 +69,9 @@ color: #39FF14;
     <br>
     Event Date: <input type="text" name="event" value="">
     <br>
-    Type: <input type="text" name="event_type" value="">
+    Type:  <input type="text" name="event_type" value="">
     <br>
-    Text: <input type="text" name="event_text" value="">
+    Text:  <input type="text" name="event_text" value="">
     <br>
     <br>
     Included Documentation:
