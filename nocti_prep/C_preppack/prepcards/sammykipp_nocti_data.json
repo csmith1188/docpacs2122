@@ -1,0 +1,229 @@
+{
+  "generalInformationAndConcepts" : [
+    ["Sammy Kipp",
+    "Which of the following errors is caused by a calculation error?",
+    ["logical", "arithmetic", "truncation", "semantic"],
+    "1",
+    "2"
+    ],
+    ["Sammy Kipp",
+    "Which of the following uses three basic control structures to form highly structured units of code?",
+    ["structured programming", "circular connector", "modular construction", "loop structure"],
+    "1",
+    "1"
+    ],
+    ["Sammy Kipp",
+    "What type of principle is used for configuring prefrences that allow the user to personalize an application?",
+    ["CLI", "GUI", "API", "DOS"],
+    "1",
+    "2"
+    ],
+    ["Sammy Kipp",
+    "All computer instructions are based on four basic logic patterns. These patterns are simple sequence, selection, loop, and?",
+    ["trailer", "modular", "top-down", "branch"],
+    "1",
+    "4"
+    ],
+    ["Sammy Kipp",
+    "If the memory speed of the bus is 750MHz, and the CPU is operating at twice the speed of the bus, what is the processor speed?",
+    ["375 MHz", "750 MHz", "1.5 GHz", "2 GHz"],
+    "1",
+    "3"
+    ],
+    ["Sammy Kipp",
+    "Two types of programs that create machine codes are the interpreter and the?",
+    ["assembler", "object", "compiler", "source"],
+    "1",
+    "3"
+    ],
+    ["Sammy Kipp",
+    "In the order of calculations in a program?",
+    ["addition precedes division", "parentheses preced exponentation", "subtraction precedes addition", "multiplication precedes exponentation"],
+    "1",
+    "2"
+    ],
+    ["Sammy Kipp",
+    "When the code below is executed, strAdd will be equal to?",
+    ["579", "123 + 456", "123456", "strFirst + strSecond"],
+    "1",
+    "3"
+    ]
+  ],
+  "ethicsLegalComplianceAndSecurity": [
+    ["Sammy Kipp",
+    "If a programmer downloads a copy of Minecraft SQL Server from a file-sharing website without paying for it, the programmer has commited and offense called?",
+    ["piracy", "larceny", "felony", "spyware"],
+    "1",
+    "1"
+    ],
+    ["Sammy Kipp",
+    "The Sarbanes-Oxley Act (SOX) requires monitoring and documentation of transactions. How could a programmer mistakenly setup a program that would cause problems with compliance with SOX?",
+    ["create system logs of the transactions taken in the session", "require a user to click three times when they are sure they want to prceed", "help a user to request assisstance from the system administrators", "multiplication preced exponentation"],
+    "1",
+    "4"
+    ]
+  ],
+  "analyzeProgrammingProblemsManageProjectsAndCreateFlowchartSolutions" : [
+    ["Sammy Kipp",
+    "The following programming flowchart symbol is a ______ symbol",
+    ["processing", "input/output", "decision", "connector"],
+    "1",
+    "3"
+    ],
+    ["Sammy Kipp",
+    "One of the main goals in analyzing user requiremtns is to?",
+    ["troubleshoot the problem", "shutdown and maintain the system", "keep the customer happy", "elicit requirements from a user's point of view"],
+    "1",
+    "4"
+    ],
+    ["Sammy Kipp",
+    "If a record has the following field lengths, what is the record length?",
+    ["42", "47", "54", "56"],
+    "1",
+    "2"
+    ],
+    ["Sammy Kipp",
+    "The following programming flowchart symbol is a ______ symbol",
+    ["processing", "input/output", "decision", "connector"],
+    "1",
+    "2"
+    ],
+    ["Sammy Kipp",
+    "A programmer is starting a new programming project. During what phase of the programming prject should the programmer begin planning for data storage?",
+    ["billing", "documentation", "implmentation", "test"],
+    "1",
+    "3"
+    ],
+    ["Sammy Kipp",
+    "A programmer needs to manipulate data that consists of a sequence of number that must be used as both an individual object and a set of data. What is the BEST data structure the programmer can use?",
+    ["array", "constant", "string", "field"],
+    "1",
+    "1"
+    ],
+    ["Sammy Kipp",
+    "When a programmer is ready to creat executable code, what process is used?",
+    ["debugging", "editing", "compiling", "disassembling"],
+    "1",
+    "3"
+    ],
+
+  ],
+  "designProgramSolutions" : [
+    ["Sammy Kipp",
+    "The source document and _____ should follow the same order.",
+    ["input screen design", "output screen design", "decision-type operator symbols", "processing function symbols"],
+    "1",
+    "1"
+    ],
+    ["Sammy Kipp",
+    "Which of the following is a CORRECT name for a variable?",
+    ["State_Zipcode", "State+Zipcode", "State Zipcode", "State=Zipcode"],
+    "1",
+    "1"
+    ],
+    ["Sammy Kipp",
+    "Why is the following expression invalid? A=10 + 'New Data'",
+    ["Variable 5 is not defined", "data types are mixed", "'New Data' is not a string", "'New Data' equals 0"],
+    "1",
+    "2"
+    ],
+    ["Sammy Kipp",
+    "An output field has 'Los Angeles' moved to it and when examined contains 'Los Angel'. This indicates a ______ error",
+    ["logical", "arithmetic", "truncation", "semantic"],
+    "1",
+    "3"
+    ],
+    ["Sammy Kipp",
+    "A programmer needa to define the type of value for a variable. What pre-defined set of characteristics for a variable can the programmer choose?",
+    ["storage location", "return value", "method modifier", "data type"],
+    "1",
+    "4"
+    ],
+  ],
+  "codePrograms" : [
+    ["Sammy Kipp",
+    "One Example of scripting (text processing) language is?",
+    ["Perl", "C++", "Fortran", "Beta"],
+    "1",
+    "1"
+    ],
+    ["Sammy Kipp",
+    "Which of the following enables the use of 'plain English' queries?",
+    ["BASIC", "FORTRAN", "SQL", "C++"],
+    "1",
+    "3"
+    ],
+    ["Sammy Kipp",
+    "An example of loop structure is?",
+    ["DO UNTIL", "SELECT IF", "EXECUTE", "NEXT"],
+    "1",
+    "1"
+    ],
+    ["Sammy Kipp",
+    "Compile errors can be caused by?",
+    ["bad syntax", "input data", "insufficient test data", "incorrect use specification"],
+    "1",
+    "1"
+    ]
+  ],
+  "testPrograms" : [
+    ["Sammy Kipp",
+    "Typically after successful intergration testing, a ______ test is preformed to complete a front-to-back execution of the entire program?",
+    ["system", "unit", "fuzz", "beta"],
+    "1",
+    "1"
+    ],
+    ["Sammy Kipp",
+    "The implementation phase consists of coding, testing, and?",
+    ["designing", "building prototype programs", "establishing requirements", "integration"],
+    "1",
+    "4"
+    ],
+    ["Sammy Kipp",
+    "When TEXT1.VALUE= 'March 7', TEXT1_LEN=?",
+    ["7", "8", "9", "10"],
+    "1",
+    "1"
+    ],
+    ["Sammy Kipp",
+    "A data element is intended to contain a range from 15 to 30 and after testing is contains 32. What kind of error is this?",
+    ["truncation", "rounding", "run time", "boundry"],
+    "1",
+    "4"
+    ],
+    ["Sammy Kipp",
+    "Which of the following consists of a sequence of events to follow so they can be repeated?",
+    ["runtime", "test files", "trace route", "scriot"],
+    "1",
+    "4"
+    ]
+  ],
+  "mainProgramsAndImplementChangeManagement" : [
+    ["Sammy Kipp",
+    "Maintenance refers to changes to a system in operating arising from error corrections, preformance improvements, changes in the business enviroment and?",
+    ["enhancements in functions", "application requirements", "refrencing software", "material requirements"],
+    "1",
+    "1"
+    ],
+    ["Sammy Kipp",
+    "One methond of ensuring that updates to documentation are efficiently distrubuted is to?",
+    ["send customers printed documentation annually regardless of whether there have been changes", "make changes in an online help system rather than printed sources", "send fliers only containing the changes rather than new printed volumes", "make changes only on a pre-specified schedule"],
+    "1",
+    "2"
+    ]
+  ],
+  "completeUserDocumentationAndTechnicalWriting" : [
+    ["Sammy Kipp",
+    "A programmer has to make programming changes to an existing program. Therefore the comments in the existing program must also be updated. The comments are referred to as _____ documentation?",
+    ["external", "internal", "primary", "secondary"],
+    "1",
+    "2"
+    ],
+    ["Sammy Kipp",
+    "A programmer has decided to create a pop-up window that will display a brief description of a control's purpose when the mouse hovers over it. This pop-up window is known as a?",
+    ["hyper clip", "tool tip", "task bar", "help bar"],
+    "1",
+    "2"
+    ],
+  ]
+}
