@@ -13,7 +13,6 @@ app.post("/neworder", (req, res) => {
       total: 0
     });
     res.send(`Order ${data.orders.length} was created`);
-    data = JSON.stringify(data);
-    fs.writeFile("data.json", data, () => console.log("Wrote to file"));
+    fs.writeFile("data.json", JSON.stringify(data), () => console.log("Wrote to file"));
   }
 });
