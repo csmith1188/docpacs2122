@@ -2,6 +2,7 @@
 
 ## Students:
 - Mr. Smith
+- Riley Rorrer
 - Jenna Mellen
 - Oley Birkeland
 - Christopher Mooney
