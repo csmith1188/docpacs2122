@@ -50,7 +50,7 @@
 ],
 [
   "Leniece",
-  "When the code below is executed, strAdd will be equal to",
+  "When the code below is executed, strAdd will be equal to \n strFirst = '123' \n strSecond = '456' \n strAdd = strFirst + strSecond",
   ["579","123 + 456","123456", "strFirst + strSecond"],
   "1",
   "3"
@@ -87,7 +87,7 @@
 ],
 [
   "Leniece",
-  "If a record has the following field lengths, what is the record length?",
+  "If a record has the following field lengths, what is the record length? \n Name = 35 \n Zipcode = 5 \n District = 7",
   ["42","47","54","56"],
   "1",
   "2"
@@ -202,7 +202,7 @@
 ],
 [
   "Leniece",
-  "When TEXT1.VALUE = 'MARCH 7', TEXT1_LEN="
+  "When TEXT1.VALUE = 'MARCH 7', TEXT1_LEN= \n Sub Form_Click() \n IN = TEXT 1.VALUE \n TEXT1_len = LEN$(IN) \n For I = TEXT_len to 1 step -1 \n TEMP = TEMP & mid (in, I, 1) \n NEXT \n OUT = TEMP & right (in, text_len, -n)"
   ["7","8","9","10"],
   "1",
   "1"
