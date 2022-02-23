@@ -2,9 +2,18 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Main Page</title>
   </head>
   <body>
-    
+    <%- orderlist %>
+    <form action="/neworder" method="get">
+      <button id="entry" type="submit">Create A New Order</button>
+    </form>
+    <form action="/additem" method="get">
+      <button id="entry" type="submit">Add an Item</button>
+    </form>
+    <form action="/view" method="get">
+      <button id="entry" type="submit">View Orders</button>
+    </form>
   </body>
 </html>
