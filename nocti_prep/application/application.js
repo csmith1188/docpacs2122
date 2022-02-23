@@ -31,11 +31,8 @@ app.post('/additem', function(req, res){
 })
 app.get('/view', function(req, res){
   res.render('viewlist', {
-    
+
   })
 })
-
-
-
 
 app.listen(5000)
