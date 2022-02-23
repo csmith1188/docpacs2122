@@ -15,6 +15,27 @@ app.get('/neworder', function(req, res){
   })
 })
 app.post('/neworder', function(req, res){
-  
+  res.render("orderform", {
+
+  })
 })
+app.get('/additem', function(req, res){
+  res.render("additem", {
+
+  })
+})
+app.post('/additem', function(req, res){
+  res.render("itemaddform", {
+
+  })
+})
+app.get('/view', function(req, res){
+  res.render('viewlist', {
+    
+  })
+})
+
+
+
+
 app.listen(5000)
