@@ -51,5 +51,5 @@ app.get('/view', function(req,res){
 
 
 app.listen(port, ip, function(){
-  console.log("Server: Functional");
+  console.log("Server running at 127.0.0.1:8080");
 })
