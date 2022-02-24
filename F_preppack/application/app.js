@@ -60,7 +60,7 @@ app.post('/neworder', (req, res) => {
 
 app.get('/additem', (req, res) => {
   res.render('addItem', {
-
+    mainbody: ""
   })
 })
 
