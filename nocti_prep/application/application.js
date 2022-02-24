@@ -14,7 +14,7 @@ app.get('/', function(req, res){
 })
 app.get('/neworder', function(req, res){
   res.render("neworder", {
-
+    message: ""
   })
 })
 
@@ -34,7 +34,25 @@ app.get('/additem', function(req, res){
 })
 
 app.post('/neworder', function(req, res){
+  if (req.body.name && req.body.address) {
+    var rawdata = fs.readFileSync('data.json', function(err,data){})
+    var data = JSON.parse(rawdata)
+    data.data.push({ordernumber: data.data.length +1, customername: req.body.name, customeraddress: req.body.address, items: [], subtotal: 0, tax: 0, total: 0 })
+    var stringdata = JSON.stringify(data)
 
+    fs.writeFileSync("data.json",stringdata, "utf8")
+
+      res.render("neworder", {
+        message: `order ${data.data[data.data.length - 1].ordernumber} was created`
+
+    })
+  } else {
+
+      res.render("neworder", {
+        message: "one of the feild is empty"
+      })
+
+  }
 })
 
 app.post('/additem', function(req, res){
