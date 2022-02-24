@@ -8,7 +8,10 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
-
+res.send('index')
 })
 
+app.post('/', (req, res) => {
+  
+})
 console.log("Server is running on localhost:8080");
