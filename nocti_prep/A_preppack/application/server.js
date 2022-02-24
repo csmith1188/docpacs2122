@@ -16,6 +16,14 @@ app.get('/neworder', function(req,res){
   res.render('neworder.ejs')
 })
 
+app.post('/neworder', function(req,res){
+  const name = req.body.cName
+  const address = req.body.cAddress
+})
+
+
+
+
 app.get('/additem', function(req,res){
   res.render('additem.ejs')
 })
