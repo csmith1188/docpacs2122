@@ -60,10 +60,12 @@ app.post('/additem', function(req, res){
     res.render('additem', {
       error: "You Forgot Something"
     })
-  } else if () {
-
+  } else if (req.body.num >= 0 && req.body.num <= data.data.length - 1) {
+data.data[req.body.num].item.push({itemname: req.body.itemname, quantity: req.body.qty, })
   } else {
-    
+    res.render('additem', {
+      error: "THE ORDER IS IN THE BLACK ABYESS WHERE NOTHING EXIST please put in order number of this realm"
+    })
   }
 
 })
