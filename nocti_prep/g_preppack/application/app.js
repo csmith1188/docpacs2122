@@ -18,6 +18,18 @@ app.get("/neworder", (req, res) => {
   res.render("neworder.ejs");
 })
 
+app.get('/view', (req, res) => {
+  console.log(req.query.order);
+  if (req.query.order) {
+    if (req.query.orders > 0 && req.query.orders < data.orders - 1) {
+      return orders;
+    };
+  } else {
+    return "Invalid order number";
+  }
+});
+
+//The res.send statements need to be replaced with an EJS template containing a message and a link to "/"
 app.post("/neworder", (req, res) => {
   let formdata = req.body;
   if (!formdata.customername || !formdata.customeraddress) {
