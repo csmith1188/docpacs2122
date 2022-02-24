@@ -3,18 +3,36 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <link rel="stylesheet" href="/public/css/style.css" type="text/css">
   </head>
   <body>
     <form action="newOrder" method="post">
-      Customer Name: <br>
-      <input type="text" name="custName" value="">
-      <br>
-      <br>
-      Customer Address: <br>
-      <input type="text" name="custAdd" value="">
-      <br>
-      <br>
-      <button type="submit" name="button">Submit</button>
+      <div class="outer">
+        <div class="inner">
+          <p1>Customer Name:</p1>
+
+        </div>
+        <div class="inner">
+          <input type="text" name="custName" value="">
+
+        </div>
+    </div>
+      <div class="outer">
+        <div class="inner">
+          <p1>Customer Address:</p1>
+
+        </div>
+        <div class="inner">
+          <input type="text" name="custAdd" value="">
+
+        </div>
+      </div>
+        <div class="outer">
+          <div class="inner">
+            <button type="submit" name="button"id="button">Submit</button>
+
+          </div>
+        </div>
     </form>
     <%-mainbody%>
     <h3>Add Items:</h3><button type="button" name="addItem"><a href="additem">Add Items</a></button>
