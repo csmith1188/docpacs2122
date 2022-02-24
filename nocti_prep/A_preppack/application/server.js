@@ -28,18 +28,14 @@ app.post('/neworder', function(req,res){
   const user = {
     usrName: name,
     usrAddress: address
+    }
+    if(name == "" || address == ""){
+      res.render('neworder.ejs', {
+        error: "Must Fill Out All Fields"
+      })
+    }
   }
-  if(name == ""){
-    res.render('neworder.ejs', {
-      error: "Must fill out Name field"
-    })
-  }
-
-  if(address == ""){
-    res.render('neworder.ejs', {
-      error: "Must fill out Address field"
-  })
-}
+)
 
 
 app.get('/additem', function(req,res){
@@ -55,5 +51,5 @@ app.get('/view', function(req,res){
 
 
 app.listen(port, ip, function(){
-  console.log("Server Up: 127.0.0.1:8080 ");
+  console.log("Server: Functional");
 })
