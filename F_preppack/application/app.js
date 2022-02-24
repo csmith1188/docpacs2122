@@ -112,7 +112,15 @@ app.post('/additem', (req, res) => {
   })
 }
 })
-app.get('/view', (req, res) => {
+app.get('/view',z (req, res) => {
+  if (req.query.order) {
+
+  } else {
+  var listofItems = []
+  for (var x in data.order) {
+    listofItems.push(data.order[x].orderNumber); listofItems.push(data.order[x].customerName);
+  }
+}
   res.render('view', {
 
   })
