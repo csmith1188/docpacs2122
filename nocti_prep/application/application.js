@@ -7,9 +7,11 @@ app.use(express.urlencoded({extended: true}))
 var rawdata = fs.readFileSync('data.json', function(err,data){})
 var data = JSON.parse(rawdata)
 
+console.log(data.data);
+
 app.get('/', function(req, res){
   res.render("main", {
-    orderlist: data.data
+    orderlist: JSON.stringify(data.data)
   })
 })
 app.get('/neworder', function(req, res){
@@ -60,10 +62,6 @@ app.post('/additem', function(req, res){
     res.render('additem', {
       error: "You Forgot Something"
     })
-  } else if () {
-
-  } else {
-    
   }
 
 })
