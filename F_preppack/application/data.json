@@ -1,3 +1,1 @@
-{
-  "order": []
-}
+{"order":[{"orderNumber":1,"customerName":"Jeff","customerAddress":"123","items":[],"subtotal":0,"tax":0,"total":0},{"orderNumber":2,"customerName":"Jeff","customerAddress":"123","items":[{"itemName":"Sword","quantity":"3","price":"6.66"},{"itemName":"Sword","quantity":"3","price":"6.66"},{"itemName":"Sword","quantity":"3","price":"6.66"}],"subtotal":59.94,"tax":1.2,"total":61.14}]}
