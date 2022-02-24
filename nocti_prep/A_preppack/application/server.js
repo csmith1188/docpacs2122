@@ -48,9 +48,11 @@ app.get('/view', function(req,res){
   res.locals.query = req.query;
   res.render('view.ejs')
   if(res.locals.query){
+     //how to put shit here and yeet it to view.ejs
+     //wait this isnt google
     console.log(req.query);
   }else{
-    console.log('no')
+    console.log('no') //lol stupid this isnt gonna work, the parmaters are still there its just empty
   }
 })
 
