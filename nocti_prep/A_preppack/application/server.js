@@ -29,7 +29,13 @@ app.get('/additem', function(req,res){
 })
 
 app.get('/view', function(req,res){
+  res.locals.query = req.query;
   res.render('view.ejs')
+  if(res.locals.query){
+    console.log(req.query);
+  }else{
+    console.log('no')
+  }
 })
 
 app.listen(port, ip, function(){
