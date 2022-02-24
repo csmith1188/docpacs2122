@@ -1,0 +1,34 @@
+body {
+  background-color: black;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+}
+
+h3 {
+  font-family: verdana;
+  font-size: 30px;
+  color: #FF007F;
+}
+
+#button,input{
+  background-color: black;
+  border-color: #FF007F;
+  color: #FF007F;
+  display: inline-block;
+  font-size: 15px;
+}
+
+p1 {
+  font-family: Trebuchet MS;
+  font-size: 30px;
+  color: #FF007F;
+}
+.outer{
+
+}
+.inner{
+  padding: 20px 10px 20px 10px;
+}
