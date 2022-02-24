@@ -2,9 +2,15 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Add Item</title>
   </head>
   <body>
-
+    <form action="/additem" method="post">
+      <input type="text" name="num" placeholder = "Enter the item number here..." value="">
+      <input type="text" name="itemname" placeholder = "Enter the item name here..." value="">
+      <input type="text" name="qty" placeholder = "Enter quantity here..." value="">
+      <input type="text" name="price" placeholder = "Enter item price here..." value="">
+      <input type="submit" value="Submit">
+    </form>
   </body>
 </html>
