@@ -2,13 +2,21 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>New Orders</title>
+    <title>Home</title>
   </head>
   <body>
-<form class="" action="index.ejs" method="post">
-  <input type="text" name="name" value="">
-  <input type="text" name="address" rows="4" cols="40" >
-  <input type="submit" name="" value="">
+
+<form  action="/neworder" method="get">
+  <input type="submit" name="" value="Create Order">
 </form>
+
+<form action="/additem" method="get">
+<input type="submit" name="" value="Add Item">
+</form>
+
+<form action="/view" method="get">
+  <input type="submit" name="" value="View Orders">
+</form>
+
   </body>
 </html>

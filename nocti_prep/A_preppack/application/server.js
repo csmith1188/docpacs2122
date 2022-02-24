@@ -1,17 +1,29 @@
 const express = require('express');
-const ejs = require('ejs');
-var app = express();
-const PORT = 8080;
+const app = express()
+const port = 8080
+const ip = '127.0.0.1'
+app.set('view engine', 'ejs')
+app.use(express.urlencoded({extended:true}))
 
-app.use(bodyParser.urlencoded({extended: false}));
-//change view engine
-app.set('view engine', 'ejs');
 
-app.get('/', (req, res) => {
-res.send('index')
+
+
+app.get('/', function(req,res){
+  res.render('index.ejs')
 })
 
-app.post('/', (req, res) => {
-  
+app.get('/neworder', function(req,res){
+  res.render('neworder.ejs')
 })
-console.log("Server is running on localhost:8080");
+
+app.get('/additem', function(req,res){
+  res.render('additem.ejs')
+})
+
+app.get('/view', function(req,res){
+  res.render('view.ejs')
+})
+
+app.listen(port, ip, function(){
+  console.log("Server Up: ");
+})
