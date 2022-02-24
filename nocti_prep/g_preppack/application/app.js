@@ -18,7 +18,6 @@ app.get("/neworder", (req, res) => {
   res.render("neworder.ejs");
 })
 
-//The res.send statements need to be replaced with an EJS template containing a message and a link to "/"
 app.post("/neworder", (req, res) => {
   let formdata = req.body;
   if (!formdata.customername || !formdata.customeraddress) {
