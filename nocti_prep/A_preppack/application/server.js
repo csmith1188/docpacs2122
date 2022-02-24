@@ -55,7 +55,7 @@ app.post('/additem?', function(req,res){
 
   if (data.orderNumber == '' || data.itemName == '' || data.quantity == '' || data.price == '') {
     res.render('additem.ejs', {
-      error: "one field has been left empty"
+      error: "One or more fields has been left empty"
     })
   }
 })
