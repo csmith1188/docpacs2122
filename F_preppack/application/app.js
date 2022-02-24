@@ -112,7 +112,7 @@ app.post('/additem', (req, res) => {
   })
 }
 })
-app.get('/view',z (req, res) => {
+app.get('/view', (req, res) => {
   if (req.query.order) {
 
   } else {
