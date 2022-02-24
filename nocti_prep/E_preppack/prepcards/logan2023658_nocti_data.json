@@ -177,4 +177,41 @@
 "1",
 "1"
 ]
+[ "Logan Hiller"
+"A data element is intended to contain a range from 15 to 30 and after testing it contains 32. What kind of error is this?"
+["1", "2", "3", "4", ],
+"1",
+"4"
+]
+[ "Logan Hiller"
+"Which of the following consists of a sequence of events to follow so they can be repeated?"
+["1", "2", "3", "4", ],
+"1",
+"4"
+]
+"Maintain Programs and Implement Change Management Procedures"
+[ "Logan Hiller"
+"Maintenance refers to changes to a system in operating arising from error corrections, performance improvements, changes in the business environment and"
+["1", "2", "3", "4", ],
+"1",
+"1"
+]
+[ "Logan Hiller"
+"One method of ensuring that updates to documentation are efficiently distributed is to"
+["1", "2", "3", "4", ],
+"1",
+"2"
+]
+[ "Logan Hiller"
+"A programmer has to make programming changes to an existing program. Therefore the comments in the existing program must also be updated. The comments are referred to as _____ documentation."
+["1", "2", "3", "4", ],
+"1",
+"2"
+]
+[ "Logan Hiller"
+"A programmer has decided to create a pop-up window that will display a brief description of a control's purpose when the mouse hovers over it. This pop-up window is known as a"
+["1", "2", "3", "4", ],
+"1",
+"2"
+]
 }
