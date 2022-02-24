@@ -32,8 +32,9 @@ app.get('/view', (req, res) => {
 //The res.send statements need to be replaced with an EJS template containing a message and a link to "/"
 app.post("/neworder", (req, res) => {
   let formdata = req.body;
-  if (!formdata.customername || !formdata.customeraddress) res.send("Error: missing data");
-  else {
+  if (!formdata.customername || !formdata.customeraddress) {
+    res.render("message.ejs", {message: "Error: missing data"});
+  } else {
     data.orders.push({
       ordernumber: data.orders.length,
       customername: formdata.customername,
@@ -43,7 +44,7 @@ app.post("/neworder", (req, res) => {
       tax: 0,
       total: 0
     });
-    res.send(`Order ${data.orders.length} was created`);
+    res.render("message.ejs", {message: `Order ${data.orders.length} was created`});
     data = JSON.stringify(data);
     fs.writeFile("data.json", data, () => console.log("Wrote to file"));
   }
