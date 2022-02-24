@@ -1,1 +1,1 @@
-{"orders":[{"ordernumber":0,"customername":"john cena","customeraddress":"1337 meme road","items":[],"subtotal":0,"tax":0,"total":0}]}
+{"orders":[{"ordernumber":0,"customername":"john cena","customeraddress":"1337 meme road","items":[{"itemname":"Sword","quantity":"1","price":"99"}],"subtotal":99,"tax":5.9399999999999995,"total":104.94},{"ordernumber":1,"customername":"Boom bam","customeraddress":"Messstret 55858","items":[],"subtotal":0,"tax":0,"total":0}]}
