@@ -6,6 +6,8 @@ const port = 8000;
 app.use(express.urlencoded({
   extended: false
 }))
+app.use(express.static(__dirname + '/public'));
+app.use('/public', express.static('public'));
 app.set('view engine', 'ejs')
 
 var rawData = fs.readFileSync('data.json')
