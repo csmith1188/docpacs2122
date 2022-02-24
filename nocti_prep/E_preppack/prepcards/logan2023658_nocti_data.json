@@ -47,4 +47,35 @@
 "1",
 "3"
 ]
+"Ethics, Legal Compliance, and Security"
+[ "Logan Hiller"
+"If a programmer downloads a copy of Microsoft SQL Server from a file-sharing website without paying for it, the programmer has commited an offence called"
+["1", "2", "3", "4", ],
+"1",
+"1"
+]
+[ "Logan Hiller"
+"The Sarbanes-Oxley Act (SOX) requires monitoring and documentation of transactions. How could a programmer mistakenly setup a program that would cause problems with compliance with SOX?"
+["1", "2", "3", "4", ],
+"1",
+"4"
+]
+[ "Logan Hiller"
+"The following programming flowchart symbol is a/an _____ symbol"
+["1", "2", "3", "4", ],
+"1",
+"3"
+]
+[ "Logan Hiller"
+"One of the main goals in analyzing user requirements is to"
+["1", "2", "3", "4", ],
+"1",
+"4"
+]
+[ "Logan Hiller"
+"If a record has the following field lengths, what is the record length?"
+["1", "2", "3", "4", ],
+"1",
+"2"
+]
 }
