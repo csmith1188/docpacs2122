@@ -1,12 +1,15 @@
 const express = require('express');
 const fs = require('fs');
-const Math = require('Math');
 var app = express()
 app.set("view engine", 'ejs')
 app.use(express.urlencoded({extended: true}))
 
 var rawdata = fs.readFileSync('data.json', function(err,data){})
 var data = JSON.parse(rawdata)
+
+function financial(x) {
+  return Number.parseFloat(x).toFixed(2);
+}
 
 console.log(data.data.length);
 
@@ -59,6 +62,9 @@ app.post('/neworder', function(req, res){
 })
 
 app.post('/additem', function(req, res){
+
+  var rawdata = fs.readFileSync('data.json', function(err,data){})
+  var data = JSON.parse(rawdata)
   if (req.body.num == false || req.body.itemname == false || req.body.qty == false || req.body.price == false) {
     res.render('additem', {
       error: "You Forgot Something"
@@ -68,7 +74,9 @@ app.post('/additem', function(req, res){
       error: "THE ORDER IS IN THE BLACK ABYESS WHERE NOTHING EXIST please put in order number of this realm"
     })
   } else {
-    data.data[req.body.num - 1].items.push({itemname: req.body.itemname, quantity: req.body.qty, price: req.body.price })
+
+    let fixPrice = financial(req.body.price)
+    data.data[req.body.num - 1].items.push({itemname: req.body.itemname, quantity: req.body.qty, price: fixPrice })
     var stringdata = JSON.stringify(data)
     fs.writeFileSync("data.json",stringdata, "utf8")
     res.render('additem', {
