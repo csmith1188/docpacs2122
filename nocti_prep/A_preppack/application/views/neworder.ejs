@@ -5,13 +5,17 @@
     <title>New Order</title>
   </head>
   <body>
-<form method="post">
+<form action="/neworder" method="post">
   <input type="text" name="cName" placeholder="Your Name...">
   <br>
   <input type="text" name="cAddress" placeholder="Your Address">
   <br>
   <input type="submit" name="" value="Send Order">
 </form>
+<br>
+<%=error%>
+<br>
 
   </body>
+
 </html>
