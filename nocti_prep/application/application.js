@@ -1,5 +1,6 @@
 const express = require('express');
 const fs = require('fs');
+const Math = require('Math');
 var app = express()
 app.set("view engine", 'ejs')
 app.use(express.urlencoded({extended: true}))
@@ -7,9 +8,11 @@ app.use(express.urlencoded({extended: true}))
 var rawdata = fs.readFileSync('data.json', function(err,data){})
 var data = JSON.parse(rawdata)
 
+console.log(data.data.length);
+
 app.get('/', function(req, res){
   res.render("main", {
-    orderlist: data.data
+    orderlist: JSON.stringify(data.data)
   })
 })
 app.get('/neworder', function(req, res){
@@ -37,7 +40,7 @@ app.post('/neworder', function(req, res){
   if (req.body.name && req.body.address) {
     var rawdata = fs.readFileSync('data.json', function(err,data){})
     var data = JSON.parse(rawdata)
-    data.data.push({ordernumber: data.data.length +1, customername: req.body.name, customeraddress: req.body.address, items: [], subtotal: 0, tax: 0, total: 0 })
+    data.data.push({ordernumber: data.data.length + 1, customername: req.body.name, customeraddress: req.body.address, items: [], subtotal: 0, tax: 0, total: 0 })
     var stringdata = JSON.stringify(data)
 
     fs.writeFileSync("data.json",stringdata, "utf8")
@@ -60,11 +63,16 @@ app.post('/additem', function(req, res){
     res.render('additem', {
       error: "You Forgot Something"
     })
-  } else if (req.body.num >= 0 && req.body.num <= data.data.length - 1) {
-data.data[req.body.num].item.push({itemname: req.body.itemname, quantity: req.body.qty, })
-  } else {
+  } else if (req.body.num < 0 || req.body.num > data.data.length) {
     res.render('additem', {
       error: "THE ORDER IS IN THE BLACK ABYESS WHERE NOTHING EXIST please put in order number of this realm"
+    })
+  } else {
+    data.data[req.body.num - 1].items.push({itemname: req.body.itemname, quantity: req.body.qty, price: req.body.price })
+    var stringdata = JSON.stringify(data)
+    fs.writeFileSync("data.json",stringdata, "utf8")
+    res.render('additem', {
+      error: 'Item added'
     })
   }
 
