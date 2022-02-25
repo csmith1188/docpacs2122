@@ -2,8 +2,7 @@
   "name": "application",
   "version": "1.0.0",
   "main": "app.js",
-<<<<<<< Updated upstream
-=======
+  
   "dependencies": {
     "ejs": "^3.1.6",
     "express": "^4.17.3",
@@ -11,7 +10,7 @@
     "node": "^17.4.0",
     "nodejs": "^0.0.0"
   },
->>>>>>> Stashed changes
+
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

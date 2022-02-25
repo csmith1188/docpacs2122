@@ -74,7 +74,7 @@ app.post('/additem', (req, res) => {
   var quantity = req.body.quantity
   var price = req.body.price
   if (orderNumber && itemName && quantity && price) {
-    if (orderNumber >= 0 && orderNumber <= data.order.length) {
+    if (orderNumber 3>= 0 && orderNumber <= data.order.length) {
       var newItem = {
         itemName: itemName,
         quantity: quantity,
@@ -114,16 +114,15 @@ app.post('/additem', (req, res) => {
 })
 app.get('/view', (req, res) => {
   if (req.query.order) {
-
+    var listofItems = []
+    for (var x in data.order) {
+      listofItems.push(data.order[x].orderNumber); listofItems.push(data.order[x].customerName);
+    }
   } else {
-  var listofItems = []
-  for (var x in data.order) {
-    listofItems.push(data.order[x].orderNumber); listofItems.push(data.order[x].customerName);
-  }
+    res.render('view', {
+      mainbody: "Invalid order number"
+    })
 }
-  res.render('view', {
-
-  })
 })
 
 app.listen(8000)
