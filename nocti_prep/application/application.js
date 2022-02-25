@@ -7,6 +7,10 @@ app.use(express.urlencoded({extended: true}))
 var rawdata = fs.readFileSync('data.json', function(err,data){})
 var data = JSON.parse(rawdata)
 
+function financial(x) {
+  return Number.parseFloat(x).toFixed(2);
+}
+
 console.log(data.data.length);
 
 app.get('/', function(req, res){
@@ -14,7 +18,6 @@ app.get('/', function(req, res){
     orderlist: JSON.stringify(data.data)
   })
 })
-
 app.get('/neworder', function(req, res){
   res.render("neworder", {
     message: ""
@@ -22,12 +25,27 @@ app.get('/neworder', function(req, res){
 })
 
 app.get('/view', function(req, res){
-  if (req.body === false) {
-    console.log('It worked');
+
+  var rawdata = fs.readFileSync('data.json', function(err,data){})
+  var data = JSON.parse(rawdata)
+  if (req.query.order < 0 || req.query.order > data.data.length) {
+
+
+    for (var i = 0; i < data.data.length; i++) {
+
+
+      if  (data.data[i].ordernumber = req.query.order ) {
+      console.log("IT A WORK");
+      res.render("viewlist", {
+        Data: data.data[i],
+        valid: true
+      })
+    }
   }
-  res.render("viewlist", {
-    
-  })
+}
+
+
+
 })
 
 app.get('/additem', function(req, res){
@@ -90,8 +108,4 @@ app.post('/additem', function(req, res){
   }
 
 })
-
 app.listen(5000)
-
-
-//EOF
