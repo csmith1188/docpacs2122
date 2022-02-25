@@ -74,7 +74,7 @@ app.post('/additem', (req, res) => {
   var quantity = req.body.quantity
   var price = req.body.price
   if (orderNumber && itemName && quantity && price) {
-    if (orderNumber 3>= 0 && orderNumber <= data.order.length) {
+    if (orderNumber >= 0 && orderNumber <= data.order.length) {
       var newItem = {
         itemName: itemName,
         quantity: quantity,
