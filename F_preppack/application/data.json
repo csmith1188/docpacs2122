@@ -1,5 +1,1 @@
-
-{
-  "order": []
-}
-
+{"order":[{"orderNumber":1,"customerName":"Ethan","customerAddress":"134","items":[],"subtotal":0,"tax":0,"total":0},{"orderNumber":2,"customerName":"Chris","customerAddress":"123","items":[],"subtotal":0,"tax":0,"total":0}]}
