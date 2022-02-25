@@ -75,10 +75,10 @@ app.post('/additem', function(req, res){
     data.data[req.body.num - 1].tax = 0
     data.data[req.body.num - 1].total = 0
     data.data[req.body.num - 1].items.forEach((item, i) => {
-      var opsub = this.price * this.quantity
+      var opsub = data.data[req.body.num - 1].items[i].price * data.data[req.body.num - 1].items[i].quantity
       data.data[req.body.num - 1].subtotal = opsub + data.data[req.body.num - 1].subtotal
-      this.tax = this.subtotal * 0.06
-      this.total = this.tax + this.subtotal
+      data.data[req.body.num - 1].tax = data.data[req.body.num - 1].subtotal * 0.06
+      data.data[req.body.num - 1].total = data.data[req.body.num - 1].tax + data.data[req.body.num - 1].subtotal
     });
 
     var stringdata = JSON.stringify(data)
