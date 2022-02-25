@@ -14,6 +14,7 @@ app.get('/', function(req, res){
     orderlist: JSON.stringify(data.data)
   })
 })
+
 app.get('/neworder', function(req, res){
   res.render("neworder", {
     message: ""
@@ -25,7 +26,7 @@ app.get('/view', function(req, res){
     console.log('It worked');
   }
   res.render("viewlist", {
-
+    
   })
 })
 
@@ -89,4 +90,8 @@ app.post('/additem', function(req, res){
   }
 
 })
+
 app.listen(5000)
+
+
+//EOF
