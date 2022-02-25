@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express()
+const fs = require('fs');
 const port = 8080
 const ip = '127.0.0.1'
 app.set('view engine', 'ejs')
@@ -58,7 +59,16 @@ app.post('/additem?', function(req,res){
       error: "one field has been left empty"
     })
   }
+  if (data.orderNumber != '' && data.itemName != '' && data.quantity != '' && data.price != '') {
+    let rawInfo = fs.readFileSync(__dirname + '/data.json')
+    let feed = JSON.parse(rawInfo)
+    feed.comments.push(data)
+    console.log(feed)
+    fs.writeFile(__dirname + '/data.json', JSON.stringify(feed), 'utf8', function() {
+      console.log('wrote to file')
+    })
 })
+
 
 app.get('/view', function(req,res){
   res.locals.query = req.query;
