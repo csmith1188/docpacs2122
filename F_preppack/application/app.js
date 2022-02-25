@@ -113,17 +113,9 @@ app.post('/additem', (req, res) => {
 }
 })
 app.get('/view', (req, res) => {
-  if (req.query.order) {
-    var listofItems = []
-    listofItems.push(data.order[x])
     res.render('view', {
-      mainbody: listofItems
+      orderlist: data.order
     })
-  } else {
-    res.render('view', {
-      mainbody: "Invalid order number"
-    })
-}
 })
 
 app.listen(8000)
