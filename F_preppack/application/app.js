@@ -114,7 +114,7 @@ app.post('/additem', (req, res) => {
 })
 app.get('/view', (req, res) => {
   res.render('view', {
-
+    orderlist: data.order
   })
 })
 

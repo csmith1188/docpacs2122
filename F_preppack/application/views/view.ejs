@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="/public/css/style.css" type="text/css">
+    <meta charset="utf-8">
+    <title></title>
+
+  </head>
+  <style media="screen">
+    .Stuffs{
+      padding: 5px;
+    }
+  </style>
+  <body>
+    <%console.log(orderlist);%>
+    <% if (orderlist) { %>
+      <ul>
+        <% for (var i = 0; i < orderlist.length; i++) { %>
+          <div class="Stuffs">
+            <p1> Order Number: <%-JSON.stringify(orderlist[i]["orderNumber"])%> </p1>
+            <br>
+            <p1> Customer Name: <%-JSON.stringify(orderlist[i]["customerName"])%> </p1>
+          </div>
+        <%  } %>
+      </ul>
+    <% } else { %>
+      Iz emptee
+    <% } %>
+  </body>
+</html>
