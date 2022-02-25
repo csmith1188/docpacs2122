@@ -27,11 +27,9 @@ app.get('/neworder', function(req,res){
 app.post('/neworder', function(req,res){
   const name = req.body.cName
   const address = req.body.cAddress
-  const number = req.body.cOrder
   const user = {
     usrName: name,
-    usrAddress: address,
-    usrOrder: number
+    usrAddress: address
     }
     if(name == "" || address == ""){
       res.render('neworder.ejs', {
@@ -40,7 +38,7 @@ app.post('/neworder', function(req,res){
     }
 
     const order = {
-      orderNumber: number ,
+      orderNumber:  ,
       order:1 ,
       customerName: name ,
       customerAddress: address,
@@ -49,6 +47,7 @@ app.post('/neworder', function(req,res){
       tax: 0,
       total: 0
     }
+
     console.log(order);
     outData = JSON.stringify(order)
     fs.writeFileSync('data.json', outData, function(){
@@ -73,9 +72,9 @@ app.post('/additem?', function(req,res){
   }
   console.log(data.orderNumber)
 
-  if (data.orderNumber == '' || data.itemName == '' || data.quantity == '' || data.price == '') {
+  if (data.orderNumber == "" || data.itemName == "" || data.quantity == "" || data.price == "") {
     res.render('additem.ejs', {
-      error: "One or more fields has been left empty"
+      error: "One or more fields has been left empty: "
     })
   }
   if (data.orderNumber != '' && data.itemName != '' && data.quantity != '' && data.price != '') {
