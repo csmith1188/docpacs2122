@@ -17,7 +17,8 @@ app.get('/', function(req,res){
 
 app.get('/neworder', function(req,res){
   res.render('neworder.ejs', {
-    error:""
+    error:"",
+    alert: ""
   })
 })
 
@@ -26,15 +27,33 @@ app.get('/neworder', function(req,res){
 app.post('/neworder', function(req,res){
   const name = req.body.cName
   const address = req.body.cAddress
+  const number = req.body.cOrder
   const user = {
     usrName: name,
-    usrAddress: address
+    usrAddress: address,
+    usrOrder: number
     }
     if(name == "" || address == ""){
       res.render('neworder.ejs', {
         error: "Must Fill Out All Fields"
       })
     }
+
+    const order = {
+      orderNumber: number ,
+      order:1 ,
+      customerName: name ,
+      customerAddress: address,
+      item: [],
+      subtotal: 0,
+      tax: 0,
+      total: 0
+    }
+    console.log(order);
+    outData = JSON.stringify(order)
+    fs.writeFileSync('data.json', outData, function(){
+      console.log("Data Saved: ");
+    })
   }
 )
 
@@ -56,7 +75,7 @@ app.post('/additem?', function(req,res){
 
   if (data.orderNumber == '' || data.itemName == '' || data.quantity == '' || data.price == '') {
     res.render('additem.ejs', {
-      error: "one field has been left empty"
+      error: "One or more fields has been left empty"
     })
   }
   if (data.orderNumber != '' && data.itemName != '' && data.quantity != '' && data.price != '') {
@@ -74,9 +93,11 @@ app.get('/view', function(req,res){
   res.locals.query = req.query;
   res.render('view.ejs')
   if(res.locals.query){
+     //how to put shit here and yeet it to view.ejs
+     //wait this isnt google
     console.log(req.query);
   }else{
-    console.log('no')
+    console.log('no') //lol stupid this isnt gonna work, the parmaters are still there its just empty
   }
 })
 
