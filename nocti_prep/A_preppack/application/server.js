@@ -59,17 +59,41 @@ app.post('/neworder', function(req,res){
 
 
 app.get('/additem', function(req,res){
-  res.render('additem.ejs')
+  res.render('additem.ejs', {
+    error:""
+  })
 })
 
+app.post('/additem?', function(req,res){
+  var data = {
+    orderNumber: req.body.orderNumber,
+    itemName: req.body.itemName,
+    quantity: req.body.quantity,
+    price: req.body.price,
+  }
+  console.log(data.orderNumber)
 
+  if (data.orderNumber == '' || data.itemName == '' || data.quantity == '' || data.price == '') {
+    res.render('additem.ejs', {
+      error: "One or more fields has been left empty"
+    })
+  }
+})
 
 app.get('/view', function(req,res){
+  res.locals.query = req.query;
   res.render('view.ejs')
+  if(res.locals.query){
+     //how to put shit here and yeet it to view.ejs
+     //wait this isnt google
+    console.log(req.query);
+  }else{
+    console.log('no') //lol stupid this isnt gonna work, the parmaters are still there its just empty
+  }
 })
 
 
 
 app.listen(port, ip, function(){
-  console.log("Server: Functional");
+  console.log("Server running at 127.0.0.1:8080");
 })
