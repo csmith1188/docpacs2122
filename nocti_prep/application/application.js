@@ -62,7 +62,6 @@ app.post('/neworder', function(req, res){
 })
 
 app.post('/additem', function(req, res){
-
   var rawdata = fs.readFileSync('data.json', function(err,data){})
   var data = JSON.parse(rawdata)
   if (req.body.num == false || req.body.itemname == false || req.body.qty == false || req.body.price == false) {
@@ -73,10 +72,19 @@ app.post('/additem', function(req, res){
     res.render('additem', {
       error: "THE ORDER IS IN THE BLACK ABYESS WHERE NOTHING EXIST please put in order number of this realm"
     })
+    console.log(data.data.length);
   } else {
+    data.data[req.body.num - 1].items.push({itemname: req.body.itemname, quantity: req.body.qty, price: req.body.price })
+    data.data[req.body.num - 1].subtotal = 0
+    data.data[req.body.num - 1].tax = 0
+    data.data[req.body.num - 1].total = 0
+    data.data[req.body.num - 1].items.forEach((item, i) => {
+      var opsub = data.data[req.body.num - 1].items[i].price * data.data[req.body.num - 1].items[i].quantity
+      data.data[req.body.num - 1].subtotal = opsub + data.data[req.body.num - 1].subtotal
+      data.data[req.body.num - 1].tax = data.data[req.body.num - 1].subtotal * 0.06
+      data.data[req.body.num - 1].total = data.data[req.body.num - 1].tax + data.data[req.body.num - 1].subtotal
+    });
 
-    let fixPrice = financial(req.body.price)
-    data.data[req.body.num - 1].items.push({itemname: req.body.itemname, quantity: req.body.qty, price: fixPrice })
     var stringdata = JSON.stringify(data)
     fs.writeFileSync("data.json",stringdata, "utf8")
     res.render('additem', {
