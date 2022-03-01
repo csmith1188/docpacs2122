@@ -50,7 +50,7 @@
       ["Aidan Hamme","When the code below is executed, strAdd will be equal to",["579", "123 + 456", "123456", "strFirst + strSecond"],"1","3"]
     ]
 
-    var data_exam3 = [
+    var data_nocti = [
     [
       "Aidan Hamme",
       "Which of the following errors is caused by a calculation error?",
@@ -525,16 +525,16 @@
           data.push(dataList.splice(Math.floor(Math.random() * dataList.length), 1)[0])
         }
         return data;
-      } else if (languageType == "data_exam3") {
+      } else if (languageType == "data_nocti") {
         data = [];
         mistakePile = [];
         discardPile = 0;
         var cardIndex = 0;
         dataList = [];
-        var numberOfCards = data_exam3.length;
+        var numberOfCards = data_nocti.length;
         // var dataList = data_python;
         for (let i = 0; i < numberOfCards; i++) {
-          dataList.push(data_exam3[i])
+          dataList.push(data_nocti[i])
         }
         console.log(dataList);
 
@@ -721,7 +721,7 @@
             <a onclick="languageTypePicker('data_java')" href="#">Javascript</a>
             <a onclick="languageTypePicker('data_py')" href="#">Python</a>
             <a href="#">HTML</a>
-            <a onclick="languageTypePicker('data_exam3')" href="#">Exam</a>
+            <a onclick="languageTypePicker('data_nocti')" href="#">Nocti</a>
           </div>
         </div>
       </div>
