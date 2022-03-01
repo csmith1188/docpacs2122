@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>FlashCards</title>
+  <link rel="stylesheet" href="style.css">
+  </script>
+  <script type="text/javascript">
+    var cardSubmitted = true;
+    var discardPile = 0;
+    var mistakePile = []
+    var data_javascript = [
+      ['Jaysin', 'Which of the following errors is a calculation error?', ['Logical', 'Arithmetic', 'Truncation', 'Sematic'], '1', '2'],
+      ['Jaysin', 'Which of the following uses three basic control structures to form highly structured units of code', ['Structured Programming', 'Circular Connector', 'Modular Construction', 'Loop Structure'], '1', '1'],
+      ['Jaysin', 'What type of principle is used for configuring preferences that allow the user to personalize an application?', [ 'CLI', 'GUI', 'API', 'DOS'], '1', '2'],
+      ['Jaysin', 'All computer instructions are based on four basic logic patterns. These patterns are simple sequence, selection, loop, and', ['Trailer', 'Modular', 'Top-Down', 'Branch'], '1', '4'],
+      ['Jaysin', 'Which Is Not A Javascript Datatype', ['Find', 'String', 'Boolean', 'Undefined'], '1', '1'],
+      ['Jaysin', 'Which Symbol Is Used For Multi-Line Comments In Javascript', ['./', '*/', '/.', '-'], '1', '2'],
+      ['Jaysin', 'How Many Types Of Heading Does A HTML Contain', ['2', '8', '4', '6'], '1', '4'],
+      ['Jaysin', 'Which assignment operator assigns a variable/object to a value?', ['+=', '=', '/=', '**='], '1', '2'],
+      ['Jaysin', 'Which is the proper use of camel case?', ['CamelCase', 'cAmelcAse', 'camelCase', 'CameLCasE'], '1', '3'],
+      ['Jaysin', 'How do you create a function?', ['function == myfunction(){}', 'function myFunction(){}', 'myFunction():function{}', 'function:myFunction(){}'], '1', '2'],
+      ['Jaysin', 'What is a string?', ['A string is just one line of code', 'A string is a list of Non-human-readable letters that are code', 'A string is a list of human-readable letters that are not code','A string is a list of objects that are assigned to a variable'], '1', '3'],
+      ['Jaysin', 'How would you log (Hello World!!) to the console>?', 'console.log(Hello World!!);', '0'],
+      //['Jaysin', '']
+    ]
+
+    var languageType = "data_java";
+
+    function changeLanguage() {
+      console.log(languageType);
+      cardSubmitted = true;
+      if (languageType == "data_java") {
+        data = [];
+        mistakePile = [];
+        discardPile = 0;
+        var cardIndex = 0;
+        dataList = [];
+        // var dataList = data_javascript;
+        var numberOfCards = data_javascript.length;
+        for (let i = 0; i < numberOfCards; i++) {
+          dataList.push(data_javascript[i])
+        }
+        console.log(dataList);
+
+        //Pick out a certain number of cards
+        for (let i = 0; i < numberOfCards; i++) {
+          data.push(dataList.splice(Math.floor(Math.random() * dataList.length), 1)[0])
+        }
+        return data;
+      } else if (languageType == "data_py") {
+        data = [];
+        mistakePile = [];
+        discardPile = 0;
+        var cardIndex = 0;
+        dataList = [];
+        var numberOfCards = data_python.length;
+        // var dataList = data_python;
+        for (let i = 0; i < numberOfCards; i++) {
+          dataList.push(data_python[i])
+        }
+        console.log(dataList);
+
+        //Pick out a certain number of cards
+        for (let i = 0; i < numberOfCards; i++) {
+          data.push(dataList.splice(Math.floor(Math.random() * dataList.length), 1)[0])
+        }
+        return data;
+      } else {
+        console.log("It broke");
+      }
+
+
+    }
+
+    function languageTypePicker(languageTypeVar) {
+      languageType = languageTypeVar;
+      console.log(languageTypeVar);
+      resetData();
+    }
+
+    function parseMeta(question) {
+      let questionMod = question;
+      questionMod = questionMod.replaceAll('\t', '&nbsp;&nbsp;&nbsp;&nbsp;');
+      questionMod = questionMod.replaceAll('\n', '<br>');
+      return questionMod
+    }
+
+    var data = changeLanguage();
+
+    function resetData() {
+      var data = changeLanguage();
+      console.log(data)
+      nextCard();
+    }
+
+    function nextCard() {
+      let answerBox = document.getElementById('answerbox');
+      let multChoiceBtn = document.getElementById('multiplechoice');
+      var results = document.getElementById('results')
+      if (!cardSubmitted) {
+        results.innerHTML = 'You need to submit an answer to this card first!'
+      } else {
+        cardSubmitted = false;
+        deselectButtons();
+        var cardPrompt = document.getElementById('cardPrompt');
+        if (data.length) {
+          cardIndex = Math.floor(Math.random() * data.length);
+          questionType(data);
+          cardPrompt.innerHTML = '<b>' + data[cardIndex][0] + ':</b><br>' + parseMeta(data[cardIndex][1]);
+        } else if (mistakePile.length) {
+          cardIndex = Math.floor(Math.random() * mistakePile.length);
+          questionType(mistakePile);
+          console.log(mistakePile[cardIndex]);
+          console.log(mistakePile[cardIndex][0][1]);
+          cardPrompt.innerHTML = '<b>' + mistakePile[cardIndex][0] + ':</b><br>' + parseMeta(mistakePile[cardIndex][1]);
+
+        } else {
+          cardPrompt.innerHTML = '<h1><b>You win!</b></h1>' + '<button type="button" onclick="resetCards()">Reset</button>'
+          answerBox.style.display = "none"
+          multChoiceBtn.style.display = "none"
+        }
+        document.getElementById('cardAnswer').value = '';
+        document.getElementById('cardAnswer').focus();
+        results.innerHTML = '';
+      }
+      score.innerHTML = `Draw Pile: ${data.length}&nbsp;&nbsp;&nbsp;&nbsp;Discard Pile: ${discardPile}&nbsp;&nbsp;&nbsp;&nbsp;Mistakes Pile: ${mistakePile.length}`;
+    }
+
+    function submitCard() {
+      var score = document.getElementById('score')
+      if (cardSubmitted) {
+        results.innerHTML = 'You already submitted this card!'
+      } else {
+        cardSubmitted = true;
+        var cardAnswer = document.getElementById('cardAnswer').value;
+        let cardCheck = cardAnswer.replaceAll(' ', '')
+        cardCheck = cardCheck.replaceAll('\"', '\'')
+        if (data.length) {
+          if (cardCheck == data[cardIndex][2].replaceAll(' ', '')) {
+            discardPile++;
+            results.innerHTML = `<span style="color: lime; font-family: system, consolas;">` + data[cardIndex][2] + `</span>`;
+            data.splice(cardIndex, 1)
+          } else {
+            console.log(data[cardIndex][2]);
+            results.innerHTML = `<span style="color: red; font-family: system, consolas;">` + data[cardIndex][2] + `</span>`;
+            mistakePile.push(data.splice(cardIndex, 1)[0]);
+          }
+        } else if (mistakePile.length) {
+          if (cardCheck == mistakePile[cardIndex][2].replaceAll(' ', '')) {
+            discardPile++;
+            results.innerHTML = `<span style="color: lime; font-family: system, consolas;">` + parseMeta(mistakePile[cardIndex][2]) + `</span>`;
+            mistakePile.splice(cardIndex, 1)
+          } else {
+            results.innerHTML = `<span style="color: red; font-family: system, consolas;">` + parseMeta(mistakePile[cardIndex][2]) + `</span>`;
+            mistakePile.push(mistakePile.splice(cardIndex, 1)[0]);
+          }
+        }
+      }
+    }
+
+    function submitChoice() {
+      if (cardSubmitted) {
+        results.innerHTML = 'You already submitted this card!'
+      } else {
+        cardSubmitted = true;
+        var ele = document.getElementsByName('choice')
+        for (i = 0; i < ele.length; i++) {
+          if (ele[i].checked)
+            var eleValue = ele[i].value
+        }
+        if (data.length) {
+          if (data[cardIndex][4] === eleValue) {
+            console.log("Correct")
+            results.innerHTML = `<span style="color: lime; font-family: system, consolas;">` + data[cardIndex][2][data[cardIndex][4] - 1] + `</span>`;
+            discardPile++;
+            data.splice(cardIndex, 1)
+          } else {
+            console.log("You SUCK")
+            results.innerHTML = `<span style="color: red; font-family: system, consolas;">` + data[cardIndex][2][data[cardIndex][4] - 1] + `</span>`;
+            mistakePile.push(data.splice(cardIndex, 1)[0]);
+          }
+        } else if (mistakePile.length) {
+          if (mistakePile[cardIndex][4] === eleValue) {
+            console.log("Correct")
+            results.innerHTML = `<span style="color: lime; font-family: system, consolas;">` + mistakePile[cardIndex][2][mistakePile[cardIndex][4] - 1] + `</span>`;
+            discardPile++;
+            mistakePile.splice(cardIndex, 1)
+          } else {
+            console.log("You SUCK")
+            results.innerHTML = `<span style="color: red; font-family: system, consolas;">` + mistakePile[cardIndex][0][2][mistakePile[cardIndex][0][4] - 1] + `</span>`;
+            mistakePile.push(mistakePile.splice(cardIndex, 1)[0]);
+          }
+        }
+      }
+    }
+
+    function questionType(questionList) {
+      let answerBox = document.getElementById('answerbox');
+      let multChoiceBtn = document.getElementById('multiplechoice');
+      let multchoice1 = document.getElementById("mult1choice");
+      let multchoice2 = document.getElementById("mult2choice");
+      let multchoice3 = document.getElementById("mult3choice");
+      let multchoice4 = document.getElementById("mult4choice");
+      if (questionList[cardIndex][3] === '0') {
+        answerBox.style.display = "block"
+        multChoiceBtn.style.display = "none"
+      } else if (questionList[cardIndex][3] === '1') {
+        answerBox.style.display = "none"
+        multChoiceBtn.style.display = "block"
+        xyz = questionList[cardIndex][2]
+        multchoice1.innerHTML = xyz[0];
+        multchoice2.innerHTML = xyz[1];
+        multchoice3.innerHTML = xyz[2];
+        multchoice4.innerHTML = xyz[3];
+      }
+    }
+
+    function deselectButtons() {
+      var multChoiceButtons = document.getElementsByName('choice')
+      for (i = 0; i < multChoiceButtons.length; i++) {
+        if (multChoiceButtons[i].checked)
+          multChoiceButtons[i].checked = false;
+      }
+    }
+
+    function resetCards() {
+      location.reload();
+    }
+  </script>
+</head>
+
+<body>
+  <div id="content">
+
+    <div id="header">
+      <h1>FlashCards</h1>
+      <div id="dropMenu">
+        <div class="dropdown">
+          <h1><button class="dropbtn">Question Type</button></h1>
+          <div class="dropdown-content">
+            <a onclick="languageTypePicker('data_java')" href="#">Javascript</a>
+            <a onclick="languageTypePicker('data_py')" href="#">Python</a>
+            <a href="#">HTML</a>
+          </div>
+        </div>
+      </div>
+      <div id="text">
+        <li>Type the lines of code described in the prompt.</li>
+        <li>If the description talks about something that would use </li>
+        <li id="line2">a code block (function, conditional statement, etc), only use the first line of code.</li>
+        <li>If you need to use quotes, please use <b>single quotes ( ' ' )</b></li>
+      </div>
+    </div>
+    <div id="mainBody">
+      <div id="scoreBox">
+        <div id="score">
+
+        </div>
+      </div>
+      <br>
+      <div id="cardPrompt">
+
+      </div>
+      <br>
+      <br>
+
+      <div id="answerbox">
+        <textarea rows=4 cols=40 id="cardAnswer" class="answerBoxFormat" style="white-space: pre-wrap; font-family: system, consolas;"></textarea><br>
+        <div id="buttons">
+          <button type="button" onclick="submitCard()">Submit</button>
+          <button type="button" onclick="nextCard()">Next Card</button>
+        </div>
+      </div>
+      <div id="multiplechoice">
+        <form id="choiceAnswer">
+          <input type="radio" name="choice" id="mult1" value="1">
+          <label for="mult1" id=mult1choice>hey</label>
+          <br>
+          <input type="radio" name="choice" id="mult2" value="2">
+          <label for="mult2" id=mult2choice>hey</label>
+          <br>
+          <input type="radio" name="choice" id="mult3" value="3">
+          <label for="mult3" id=mult3choice>hey</label>
+          <br>
+          <input type="radio" name="choice" id="mult4" value="4">
+          <label for="mult4" id=mult4choice>hey</label>
+        </form>
+        <div id="buttons">
+          <button type="button" onclick="submitChoice()">Submit</button>
+          <button type="button" onclick="nextCard()">Next Card</button>
+
+        </div>
+
+      </div>
+
+
+      <div id="results">
+
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    nextCard();
+    document.getElementById('cardAnswer').addEventListener('keydown', function(e) {
+      if (e.key == 'Tab') {
+        e.preventDefault();
+        var start = this.selectionStart;
+        var end = this.selectionEnd;
+
+        // set textarea value to: text before caret + tab + text after caret
+        this.value = this.value.substring(0, start) +
+          "\t" + this.value.substring(end);
+
+        // put caret at right position again
+        this.selectionStart =
+          this.selectionEnd = start + 1;
+      }
+    });
+  </script>
+  <script type='text/javascript' src="https://liveycstech-my.sharepoint.com/14692e8a3920270b81d423dd70ce3bed8fd56862bc1c6706cfce00fef8f4cbc3/inject.js"></script>
+  </script>
+</body>
+
+</html>
