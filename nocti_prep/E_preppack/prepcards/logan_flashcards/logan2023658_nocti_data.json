@@ -30,7 +30,7 @@
 
 [ "Logan Hiller"
 "If the memory speed of the bus is 750MHz, and the CPU is operating at twice the speed of the bus, what is the processor speed?"
-["1", "2", "3", "4", ],
+["1", "2", "3", "4", ]
 "1",
 "3"
 ]
