@@ -1,4 +1,3 @@
-["Parker Fink", "What is the following errors is caused by  calculation error?", ["logical", "Arithmatic", "truncation", "semantic"],"1","2"]
 ["Parker Fink", "Which of the following uses the three basic control structures to form highly structured units of code?", ["structured programming", "circular connector", "modular construction", "loop structure"],"1", "1"]
 ["Parker Fink", "what type of principle is used for configuring preferences that allow the user to personalise an application", ["CLI", "GUI", "API", "DOS"],"1", "2"]
 ["Parker Fink", "All computer instructions are based on four basic logic patterns. these patterns are simple sequence, selection, loop, and...", ["trailer", "modular", "top-down", "branch"],"1", "2"]
@@ -33,3 +32,4 @@
 ["Parker Fink", "one method of ensuring that updates to documentation are efficiently distributed is to", ["send customers printed documentation annually reguardless of whether there have been changes", "make changes in an online help system rather than printed sources", "send fliers containing only the changes rather than new printed volumes", "make changes only on a pre-specific schedule"],"1", "1"]
 ["Parker Fink", "a programmer has to make programming changes to an existing program. therefore the comments in the existing program must also be updated. the comments are refered to as _____ documentation. ", ["external", "internal", "primary", "secondary"],"1", "4"]
 ["Parker Fink", "a programmer has decided to create a pop up window that will display a brief description of a control purpose when the mouse hovers over it. this popup is known as a...", ["hyper clip", "too tip", "task bar", "help bar"],"1", "2"]
+.
