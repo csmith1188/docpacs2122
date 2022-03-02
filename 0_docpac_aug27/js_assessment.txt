@@ -1,0 +1,24 @@
+// 1: Create a variable that's a number
+
+// 2: Create a variable that's a string
+
+// 3: Create an object with one property, whose value is a string
+
+// 4: Create an array that contains three numbers
+
+// 5: Log the value to the console of the last item in the array you made in #4
+
+// 6: Create a for loop that logs each value in the array from #4 to console
+
+// 7: Add two more properties to the object from #3
+
+// 8: Create a loop that logs the value of each property from #7
+
+// 9: Generate a random whole number between 10 and 20
+
+// 10: Write a function that adds two numbers given as arguments, and call it
+
+// 11: Modify function #10 to log if the first argument's value is bigger or
+//    smaller than the second argument's value
+
+// 12: Add the function from #11 as a method to the object from #3/#7
