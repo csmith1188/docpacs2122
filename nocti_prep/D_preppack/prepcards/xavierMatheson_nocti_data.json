@@ -1,5 +1,5 @@
  {
-   "genInfo" : [
+   "genInfo": [
      [
        "Xavier Matheson",
        "Which of the following errors is caused by a calculation error?",
@@ -51,15 +51,13 @@
      ],
      [
        "Xavier Matheson",
-       "When the code below is executed, strAdd will be equal to
-      \n strFirst = '123' \n strSecond = '456' \n strAdd = strFirst + strSecond
-       ",
+       "When the code below is executed, strAdd will be equal to \n strFirst = 123 \n strSecond = 456 \n strAdd = strFirst + strSecond",
        ["579", "123 + 456", "123456", "strSecond"],
        "1",
        "3"
      ]
    ],
-   "ethics" : [
+   "ethics": [
      [
        "Xavier Matheson",
        "If a programmer downloads a copy of Microsoft SQL Server from a file-sharing website without paying for it, the programmer has commited an offence called",
@@ -75,7 +73,7 @@
        "4"
      ]
    ],
-   "flowCharts" : [
+   "flowCharts": [
      [
        "Xavier Matheson",
        "The following programming flowchart symbol is a/an __ symbol. (image of a diamond)",
@@ -126,7 +124,7 @@
        "3"
      ]
    ],
-   "solutionDesign" : [
+   "solutionDesign": [
      [
        "Xavier Matheson",
        "The source document and __ should follow the same order.",
@@ -163,7 +161,7 @@
        "4"
      ]
    ],
-   "codePrograms" : [
+   "codePrograms": [
      [
        "Xavier Matheson",
        "One example of scripting (text processing) language is",
@@ -193,7 +191,7 @@
        "1"
      ]
    ],
-   "testPrograms" : [
+   "testPrograms": [
      [
        "Xavier Matheson",
        "Typically after successful integration testing, a __ test is performed to complete a front-to-back execution of the entire application.",
@@ -210,9 +208,7 @@
      ],
      [
        "Xavier Matheson",
-       "When TEXT1.VALUE= 'March 7', TEXT1_LEN=
-\n Sub Form_Click() \n IN = TEXT 1.VALUE \n TEXT1_len = LEN$(IN) \n For I = TEXT_len to 1 step -1 \n TEMP = TEMP & mid (in, I, 1) \n NEXT \n OUT = TEMP & right (in, text_len, -n)
-       ",
+       "When TEXT1.VALUE= 'March 7', TEXT1_LEN= \n Sub Form_Click() \n IN = TEXT 1.VALUE \n TEXT1_len = LEN$(IN) \n For I = TEXT_len to 1 step -1 \n TEMP = TEMP & mid (in, I, 1) \n NEXT \n OUT = TEMP & right (in, text_len, -n)",
        ["7", "8", "9", "10"],
        "1",
        "1"
@@ -232,7 +228,7 @@
        "4"
      ]
    ],
-   "maintainPrograms" : [
+   "maintainPrograms": [
      [
        "Xavier Matheson",
        "Maintenance refers to changes to a system in operating arising from error corrections, performance improvements, changes in the business environment and",
@@ -248,7 +244,7 @@
        "2"
      ]
    ],
-   "documentation" : [
+   "documentation": [
      [
        "Xavier Matheson",
        "A programmer has to make programming changes to an existing program. Therefore the comments in the existing program must also be updated. The comments are referred to as __ documentation.",
