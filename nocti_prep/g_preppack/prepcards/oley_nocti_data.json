@@ -11,7 +11,7 @@
 	],
 	"ethicsLegalComplianceAndSecurity": [
 		["Oley Birkeland", "If a programmer downloads a copy of Minecraft SQL Server from a file-sharing website without paying for it, the programmer has commited and offense called?", ["piracy", "larceny", "felony", "spyware"], "1", "1"],
-		["Oley Birkeland", "The Sarbanes-Oxley Act (SOX) requires monitoring and documentation of transactions. How could a programmer mistakenly setup a program that would cause problems with compliance with SOX?", ["create system logs of the transactions taken in the session", "require a user to click three times when they are sure they want to prceed", "help a user to request assistance from the system administrators", "multiplication preced exponentation"], "1", "4"]
+		["Oley Birkeland", "The Sarbanes-Oxley Act (SOX) requires monitoring and documentation of transactions. How could a programmer mistakenly setup a program that would cause problems with compliance with SOX?", ["create system logs of the transactions taken in the session", "require a user to click three times when they are sure they want to prceed", "help a user to request assistance from the system administrators", "multiplication precedes exponentation"], "1", "4"]
 	],
 	"analyzeProgrammingProblemsManageProjectsAndCreateFlowchartSolutions": [
 		["Oley Birkeland", "The following programming flowchart symbol is a/an _____ symbol.\n◇", ["processing", "input/output", "decision", "connector"], "1", "3"],

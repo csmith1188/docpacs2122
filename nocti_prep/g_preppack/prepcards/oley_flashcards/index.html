@@ -11,7 +11,7 @@
     var discardPile = 0;
     var mistakePile = []
 
-    var json_nocti = `{
+    var json_nocti_written = `{
       "generalInformationAndConcepts": [
         ["Oley Birkeland", "Which of the following errors is caused by a calculation error?", ["logical", "arithmetic", "truncation", "semantic"], "1", "2"],
         ["Oley Birkeland", "Which of the following uses three basic control structures to form highly structured units of code?", ["structured programming", "circular connector", "modular construction", "loop structure"], "1", "1"],
@@ -24,7 +24,7 @@
       ],
       "ethicsLegalComplianceAndSecurity": [
         ["Oley Birkeland", "If a programmer downloads a copy of Minecraft SQL Server from a file-sharing website without paying for it, the programmer has commited and offense called?", ["piracy", "larceny", "felony", "spyware"], "1", "1"],
-        ["Oley Birkeland", "The Sarbanes-Oxley Act (SOX) requires monitoring and documentation of transactions. How could a programmer mistakenly setup a program that would cause problems with compliance with SOX?", ["create system logs of the transactions taken in the session", "require a user to click three times when they are sure they want to prceed", "help a user to request assistance from the system administrators", "multiplication preced exponentation"], "1", "4"]
+        ["Oley Birkeland", "The Sarbanes-Oxley Act (SOX) requires monitoring and documentation of transactions. How could a programmer mistakenly setup a program that would cause problems with compliance with SOX?", ["create system logs of the transactions taken in the session", "require a user to click three times when they are sure they want to prceed", "help a user to request assistance from the system administrators", "multiplication precedes exponentation"], "1", "4"]
       ],
       "analyzeProgrammingProblemsManageProjectsAndCreateFlowchartSolutions": [
         ["Oley Birkeland", "The following programming flowchart symbol is a/an _____ symbol.\\n◇", ["processing", "input/output", "decision", "connector"], "1", "3"],
@@ -64,8 +64,18 @@
         ["Oley Birkeland", "A programmer has decided to create a pop-up window that will display a brief description of a control's purpose when the mouse hovers over it. This pop-up window is known as a", ["hyper clip", "tool tip", "task bar", "help bar"], "1", "2"]
       ]
     }`
-    var object_nocti = JSON.parse(json_nocti);
-    var data_nocti = Object.values(object_nocti).flat();
+    var object_nocti_written = JSON.parse(json_nocti_written);
+    var data_nocti_written = Object.values(object_nocti_written).flat();
+
+    var data_nocti_performance = [
+      ['Oley', 'What code do you use to tell an ExpressJS to read URL-encoded data?', 'app.use(express.urlencoded());', '0'],
+      ['Oley', 'Create a GET endpoint at \'/\' the sends back \"Hello\"', 'app.get(\'/\', (req, res) => res.send(\'Hello\'));', '0'],
+      ['Oley', 'Create a POST endpoint at \'/new\' that sends back the content of the request body parameter named \"name\"', 'app.post(\'/new\', (req, res) => res.send(req.body.name));', '0'],
+      ['Oley', 'Create and if statement that checks if the content of the request body parameter named \"ordernumber\" exists, and logs \"Found\" if it does.', 'if (req.body.ordernumber) console.log(\'Found\');', '0'],
+      ['Oley', 'Use the fs module to write a JS object named \"newData\" into a JSON file named \"newData.json\"', 'fs.writeFile(\'newData.json\', newData);', '0'],
+      ['Oley', 'Use the fs module to read a file called \"oldData.json\" and convert it to a JS object named \"oldData\"', 'fs.readFile(\'oldData.json\', oldData);', '0'],
+      ['Oley', 'Start an ExpressJS app listen server', 'app.listen();', '0'],
+    ];
 
     var data_javascript = [
       // ['Will', '', ['', '', '', ''], '', ''],
@@ -118,7 +128,7 @@
           data.push(dataList.splice(Math.floor(Math.random() * dataList.length), 1)[0])
         }
     */
-    var languageType = "data_nocti";
+    var languageType = "data_nocti_written";
 
     function changeLanguage() {
       console.log(languageType);
@@ -159,16 +169,34 @@
           data.push(dataList.splice(Math.floor(Math.random() * dataList.length), 1)[0])
         }
         return data;
-      } else if (languageType == "data_nocti") {
+      } else if (languageType == "data_nocti_written") {
         data = [];
         mistakePile = [];
         discardPile = 0;
         var cardIndex = 0;
         dataList = [];
-        var numberOfCards = data_nocti.length;
-        // var dataList = data_nocti;
+        var numberOfCards = data_nocti_written.length;
+        // var dataList = data_nocti_written;
         for (let i = 0; i < numberOfCards; i++) {
-          dataList.push(data_nocti[i])
+          dataList.push(data_nocti_written[i])
+        }
+        console.log(dataList);
+
+        //Pick out a certain number of cards
+        for (let i = 0; i < numberOfCards; i++) {
+          data.push(dataList.splice(Math.floor(Math.random() * dataList.length), 1)[0])
+        }
+        return data;
+      } else if (languageType == "data_nocti_performance") {
+        data = [];
+        mistakePile = [];
+        discardPile = 0;
+        var cardIndex = 0;
+        dataList = [];
+        var numberOfCards = data_nocti_performance.length;
+        // var dataList = data_nocti_performance;
+        for (let i = 0; i < numberOfCards; i++) {
+          dataList.push(data_nocti_performance[i])
         }
         console.log(dataList);
 
@@ -353,7 +381,8 @@
             <a onclick="languageTypePicker('data_java')" href="#">Javascript</a>
             <a onclick="languageTypePicker('data_py')" href="#">Python</a>
             <a onclick="languageTypePicker('data_html')" href="#">HTML</a>
-            <a onclick="languageTypePicker('data_nocti')" href="#">NOCTI prep</a>
+            <a onclick="languageTypePicker('data_nocti_written')" href="#">NOCTI Written</a>
+            <a onclick="languageTypePicker('data_nocti_performance')" href="#">NOCTI Performance</a>
           </div>
         </div>
       </div>
@@ -362,6 +391,8 @@
         <li>If the description talks about something that would use </li>
         <li id="line2">a code block (function, conditional statement, etc), only use the first line of code.</li>
         <li>If you need to use quotes, please use <b>single quotes ( ' ' )</b></li>
+        <li>The Express.js application object will always be named "app".</li>
+        <li>The response and request arguments in callbacks will always be named "res" and "req".</li>
       </div>
     </div>
     <div id="mainBody">
