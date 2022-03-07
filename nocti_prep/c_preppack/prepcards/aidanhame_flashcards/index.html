@@ -50,6 +50,7 @@
       ["Aidan Hamme","When the code below is executed, strAdd will be equal to",["579", "123 + 456", "123456", "strFirst + strSecond"],"1","3"]
     ]
 
+<<<<<<< Updated upstream
     var data_nocti = [
     [
       "Aidan Hamme",
@@ -75,6 +76,30 @@
       "1",
       "1"
     ],
+=======
+    var data_nocti_proformace = []
+
+    var data_nocti_written = [
+    {
+      author: 'Aidan Hamme',
+      question: 'Which of the following errors is caused by a calculation error?',
+      answers: ['logical', 'arithmetic', 'truncation', 'semantic'],
+      type: 'multi',
+      key: 1
+    },
+    {
+      author: 'Aidan Hamme',
+      question: 'Which of the following uses three basic control structures to form highly structured units of code?',
+      answers: [
+        'structed programming',
+        'circular connector',
+        'modular construction',
+        'loop structure'
+      ],
+      type: 'multi',
+      key: 0
+    },
+>>>>>>> Stashed changes
     [
       "Aidan Hamme",
       "What type of principle is used for configureing preferences that allow the user to personalize an application?",
@@ -525,16 +550,27 @@
           data.push(dataList.splice(Math.floor(Math.random() * dataList.length), 1)[0])
         }
         return data;
+<<<<<<< Updated upstream
       } else if (languageType == "data_nocti") {
+=======
+      } else if (languageType == "data_nocti_written") {
+>>>>>>> Stashed changes
         data = [];
         mistakePile = [];
         discardPile = 0;
         var cardIndex = 0;
         dataList = [];
+<<<<<<< Updated upstream
         var numberOfCards = data_nocti.length;
         // var dataList = data_python;
         for (let i = 0; i < numberOfCards; i++) {
           dataList.push(data_nocti[i])
+=======
+        var numberOfCards = data_nocti_written.length;
+        // var dataList = data_python;
+        for (let i = 0; i < numberOfCards; i++) {
+          dataList.push(data_nocti_written[i])
+>>>>>>> Stashed changes
         }
         console.log(dataList);
 
