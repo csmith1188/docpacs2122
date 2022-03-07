@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Create a New Order</title>
+  </head>
+  <body>
+    <form action="/neworder" method="post">
+      <input type="text" name="name" placeholder = "Enter your name here..." value="">
+      <input type="text" name="address" placeholder = "Enter your address here..." value="">
+      <input type="submit" value="Submit">
+    </form>
+
+    <p>
+ <%- message %>
+
+    </p>
+    <form action="/" method="get">
+      <button id="entry" type="submit">back to main</button>
+    </form>
+  </body>
+</html>
