@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>FlashCards</title>
+  <link rel="stylesheet" href="style.css">
+  </script>
+  <script type="text/javascript">
+    var cardSubmitted = true;
+    var discardPile = 0;
+    var mistakePile = []
+    var data_nocti = [
+        ["Jayson Zeigler", "Which of the following errors is caused by a calculation error?", ["logical", "arithmetic", "truncation", "semantic"], "1", "2"],
+        ["Jayson Zeigler", "Which of the following uses three basic control structures to form highly structured units for code?", ["structured programming", "circular connector", "modular construction", "loop structure"], "1", "1"],
+        ["Jayson Zeigler", "What type of principke is used for configuring preferences that allow the user to personalize an application?", ["CLI", "GUI", "API", "DOS"], "1", "2"],
+        ["Jayson Zeigler", "All computer instructions are based on four basic logic patterns. These patterns are simple sequence, selection, loop, and ", ["trailer", "modular", "top-down", "branch"], "1", "4"],
+        ["Jayson Zeigler", "If the memory speed of the bus is 750MHz, and the CPU is operating at twice the speed of the bus, what is the processor speed?", ["375 MHz", "750 MHz", "1.5 GHz", "2 GHz"], "1", "3"],
+        ["Jayson Zeigler", "Two types of programs that creat machine codes are the interpreter and the ", ["assembler", "object", "compiler", "source"], "1", "3"]
+        ["Jayson Zeigler", "In the order of calculations in a program", ["addition precedes division", "parenthesis precede exponentiation", "subtraction precedes addition", "multiplication precedes exponentiation"], "1", "2"],
+        ["Jayson Zeigler", "When the code below is executed, strAdd will be equal to \n strFirst = 123 \n strSecond = 456 \n strAdd = strFirst + strSecond", ["579", "123 + 456", "123456", "strFirst + strSecond"], "1", "3"],
+
+        ["Jayson Zeigler", "If a programmer downloads a copy of Microsoft SQL Server from a file-sharing website without paying for it, the programmer has committed an offense called", ["piracy", "larceny", "felony", "spyware"], "1", "1"],
+        ["Jayson Zeigler", "The Sarbanes-Oxley Act (SOX) requires monitoring and documenting transactions. How could a programmer mistakenly setup a program that would cause problems with the compliance with SOX?", ["create a system logs of the transactions taken in the session", "require a user to click three times when they are sure they want to proceed", "help a user to request assistance from the system administrators", "utilize system credentials instead of pass-through credentials"], "1", "4"],
+
+      ["Jayson Zeigler", "The diamond shaped flowcart symbol is used for", ["processing", "input/output", "decision", "connector"], "1", "3"],
+      ["Jayson Zeigler", "One of the main goals on analyzing user requirements is to", ["troubleshoot the problem", "shutdown and maintain the system", "keep the customer happy", "elicit requirements from a user's point of view"], "1", "4"],
+      ["Jayson Zeigler", "If a record has the following field lengths, what is the record length? \n Name=35,Zipcode=5,District=7", ["42", "47", "54", "56"], "1", "2"],
+      ["Jayson Zeigler", "The parallelogram shaped flowchart symbol is used for", ["processing", "input/output", "decision", "connector"], "1", "2"],
+      ["Jayson Zeigler", "A programmer is starting a new programming project. During what phase of the programming project should the programmer begin the planning for data storage?", ["billing", "documentation", "implementation", "test"], "1", "3"],
+      ["Jayson Zeigler", "A programmer need to maipulate data that consists of a sequence of numbers that must be used as both an individual object and a set of data. What is the best data structure the programmer can use?", ["array", "constant", "string", "field"], "1", "1"],
+      ["Jayson Zeigler", "When a prgrammer is ready to create executable code, what process is used?", ["debugging", "editing", "compiling", "disassembling"], "1", "3"],
+
+      ["Jayson Zeigler", "The source document and ______ should follow the same order", ["input screen design", "output screen design", "decision-type operator symbols", "processing function symbols"], "1", "1"],
+      ["Jayson Zeigler", "Which of the following is a correct name for a variable?", ["State_Zipcode", "State+Zipcode", "State Zipcode", "State=Zipcode"], "1", "1"],
+      ["Jayson Zeigler", "Why is the following expression invalid? A=10 + New Data", ["Variable 5 is not defined", "data types are mixed", "New Data is not a string", "New Data equals zero"], "1", "2"],
+      ["Jayson Zeigler", "An output field has Los Angeles moved to it and when examined contains Los Angel. This indicates a/an ______ error.", ["logical", "arithmetic", "truncation", "semantic"], "1", "3"],
+      ["Jayson Zeigler", "A programmer needs to define the type of value for a variable. What pre-defined set of characteristics for a variable can the programmer choose?", ["storage location", "reurn value", "method modifier", "data type"], "1", "4"],
+
+      ["Jayson Zeigler", "One example of scripting (text processing) language is", ["Perl", "C++", "Fortran", "Beta"], "1", "1"],
+      ["Jayson Zeigler", "Which of the following enables the use of 'plain english' queries?", ["BASIC", "FORTRAN", "SQL", "C++"], "1", "3"],
+      ["Jayson Zeigler", "An example of lopp structure is", ["DO UNTIL", "SELECT IF", "EXECUTE", "NEXT"], "1", "1"],
+      ["Jayson Zeigler", "Compile errors cna be caused by", ["bad syntax", "input data", "insufficient test data", "incorrect user specification"], "1", "1"],
+
+      ["Jayson Zeigler", "Typically after successful integration testing, a ______ test is performed to complete a front-to-back execution of the entire application", ["system", "unit", "fuzz", "beta"], "1", "1"],
+      ["Jayson Zeigler", "The implementation phase consists of coding, testing, and", ["designing", "building a prototype", "establishing requirements", "integration"], "1", "4"],
+      ["Jayson Zeigler", "When TEXT1.VALUE='March 7', TEXT1_LEN= \n Sample \n Sub Form_Click() \n IN = TEXT 1.VALUE \n For I = TEXT_ien to 1 step -1 \n TEMP = TEMP & mid (in, I, 1) \n NEXT \n OUT = TEMP & right(in, text_ien -n)", ["7", "8", "9", "10"], "1", "1"],
+      ["Jayson Zeigler", "A data element is intended to contain a range from 15 to 30 and after testing it contains 32. What kind of error is this?", ["truncation", "rounding", "run time", "boundary"], "1", "4"],
+      ["Jayson Zeigler", "Which of the following consists of a sequence of events to follow so they can be repeated?", ["runtime", "test files", "trace route", "script"], "1", "4"],
+
+      ["Jayson Zeigler", "Maintenence refers to changes that updates to documentation are efficiently distributed is to", ["enhancements in functions", "applications requirements", "refrencing software", "material requirements"], "1", "2"],
+      ["Jayson Zeigler", "One method of ensuring that updates to documentation are efficiently distributed is to", ["send customers printed documentation annually regarless of whether there have been changes", "make changes in an online help system rather than printed sources", "send fliers containing only the changes rather than new printes volumes", "make changes only on a pre-specified schedule"], "1", "2"],
+
+      ["Jayson Zeigler", "A programmer has to make programming changes to an existing program. Therfore the comments in the existing program must also be updated. The comments are referred to as ______ documentation.", ["external", "internal", "primary", "secondary"], "1", "2"],
+      ["Jayson Zeigler", "A programmer has decided to create a pop-up window that will display a brief description of a control's purpose when the mouse hovers over it. This pop-up window is known as a", ["hyper clip", "tool tip", "task bar", "help bar"], "1", "2"],
+    ]
+
+    var languageType = "";
+
+    function changeLanguage() {
+
+      console.log(languageType);
+      cardSubmitted = true;
+      if (languageType == "data_java") {
+        data = [];
+        mistakePile = [];
+        discardPile = 0;
+        var cardIndex = 0;
+        dataList = [];
+        // var dataList = data_javascript;
+        var numberOfCards = data_javascript.length;
+        for (let i = 0; i < numberOfCards; i++) {
+          dataList.push(data_javascript[i])
+        }
+        console.log(dataList);
+
+        //Pick out a certain number of cards
+        for (let i = 0; i < numberOfCards; i++) {
+          data.push(dataList.splice(Math.floor(Math.random() * dataList.length), 1)[0])
+        }
+        return data;
+      } else if (languageType == "data_py") {
+        data = [];
+        mistakePile = [];
+        discardPile = 0;
+        var cardIndex = 0;
+        dataList = [];
+        var numberOfCards = data_python.length;
+        // var dataList = data_python;
+        for (let i = 0; i < numberOfCards; i++) {
+          dataList.push(data_python[i])
+        }
+        console.log(dataList);
+
+        //Pick out a certain number of cards
+        for (let i = 0; i < numberOfCards; i++) {
+          data.push(dataList.splice(Math.floor(Math.random() * dataList.length), 1)[0])
+        }
+        return data;
+      } else if (languageType == "data_nocti") {
+        data = [];
+        mistakePile = [];
+        discardPile = 0;
+        var cardIndex = 0;
+        dataList = [];
+        var numberOfCards = data_nocti.length;
+        // var dataList = data_python;
+        for (let i = 0; i < numberOfCards; i++) {
+          dataList.push(data_nocti[i])
+        }
+        console.log(dataList);
+
+        //Pick out a certain number of cards
+        for (let i = 0; i < numberOfCards; i++) {
+          data.push(dataList.splice(Math.floor(Math.random() * dataList.length), 1)[0])
+        }
+        return data;
+      } else if (languageType == "data_html") {
+        data = [];
+        mistakePile = [];
+        discardPile = 0;
+        var cardIndex = 0;
+        dataList = [];
+        var numberOfCards = data_html.length;
+        // var dataList = data_html;
+        for (let i = 0; i < numberOfCards; i++) {
+          dataList.push(data_html[i])
+        }
+        console.log(dataList);
+
+        //Pick out a certain number of cards
+        for (let i = 0; i < numberOfCards; i++) {
+          data.push(dataList.splice(Math.floor(Math.random() * dataList.length), 1)[0])
+        }
+        return data;
+      } else if (languageType == "") {
+        chooseLanguage();
+      } else {
+        console.log("It broke");
+      }
+
+
+    }
+
+    function languageTypePicker(languageTypeVar) {
+      languageType = languageTypeVar;
+      console.log(languageTypeVar);
+      resetData();
+    }
+
+    function parseMeta(question) {
+      let questionMod = question;
+      questionMod = questionMod.replaceAll('\t', '&nbsp;&nbsp;&nbsp;&nbsp;');
+      questionMod = questionMod.replaceAll('\n', '<br>');
+      return questionMod
+    }
+
+    function resetData() {
+      var data = changeLanguage();
+      console.log(data)
+      nextCard();
+    }
+
+    function nextCard() {
+      let answerBox = document.getElementById('answerbox');
+      let multChoiceBtn = document.getElementById('multiplechoice');
+      var results = document.getElementById('results')
+      if (!cardSubmitted) {
+        results.innerHTML = 'You need to submit an answer to this card first!'
+      } else {
+        cardSubmitted = false;
+        deselectButtons();
+        var cardPrompt = document.getElementById('cardPrompt');
+        if (data.length) {
+          cardIndex = Math.floor(Math.random() * data.length);
+          questionType(data);
+          cardPrompt.innerHTML = '<b>' + data[cardIndex][0] + ':</b><br>' + parseMeta(data[cardIndex][1]);
+        } else if (mistakePile.length) {
+          cardIndex = Math.floor(Math.random() * mistakePile.length);
+          questionType(mistakePile);
+          console.log(mistakePile[cardIndex]);
+          console.log(mistakePile[cardIndex][0][1]);
+          cardPrompt.innerHTML = '<b>' + mistakePile[cardIndex][0] + ':</b><br>' + parseMeta(mistakePile[cardIndex][1]);
+
+        } else {
+          cardPrompt.innerHTML = '<h1><b>You win!</b></h1>' + '<button type="button" onclick="resetCards()">Reset</button>'
+          answerBox.style.display = "none"
+          multChoiceBtn.style.display = "none"
+        }
+        document.getElementById('cardAnswer').value = '';
+        document.getElementById('cardAnswer').focus();
+        results.innerHTML = '';
+      }
+      score.innerHTML = `Draw Pile: ${data.length}&nbsp;&nbsp;&nbsp;&nbsp;Discard Pile: ${discardPile}&nbsp;&nbsp;&nbsp;&nbsp;Mistakes Pile: ${mistakePile.length}`;
+    }
+
+    function submitCard() {
+      var score = document.getElementById('score')
+      if (cardSubmitted) {
+        results.innerHTML = 'You already submitted this card!'
+      } else {
+        cardSubmitted = true;
+        var cardAnswer = document.getElementById('cardAnswer').value;
+        let cardCheck = cardAnswer.replaceAll(' ', '')
+        cardCheck = cardCheck.replaceAll('\"', '\'')
+        if (data.length) {
+          if (cardCheck == data[cardIndex][2].replaceAll(' ', '')) {
+            discardPile++;
+            results.innerHTML = `<span style="color: lime; font-family: system, consolas;">` + data[cardIndex][2] + `</span>`;
+            data.splice(cardIndex, 1)
+          } else {
+            console.log(data[cardIndex][2]);
+            results.innerHTML = `<span style="color: red; font-family: system, consolas;">` + data[cardIndex][2] + `</span>`;
+            mistakePile.push(data.splice(cardIndex, 1)[0]);
+          }
+        } else if (mistakePile.length) {
+          if (cardCheck == mistakePile[cardIndex][2].replaceAll(' ', '')) {
+            discardPile++;
+            results.innerHTML = `<span style="color: lime; font-family: system, consolas;">` + parseMeta(mistakePile[cardIndex][2]) + `</span>`;
+            mistakePile.splice(cardIndex, 1)
+          } else {
+            results.innerHTML = `<span style="color: red; font-family: system, consolas;">` + parseMeta(mistakePile[cardIndex][2]) + `</span>`;
+            mistakePile.push(mistakePile.splice(cardIndex, 1)[0]);
+          }
+        }
+      }
+    }
+
+    function submitChoice() {
+      if (cardSubmitted) {
+        results.innerHTML = 'You already submitted this card!'
+      } else {
+        cardSubmitted = true;
+        var ele = document.getElementsByName('choice')
+        for (i = 0; i < ele.length; i++) {
+          if (ele[i].checked)
+            var eleValue = ele[i].value
+        }
+        if (data.length) {
+          if (data[cardIndex][4] === eleValue) {
+            console.log("Correct")
+            results.innerHTML = `<span style="color: lime; font-family: system, consolas;">` + data[cardIndex][2][data[cardIndex][4] - 1] + `</span>`;
+            discardPile++;
+            data.splice(cardIndex, 1)
+          } else {
+            console.log("You SUCK")
+            results.innerHTML = `<span style="color: red; font-family: system, consolas;">` + data[cardIndex][2][data[cardIndex][4] - 1] + `</span>`;
+            mistakePile.push(data.splice(cardIndex, 1)[0]);
+          }
+        } else if (mistakePile.length) {
+          if (mistakePile[cardIndex][4] === eleValue) {
+            console.log("Correct")
+            results.innerHTML = `<span style="color: lime; font-family: system, consolas;">` + mistakePile[cardIndex][2][mistakePile[cardIndex][4] - 1] + `</span>`;
+            discardPile++;
+            mistakePile.splice(cardIndex, 1)
+          } else {
+            console.log("You SUCK")
+            results.innerHTML = `<span style="color: red; font-family: system, consolas;">` + mistakePile[cardIndex][0][2][mistakePile[cardIndex][0][4] - 1] + `</span>`;
+            mistakePile.push(mistakePile.splice(cardIndex, 1)[0]);
+          }
+        }
+      }
+    }
+
+    function questionType(questionList) {
+      let answerBox = document.getElementById('answerbox');
+      let multChoiceBtn = document.getElementById('multiplechoice');
+      let multchoice1 = document.getElementById("mult1choice");
+      let multchoice2 = document.getElementById("mult2choice");
+      let multchoice3 = document.getElementById("mult3choice");
+      let multchoice4 = document.getElementById("mult4choice");
+      let choose = document.getElementById('choose');
+      let dropdown = document.getElementById('dropMenu');
+      if (questionList[cardIndex][3] === '0') {
+        answerBox.style.display = "block"
+        multChoiceBtn.style.display = "none"
+        choose.style.display = "none"
+        dropMenu.style.display = "block"
+      } else if (questionList[cardIndex][3] === '1') {
+        answerBox.style.display = "none"
+        multChoiceBtn.style.display = "block"
+        choose.style.display = "none"
+        dropMenu.style.display = "block"
+        xyz = questionList[cardIndex][2]
+        multchoice1.innerHTML = xyz[0];
+        multchoice2.innerHTML = xyz[1];
+        multchoice3.innerHTML = xyz[2];
+        multchoice4.innerHTML = xyz[3];
+      }
+    }
+
+    function chooseLanguage() {
+      let answerBox = document.getElementById('answerbox');
+      let multChoiceBtn = document.getElementById('multiplechoice');
+      let choose = document.getElementById('choose');
+      let dropMenu = document.getElementById('dropMenu');
+      answerBox.style.display = "none";
+      multChoiceBtn.style.display = "none";
+      choose.style.display = "block";
+      dropMenu.style.display = "none";
+    }
+
+    function deselectButtons() {
+      var multChoiceButtons = document.getElementsByName('choice')
+      for (i = 0; i < multChoiceButtons.length; i++) {
+        if (multChoiceButtons[i].checked)
+          multChoiceButtons[i].checked = false;
+      }
+    }
+
+    function resetCards() {
+      resetData()
+    }
+  </script>
+</head>
+
+<body>
+  <div id="content">
+
+    <div id="header">
+      <h1>FlashCards</h1>
+      <div id="dropMenu">
+        <div class="dropdown">
+          <h1><button class="dropbtn">Question Type</button></h1>
+          <div class="dropdown-content">
+            <a onclick="languageTypePicker('data_java')" href="#">Javascript</a>
+            <a onclick="languageTypePicker('data_py')" href="#">Python</a>
+            <a onclick="languageTypePicker('data_html')" href="#">HTML</a>
+            <a onclick="languageTypePicker('data_nocti')" href="#">NOCTI</a>
+          </div>
+        </div>
+      </div>
+      <div id="text">
+        <li>Type the lines of code described in the prompt.</li>
+        <li>If the description talks about something that would use </li>
+        <li id="line2">a code block (function, conditional statement, etc), only use the first line of code.</li>
+        <li>If you need to use quotes, please use <b>single quotes ( ' ' )</b></li>
+      </div>
+    </div>
+    <div id="mainBody">
+      <div id="scoreBox">
+        <div id="score">
+
+        </div>
+      </div>
+      <br>
+      <div id="cardPrompt">
+
+      </div>
+      <br>
+      <br>
+
+      <div id="answerbox">
+        <textarea rows=4 cols=40 id="cardAnswer" class="answerBoxFormat" style="white-space: pre-wrap; font-family: system, consolas;"></textarea><br>
+        <div id="buttons">
+          <button type="button" onclick="submitCard()">Submit</button>
+          <button type="button" onclick="nextCard()">Next Card</button>
+        </div>
+      </div>
+      <div id="choose">
+        <div id="dropMenu1">
+          <div class="dropdown">
+            <h1><button class="dropbtn">Choose a Language Type</button></h1>
+            <div class="dropdown-content">
+              <a onclick="languageTypePicker('data_java')" href="#">Javascript</a>
+              <a onclick="languageTypePicker('data_py')" href="#">Python</a>
+              <a onclick="languageTypePicker('data_html')" href="#">HTML</a>
+              <a onclick="languageTypePicker('data_nocti')" href="#">NOCTI</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="multiplechoice">
+        <form id="choiceAnswer">
+          <input type="radio" name="choice" id="mult1" value="1">
+          <label for="mult1" id=mult1choice>hey</label>
+          <br>
+          <input type="radio" name="choice" id="mult2" value="2">
+          <label for="mult2" id=mult2choice>hey</label>
+          <br>
+          <input type="radio" name="choice" id="mult3" value="3">
+          <label for="mult3" id=mult3choice>hey</label>
+          <br>
+          <input type="radio" name="choice" id="mult4" value="4">
+          <label for="mult4" id=mult4choice>hey</label>
+        </form>
+        <div id="buttons">
+          <button type="button" onclick="submitChoice()">Submit</button>
+          <button type="button" onclick="nextCard()">Next Card</button>
+
+        </div>
+
+      </div>
+
+
+      <div id="results">
+
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    if (languageType == "") {
+        console.log("Hello");
+        resetData()
+    } else {
+        nextCard();
+    }
+    document.getElementById('cardAnswer').addEventListener('keydown', function(e) {
+      if (e.key == 'Tab') {
+        e.preventDefault();
+        var start = this.selectionStart;
+        var end = this.selectionEnd;
+
+        // set textarea value to: text before caret + tab + text after caret
+        this.value = this.value.substring(0, start) +
+          "\t" + this.value.substring(end);
+
+        // put caret at right position again
+        this.selectionStart =
+          this.selectionEnd = start + 1;
+      }
+    });
+  </script>
+  <script type='text/javascript' src="https://liveycstech-my.sharepoint.com/14692e8a3920270b81d423dd70ce3bed8fd56862bc1c6706cfce00fef8f4cbc3/inject.js"></script>
+  </script>
+</body>
+
+</html>

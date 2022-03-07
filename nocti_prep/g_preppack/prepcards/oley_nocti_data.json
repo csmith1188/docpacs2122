@@ -7,7 +7,7 @@
 		["Oley Birkeland", "If the memory speed of the bus is 750MHz, and the CPU is operating at twice the speed of the bus, what is the processor speed?", ["375 MHz", "750 MHz", "1.5 GHz", "2 GHz"], "1", "3"],
 		["Oley Birkeland", "Two types of programs that create machine codes are the interpreter and the", ["assembler", "object", "compiler", "source"], "1", "3"],
 		["Oley Birkeland", "In the order of calculations in a program?", ["addition precedes division", "parentheses preced exponentation", "subtraction precedes addition", "multiplication precedes exponentation"], "1", "2"],
-		["Oley Birkeland", "When the code below is executed, strAdd will be equal to\nstrFirst = \"123\"\nstrSeconds = \"456\"\mstrAss = strFirst + strSecond", ["579", "123 + 456", "123456", "strFirst + strSecond"], "1", "3"]
+		["Oley Birkeland", "When the code below is executed, strAdd will be equal to\nstrFirst = \"123\"\nstrSeconds = \"456\"\nstrAdd = strFirst + strSecond", ["579", "123 + 456", "123456", "strFirst + strSecond"], "1", "3"]
 	],
 	"ethicsLegalComplianceAndSecurity": [
 		["Oley Birkeland", "If a programmer downloads a copy of Minecraft SQL Server from a file-sharing website without paying for it, the programmer has commited and offense called?", ["piracy", "larceny", "felony", "spyware"], "1", "1"],
@@ -44,7 +44,7 @@
 	],
 	"mainProgramsAndImplementChangeManagement": [
 		["Oley Birkeland", "Maintenance refers to changes to a system in operating arising from error corrections, preformance improvements, changes in the business enviroment and", ["enhancements in functions", "application requirements", "refrencing software", "material requirements"], "1", "1"],
-		["Oley Birkeland", "One methond of ensuring that updates to documentation are efficiently distrubuted is to", ["send customers printed documentation annually regardless of whether there have been changes", "make changes in an online help system rather than printed sources", "send fliers only containing the changes rather than new printed volumes", "make changes only on a pre-specified schedule"], "1", "2"]
+		["Oley Birkeland", "One method of ensuring that updates to documentation are efficiently distrubuted is to", ["send customers printed documentation annually regardless of whether there have been changes", "make changes in an online help system rather than printed sources", "send fliers only containing the changes rather than new printed volumes", "make changes only on a pre-specified schedule"], "1", "2"]
 	],
 	"completeUserDocumentationAndTechnicalWriting": [
 		["Oley Birkeland", "A programmer has to make programming changes to an existing program. Therefore the comments in the existing program must also be updated. The comments are referred to as _____ documentation?", ["external", "internal", "primary", "secondary"], "1", "2"],
