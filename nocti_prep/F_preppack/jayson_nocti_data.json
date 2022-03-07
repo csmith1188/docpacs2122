@@ -1,0 +1,52 @@
+{
+  "generalInformation": [
+    ["Jayson Zeigler", "Which of the following errors is caused by a calculation error?", ["logical", "arithmetic", "truncation", "semantic"], "1", "2"]
+    ["Jayson Zeigler", "Which of the following uses three basic control structures to form highly structured units for code?", ["structured programming", "circular connector", "modular construction", "loop structure"], "1", "1"]
+    ["Jayson Zeigler", "What type of principke is used for configuring preferences that allow the user to personalize an application?", ["CLI", "GUI", "API", "DOS"], "1", "2"]
+    ["Jayson Zeigler", "All computer instructions are based on four basic logic patterns. These patterns are simple sequence, selection, loop, and ", ["trailer", "modular", "top-down", "branch"], "1", "4"]
+    ["Jayson Zeigler", "If the memory speed of the bus is 750MHz, and the CPU is operating at twice the speed of the bus, what is the processor speed?", ["375 MHz", "750 MHz", "1.5 GHz", "2 GHz"], "1", "3"]
+    ["Jayson Zeigler", "Two types of programs that creat machine codes are the interpreter and the ", ["assembler", "object", "compiler", "source"], "1", "3"]
+    ["Jayson Zeigler", "In the order of calculations in a program", ["addition precedes division", "parenthesis precede exponentiation", "subtraction precedes addition", "multiplication precedes exponentiation"], "1", "2"]
+    ["Jayson Zeigler", "When the code below is executed, strAdd will be equal to \n strFirst = 123 \n strSecond = 456 \n strAdd = strFirst + strSecond", ["579", "123 + 456", "123456", "strFirst + strSecond"], "1", "3"]
+  ],
+  "ethics": [
+    ["Jayson Zeigler", "If a programmer downloads a copy of Microsoft SQL Server from a file-sharing website without paying for it, the programmer has committed an offense called", ["piracy", "larceny", "felony", "spyware"], "1", "1"]
+    ["Jayson Zeigler", "The Sarbanes-Oxley Act (SOX) requires monitoring and documenting transactions. How could a programmer mistakenly setup a program that would cause problems with the compliance with SOX?", ["create a system logs of the transactions taken in the session", "require a user to click three times when they are sure they want to proceed", "help a user to request assistance from the system administrators", "utilize system credentials instead of pass-through credentials"], "1", "4"]
+  ],
+  "analyzeProgramming": [
+  ["Jayson Zeigler", "The diamond shaped flowcart symbol is used for", ["processing", "input/output", "decision", "connector"], "1", "3"]
+  ["Jayson Zeigler", "One of the main goals on analyzing user requirements is to", ["troubleshoot the problem", "shutdown and maintain the system", "keep the customer happy", "elicit requirements from a user's point of view"], "1", "4"]
+  ["Jayson Zeigler", "If a record has the following field lengths, what is the record length? \n Name=35,Zipcode=5,District=7", ["42", "47", "54", "56"], "1", "2"]
+  ["Jayson Zeigler", "The parallelogram shaped flowchart symbol is used for", ["processing", "input/output", "decision", "connector"], "1", "2"]
+  ["Jayson Zeigler", "A programmer is starting a new programming project. During what phase of the programming project should the programmer begin the planning for data storage?", ["billing", "documentation", "implementation", "test"], "1", "3"]
+  ["Jayson Zeigler", "A programmer need to maipulate data that consists of a sequence of numbers that must be used as both an individual object and a set of data. What is the best data structure the programmer can use?", ["array", "constant", "string", "field"], "1", "1"]
+  ["Jayson Zeigler", "When a prgrammer is ready to create executable code, what process is used?", ["debugging", "editing", "compiling", "disassembling"], "1", "3"]
+  ],
+  "programSolution": [
+  ["Jayson Zeigler", "The source document and ______ should follow the same order", ["input screen design", "output screen design", "decision-type operator symbols", "processing function symbols"], "1", "1"]
+  ["Jayson Zeigler", "Which of the following is a correct name for a variable?", ["State_Zipcode", "State+Zipcode", "State Zipcode", "State=Zipcode"], "1", "1"]
+  ["Jayson Zeigler", "Why is the following expression invalid? A=10 + New Data", ["Variable 5 is not defined", "data types are mixed", "New Data is not a string", "New Data equals zero"], "1", "2"]
+  ["Jayson Zeigler", "An output field has Los Angeles moved to it and when examined contains Los Angel. This indicates a/an ______ error.", ["logical", "arithmetic", "truncation", "semantic"], "1", "3"]
+  ["Jayson Zeigler", "A programmer needs to define the type of value for a variable. What pre-defined set of characteristics for a variable can the programmer choose?", ["storage location", "reurn value", "method modifier", "data type"], "1", "4"]
+  ],
+  "codePrograms": [
+  ["Jayson Zeigler", "One example of scripting (text processing) language is", ["Perl", "C++", "Fortran", "Beta"], "1", "1"]
+  ["Jayson Zeigler", "Which of the following enables the use of 'plain english' queries?", ["BASIC", "FORTRAN", "SQL", "C++"], "1", "3"]
+  ["Jayson Zeigler", "An example of lopp structure is", ["DO UNTIL", "SELECT IF", "EXECUTE", "NEXT"], "1", "1"]
+  ["Jayson Zeigler", "Compile errors cna be caused by", ["bad syntax", "input data", "insufficient test data", "incorrect user specification"], "1", "1"]
+  ],
+  "testPrograms": [
+  ["Jayson Zeigler", "Typically after successful integration testing, a ______ test is performed to complete a front-to-back execution of the entire application", ["system", "unit", "fuzz", "beta"], "1", "1"]
+  ["Jayson Zeigler", "The implementation phase consists of coding, testing, and", ["designing", "building a prototype", "establishing requirements", "integration"], "1", "4"]
+  ["Jayson Zeigler", "When TEXT1.VALUE='March 7', TEXT1_LEN= \n Sample \n Sub Form_Click() \n IN = TEXT 1.VALUE \n For I = TEXT_ien to 1 step -1 \n TEMP = TEMP & mid (in, I, 1) \n NEXT \n OUT = TEMP & right(in, text_ien -n)", ["7", "8", "9", "10"], "1", "1"]
+  ["Jayson Zeigler", "A data element is intended to contain a range from 15 to 30 and after testing it contains 32. What kind of error is this?", ["truncation", "rounding", "run time", "boundary"], "1", "4"]
+  ["Jayson Zeigler", "Which of the following consists of a sequence of events to follow so they can be repeated?", ["runtime", "test files", "trace route", "script"], "1", "4"]
+  ],
+  "maintainPrograms": [
+  ["Jayson Zeigler", "Maintenence refers to changes that updates to documentation are efficiently distributed is to", ["enhancements in functions", "applications requirements", "refrencing software", "material requirements"], "1", "2"],
+  ["Jayson Zeigler", "One method of ensuring that updates to documentation are efficiently distributed is to", ["send customers printed documentation annually regarless of whether there have been changes", "make changes in an online help system rather than printed sources", "send fliers containing only the changes rather than new printes volumes", "make changes only on a pre-specified schedule"], "1", "2"]
+  ],
+  "completeDocumentation": [
+  ["Jayson Zeigler", "A programmer has to make programming changes to an existing program. Therfore the comments in the existing program must also be updated. The comments are referred to as ______ documentation.", ["external", "internal", "primary", "secondary"], "1", "2"],
+  ["Jayson Zeigler", "A programmer has decided to create a pop-up window that will display a brief description of a control's purpose when the mouse hovers over it. This pop-up window is known as a", ["hyper clip", "tool tip", "task bar", "help bar"], "1", "2"]
+]}
