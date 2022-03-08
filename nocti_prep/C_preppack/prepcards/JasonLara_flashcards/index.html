@@ -387,16 +387,16 @@
           data.push(dataList.splice(Math.floor(Math.random() * dataList.length), 1)[0])
         }
         return data;
-      } else if (languageType == "data_nocti_written") {
+      } else if (languageType == "data_html") {
         data = [];
         mistakePile = [];
         discardPile = 0;
         var cardIndex = 0;
         dataList = [];
-        var numberOfCards = data_nocti_written.length;
+        var numberOfCards = data_html.length;
         // var dataList = data_python;
         for (let i = 0; i < numberOfCards; i++) {
-          dataList.push(data_nocti_written[i])
+          dataList.push(data_html[i])
         }
         console.log(dataList);
 
@@ -593,9 +593,11 @@
         <li>If the description talks about something that would use </li>
         <li id="line2">a code block (function, conditional statement, etc), only use the first line of code.</li>
         <li>If you need to use quotes, please use <b>single quotes ( ' ' )</b></li>
+        <li>USE APP for application, req for request, res for respond</b></li>
       </div>
     </div>
     <div id="mainBody">
+      <br>
       <div id="scoreBox">
         <div id="score">
 
