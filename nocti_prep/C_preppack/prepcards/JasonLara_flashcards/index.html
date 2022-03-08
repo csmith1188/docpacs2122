@@ -387,6 +387,24 @@
           data.push(dataList.splice(Math.floor(Math.random() * dataList.length), 1)[0])
         }
         return data;
+      } else if (languageType == "data_nocti_written") {
+        data = [];
+        mistakePile = [];
+        discardPile = 0;
+        var cardIndex = 0;
+        dataList = [];
+        var numberOfCards = data_nocti_written.length;
+        // var dataList = data_python;
+        for (let i = 0; i < numberOfCards; i++) {
+          dataList.push(data_nocti_written[i])
+        }
+        console.log(dataList);
+
+        //Pick out a certain number of cards
+        for (let i = 0; i < numberOfCards; i++) {
+          data.push(dataList.splice(Math.floor(Math.random() * dataList.length), 1)[0])
+        }
+        return data;
       }
        else {
         console.log("It broke");
