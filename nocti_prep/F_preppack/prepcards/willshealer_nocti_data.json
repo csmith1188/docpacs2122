@@ -1,0 +1,53 @@
+{
+  "General Information and Concepts": [
+"Question 1": ["Will Shealer", "Which of the following errors is caused by a calculation error?", ["Logical", "Arithmetic", "Truncation", "Sematic"], "1" , "2"],
+"Question 2": ["Will Shealer", "Which of the following uses three basic control structures control structures to form highly structured units of code ?", ["Structured Programming", "Circular Connector", "Modular Construction", "Loop Structure"], "1" , "1"],
+"Question 3": ["Will Shealer", "What type of principle is used for configuring preferences that allow the user to personalize an application", ["CLI", "GUI", "API", "DOS"], "1" , "2"],
+"Question 4": ["Will Shealer", "All computer instructions are based on four basic logic patterns. These patterns are simple sequence, selection, loop, and", ["Trailer", "Modular", "Top-down", "Branch"], "1" , "4"],
+"Question 5": ["Will Shealer", "If the memory speed of the bus is 750MHz, and the CPU is operating at twice the speed of the bus, what is the processor speed?", ["375 MHz", "750 MHz", "1.5 GHz", "2 GHz"], "1" , "3"],
+"Question 6": ["Will Shealer", "Two types of programs that create machine codes are the interpreter and the", ["Assembler", "Object", "Complier", "Source"], "1" , "3"],
+"Question 7": ["Will Shealer", "In the order of calculations in a program", ["Addition precedes division", "Parentheses precede exponentiation", "Subtraction precedes addition", "multiplication precedes exponentiation"], "1" , "2"],
+"Question 8": ["Will Shealer", "When the code below is executed, strAdd will be equal to", ["strFirst = 123", "strSecond", "strAdd"], "1" , "3"],
+],
+  "Ethnics, Legal Compliance, and Security" :[
+"Question 9": ["Will Shealer", "If a programmer downloads, a copy of Microsoft SQL server from a file-sharing website without paying for it, the programmer has committed an offense called", ["Logical", "Arithmetic", "Truncation", "Sematic"], "1" , "1"],
+"Question 10": ["Will Shealer", "The Sarbanes-Oxely Act (SOX) requires monitoring and documentation of transactions. How could a programmer mistakenly setup a program that would cause problems with compliancewith SOX?", ["Create system ogs of transactions taken in the session", "Require a user to click three times when they are sure they want to proceed", "Help a user to request assistance from the system administrators", "Utilize system credentials instead of pass-through credentials"], "1", "4"],
+],
+"Analyze Programming Problems, Manage Projects, and Create Flowchart Solutions" :[
+"Question 11": ["Will Shealer", "The following programming flowchart symbol (diamond) is a/an ___ symbol", ["Processing", "Input/Output", "Decision", "Connector"], "1" , "3"],
+"Question 12": ["Will Shealer", "One of the main goals in analyzing user requirements is to", ["Troubleshoot the problem", "Shutdown and maintain the system", "Keep the customer happy", "Elicit requirements from a users point of view"], "1" , "4"],
+"Question 13": ["Will Shealer", "If a record has the following field lengths, what is the record length? Name=35,ZipCode=5,District=7", ["42", "47", "54", "56"], "1" , "2"],
+"Question 14": ["Will Shealer", "The following programming flowcharts symbol is a/an pentagram symbol", ["Processing", "Input/Output", "Decision", "Connector"], "1" , "2"],
+"Question 15": ["Will Shealer", "A programmer is starting a new programming project. During what phase of the programming project should the programmer begin planning for data storage?", ["Billing", "Documentation", "Implementation", "Test"], "1" , "3"],
+"Question 16": ["Will Shealer", "A programmer needs to manipulate data that consists of a sequence of numbers that must be used as both individual object and a set of data. What is the best data structure the programmer can use?", ["Array", "Constant", "String", "Field"], "1" , "1"],
+"Question 17": ["Will Shealer", "When a programmer is ready to create executable code, what is used?", ["Logical", "Arithmetic", "Truncation", "Sematic"], "2" , "3"],
+],
+  "Design Program Solutions" :[
+"Question 18": ["Will Shealer", "The source documentation and ___ should follow the same order.", ["Input screen design", "Output screen design", "Decision-type operator symbols", "Process function symbols"], "1" , "1"],
+"Question 19": ["Will Shealer", "Which of the following is a correct name for a variable?", ["state_Zipcode", "State+ZipCode", "State Zipcode", "State=Zipcode"], "1" , "1"],
+"Question 20": ["Will Shealer", "Why is the following expression invalid? A=10 + New Data", ["Variable 5 is not defined", "data types are mixed", "New Data is not a string", "New Data equals zero"], "1" , "2"],
+"Question 21": ["Will Shealer", "An output field has Log Angeles moved to it and when examined contains Los Angel. This indicates a/an___ error.?", ["Logical", "Arithmetic", "Truncation", "Sematic"], "1" , "3"],
+"Question 22": ["Will Shealer", "A programmer needs to define the type of value for a variable. What pre-defined set of characteristics for a variable can the programmer choose?", ["Storage Location", "Return Value", "Method Modifier", "Data Type"], "1" , "4"],
+],
+  "Code Programs" : [
+"Question 23": ["Will Shealer", "One example of scripting (text processing) language is?", ["Pearl", "C++", "Fortran", "Beta"], "1" , "1"],
+"Question 24": ["Will Shealer", "Which of the following enables the use of plain English queries?", ["BASIC", "FORTRAN", "SQL", "C++"], "1" , "3"],
+"Question 25": ["Will Shealer", "An example of a loop structure is?", ["DO UNTIL", "SELECT IF", "EXECUTE", "NEXT"], "1" , "1"],
+"Question 26": ["Will Shealer", "Compile errors can be caused by?", ["Bad Syntax", "Input Data", "Insufficient Test Data", "Incorrect User Specification"], "1" , "1"],
+],
+  "Test Programs" : [
+"Question 27": ["Will Shealer", "Typically after a successful immigration testing, a ___ test is performed to complete a front-to-back execution of the entire application?", ["System", "Unit", "Fuzz", "Beta"], "1" , "1"],
+"Question 28": ["Will Shealer", "The Implementation phase consists of coding, testing, and?", ["Designing", "Building Prototype Programs", "Establishing Requirements", "Integration"], "1" , ""],
+"Question 29": ["Will Shealer", "When TEXT1.VALUE= 'March7',TEXT1_LEN= /n Sub Form_Click() /n IN = TEXT 1.VALUE /n TEXT1_len = LEN$(IN) /n For 1 = TEXT_len to 1 step -1 /n TEMP = TEMP & mid (in, I, 1) /n NEXT /n OUT = TEMP & right (in, text_len -n)", ["7", "8", "9", "10"], "1" , "1"],
+"Question 30": ["Will Shealer", "A data element is intended to contain a range from 15 to 30 and after testing it contains 32. What kind of error is this?", ["Truncation", "Rounding", "Run Time", "Boundary"], "1" , "4"],
+"Question 31": ["Will Shealer", "Which of the following consists of a sequence of events to follow so they can be repeated?", ["Runtime", "Test Files", "Trace Route", "Script"], "1" , "4"],
+],
+  "Maintain Programs and Implement Change Management Procedures" :[
+"Question 32": ["Will Shealer", "Maintenance refers to changes to a system in operating arising from error corrections, performance improvements, changes in the business environment and", ["Enhancement In Functions", "Application Requirements", "Referencing Software", "Material Requirements"], "1" , "1"],
+"Question 33": ["Will Shealer", "One method of ensuring that updates to documentation are efficiently distributed is to", ["Send Customers Printed Documentation Annually Regardless Of Whether There Have Been Changes", "Make Changes In An Online Help System Rather Than Printed Sources", "Send Filers Containing Only The Changes Rather Than New Printed Volumes", "Make Changes Only On A Pre-Specified Schedule"], "1" , "2"],
+],
+  "Complete User Documentation and Technical Writing" :[
+"Question 34": ["Will Shealer", "A programmer has to make programming changes to an existing program. Therefore the comments in the existing program must also be updated. The comments are referred to as documentation", ["External", "Internal", "Primary", "Secondary"], "1" , "2"],
+"Question 35": ["Will Shealer", "A programmer has decided to create a pop-up window that will display a brief description of a controls purpose when the mouse hovers over it. This pop-up window is known as a", ["Hyper Clip", "Tool Tip", "Task Bar", "Help Bar"], "1" , "2"],
+]
+}
