@@ -15,260 +15,261 @@
       // ['Chris', '', ['', '', '', ''], '', ''],
       // ['Ethan', '', ['', '', '', ''], '', ''],
       // ['Jayson', '', ['', '', '', ''], '', ''],
-      ['Will', 'What Does HTML Mean', ['HyperText Markup Language', 'HyperTest Magic Language', 'HypoText', 'HTML has no meaning'], '1', '1'],
-      ['Will', 'What Do Tags Do', ['They Do Nothing', 'They Properly Format Content', 'They Are The Content', '<'], '1', '2'],
-      ['Will', 'What Are Some Common HTML Tags', ["'l'", "'kd'", "'vc'", "'br'"], '1', '4'],
-      ['Will', 'Which Is Not A Coding Language', ['Javascript', 'Erlang', 'Ruby', 'Unit'], '1', '4'],
-      ['Will', 'Which Is Not A Javascript Datatype', ['Find', 'String', 'Boolean', 'Undefined'], '1', '1'],
-      ['Will', 'Which Symbol Is Used For Multi-Line Comments In Javascript', ['./', '*/', '/.', '-'], '1', '2'],
-      ['Will', 'How Many Types Of Heading Does A HTML Contain', ['2', '8', '4', '6'], '1', '4'],
-      ['Jayson', 'Which assignment operator assigns a variable/object to a value?', ['+=', '=', '/=', '**='], '1', '2'],
-      ['Jayson', 'Which is the proper use of camel case?', ['CamelCase', 'cAmelcAse', 'camelCase', 'CameLCasE'], '1', '3'],
-      ['Jayson', 'How do you create a function?', ['function == myfunction(){}', 'function myFunction(){}', 'myFunction():function{}', 'function:myFunction(){}'], '1', '2'],
-      ['Jayson', 'What is a string?', ['A string is just one line of code', 'A string is a list of Non-human-readable letters that are code', 'A string is a list of human-readable letters that are not code','A string is a list of objects that are assigned to a variable'], '1', '3'],
-      ['Jayson', 'How would you log (Hello World!!) to the console>?', 'console.log(Hello World!!);', '0'],
+      {author: 'Will',question: 'What Does HTML Mean',answers: ['HyperText Markup Language', 'HyperTest Magic Language', 'HypoText', 'HTML has no meaning'],type: 'multi', key: '0'},
+      {author: 'Will',question: 'What Do Tags Do',answers: ['They Do Nothing', 'They Properly Format Content', 'They Are The Content', '<'],type: 'multi', key: '1'},
+      {author: 'Will',question: 'What Are Some Common HTML Tags',answers: ["'l'", "'kd'", "'vc'", "'br'"],type: 'multi', key: '3'},
+      {author: 'Will',question: 'Which Is Not A Coding Language',answers: ['Javascript', 'Erlang', 'Ruby', 'Unit'],type: 'multi', key: '3'},
+      {author: 'Will',question: 'Which Is Not A Javascript Datatype',answers: ['Find', 'String', 'Boolean', 'Undefined'],type: 'multi', key: '0'},
+      {author: 'Will',question: 'Which Symbol Is Used For Multi-Line Comments In Javascript',answers: ['./', '*/', '/.', '-'],type: 'multi', key: '1'},
+      {author: 'Will',question: 'How Many Types Of Heading Does A HTML Contain',answers: ['2', '8', '4', '6'],type: 'multi', key: '3'},
+      {author: 'Jayson',question: 'Which assignment operator assigns a variable/object to a value?',answers: ['+=', '=', '/=', '**='],type: 'multi', key: '1'},
+      {author: 'Jayson',question: 'Which is the proper use of camel case?',answers: ['CamelCase', 'cAmelcAse', 'camelCase', 'CameLCasE'],type: 'multi', key: '2'},
+      {author: 'Jayson',question: 'How do you create a function?',answers: ['function == myfunction(){}', 'function myFunction(){}', 'myFunction():function{}', 'function:myFunction(){}'],type: 'multi', key: '1'},
+      {author: 'Jayson',question: 'What is a string?',answers: ['A string is just one line of code', 'A string is a list of Non-human-readable letters that are code', 'A string is a list of human-readable letters that are not code','A string is a list of objects that are assigned to a variable'],type: 'multi', key: '2'},
+      {author: 'Jayson',question: 'How would you log (Hello World!!) to the console>?',answers: 'console.log(Hello World!!);',type: 'text'},
       //['Jayson', '']
     ]
-    var data_nocti = [
+
+    var data_nocti_written = [
       // ['Will', '', ['', '', '', ''], '', ''],
       // ['Chris', '', ['', '', '', ''], '', ''],
       // ['Ethan', '', ['', '', '', ''], '', ''],
       // ['Jayson', '', ['', '', '', ''], '', ''],
-      [ "Jaysin Haugh",
-      "Which of the following errors is a calculation error?",
-      ["logical", "arithmetic", "truncation", "semantic"],
-      "1",
-      "2"
-      ],
+      { author: "Jaysin Haugh",
+        question: "Which of the following errors is a calculation error?",
+        answers: ["logical", "arithmetic", "truncation", "semantic"],
+        type: "multi",
+        key: "1"
+      },
 
-      [ "Jaysin Haugh",
-      "Which of the following uses three basic control structures to form highly structured units of code",
-      ["structured programming", "circular connector", "modular construction", "loop structure"],
-      "1",
-      "1"
-      ],
+      { author: "Jaysin Haugh",
+        question: "Which of the following uses three basic control structures to form highly structured units of code",
+        answers: ["structured programming", "circular connector", "modular construction", "loop structure"],
+        type: "multi",
+        key: "0"
+      },
 
-      [ "Jaysin Haugh",
-      "What type of principle is used for configuring preferences that allow the user to personalize an application?",
-      ["CLI", "GUI", "API", "DOS"],
-      "1",
-      "2"
-      ],
+      { author: "Jaysin Haugh",
+        question: "What type of principle is used for configuring preferences that allow the user to personalize an application?",
+        answers: ["CLI", "GUI", "API", "DOS"],
+        type: "multi",
+        key: "1"
+      },
 
-      [ "Jaysin Haugh",
-      "All computer instructions are based on four basic logic patterns. These patterns are simple sequence, selection, loop, and",
-      ["trailer", "modular", "top-down", "branch"],
-      "1",
-      "4"
-      ],
+      { author: "Jaysin Haugh",
+        question: "All computer instructions are based on four basic logic patterns. These patterns are simple sequence, selection, loop, and",
+        answers: ["trailer", "modular", "top-down", "branch"],
+        type: "multi",
+        key: "3"
+      },
 
-      [ "Jaysin Haugh",
-      "If the memory speed of the bus is 750MHz, and the CPU is operating at twice the speed of the bus, what is the processor speed?",
-      ["375Mhz", "750MHz", "1.5 GHz", "2 GHz"],
-      "1",
-      "3"
-      ],
-      [ "Jaysin Haugh",
-      "Two types of programs that create machine codes are the interpreter and the-",
-      ["assembler", "object", "compiler", "source"],
-      "1",
-      "3"
-      ],
-      [ "Jaysin Haugh",
-      "In the order of calculations in a program",
-      ["addition precedes division", "parentheses precede exponentation", "subtraction precedes addition", "multiplication precedes exponentation"],
-      "1",
-      "2"
-      ],
-      [ "Jaysin Haugh",
-      "When the code below is executed, strAdd will be equal to\n strFirst='123'\n strSecond='456'\n strAdd = strFirst + strSecond",
-      ["579", "123 + 456", "123456", "strFirst + strSecond"],
-      "1",
-      "3"
-      ],
-      [ "Jaysin Haugh",
-      "If a programmer downloads a copy of Microsoft SQL Server from a file-sharing website without paying for it, the programmer has commited an offense called-",
-      ["piracy", "larceny", "felony", "spyware"],
-      "1",
-      "1"
-      ],
+      { author: "Jaysin Haugh",
+        question: "If the memory speed of the bus is 750MHz, and the CPU is operating at twice the speed of the bus, what is the processor speed?",
+        answers: ["375Mhz", "750MHz", "1.5 GHz", "2 GHz"],
+        type: "multi",
+        key: "2"
+      },
+      { author: "Jaysin Haugh",
+        question: "Two types of programs that create machine codes are the interpreter and the-",
+        answers: ["assembler", "object", "compiler", "source"],
+        type: "multi",
+        key: "2"
+      },
+      { author: "Jaysin Haugh",
+        question: "In the order of calculations in a program",
+        answers: ["addition precedes division", "parentheses precede exponentation", "subtraction precedes addition", "multiplication precedes exponentation"],
+        type: "multi",
+        key: "1"
+      },
+      { author: "Jaysin Haugh",
+        question: "When the code below is executed, strAdd will be equal to\n strFirst='123'\n strSecond='456'\n strAdd = strFirst + strSecond",
+        answers: ["579", "123 + 456", "123456", "strFirst + strSecond"],
+        type: "multi",
+        key: "2"
+      },
+      { author: "Jaysin Haugh",
+        question: "If a programmer downloads a copy of Microsoft SQL Server from a file-sharing website without paying for it, the programmer has commited an offense called-",
+        answers: ["piracy", "larceny", "felony", "spyware"],
+        type: "multi",
+        key: "0"
+      },
 
-      [ "Jaysin Haugh",
-      "The Sarbanes-Oxley Act (SOX) requires monitoring and documentation of transactions. How could a programmer mistakenly setup a program that would cause problems with compliance with SOX?",
-      ["create system logs of the transactions taken in the session", "require a user to click three times when they are sure they want to proceed", "help a user to request assistance from the system administrators", "utilize system credentials instead of pass-through credentials"],
-      "1",
-      "4"
-      ],
+      { author: "Jaysin Haugh",
+        question: "The Sarbanes-Oxley Act (SOX) requires monitoring and documentation of transactions. How could a programmer mistakenly setup a program that would cause problems with compliance with SOX?",
+        answers: ["create system logs of the transactions taken in the session", "require a user to click three times when they are sure they want to proceed", "help a user to request assistance from the system administrators", "utilize system credentials instead of pass-through credentials"],
+        type: "multi",
+        key: "3"
+      },
 
-      [ "Jaysin Haugh",
-      "The following flowchart symbol is a/an _______ symbol: Diamond",
-      ["processing", "input/output", "decision", "connector"],
-      "1",
-      "3"
-      ],
+      { author: "Jaysin Haugh",
+        question: "The following flowchart symbol is a/an _______ symbol: Diamond",
+        answers: ["processing", "input/output", "decision", "connector"],
+        type: "multi",
+        key: "2"
+      },
 
-      [ "Jaysin Haugh",
-      "One of the main goals in analyzing user requirements is to...",
-      ["troubleshoot the problem", "shutdown and maintain the system", "keep the customer happy", "elicit requirements from a user's point of view"],
-      "1",
-      "4"
-      ],
+      { author: "Jaysin Haugh",
+        question: "One of the main goals in analyzing user requirements is to...",
+        answers: ["troubleshoot the problem", "shutdown and maintain the system", "keep the customer happy", "elicit requirements from a user's point of view"],
+        type: "multi",
+        key: "3"
+      },
 
-      [ "Jaysin Haugh",
-      "If a record has the following field lengths, what is the record length?\n\n name=35,zipcode=5,district=7",
-      ["42", "47", "54", "56"],
-      "1",
-      "2"
-      ],
+      { author: "Jaysin Haugh",
+        question: "If a record has the following field lengths, what is the record length?\n\n name=35,zipcode=5,district=7",
+        answers: ["42", "47", "54", "56"],
+        type: "multi",
+        key: "1"
+      },
 
-      [ "Jaysin Haugh",
-      "The following programming flowchart symbol is a/an _______ symbol: Paralellogram",
-      ["processing", "input/output", "decision", "connector"],
-      "1",
-      "2"
-      ],
+      { author: "Jaysin Haugh",
+        question: "The following programming flowchart symbol is a/an _______ symbol: Paralellogram",
+        answers: ["processing", "input/output", "decision", "connector"],
+        type: "multi",
+        key: "1"
+      },
 
-      [ "Jaysin Haugh",
-      "A programmer is starting a new programming project. During what phase of the programming project should the programmer begin planning for data storage?",
-      ["billing", "documentation", "implementation", "test"],
-      "1",
-      "3"
-      ],
+      { author: "Jaysin Haugh",
+        question: "A programmer is starting a new programming project. During what phase of the programming project should the programmer begin planning for data storage?",
+        answers: ["billing", "documentation", "implementation", "test"],
+        type: "multi",
+        key: "2"
+      },
 
-      [ "Jaysin Haugh",
-      "A programmer needs to manipulate data that consists of a sequence of numbers that must be used as both an individual object and a set of data. What is the BEST data structure the programmer can use?",
-      ["array", "constant", "string", "field"],
-      "1",
-      "1"
-      ],
+      { author: "Jaysin Haugh",
+        question: "A programmer needs to manipulate data that consists of a sequence of numbers that must be used as both an individual object and a set of data. What is the BEST data structure the programmer can use?",
+        answers: ["array", "constant", "string", "field"],
+        type: "multi",
+        key: "0"
+      },
 
-      [ "Jaysin Haugh",
-      "When a programmer is ready to create executable code, what process is used?",
-      ["debugging", "editing", "compiling", "disassembling"],
-      "1",
-      "3"
-      ],
-      [ "Jaysin Haugh",
-      "The source document and _______ should follow the same order.",
-      ["input screen design", "output screen design", "decision-type operator symbols", "processing function symbols"],
-      "1",
-      "1"
-      ],
+      { author: "Jaysin Haugh",
+        question: "When a programmer is ready to create executable code, what process is used?",
+        answers: ["debugging", "editing", "compiling", "disassembling"],
+        type: "multi",
+        key: "2"
+      },
+      { author: "Jaysin Haugh",
+        question: "The source document and _______ should follow the same order.",
+        answers: ["input screen design", "output screen design", "decision-type operator symbols", "processing function symbols"],
+        type: "multi",
+        key: "0"
+      },
 
-      [ "Jaysin Haugh",
-      "Which of the following is a CORRECT name for a variable?",
-      ["State_Zipcode", "State+Zipcode", "State Zipcode", "State=Zipcode"],
-      "1",
-      "1"
-      ],
+      { author: "Jaysin Haugh",
+        question: "Which of the following is a CORRECT name for a variable?",
+        answers: ["State_Zipcode", "State+Zipcode", "State Zipcode", "State=Zipcode"],
+        type: "multi",
+        key: "0"
+      },
 
-      [ "Jaysin Haugh",
-      "Why is the following expression invalid? A=10 + 'New Data'",
-      ["Variable 5 is not defined", "data types are mixed", "'New Data' is not a string", "'New Data' equals zero"],
-      "1",
-      "2"
-      ],
+      { author: "Jaysin Haugh",
+        question: "Why is the following expression invalid? A=10 + 'New Data'",
+        answers: ["Variable 5 is not defined", "data types are mixed", "'New Data' is not a string", "'New Data' equals zero"],
+        type: "multi",
+        key: "1"
+      },
 
-      [ "Jaysin Haugh",
-      "An output field has 'Los Angeles' moved to it and when examined contains 'Los Angel'. This indicates a/an _______ error.",
-      ["logical", "arithmetic", "truncation", "semantic"],
-      "1",
-      "3"
-      ],
+      { author: "Jaysin Haugh",
+        question: "An output field has 'Los Angeles' moved to it and when examined contains 'Los Angel'. This indicates a/an _______ error.",
+        answers: ["logical", "arithmetic", "truncation", "semantic"],
+        type: "multi",
+        key: "2"
+      },
 
-      [ "Jaysin Haugh",
-      "A programmer needs to define the type of value for a variable. What pre-defined set of characteristics for a variable can the programmer choose?",
-      ["storage location", "return value", "method modifier", "data type"],
-      "1",
-      "4"
-      ],
-      [ "Jaysin Haugh",
-      "One example of scripting (text processing) language is...",
-      ["Perl", "C++", "Fortran", "Beta"],
-      "1",
-      "1"
-      ],
+      { author: "Jaysin Haugh",
+        question: "A programmer needs to define the type of value for a variable. What pre-defined set of characteristics for a variable can the programmer choose?",
+        answers: ["storage location", "return value", "method modifier", "data type"],
+        type: "multi",
+        key: "3"
+      },
+      { author: "Jaysin Haugh",
+        question: "One example of scripting (text processing) language is...",
+        answers: ["Perl", "C++", "Fortran", "Beta"],
+        type: "multi",
+        key: "0"
+      },
 
-      [ "Jaysin Haugh",
-      "Which of the following enables the use of 'plain English' queries?",
-      ["BASIC", "FORTRAN", "SQL", "C++"],
-      "1",
-      "3"
-      ],
+      { author: "Jaysin Haugh",
+        question: "Which of the following enables the use of 'plain English' queries?",
+        answers: ["BASIC", "FORTRAN", "SQL", "C++"],
+        type: "multi",
+        key: "2"
+      },
 
-      [ "Jaysin Haugh",
-      "An example of loop structure is...",
-      ["DO UNTIL", "SELECT IF", "EXECUTE", "NEXT"],
-      "1",
-      "1"
-      ],
+      { author: "Jaysin Haugh",
+        question: "An example of loop structure is...",
+        answers: ["DO UNTIL", "SELECT IF", "EXECUTE", "NEXT"],
+        type: "multi",
+        key: "0"
+      },
 
-      [ "Jaysin Haugh",
-      "Compile errors can be caused by...",
-      ["bad syntax", "input data", "insufficient test data", "incorrect user specification"],
-      "1",
-      "1"
-      ],
-      [ "Jaysin Haugh",
-      "Typically after successful integration testing, a _______ test is performed to complete a front-to-back execution of the entire application.",
-      ["system", "unit", "fuzz", "beta"],
-      "1",
-      "1"
-      ],
+      { author: "Jaysin Haugh",
+        question: "Compile errors can be caused by...",
+        answers: ["bad syntax", "input data", "insufficient test data", "incorrect user specification"],
+        type: "multi",
+        key: "0"
+      },
+      { author: "Jaysin Haugh",
+        question: "Typically after successful integration testing, a _______ test is performed to complete a front-to-back execution of the entire application.",
+        answers: ["system", "unit", "fuzz", "beta"],
+        type: "multi",
+        key: "0"
+      },
 
-      [ "Jaysin Haugh",
-      "The implementation of phase consists of coding, testing, and...",
-      ["designing", "building prototype programs", "establishing requirements", "integration"],
-      "1",
-      "4"
-      ],
+      { author: "Jaysin Haugh",
+        question: "The implementation of phase consists of coding, testing, and...",
+        answers: ["designing", "building prototype programs", "establishing requirements", "integration"],
+        type: "multi",
+        key: "3"
+      },
 
-      [ "Jaysin Haugh",
-      "When TEXT1.VALUE 'March 7', TEXT1_LEN=\n Sub Form_Click () - IN = Text 1.VALUE\n TEXT1_len = LEN$(IN) - For I = TEXT_len to 1 step -1\n TEMP = TEMP & mid (in, I, 1) - OUT = TEMP & right (in, text_len -n) ",
-      ["7", "8", "9", "10"],
-      "1",
-      "1"
-      ],
+      { author: "Jaysin Haugh",
+        question: "When TEXT1.VALUE 'March 7', TEXT1_LEN=\n Sub Form_Click () - IN = Text 1.VALUE\n TEXT1_len = LEN$(IN) - For I = TEXT_len to 1 step -1\n TEMP = TEMP & mid (in, I, 1) - OUT = TEMP & right (in, text_len -n) ",
+        answers: ["7", "8", "9", "10"],
+        type: "multi",
+        key: "0"
+      },
 
-      [ "Jaysin Haugh",
-      "A data element is intended to contain a range from 15 to 30 and after testing it contains 32. What kind of error is this?",
-      ["truncation", "rounding", "run time", "boundary"],
-      "1",
-      "4"
-      ],
+      { author: "Jaysin Haugh",
+        question: "A data element is intended to contain a range from 15 to 30 and after testing it contains 32. What kind of error is this?",
+        answers: ["truncation", "rounding", "run time", "boundary"],
+        type: "multi",
+        key: "3"
+      },
 
-      [ "Jaysin Haugh",
-      "Which of the following consists of a sequence of events to follow so they can be repeated?",
-      ["runtime", "test files", "trace route", "script"],
-      "1",
-      "4"
-      ],
-      [ "Jaysin Haugh",
-      "Maintenance refers to changes to a system in operating arising from error corrections, performance improvements, changes in the business environment, and...",
-      ["enhancements in functions", "application requirements", "referencing software", "material requirements"],
-      "1",
-      "1"
-      ],
+      { author: "Jaysin Haugh",
+        question: "Which of the following consists of a sequence of events to follow so they can be repeated?",
+        answers: ["runtime", "test files", "trace route", "script"],
+        type: "multi",
+        key: "3"
+      },
+      { author: "Jaysin Haugh",
+        question: "Maintenance refers to changes to a system in operating arising from error corrections, performance improvements, changes in the business environment, and...",
+        answers: ["enhancements in functions", "application requirements", "referencing software", "material requirements"],
+        type: "multi",
+        key: "0"
+      },
 
-      [ "Jaysin Haugh",
-      "One method of ensuring that updates to documentation are efficiently distributed is to...",
-      ["send customers printed documentation annually refardless of whether there may have been changes", "make changes in an online help system rather than printed sources", "send fliers containing only the changes rather than new printed volumes", "make changes only on a pre-specified schedule"],
-      "1",
-      "2"
-      ],
-      [ "Jaysin Haugh",
-      "A programmer has to make programming changes to an existing program. Therefore the comments in the existing program must also be updated. The comments are referred to as _______ documentation.",
-      ["external", "internal", "primary", "secondary"],
-      "1",
-      "2"
-      ],
+      { author: "Jaysin Haugh",
+        question: "One method of ensuring that updates to documentation are efficiently distributed is to...",
+        answers: ["send customers printed documentation annually refardless of whether there may have been changes", "make changes in an online help system rather than printed sources", "send fliers containing only the changes rather than new printed volumes", "make changes only on a pre-specified schedule"],
+        type: "multi",
+        key: "1"
+      },
+      { author: "Jaysin Haugh",
+        question: "A programmer has to make programming changes to an existing program. Therefore the comments in the existing program must also be updated. The comments are referred to as _______ documentation.",
+        answers: ["external", "internal", "primary", "secondary"],
+        type: "multi",
+        key: "1"
+      },
 
-      [ "Jaysin Haugh",
-      "A programmer has decided to create a pop-up window that will display a brief description of a control's purpose when the mouse hovers over it. This pop-up window is known as...",
-      ["hyper clip", "tool tip", "task bar", "help bar"],
-      "1",
-      "2"
-      ],
+      { author: "Jaysin Haugh",
+        question: "A programmer has decided to create a pop-up window that will display a brief description of a control's purpose when the mouse hovers over it. This pop-up window is known as...",
+        answers: ["hyper clip", "tool tip", "task bar", "help bar"],
+        type: "multi",
+        key: "1"
+      },
       //['Will', 'What Does HTML Mean', ['HyperText Markup Language', 'HyperTest Magic Language', 'HypoText', 'HTML has no meaning'], '1', '1'],
       //['Will', 'What Do Tags Do', ['They Do Nothing', 'They Properly Format Content', 'They Are The Content', '<'], '1', '2'],
       //['Will', 'What Are Some Common HTML Tags', ["'l'", "'kd'", "'vc'", "'br'"], '1', '4'],
@@ -284,23 +285,23 @@
     ]
 
     var data_python = [
-      [`Mr. Smith`, `Define a function called 'kick'\nIt prints the string 'Ouch!'`, `def kick():\n\tprint('Ouch!')`, '0'],
-      [`Mr. Smith`, `Define a function called 'myName'\nIt returns the string 'Jeff'`, `def myName():\n\treturn 'Jeff'`, '0'],
-      [`Mr. Smith`, `Define a function called 'kick'\nIt prints the string 'Ouch!'`, `def kick():\n\tprint('Ouch!')`, '0'],
-      [`Mr. Smith`, `Define a function called 'kick'\nIt takes one argument called targetHP\nIt returns targetHP - 2`, `def kick(targetHP):\n\treturn targetHP - 2`, '0'],
-      [`Mr. Smith`, `Call a function called 'kick'\nIt takes the object Player1 as its argument.\nStore its return value to the property 'Player1.hp'`, `Player1.hp = kick(Player1)`, '0'],
-      [`Mr. Smith`, `Call a function called 'myName'\nPrint its return value.`, `print(myName())`, '0'],
-      [`Mr. Smith`, `Call a function called 'getScore'\nIt takes the string 'Player1' as its argument.\Convert its return value to an integer and store it to a variable called 'score'.`, `score = int(getScore('Player1'))`, '0'],
-      [`Mr. Smith`, `Call a function called 'getScore'\nIt takes the object Player1 as its argument\nPrint its return value.`, `print(getScore(Player1))`, '0'],
-      [`Mr. Smith`, `Define a function called 'doNothing'\nIt returns nothing`, `def doNothing():\n\treturn`, '0'],
-      [`Mr. Smith`, `Call a function called rollDice\nStore its return value in a variable called 'dieResult'`, `dieResult = rollDice()`, '0'],
-      [`Mr. Smith`, `Define a function called sayMessage\nIt takes an argument called 'msg'\nIt prints the 'msg' argument`, `def sayMessage(msg):\n\tprint(msg)`, '0'],
-      [`Mr. Smith`, `Define a function called convertAdd()\nIt takes two arguments called 'a' and 'b'\nIt returns 'a' converted to an integer plus 'b' converted to an integer `, `def convertAdd(a, b):\n\treturn int(a) + int(b)`, '0'],
+      { author: "Mr. Smith", question: `Define a function called 'kick'\nIt prints the string 'Ouch!'`, answer: `def kick():\n\tprint('Ouch!')`,type: 'text'],
+      { author: "Mr. Smith", question: `Define a function called 'myName'\nIt returns the string 'Jeff'`, answer: `def myName():\n\treturn 'Jeff'`,type: 'text'],
+      { author: "Mr. Smith", question: `Define a function called 'kick'\nIt prints the string 'Ouch!'`, answer: `def kick():\n\tprint('Ouch!')`,type: 'text'],
+      { author: "Mr. Smith", question: `Define a function called 'kick'\nIt takes one argument called targetHP\nIt returns targetHP - 2`, answer: `def kick(targetHP):\n\treturn targetHP - 2`,type: 'text'],
+      { author: "Mr. Smith", question: `Call a function called 'kick'\nIt takes the object Player1 as its argument.\nStore its return value to the property 'Player1.hp'`, answer: `Player1.hp = kick(Player1)`,type: 'text'],
+      { author: "Mr. Smith", question: `Call a function called 'myName'\nPrint its return value.`, answer: `print(myName())`,type: 'text'],
+      { author: "Mr. Smith", question: `Call a function called 'getScore'\nIt takes the string 'Player1' as its argument.\Convert its return value to an integer and store it to a variable called 'score'.`, answer: `score = int(getScore('Player1'))`, '0'],
+      { author: "Mr. Smith", question: `Call a function called 'getScore'\nIt takes the object Player1 as its argument\nPrint its return value.`, answer: `print(getScore(Player1))`,type: 'text'],
+      { author: "Mr. Smith", question: `Define a function called 'doNothing'\nIt returns nothing`, answer: `def doNothing():\n\treturn`,type: 'text'],
+      { author: "Mr. Smith", question: `Call a function called rollDice\nStore its return value in a variable called 'dieResult'`, answer: `dieResult = rollDice()`,type: 'text'],
+      { author: "Mr. Smith", question: `Define a function called sayMessage\nIt takes an argument called 'msg'\nIt prints the 'msg' argument`, answer: `def sayMessage(msg):\n\tprint(msg)`,type: 'text'],
+      { author: "Mr. Smith", question: `Define a function called convertAdd()\nIt takes two arguments called 'a' and 'b'\nIt returns 'a' converted to an integer plus 'b' converted to an integer `, answer: `def convertAdd(a, b):\n\treturn int(a) + int(b)`,type: 'text'],
     ]
 
     var data_html = [
 
-      [`Mr. Smith`, `Create a variable called 'x' and store the value 5 into it.`, `x = 5`, '0']
+      { author: "Mr. Smith", `Create a variable called 'x' and store the value 5 into it.`, `x = 5`, '0']
     ]
 
     /*
