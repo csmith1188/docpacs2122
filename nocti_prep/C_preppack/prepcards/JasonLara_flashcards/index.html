@@ -369,16 +369,16 @@
           data.push(dataList.splice(Math.floor(Math.random() * dataList.length), 1)[0])
         }
         return data;
-      } else if (languageType == "data_nocti") {
+      } else if (languageType == "data_nocti_written") {
         data = [];
         mistakePile = [];
         discardPile = 0;
         var cardIndex = 0;
         dataList = [];
-        var numberOfCards = data_nocti.length;
+        var numberOfCards = data_nocti_written.length;
         // var dataList = data_python;
         for (let i = 0; i < numberOfCards; i++) {
-          dataList.push(data_nocti[i])
+          dataList.push(data_nocti_written[i])
         }
         console.log(dataList);
 
@@ -429,13 +429,13 @@
         if (data.length) {
           cardIndex = Math.floor(Math.random() * data.length);
           questionType(data);
-          cardPrompt.innerHTML = '<b>' + data[cardIndex][0] + ':</b><br>' + parseMeta(data[cardIndex][1]);
+          cardPrompt.innerHTML = '<b>' + data[cardIndex].author + ':</b><br>' + parseMeta(data[cardIndex].question);
         } else if (mistakePile.length) {
           cardIndex = Math.floor(Math.random() * mistakePile.length);
           questionType(mistakePile);
           console.log(mistakePile[cardIndex]);
-          console.log(mistakePile[cardIndex][0][1]);
-          cardPrompt.innerHTML = '<b>' + mistakePile[cardIndex][0] + ':</b><br>' + parseMeta(mistakePile[cardIndex][1]);
+          console.log(mistakePile[cardIndex].author[1]);
+          cardPrompt.innerHTML = '<b>' + mistakePile[cardIndex].author + ':</b><br>' + parseMeta(mistakePile[cardIndex].question);
 
         } else {
           cardPrompt.innerHTML = '<h1><b>You win!</b></h1>' + '<button type="button" onclick="resetCards()">Reset</button>'
@@ -459,28 +459,28 @@
         let cardCheck = cardAnswer.replaceAll(' ', '')
         cardCheck = cardCheck.replaceAll('\"', '\'')
         if (data.length) {
-          if (cardCheck == data[cardIndex][2].replaceAll(' ', '')) {
+          if (cardCheck == data[cardIndex].answers.replaceAll(' ', '')) {
             discardPile++;
-            results.innerHTML = `<span style="color: lime; font-family: system, consolas;">` + data[cardIndex][2] + `</span>`;
-            data.splice(cardIndex, 1)
+            results.innerHTML = `<span style="color: lime; font-family: system, consolas;">` + data[cardIndex].answers + `</span>`;
+            data.splice(cardIndex, 1) //look
           } else {
-            console.log(data[cardIndex][2]);
-            results.innerHTML = `<span style="color: red; font-family: system, consolas;">` + data[cardIndex][2] + `</span>`;
+            console.log(data[cardIndex].answers);
+            results.innerHTML = `<span style="color: red; font-family: system, consolas;">` + data[cardIndex].answers + `</span>`;
             mistakePile.push(data.splice(cardIndex, 1)[0]);
           }
         } else if (mistakePile.length) {
-          if (cardCheck == mistakePile[cardIndex][2].replaceAll(' ', '')) {
+          if (cardCheck == mistakePile[cardIndex].answers.replaceAll(' ', '')) {
             discardPile++;
-            results.innerHTML = `<span style="color: lime; font-family: system, consolas;">` + parseMeta(mistakePile[cardIndex][2]) + `</span>`;
+            results.innerHTML = `<span style="color: lime; font-family: system, consolas;">` + parseMeta(mistakePile[cardIndex].answers) + `</span>`;
             mistakePile.splice(cardIndex, 1)
           } else {
-            results.innerHTML = `<span style="color: red; font-family: system, consolas;">` + parseMeta(mistakePile[cardIndex][2]) + `</span>`;
+            results.innerHTML = `<span style="color: red; font-family: system, consolas;">` + parseMeta(mistakePile[cardIndex].answers) + `</span>`;
             mistakePile.push(mistakePile.splice(cardIndex, 1)[0]);
           }
         }
       }
     }
-
+// ele mean select value
     function submitChoice() {
       if (cardSubmitted) {
         results.innerHTML = 'You already submitted this card!'
@@ -490,27 +490,29 @@
         for (i = 0; i < ele.length; i++) {
           if (ele[i].checked)
             var eleValue = ele[i].value
+
         }
         if (data.length) {
-          if (data[cardIndex][4] === eleValue) {
+          if (data[cardIndex].key === eleValue - 1) {
             console.log("Correct")
-            results.innerHTML = `<span style="color: lime; font-family: system, consolas;">` + data[cardIndex][2][data[cardIndex][4] - 1] + `</span>`;
+            results.innerHTML = `<span style="color: lime; font-family: system, consolas;">` + data[cardIndex].answers[data[cardIndex].key] + `</span>`;
             discardPile++;
             data.splice(cardIndex, 1)
           } else {
+
             console.log("You SUCK")
-            results.innerHTML = `<span style="color: red; font-family: system, consolas;">` + data[cardIndex][2][data[cardIndex][4] - 1] + `</span>`;
+            results.innerHTML = `<span style="color: red; font-family: system, consolas;">` + data[cardIndex].answers[data[cardIndex].key] + `</span>`;
             mistakePile.push(data.splice(cardIndex, 1)[0]);
           }
         } else if (mistakePile.length) {
-          if (mistakePile[cardIndex][4] === eleValue) {
+          if (mistakePile[cardIndex].key === eleValue - 1) {
             console.log("Correct")
-            results.innerHTML = `<span style="color: lime; font-family: system, consolas;">` + mistakePile[cardIndex][2][mistakePile[cardIndex][4] - 1] + `</span>`;
+            results.innerHTML = `<span style="color: lime; font-family: system, consolas;">` + mistakePile[cardIndex].answers[mistakePile[cardIndex].key] + `</span>`;
             discardPile++;
             mistakePile.splice(cardIndex, 1)
           } else {
             console.log("You SUCK")
-            results.innerHTML = `<span style="color: red; font-family: system, consolas;">` + mistakePile[cardIndex][0][2][mistakePile[cardIndex][0][4] - 1] + `</span>`;
+            results.innerHTML = `<span style="color: red; font-family: system, consolas;">` + mistakePile[cardIndex].answers[mistakePile[cardIndex].key] + `</span>`;
             mistakePile.push(mistakePile.splice(cardIndex, 1)[0]);
           }
         }
@@ -524,13 +526,13 @@
       let multchoice2 = document.getElementById("mult2choice");
       let multchoice3 = document.getElementById("mult3choice");
       let multchoice4 = document.getElementById("mult4choice");
-      if (questionList[cardIndex][3] === '0') {
+      if (questionList[cardIndex].type === 'test') {
         answerBox.style.display = "block"
         multChoiceBtn.style.display = "none"
-      } else if (questionList[cardIndex][3] === '1') {
+      } else if (questionList[cardIndex].type === 'multi') {
         answerBox.style.display = "none"
         multChoiceBtn.style.display = "block"
-        xyz = questionList[cardIndex][2]
+        xyz = questionList[cardIndex].answers
         multchoice1.innerHTML = xyz[0];
         multchoice2.innerHTML = xyz[1];
         multchoice3.innerHTML = xyz[2];
@@ -539,7 +541,7 @@
     }
 
     function deselectButtons() {
-      var multChoiceButtons = document.getElementsByName('choice')
+      var multChoiceButtons = document.getElementsByName(' ')
       for (i = 0; i < multChoiceButtons.length; i++) {
         if (multChoiceButtons[i].checked)
           multChoiceButtons[i].checked = false;
@@ -563,7 +565,7 @@
           <div class="dropdown-content">
             <a onclick="languageTypePicker('data_java')" href="#">Javascript</a>
             <a onclick="languageTypePicker('data_py')" href="#">Python</a>
-            <a onclick="languageTypePicker('data_nocti')" href="#">Nocti</a>
+            <a onclick="languageTypePicker('data_nocti_written')" href="#">Nocti-written</a>
             <a href="#">HTML</a>
           </div>
         </div>
