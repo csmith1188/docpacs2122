@@ -299,7 +299,113 @@
       { author: "Mr. Smith", question: `Define a function called sayMessage\nIt takes an argument called 'msg'\nIt prints the 'msg' argument`, answer: `def sayMessage(msg):\n\tprint(msg)`,type: 'text'],
       { author: "Mr. Smith", question: `Define a function called convertAdd()\nIt takes two arguments called 'a' and 'b'\nIt returns 'a' converted to an integer plus 'b' converted to an integer `, answer: `def convertAdd(a, b):\n\treturn int(a) + int(b)`,type: 'text'],
     ]
-
+    var nocti_preformance = [
+          {
+            author: "Jaysin Haugh",
+            question: "What code do you use to tell an ExpressJS to read URL-enconded data?",
+            answers: "app.use(express.urlencoded({extended: true}))",
+            type: "text",
+            key: "0"
+          },
+          {
+            author: "Jaysin Haugh",
+            question: "Create a GET endpoint at '/' that sends back 'Hello'",
+            answers: "app.get('/', function(req, res){res.render('Hello')})",
+            type: "text",
+            key: "0"
+          },
+          {
+            author: "Jaysin Haugh",
+            question: "Create a POST endpoint at '/new' that sends back the content of the request body parameter named 'name'",
+            answers: "app.post('/', function(req, res){res.render(req.body.name)})",
+            type: "text",
+            key: "0"
+          },
+          {
+            author: "Jaysin Haugh",
+            question: "Creat an if statement that checks if the content of the request body parameter nameed 'ordernumber' exists, and logs 'Found' if it does",
+            answers: "if(req.body.ordernumber){console.log('Found')}",
+            type: "text",
+            key: "0"
+          },
+          {
+            author: "Jaysin Haugh",
+            question: "Use the fs module to write a JS object named newData into a JSON file named newData.json",
+            answers: "fs.writeFile('newData.json', JSON.stringify(newData))",
+            type: "text",
+            key: "0"
+          },
+          {
+            author: "Jaysin Haugh",
+            question: "Use the fs module to read a file called 'oldData.json' and convert it to a JS object named 'oldData'",
+            answers: "fs.readFile('oldData.json', function(err, data){var oldData = data}",
+            type: "text",
+            key: "0"
+          },
+          {
+            author: "Jaysin Haugh",
+            question: "Start an ExpressJS app listen server",
+            answers: "const express = require('express'); var app = express(); app.set('view engine', 'ejs'); app.listen(5000);",
+            type: "text",
+            key: "0"
+          },
+          {
+            author: "Jaysin Haugh",
+            question: "Convert the 'data' object to a string and save it to the 'strData' variable",
+            answers: "let strData = JSON.stringify(data)",
+            type: "text",
+            key: "0"
+          },
+          {
+            author: "Jaysin Haugh",
+            question: "Create an HTML form that contains a text field with a name",
+            answers: "<form action='/' method='post'><input type='text' name='name' placeholder = 'Enter your name here...' value=''></form>",
+            type: "text",
+            key: "0"
+          },
+          {
+            author: "Jaysin Haugh",
+            question: "Create a submit button that POSTs to '/fun'",
+            answers: "<form action=''/fun' method='post'><input type='submit' value='Submit'></form>",
+            type: "text",
+            key:"0"
+          },
+          {
+            author: "Jaysin Haugh",
+            question: "Create a GET endpoint at '/test' that returns the EJS template 'test.ejs'",
+            answers: "app.get('/test', function(req, res){res.render('test.ejs')})",
+            type: "text",
+            key: "0"
+          },
+          {
+            author: "Jaysin Haugh",
+            question: "Round the variable price to the nearest penny and save it to the varibale 'roundPrice' using .toFixed()",
+            answers: "roundPrice = price.toFixed(2)",
+            type: "text",
+            key: "0"
+          },
+          {
+            author: "Jaysin Haugh",
+            question: "Create a JS object with the properties name, age, and height. name being 'bob', age being 12, and height being '5 foot 7'",
+            answers: "{name: 'bob', age: 12, height: '5 foot 7'}",
+            type: "text",
+            key: "0"
+          },
+          {
+            author: "Jaysin Haugh",
+            question: "Create an if statement that checks if datanumber is greater than 10",
+            answers: "if(datanumber > 10){}",
+            type: "text",
+            key: "0"
+          },
+          {
+            author: "Jaysin Haugh",
+            question: "set tax to 0",
+            answers: "let tax = 0",
+            type: "text",
+            key: "0"
+          }
+        ]
     var data_html = [
 
       { author: "Mr. Smith", `Create a variable called 'x' and store the value 5 into it.`, `x = 5`, '0']
