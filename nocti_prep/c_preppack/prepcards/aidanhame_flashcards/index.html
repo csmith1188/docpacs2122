@@ -96,8 +96,8 @@
       },
       {
         author: "Aidan Hamme",
-        question: "Start an ExpressJS app listen server",
-        answers: "app.listen()" ,
+        question: "Start an ExpressJS app listen server. Port 8000",
+        answers: "const express = require('express'); app.listen(8000)" ,
         type: "text",
         key: 0
       },
@@ -112,6 +112,48 @@
         author: "Aidan Hamme",
         question: "Multiply an items price by it's quantity (qty) and add it to subtotal. After save to subtotal",
         answers: "this.price * this.qty + this.subtotal = this.subtotal",
+        type: "text",
+        key: 0
+      },
+      {
+        author: "Aidan Hamme",
+        question: "Make and object called 'object' with the property 'param' equal to 2",
+        answers: "object = {param: 2}",
+        type: "text",
+        key: 0
+      },
+      {
+        author: "Aidan Hamme",
+        question: "Connect to Database sql.db and call it db for easy use.",
+        answers: "let db = new sqlite3.Database('sql.db', (err) => {})",
+        type: "text",
+        key: 0
+      },
+      {
+        author: "Aidan Hamme",
+        question: "Create an if statement that checks to see if the request body's dateBox equals May.",
+        answers: "if (req.body.dateBox == 'May')",
+        type: "text",
+        key: 0
+      },
+      {
+        author: "Aidan Hamme",
+        question: "Make a get endpoint to the root and load the 'homepage' ejs template.",
+        answers: "app.get('/', function(req,res) => {res.render('homepage')})",
+        type: "text",
+        key: 0
+      },
+      {
+        author: "Aidan Hamme",
+        question: "In a res.render, render the 'start' template and set a parameter 'error' to 'No Error'.",
+        answers: "res.render('start', {error: 'No Error'})",
+        type: "text",
+        key: 0
+      },
+      {
+        author: "Aidan Hamme",
+        question: "In a if statement see if the request body 'name' or request body 'date' exists.",
+        answers: "if (req.body.name || req.body.date)",
         type: "text",
         key: 0
       }
