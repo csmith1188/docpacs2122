@@ -29,7 +29,7 @@ p {
   text-align: left;
 }
 
-#line2 {
+.line2 {
   display: block;
   text-align: left;
   margin-left: 20px;
@@ -67,12 +67,10 @@ p {
 
 #cardPrompt {
   text-align: center;
-  margin: 20px auto 0;
+  margin: 20px auto -10px;
   width: 50%;
   color: white;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-  top: 50px;
-  left: 25%
 }
 
 #buttons {

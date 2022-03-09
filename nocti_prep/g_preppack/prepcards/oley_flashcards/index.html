@@ -69,13 +69,20 @@
 
     var arr_nocti_performance = [
       ['Oley', 'What code do you use to tell an ExpressJS to read URL-encoded data?', 'app.use(express.urlencoded());', '0'],
-      ['Oley', 'Create a GET endpoint at \'/\' the sends back \"Hello\"', 'app.get(\'/\', (req, res) => res.send(\'Hello\'));', '0'],
+      ['Oley', 'Create a GET endpoint at \'/\' that sends back \"Hello\"', 'app.get(\'/\', (req, res) => res.send(\'Hello\'));', '0'],
       ['Oley', 'Create a POST endpoint at \'/new\' that sends back the content of the request body parameter named \"name\"', 'app.post(\'/new\', (req, res) => res.send(req.body.name));', '0'],
       ['Oley', 'Create and if statement that checks if the content of the request body parameter named \"ordernumber\" exists, and logs \"Found\" if it does.', 'if (req.body.ordernumber) console.log(\'Found\');', '0'],
       ['Oley', 'Use the fs module to write a JS object named \"newData\" into a JSON file named \"newData.json\"', 'fs.writeFile(\'newData.json\', newData);', '0'],
-      ['Oley', 'Use the fs module to read a file called \"oldData.json\" and convert it to a JS object named \"oldData\"', 'fs.readFile(\'oldData.json\', oldData);', '0'],
+      ['Oley', 'Use the fs module to read a file called \"oldData.json\" and convert it to a JS object named \"oldData\"', 'let oldData = JSON.parse(fs.readFile(\'oldData.json\', \'utf8\'));', '0'],
       ['Oley', 'Start an ExpressJS app listen server', 'app.listen();', '0'],
-      ['Oley', 'What would you type into the console to initalize a Node.js project?', 'npm init', '0'],
+      ['Oley', 'What would you type into the console to install Express.js?', ['npm init express', 'install express.js', 'node install express', 'npm i express'], '1', '4'],
+      ['Oley', 'Create a GET endpoint at \'/home\' that renders \'index.ejs\'', 'app.get(\'/home\', (req, res) => res.render(\'index\'));', '0'],
+      ['Oley', 'What would you type into the console to initialize a Node.js project?', 'npm init', '0'],
+      ['Oley', 'Which of these is an EJS insert point?', ['<< text >>', '<%- text %>', '< text />', '<% text %>'], '1', '2'],
+      ['Oley', 'What method converts an object to a JSON string?', 'JSON.stringify()', '0'],
+      ['Oley', 'What method converts a JSON string to a JavaScript object?', 'JSON.parse()', '0'],
+      ['Oley', 'Which module do you use to read and write to files?', ['fs', 'http', 'ejs', 'express'], '1', '1'],
+      ['Oley', 'Use EJS as the view engine.', 'app.set(\'view engine\', \'ejs\');', '0'],
     ];
 
     var arr_javascript = [
@@ -123,7 +130,7 @@
         author: arr[0],
         question: arr[1],
         answers: arr[2],
-        type: arr[3] ? "multi" : "text",
+        type: +arr[3] ? "multi" : "text",
         key: +arr[4]
       }));
     }
@@ -145,7 +152,7 @@
           data.push(dataList.splice(Math.floor(Math.random() * dataList.length), 1)[0])
         }
     */
-    var languageType = "data_nocti_written";
+    var languageType = "data_nocti_performance";
 
     function changeLanguage() {
       console.log(languageType);
@@ -406,10 +413,11 @@
       <div id="text">
         <li>Type the lines of code described in the prompt.</li>
         <li>If the description talks about something that would use </li>
-        <li id="line2">a code block (function, conditional statement, etc), only use the first line of code.</li>
+        <li class="line2">a code block (function, conditional statement, etc), only use the first line of code.</li>
         <li>If you need to use quotes, please use <b>single quotes ( ' ' )</b></li>
         <li>The Express.js application object will always be named "app".</li>
-        <li>The response and request arguments in callbacks will always be named "res" and "req".</li>
+        <li class="line2">The response and request arguments in callbacks will always be named "res" and "req".</li>
+        <li>When possible, keep code on one line.</li>
       </div>
     </div>
     <div id="mainBody">
