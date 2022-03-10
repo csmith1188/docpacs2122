@@ -10,7 +10,7 @@
     var cardSubmitted = true;
     var discardPile = 0;
     var mistakePile = []
-    var data_NoctiWritten = [
+    var data_NoctiPerformance = [
       // ['Will', '', ['', '', '', ''], '', ''],
       ['Will', 'What Does HTML Mean', ['HyperText Markup Language', 'HyperTest Magic Language', 'HypoText', 'HTML has no meaning'], '1', '1'],
      ['Will', 'What Do Tags Do', ['They Do Nothing', 'They Properly Format Content', 'They Are The Content', '<'], '1', '2'],
@@ -26,264 +26,261 @@
      ['Jayson', 'How would you log (Hello World!!) to the console>?', 'console.log(Hello World!!);', '0'],
 
     ]
-    var data_NoctiPerformance = [
+    var data_NoctiWritten = [
       // ['Will', '', ['', '', '', ''], '', ''],
-      [
-        "Jacob Smith",
-        "Which of the following errors is caused by a calculation error?",
-        ["logical", "arithmetic", "truncation", "semantic"],
-        "1",
-        "2"
-      ],
-      [
-        "Jacob Smith",
-        "Which of the following uses three basic control structures to form highly structured units of code?",
-        ["structured programming", "circular connector", "modular construction", "loop structure"],
-        "1",
-        "1"
-      ],
-      [
-        "Jacob Smith",
-        "What type of principle is used for configuring prefrences that allow the user to personalize an application?",
-        ["CLI", "GUI", "API", "DOS"],
-        "1",
-        "2"
-      ],
-      [
-        "Jacob Smith",
-        "All computer instructions are based on four basic logic patterns. These patterns are simple sequence, selection, loop. and",
-        ["Trailer", "modular", "top-down", "branch"],
-        "1",
-        "4"
-      ],
-      [
-        "Jacob Smith",
-        "If the memory speed of the bus is 750MHz, and the CPU is operating at twice the speed of the bus, what is the processor speed?",
-        ["375", "ans2", "ans3", "ans4"],
-        "1",
-        "3"
-      ],
-      [
-        "Jacob Smith",
-        "Two types of programs that create machine codes are the interpreter and the",
-        ["assembler", "object", "compiler", "source"],
-        "1",
-        "3"
-      ],
-      [
-        "Jacob Smith",
-        "In the order of calculations in a program",
-        ["addition precedes division", "parentheses precede exponentation", "subtraction precedes addition", "multiplication precedes exponentation"],
-        "1",
-        "2"
-      ],
-      [
-        "Jacob Smith",
-        "When the code below is executed, strAdd will be equal to",
-        ["579", "123 + 456", "123456", "strSecond"],
-        "1",
-        "3"
-      ],
+    {
+        author: "Jacob Smith",
+        question: "Which of the following errors is caused by a calculation error?",
+        answers: ["logical", "arithmetic", "truncation", "semantic"],
+        type: 'multi',
+        key: 1
+      },
+      {
+        author: "Jacob Smith",
+        question: "Which of the following uses three basic control structures to form highly structured units of code?",
+        answers: ["structured programming", "circular connector", "modular construction", "loop structure"],
+        type: "multi",
+        key: 0
+      },
+      {
+        author: "Jacob Smith",
+        question: "What type of principle is used for configuring prefrences that allow the user to personalize an application?",
+        answers: ["CLI", "GUI", "API", "DOS"],
+        type: "multi",
+        key: 1
+      },
+      {
+        author: "Jacob Smith",
+        question: "All computer instructions are based on four basic logic patterns. These patterns are simple sequence, selection, loop. and",
+        answers: ["Trailer", "modular", "top-down", "branch"],
+        type: "multi",
+        key: 3
+      },
+      {
+        author:"Jacob Smith",
+        question:"If the memory speed of the bus is 750MHz, and the CPU is operating at twice the speed of the bus, what is the processor speed?",
+        answers:["375", "ans2", "ans3", "ans4"],
+        type:"multi",
+        key: 3
+      },
+      {
+        author:"Jacob Smith",
+        question:"Two types of programs that create machine codes are the interpreter and the",
+        answers:["assembler", "object", "compiler", "source"],
+        type:"multi",
+        key: 2
+      },
+      {
+        author:"Jacob Smith",
+        question:"In the order of calculations in a program",
+        answers:["addition precedes division", "parentheses precede exponentation", "subtraction precedes addition", "multiplication precedes exponentation"],
+        type:"multi",
+        key: 1
+      },
+      {
+        author:"Jacob Smith",
+        question:"When the code below is executed, strAdd will be equal to",
+        answers:["579", "123 + 456", "123456", "strSecond"],
+        type:"multi",
+        key: 2
+      },
 
-      [
-        "Jacob Smith",
-        "If a programmer downloads a copy of Microsoft SQL Server from a file-sharing website without paying for it, the programmer has commited an offence called",
-        ["piracy", "larency", "felony", "spyware"],
-        "1",
-        "1"
-      ],
-      [
-        "Jacob Smith",
-        "questionText",
-        ["ans1", "ans2", "ans3", "ans4"],
-        "1",
-        "4"
-      ],
+      {
+        author:"Jacob Smith",
+        question:"If a programmer downloads a copy of Microsoft SQL Server from a file-sharing website without paying for it, the programmer has commited an offence called",
+        answers:["piracy", "larency", "felony", "spyware"],
+        type:"multi",
+        key: 0
+      },
+      {
+        author:"Jacob Smith",
+        question:"questionText",
+        answers:["ans1", "ans2", "ans3", "ans4"],
+        type:"ans4",
+        key:"multi"
+      },
 
-      [
-        "Jacob Smith",
-        "The following programming flowchart symbol is a/an __ symbol. (image of a diamond)",
-        ["processing", "input/output", "decision", "connector"],
-        "1",
-        "3"
-      ],
-      [
-        "Jacob Smith",
-        "One of the main goals in analyzing user requirements is to",
-        ["troubleshoot the problem", "shutdown and maintain the system", "keep the customer happy", "ellicit requirements from a user's point of view"],
-        "1",
-        "4"
-      ],
-      [
-        "Jacob Smith",
-        "If a record has the following field lengths, what is the record length?",
-        ["42", "47", "54", "56"],
-        "1",
-        "2"
-      ],
-      [
-        "Jacob Smith",
-        "The following programming flowchart symbol is a/an __ symbol. (image of a parallelogram)",
-        ["processing", "input/output", "decision", "connector"],
-        "1",
-        "2"
-      ],
-      [
-        "Jacob Smith",
-        "A programmer is starting a new programming project. During what phase of the programming project should the programmer begin planning for data storage?",
-        ["billing", "documentation", "implementation", "test"],
-        "1",
-        "3"
-      ],
-      [
-        "Jacob Smith",
-        "A programmer needs to manipulate data that consists of a sequence of numbers that must be used as both an individual object and a set of data. What is the best data structure the programmer can use?",
-        ["array", "constant", "string", "field"],
-        "1",
-        "1"
-      ],
-      [
-        "Jacob Smith",
-        "When a programmer is ready to create executable code, what process is used?",
-        ["debugging", "editing", "compiling", "disassembling"],
-        "1",
-        "3"
-      ],
+      {
+        author:"Jacob Smith",
+        question:"The following programming flowchart symbol is a/an __ symbol. (image of a diamond)",
+        answers:["processing", "input/output", "decision", "connector"],
+        type:"multi",
+        key:2
+      },
+      {
+        author:"Jacob Smith",
+        question:"One of the main goals in analyzing user requirements is to",
+        answers:["troubleshoot the problem", "shutdown and maintain the system", "keep the customer happy", "ellicit requirements from a user's point of view"],
+        type:"multi",
+        key:3
+      },
+      {
+        author:"Jacob Smith",
+        question:"If a record has the following field lengths, what is the record length?",
+        answers:["42", "47", "54", "56"],
+        type:"multi",
+        key:1
+      },
+      {
+        author:"Jacob Smith",
+        question:"The following programming flowchart symbol is a/an __ symbol. (image of a parallelogram)",
+        answers:["processing", "input/output", "decision", "connector"],
+        type:"multi",
+        key:1
+      },
+      {
+        author:"Jacob Smith",
+        question:"A programmer is starting a new programming project. During what phase of the programming project should the programmer begin planning for data storage?",
+        answers:["billing", "documentation", "implementation", "test"],
+        type:"multi",
+        key:2
+      },
+      {
+      author:  "Jacob Smith",
+        question:"A programmer needs to manipulate data that consists of a sequence of numbers that must be used as both an individual object and a set of data. What is the best data structure the programmer can use?",
+        answers:["array", "constant", "string", "field"],
+        type:"multi",
+        key:0
+      },
+      {
+        author:"Jacob Smith",
+        question:"When a programmer is ready to create executable code, what process is used?",
+        answers:["debugging", "editing", "compiling", "disassembling"],
+        type:"multi",
+        key:2
+      },
 
-      [
-        "Jacob Smith",
-        "The source document and __ should follow the same order.",
-        ["Input screen design", "output screen design", "decision-type operator symbols", "processing function symbols"],
-        "1",
-        "1"
-      ],
-      [
-        "Jacob Smith",
-        "Which of the following is a correct name for a variable?",
-        ["State_Zipcode", "State+Zipcode", "State Zipcode", "State=Zipcode"],
-        "1",
-        "1"
-      ],
-      [
-        "Jacob Smith",
-        "Why is the following expression invalid? A=10 + 'new data'",
-        ["Variable 5 is not defined", "data types are mixed", "'new data' is not a string", "'new data' equals zero"],
-        "1",
-        "2"
-      ],
-      [
-        "Jacob Smith",
-        "An output field has 'Los Angeles' moved to it and when examined contains 'Los Angel.' This indicates a/an __ error.",
-        ["logical", "arithmatic", "truncation", "semantic"],
-        "1",
-        "3"
-      ],
-      [
-        "Jacob Smith",
-        "A programmer needs to define the type of value for a variable. What predefined set of characteristics for a variable can the prgrammer choose.",
-        ["storage location", "return value", "method modifier", "data type"],
-        "1",
-        "4"
-      ],
+      {
+        author:"Jacob Smith",
+        question:"The source document and __ should follow the same order.",
+        answers:["Input screen design", "output screen design", "decision-type operator symbols", "processing function symbols"],
+        type:"multi",
+        key:0
+      },
+      {
+      author:  "Jacob Smith",
+      question:  "Which of the following is a correct name for a variable?",
+        answers:["State_Zipcode", "State+Zipcode", "State Zipcode", "State=Zipcode"],
+        type:"multi",
+        key:0
+      },
+      {
+        author:"Jacob Smith",
+        question:"Why is the following expression invalid? A=10 + 'new data'",
+        answers:["Variable 5 is not defined", "data types are mixed", "'new data' is not a string", "'new data' equals zero"],
+        type:"multi",
+        key:1
+      },
+      {
+        author:"Jacob Smith",
+        question:"An output field has 'Los Angeles' moved to it and when examined contains 'Los Angel.' This indicates a/an __ error.",
+        answers:["logical", "arithmatic", "truncation", "semantic"],
+        type:"multi",
+        key:2
+      },
+      {
+        author:"Jacob Smith",
+        question:"A programmer needs to define the type of value for a variable. What predefined set of characteristics for a variable can the prgrammer choose.",
+        answers:["storage location", "return value", "method modifier", "data type"],
+        type:"multi",
+        key:3
+      },
 
-      [
-        "Jacob Smith",
-        "One example of scripting (text processing) language is",
-        ["Perl", "C++", "Fortran", "Beta"],
-        "1",
-        "1"
-      ],
-      [
-        "Jacob Smith",
-        "Which of the following enables the use of 'plain English' queries?",
-        ["BASIC", "FORTRAN", "SQL", "C++"],
-        "1",
-        "3"
-      ],
-      [
-        "Jacob Smith",
-        "An example of loop structure is",
-        ["DO UNTIL", "SELECT IF", "EXECUTE", "NEXT"],
-        "1",
-        "1"
-      ],
-      [
-        "Jacob Smith",
-        "Comple errors can be caused by",
-        ["bad syntax", "input data", "insufficient test data", "incorrect user specification"],
-        "1",
-        "1"
-      ],
+      {
+      author:  "Jacob Smith",
+        question:"One example of scripting (text processing) language is",
+        answers:["Perl", "C++", "Fortran", "Beta"],
+        type:"multi",
+        key:0
+      },
+      {
+        author:"Jacob Smith",
+        question:"Which of the following enables the use of 'plain English' queries?",
+        answers:["BASIC", "FORTRAN", "SQL", "C++"],
+        type:"multi",
+        key:2
+      },
+      {
+      author:  "Jacob Smith",
+        question:"An example of loop structure is",
+        answers:["DO UNTIL", "SELECT IF", "EXECUTE", "NEXT"],
+        type:"multi",
+        key:0
+      },
+      {
+        author:"Jacob Smith",
+        question:"Comple errors can be caused by",
+        answers:["bad syntax", "input data", "insufficient test data", "incorrect user specification"],
+        type:"multi",
+        key:0
+      },
 
-      [
-        "Jacob Smith",
-        "Typically after successful integration testing, a __ test is performed to complete a front-to-back execution of the entire application.",
-        ["system", "unit", "fuzz", "beta"],
-        "1",
-        "1"
-      ],
-      [
-        "Jacob Smith",
-        "The implementation phase consists of coding, testing, and",
-        ["designing", "building prototype programs", "establishing requirements", "integration"],
-        "1",
-        "4"
-      ],
-      [
-        "Jacob Smith",
-        "When TEXT1.VALUE= 'March 7', TEXT1_LEN=",
-        ["7", "8", "9", "10"],
-        "1",
-        "1"
-      ],
-      [
-        "Jacob Smith",
-        "A data element is intended to contain a range from 15 to 30 and after testing it contains 32. What kind of error is this?",
-        ["truncation", "rounding", "run time", "boundary"],
-        "1",
-        "4"
-      ],
-      [
-        "Jacob Smith",
-        "Which of the following consists of a sequence of events to follow so they can be repeated?",
-        ["runtime", "test files", "trace route", "script"],
-        "1",
-        "4"
-      ],
+      {
+      author:  "Jacob Smith",
+        question:"Typically after successful integration testing, a __ test is performed to complete a front-to-back execution of the entire application.",
+        answers:["system", "unit", "fuzz", "beta"],
+        type:"multi",
+      key:0
+    },
+      {
+        author:"Jacob Smith",
+        question:"The implementation phase consists of coding, testing, and",
+        answers:["designing", "building prototype programs", "establishing requirements", "integration"],
+        type:"multi",
+        key:3
+      },
+      {
+      author:  "Jacob Smith",
+        question:"When TEXT1.VALUE= 'March 7', TEXT1_LEN=",
+        answers:["7", "8", "9", "10"],
+        type:"multi",
+        key:0
+      },
+      {
+        author:"Jacob Smith",
+        question:"A data element is intended to contain a range from 15 to 30 and after testing it contains 32. What kind of error is this?",
+        answers:["truncation", "rounding", "run time", "boundary"],
+        type:"multi",
+        key:3
+      },
+      {
+        author:"Jacob Smith",
+        question:"Which of the following consists of a sequence of events to follow so they can be repeated?",
+        answers:["runtime", "test files", "trace route", "script"],
+        type:"multi",
+        key:3
+      },
 
-      [
-        "Jacob Smith",
-        "Maintenance refers to changes to a system in operating arising from error corrections, performance improvements, changes in the business environment and",
-        ["enhancements in functions", "application requirements", "referencing software", "material requirements"],
-        "1",
-        "1"
-      ],
-      [
-        "Jacob Smith",
-        "One method of ensuring that updaes to documentation are efficiently distributed is to",
-        ["send customers printed documentation annually regardless of whether there have been changes", "make changes in an online help system rather than printed sources", "send fliers containing only the changes rather than new printed sources", "make changes only on a pre-specified schedule"],
-        "1",
-        "2"
-      ],
+      {
+        author:"Jacob Smith",
+        question:"Maintenance refers to changes to a system in operating arising from error corrections, performance improvements, changes in the business environment and",
+        answers:["enhancements in functions", "application requirements", "referencing software", "material requirements"],
+        type:"multi",
+        key:0
+      },
+      {
+        author:"Jacob Smith",
+        question:"One method of ensuring that updaes to documentation are efficiently distributed is to",
+        answers:["send customers printed documentation annually regardless of whether there have been changes", "make changes in an online help system rather than printed sources", "send fliers containing only the changes rather than new printed sources", "make changes only on a pre-specified schedule"],
+        type:"multi",
+        key:1
+      },
 
-      [
-        "Jacob Smith",
-        "A programmer has to make programming changes to an existing program. Therefore the comments in the existing program must also be updated. The comments are referred to as __ documentation.",
-        ["external", "internal", "primary", "secondary"],
-        "1",
-        "2"
-      ],
-      [
-        "Jacob Smith",
-        "A programmer has decided to create a pop-up window that will display a brief description of a control's purpose when the mouse hovers over it. this pop-up window is known as a",
-        ["hyper clip", "tool tip", "task bar", "help bar"],
-        "1",
-        "2"
-      ]
+      {
+        author:"Jacob Smith",
+        question:"A programmer has to make programming changes to an existing program. Therefore the comments in the existing program must also be updated. The comments are referred to as __ documentation.",
+        answers:["external", "internal", "primary", "secondary"],
+        type:"multi",
+        key:1
+      },
+      {
+        author:"Jacob Smith",
+        question:"A programmer has decided to create a pop-up window that will display a brief description of a control's purpose when the mouse hovers over it. this pop-up window is known as a",
+        answers:["hyper clip", "tool tip", "task bar", "help bar"],
+        type:"multi",
+        key:1
+      }
     ]
-var data_NoctiWritten = [
-
-]
 
     var data_python = [
       [`Mr. Smith`, `Define a function called 'kick'\nIt prints the string 'Ouch!'`, `def kick():\n\tprint('Ouch!')`, '0'],
@@ -316,21 +313,21 @@ var data_NoctiWritten = [
           data.push(dataList.splice(Math.floor(Math.random() * dataList.length), 1)[0])
         }
     */
-    var languageType = "data_Nocti";
+    var languageType = "data_NoctiWritten";
 
     function changeLanguage() {
       console.log(languageType);
       cardSubmitted = true;
-      if (languageType == "data_Nocti") {
+      if (languageType == "data_NoctiWritten") {
         data = [];
         mistakePile = [];
         discardPile = 0;
         var cardIndex = 0;
         dataList = [];
         // var dataList = data_javascript;
-        var numberOfCards = data_Nocti.length;
+        var numberOfCards = data_NoctiWritten.length;
         for (let i = 0; i < numberOfCards; i++) {
-          dataList.push(data_Nocti[i])
+          dataList.push(data_NoctiWritten[i])
         }
         console.log(dataList);
 
@@ -345,7 +342,7 @@ var data_NoctiWritten = [
         discardPile = 0;
         var cardIndex = 0;
         dataList = [];
-        var numberOfCards = data_Nocti.length;
+        var numberOfCards = data_py.length;
         // var dataList = data_python;
         for (let i = 0; i < numberOfCards; i++) {
           dataList.push(data_python[i])
@@ -398,13 +395,13 @@ var data_NoctiWritten = [
         if (data.length) {
           cardIndex = Math.floor(Math.random() * data.length);
           questionType(data);
-          cardPrompt.innerHTML = '<b>' + data[cardIndex][0] + ':</b><br>' + parseMeta(data[cardIndex][1]);
+          cardPrompt.innerHTML = '<b>' + data[cardIndex].author + ':</b><br>' + parseMeta(data[cardIndex].question);
         } else if (mistakePile.length) {
           cardIndex = Math.floor(Math.random() * mistakePile.length);
           questionType(mistakePile);
           console.log(mistakePile[cardIndex]);
-          console.log(mistakePile[cardIndex][0][1]);
-          cardPrompt.innerHTML = '<b>' + mistakePile[cardIndex][0] + ':</b><br>' + parseMeta(mistakePile[cardIndex][1]);
+          console.log(mistakePile[cardIndex].question);
+          cardPrompt.innerHTML = '<b>' + mistakePile[cardIndex].author + ':</b><br>' + parseMeta(mistakePile[cardIndex].question);
 
         } else {
           cardPrompt.innerHTML = '<h1><b>You win!</b></h1>' + '<button type="button" onclick="resetCards()">Reset</button>'
@@ -419,39 +416,41 @@ var data_NoctiWritten = [
     }
 
     function submitCard() {
-      var score = document.getElementById('score')
-      if (cardSubmitted) {
-        results.innerHTML = 'You already submitted this card!'
-      } else {
-        cardSubmitted = true;
-        var cardAnswer = document.getElementById('cardAnswer').value;
-        let cardCheck = cardAnswer.replaceAll(' ', '')
-        cardCheck = cardCheck.replaceAll('\"', '\'')
-        if (data.length) {
-          if (cardCheck == data[cardIndex][2].replaceAll(' ', '')) {
-            discardPile++;
-            results.innerHTML = `<span style="color: lime; font-family: system, consolas;">` + data[cardIndex][2] + `</span>`;
-            data.splice(cardIndex, 1)
-          } else {
-            console.log(data[cardIndex][2]);
-            results.innerHTML = `<span style="color: red; font-family: system, consolas;">` + data[cardIndex][2] + `</span>`;
-            mistakePile.push(data.splice(cardIndex, 1)[0]);
-          }
-        } else if (mistakePile.length) {
-          if (cardCheck == mistakePile[cardIndex][2].replaceAll(' ', '')) {
-            discardPile++;
-            results.innerHTML = `<span style="color: lime; font-family: system, consolas;">` + parseMeta(mistakePile[cardIndex][2]) + `</span>`;
-            mistakePile.splice(cardIndex, 1)
-          } else {
-            results.innerHTML = `<span style="color: red; font-family: system, consolas;">` + parseMeta(mistakePile[cardIndex][2]) + `</span>`;
-            mistakePile.push(mistakePile.splice(cardIndex, 1)[0]);
-          }
-        }
-      }
-    }
+     var score = document.getElementById('score')
+     if (cardSubmitted) {
+       results.innerHTML = 'You already submitted this card!'
+     } else {
+       cardSubmitted = true;
+       var cardAnswer = document.getElementById('cardAnswer').value;
+       let cardCheck = cardAnswer.replaceAll(' ', '')
+       cardCheck = cardCheck.replaceAll('\"', '\'')
+       if (data.length) {
+         console.log(data[cardIndex].answers);
+         if (cardCheck == data[cardIndex].answers.replaceAll(' ', '')) {
+           discardPile++;
+           results.innerHTML = `<span style="color: lime; font-family: system, consolas;">` + data[cardIndex][2] + `</span>`;
+           data.splice(cardIndex, 1)
+         } else {
+           console.log(data[cardIndex][2]);
+           results.innerHTML = `<span style="color: red; font-family: system, consolas;">` + data[cardIndex][2] + `</span>`;
+           mistakePile.push(data.splice(cardIndex, 1)[0]);
+         }
+       } else if (mistakePile.length) {
+         if (cardCheck == mistakePile[cardIndex][2].replaceAll(' ', '')) {
+           discardPile++;
+           results.innerHTML = `<span style="color: lime; font-family: system, consolas;">` + parseMeta(mistakePile[cardIndex][2]) + `</span>`;
+           mistakePile.splice(cardIndex, 1)
+         } else {
+           results.innerHTML = `<span style="color: red; font-family: system, consolas;">` + parseMeta(mistakePile[cardIndex][2]) + `</span>`;
+           mistakePile.push(mistakePile.splice(cardIndex, 1)[0]);
+         }
+       }
+     }
+   }
 
     function submitChoice() {
       if (cardSubmitted) {
+        console.log('bruh');
         results.innerHTML = 'You already submitted this card!'
       } else {
         cardSubmitted = true;
@@ -461,25 +460,27 @@ var data_NoctiWritten = [
             var eleValue = ele[i].value
         }
         if (data.length) {
-          if (data[cardIndex][4] === eleValue) {
+          console.log(data[cardIndex].key);
+          console.log(eleValue);
+          if (data[cardIndex].key == eleValue) {
             console.log("Correct")
-            results.innerHTML = `<span style="color: lime; font-family: system, consolas;">` + data[cardIndex][2][data[cardIndex][4] - 1] + `</span>`;
+            results.innerHTML = `<span style="color: lime; font-family: system, consolas;">` + data[cardIndex].answers[data[cardIndex].key] + `</span>`;
             discardPile++;
             data.splice(cardIndex, 1)
           } else {
             console.log("You SUCK")
-            results.innerHTML = `<span style="color: red; font-family: system, consolas;">` + data[cardIndex][2][data[cardIndex][4] - 1] + `</span>`;
+            results.innerHTML = `<span style="color: red; font-family: system, consolas;">` + data[cardIndex].answers[data[cardIndex].key] + `</span>`;
             mistakePile.push(data.splice(cardIndex, 1)[0]);
           }
         } else if (mistakePile.length) {
-          if (mistakePile[cardIndex][4] === eleValue) {
+          if (mistakePile[cardIndex].key === eleValue) {
             console.log("Correct")
-            results.innerHTML = `<span style="color: lime; font-family: system, consolas;">` + mistakePile[cardIndex][2][mistakePile[cardIndex][4] - 1] + `</span>`;
+            results.innerHTML = `<span style="color: lime; font-family: system, consolas;">` + mistakePile[cardIndex].answers[mistakePile[cardIndex].key] + `</span>`;
             discardPile++;
             mistakePile.splice(cardIndex, 1)
           } else {
             console.log("You SUCK")
-            results.innerHTML = `<span style="color: red; font-family: system, consolas;">` + mistakePile[cardIndex][0][2][mistakePile[cardIndex][0][4] - 1] + `</span>`;
+            results.innerHTML = `<span style="color: red; font-family: system, consolas;">` + mistakePile[cardIndex].answers[mistakePile[cardIndex].key] + `</span>`;
             mistakePile.push(mistakePile.splice(cardIndex, 1)[0]);
           }
         }
@@ -487,19 +488,20 @@ var data_NoctiWritten = [
     }
 
     function questionType(questionList) {
+      console.log(questionList[cardIndex]);
       let answerBox = document.getElementById('answerbox');
       let multChoiceBtn = document.getElementById('multiplechoice');
       let multchoice1 = document.getElementById("mult1choice");
       let multchoice2 = document.getElementById("mult2choice");
       let multchoice3 = document.getElementById("mult3choice");
       let multchoice4 = document.getElementById("mult4choice");
-      if (questionList[cardIndex][3] === '0') {
+      if (questionList[cardIndex].type === 'text') {
         answerBox.style.display = "block"
         multChoiceBtn.style.display = "none"
-      } else if (questionList[cardIndex][3] === '1') {
+      } else if (questionList[cardIndex].type === 'multi') {
         answerBox.style.display = "none"
         multChoiceBtn.style.display = "block"
-        xyz = questionList[cardIndex][2]
+        xyz = questionList[cardIndex].answers
         multchoice1.innerHTML = xyz[0];
         multchoice2.innerHTML = xyz[1];
         multchoice3.innerHTML = xyz[2];
@@ -530,7 +532,7 @@ var data_NoctiWritten = [
         <div class="dropdown">
           <h1><button class="dropbtn">Question Type</button></h1>
           <div class="dropdown-content">
-            <a onclick="languageTypePicker('data_Nocti')" href="#">Nocti</a>
+            <a onclick="languageTypePicker('data_NoctiWritten')" href="#">Nocti</a>
             <a onclick="languageTypePicker('data_py')" href="#">Python</a>
             <a href="#">HTML</a>
           </div>
@@ -565,16 +567,16 @@ var data_NoctiWritten = [
       </div>
       <div id="multiplechoice">
         <form id="choiceAnswer">
-          <input type="radio" name="choice" id="mult1" value="1">
+          <input type="radio" name="choice" id="mult1" value="0">
           <label for="mult1" id=mult1choice>hey</label>
           <br>
-          <input type="radio" name="choice" id="mult2" value="2">
+          <input type="radio" name="choice" id="mult2" value="1">
           <label for="mult2" id=mult2choice>hey</label>
           <br>
-          <input type="radio" name="choice" id="mult3" value="3">
+          <input type="radio" name="choice" id="mult3" value="2">
           <label for="mult3" id=mult3choice>hey</label>
           <br>
-          <input type="radio" name="choice" id="mult4" value="4">
+          <input type="radio" name="choice" id="mult4" value="3">
           <label for="mult4" id=mult4choice>hey</label>
         </form>
         <div id="buttons">
@@ -592,7 +594,7 @@ var data_NoctiWritten = [
     </div>
   </div>
 
-  <script type="text/Nocti">
+  <script type="text/NoctiWritten">
     nextCard();
     document.getElementById('cardAnswer').addEventListener('keydown', function(e) {
       if (e.key == 'Tab') {
