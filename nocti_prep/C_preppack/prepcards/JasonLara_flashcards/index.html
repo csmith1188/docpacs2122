@@ -1,4 +1,4 @@
-type: "text"author: "Mr. Smith"<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" dir="ltr">
 
 <head>
@@ -14,10 +14,10 @@ type: "text"author: "Mr. Smith"<!DOCTYPE html>
 
     //  {
     //  author: "Jason Lara",
-    //  question: "which of the following errors is caused by a calculation error?",
-    //answers: ["logical", "arithmetic", "truncation", "semantic"],
-    //  type: "multi",
-    //  key:1
+    //  question: "",
+    // answers: "",
+    //  type: "text",
+    //  key:0
     //}
       // ['Will', '', ['', '', '', ''], '', ''],
       // ['Chris', '', ['', '', '', ''], '', ''],
@@ -29,7 +29,7 @@ type: "text"author: "Mr. Smith"<!DOCTYPE html>
       {author: "Will", question: "Which Is Not A Coding Language", answers: ["Javascript", "Erlang", "Ruby", "Unit"], type: "multi", key: 3},
       {author: "Will", question: "Which Is Not A Javascript Datatype", answers: ["Find", "String", "Boolean", "Undefined"], type: "multi", key: 0},
       {author: "Will", question: "Which Symbol Is Used For Multi-Line Comments In Javascript", answers: ["./", "*/", "/.", "-"], type: "multi", key: 1},
-      {author: "Will", question: "How Many Types Of Heading Does A HTML Contain", answers: ["2", "8", "4", "6"], type: "multi", "4"},
+      {author: "Will", question: "How Many Types Of Heading Does A HTML Contain", answers: ["2", "8", "4", "6"], type: "multi", key: 3},
       {author: "Jayson", question: "Which assignment operator assigns a variable/object to a value?", answers: ["+=", "=", "/=", "**="], type: "multi", key: 1},
       {author: "Jayson", question: "Which is the proper use of camel case?", answers: ["CamelCase", "cAmelcAse", "camelCase", "CameLCasE"], type: "multi", key: 2},
       {author: "Jayson", question: "How do you create a function?", answers: ["function == myfunction(){}", "function myFunction(){}", "myFunction():function{}", "function:myFunction(){}"], type: "multi", key: 1},
@@ -46,7 +46,7 @@ type: "text"author: "Mr. Smith"<!DOCTYPE html>
       {author: "Mr. Smith", question: "Call a function called 'kick'\nIt takes the object Player1 as its argument.\nStore its return value to the property 'Player1.hp'", answers: "Player1.hp = kick(Player1)", type: "text", key:0},
       {author: "Mr. Smith", question: "Call a function called 'myName'\nPrint its return value.", answers: "print(myName())", type: "text",},
       {author: "Mr. Smith", question: "Call a function called 'getScore'\nIt takes the string 'Player1' as its argument.\Convert its return value to an integer and store it to a variable called 'score'.", answers: "score = int(getScore('Player1'))", type: "text", key:0},
-      {author: "Mr. Smith", question: "Call a function called 'getScore'\nIt takes the object Player1 as its argument\nPrint its return value.", "print(getScore(Player1))", type: "text", key:0},
+      {author: "Mr. Smith", question: "Call a function called 'getScore'\nIt takes the object Player1 as its argument\nPrint its return value.",answers: "print(getScore(Player1))", type: "text", key:0},
       {author: "Mr. Smith", question: "Define a function called 'doNothing'\nIt returns nothing", answers: "def doNothing():\n\treturn", type: "text", key:0},
       {author: "Mr. Smith", question: "Call a function called rollDice\nStore its return value in a variable called 'dieResult'", answers: "dieResult = rollDice()", type: "text", key:0},
       {author: "Mr. Smith", question: "Define a function called sayMessage\nIt takes an argument called 'msg'\nIt prints the 'msg' argument", answers: "def sayMessage(msg):\n\tprint(msg)", type: "text", key:0},
@@ -60,9 +60,111 @@ type: "text"author: "Mr. Smith"<!DOCTYPE html>
 
 
       var data_nocti_performance = [
-
-
-
+         {
+          author: "Jason Lara",
+          question: "What code do you use to tell an ExpressJS to read URL-encoded data",
+         answers: "app.use(express.urlencoded({extended: true}))",
+         type: "text",
+          key:0
+        },
+        {
+         author: "Jason Lara",
+         question: "Create a GET endpoint at '/' the sends back 'Hello'",
+        answers: "app.get('/', function(req, res){ console.log('hello') });",
+        type: "text",
+         key:0
+       },
+       {
+        author: "Jason Lara",
+        question: "Create a POST endpoint at '/new' that sends back the content of the request body parameter named 'name' ",
+       answers: "app.get('/', function(req, res){res.render( {name: name})})",
+       type: "text",
+        key:0
+      },
+      {
+       author: "Jason Lara",
+       question: "Create and if statement that checks if the content of the request body parameter named 'ordernumber' exist, and log 'Found' if it does",
+      answers: "if (req.body.ordernumber) {console.log('found');}",
+      type: "text",
+       key:0
+     },
+     {
+      author: "Jason Lara",
+      question: "use the fs module to write a JS object named 'newData' into a JSON file named 'newDate.json'",
+     answers: "fs.writeFileSync('newData',JSON.stringify(newData), 'utf8')",
+     type: "text",
+      key:0
+    },
+    {
+     author: "Jason Lara",
+     question: "use the fs module to read a file called 'oldData.json' and convert it to a JS object named 'oldData'",
+    answers: "oldData = JSON.parse(fs.readFileSync(oldData.json))",
+    type: "text",
+     key:0
+   },
+   {
+    author: "Jason Lara",
+    question: "start an ExpressJS app listen server",
+   answers: "app.listen(8000)",
+   type: "text",
+    key:0
+  },
+  {
+   author: "Jason Lara",
+   question: "how to import the fs module",
+  answers: "const fs = require('fs')",
+  type: "text",
+   key:0
+ },
+ {
+  author: "Jason Lara",
+  question: "how to set up an EJS file",
+ answers: "app.set('view engine', 'ejs')",
+ type: "text",
+  key:0
+},
+{
+ author: "Jason Lara",
+ question: "how to do  a if statement for cup OR bowl is true",
+answers: " if (cup || bowl) {}",
+type: "text",
+ key:0
+},
+{
+ author: "Jason Lara",
+ question: "how to do a for loop",
+answers: " for (var i = 0; i < array.length; i++) }",
+type: "text",
+ key:0
+},
+{
+ author: "Jason Lara",
+ question: "how to do  a if statement for cup AND bowl is true",
+answers: "if (cup && bowl) {}",
+type: "text",
+ key:0
+},
+{
+ author: "Jason Lara",
+ question: "how to round to hunderth of number",
+answers: "Number.parseFloat(number).toFixed(2)",
+type: "text",
+ key:0
+},
+{
+ author: "Jason Lara",
+ question: "How to read query data 'hope' and set it to variable 'query'",
+answers: "var query = req.query.hope",
+type: "text",
+ key:0
+},
+{
+ author: "Jason Lara",
+ question: "how to stringify data",
+answers: "JSON.stringify(data)",
+type: "text",
+ key:0
+}
 
 
       ]
@@ -377,16 +479,16 @@ type: "text"author: "Mr. Smith"<!DOCTYPE html>
           data.push(dataList.splice(Math.floor(Math.random() * dataList.length), 1)[0])
         }
         return data;
-      } else if (languageType == "data_nocti_written") {
+      } else if (languageType == "data_nocti_performance") {
         data = [];
         mistakePile = [];
         discardPile = 0;
         var cardIndex = 0;
         dataList = [];
-        var numberOfCards = data_nocti_written.length;
+        var numberOfCards = data_nocti_performance.length;
         // var dataList = data_python;
         for (let i = 0; i < numberOfCards; i++) {
-          dataList.push(data_nocti_written[i])
+          dataList.push(data_nocti_performance[i])
         }
         console.log(dataList);
 
@@ -394,7 +496,25 @@ type: "text"author: "Mr. Smith"<!DOCTYPE html>
         for (let i = 0; i < numberOfCards; i++) {
           data.push(dataList.splice(Math.floor(Math.random() * dataList.length), 1)[0])
         }
-        return data;
+         return data;
+       } else if (languageType == "data_nocti_written") {
+         data = [];
+         mistakePile = [];
+         discardPile = 0;
+         var cardIndex = 0;
+         dataList = [];
+         var numberOfCards = data_nocti_written.length;
+         // var dataList = data_python;
+         for (let i = 0; i < numberOfCards; i++) {
+           dataList.push(data_nocti_written[i])
+         }
+         console.log(dataList);
+
+         //Pick out a certain number of cards
+         for (let i = 0; i < numberOfCards; i++) {
+           data.push(dataList.splice(Math.floor(Math.random() * dataList.length), 1)[0])
+         }
+          return data;
       } else if (languageType == "data_html") {
         data = [];
         mistakePile = [];
@@ -552,7 +672,7 @@ type: "text"author: "Mr. Smith"<!DOCTYPE html>
       let multchoice2 = document.getElementById("mult2choice");
       let multchoice3 = document.getElementById("mult3choice");
       let multchoice4 = document.getElementById("mult4choice");
-      if (questionList[cardIndex].type === 'test') {
+      if (questionList[cardIndex].type === 'text') {
         answerBox.style.display = "block"
         multChoiceBtn.style.display = "none"
       } else if (questionList[cardIndex].type === 'multi') {
@@ -592,11 +712,13 @@ type: "text"author: "Mr. Smith"<!DOCTYPE html>
             <a onclick="languageTypePicker('data_java')" href="#">Javascript</a>
             <a onclick="languageTypePicker('data_py')" href="#">Python</a>
             <a onclick="languageTypePicker('data_nocti_written')" href="#">Nocti-written</a>
-            <a href="#">HTML</a>
+            <a onclick="languageTypePicker('data_nocti_performance')" href="#">Nocti-performance</a>
+            <a onclick="languageTypePicker('data_html')" href="#">HTML</a>
           </div>
         </div>
       </div>
       <div id="text">
+        <br>
         <li>Type the lines of code described in the prompt.</li>
         <li>If the description talks about something that would use </li>
         <li id="line2">a code block (function, conditional statement, etc), only use the first line of code.</li>
