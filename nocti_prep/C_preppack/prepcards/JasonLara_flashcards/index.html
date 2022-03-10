@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+type: "text"author: "Mr. Smith"<!DOCTYPE html>
 <html lang="en" dir="ltr">
 
 <head>
@@ -23,39 +23,39 @@
       // ['Chris', '', ['', '', '', ''], '', ''],
       // ['Ethan', '', ['', '', '', ''], '', ''],
       // ['Jayson', '', ['', '', '', ''], '', ''],
-      {'Will', 'What Does HTML Mean', ['HyperText Markup Language', 'HyperTest Magic Language', 'HypoText', 'HTML has no meaning'], '1', '1'},
-      {'Will', 'What Do Tags Do', ['They Do Nothing', 'They Properly Format Content', 'They Are The Content', '<'], '1', '2'},
-      {'Will', 'What Are Some Common HTML Tags', ["'l'", "'kd'", "'vc'", "'br'"], '1', '4'},
-      {'Will', 'Which Is Not A Coding Language', ['Javascript', 'Erlang', 'Ruby', 'Unit'], '1', '4'},
-      {'Will', 'Which Is Not A Javascript Datatype', ['Find', 'String', 'Boolean', 'Undefined'], '1', '1'},
-      {'Will', 'Which Symbol Is Used For Multi-Line Comments In Javascript', ['./', '*/', '/.', '-'], '1', '2'},
-      {'Will', 'How Many Types Of Heading Does A HTML Contain', ['2', '8', '4', '6'], '1', '4'},
-      {'Jayson', 'Which assignment operator assigns a variable/object to a value?', ['+=', '=', '/=', '**='], '1', '2'},
-      {'Jayson', 'Which is the proper use of camel case?', ['CamelCase', 'cAmelcAse', 'camelCase', 'CameLCasE'], '1', '3'},
-      {'Jayson', 'How do you create a function?', ['function == myfunction(){}', 'function myFunction(){}', 'myFunction():function{}', 'function:myFunction(){}'], '1', '2'},
-      {'Jayson', 'What is a string?', ['A string is just one line of code', 'A string is a list of Non-human-readable letters that are code', 'A string is a list of human-readable letters that are not code','A string is a list of objects that are assigned to a variable'], '1', '3'},
-      {'Jayson', 'How would you log (Hello World!!) to the console>?', 'console.log(Hello World!!);', '0'],
+      {author: "Will", question: 'What Does HTML Mean', answers: ['HyperText Markup Language', 'HyperTest Magic Language', 'HypoText', 'HTML has no meaning'], type: "multi", key: 0},
+      {author: "Will", question: 'What Do Tags Do', answers: ['They Do Nothing', 'They Properly Format Content', 'They Are The Content', '<'], type: "multi", key: 1},
+      {author: "Will", question: 'What Are Some Common HTML Tags', answers: ["'l'", "'kd'", "'vc'", "'br'"], type: "multi", key: 3},
+      {author: "Will", question: 'Which Is Not A Coding Language', answers: ['Javascript', 'Erlang', 'Ruby', 'Unit'], type: "multi", key: 3},
+      {author: "Will", question: 'Which Is Not A Javascript Datatype', answers: ['Find', 'String', 'Boolean', 'Undefined'], type: "multi", key: 0},
+      {author: "Will", question: 'Which Symbol Is Used For Multi-Line Comments In Javascript', answers: ['./', '*/', '/.', '-'], type: "multi", key: 1},
+      {author: "Will", question: 'How Many Types Of Heading Does A HTML Contain', answers: ['2', '8', '4', '6'], type: "multi", '4'},
+      {author: "Jayson", question: 'Which assignment operator assigns a variable/object to a value?', answers: ['+=', '=', '/=', '**='], type: "multi", key: 1},
+      {author: "Jayson", question: 'Which is the proper use of camel case?', answers: ['CamelCase', 'cAmelcAse', 'camelCase', 'CameLCasE'], type: "multi", key: 2},
+      {author: "Jayson", question: 'How do you create a function?', answers: ['function == myfunction(){}', 'function myFunction(){}', 'myFunction():function{}', 'function:myFunction(){}'], type: "multi", key: 1},
+      {author: "Jayson", question: 'What is a string?', answers: ['A string is just one line of code', 'A string is a list of Non-human-readable letters that are code', 'A string is a list of human-readable letters that are not code','A string is a list of objects that are assigned to a variable'], type: "multi", key: 2},
+      {author: "Jayson", question: 'How would you log (Hello World!!) to the console>?', answers: 'console.log(Hello World!!);', type: "text", key:0},
       //['Jayson', '']
     ]
 
     var data_python = [
-      {`Mr. Smith`, `Define a function called 'kick'\nIt prints the string 'Ouch!'`, `def kick():\n\tprint('Ouch!')`, '0'},
-      {`Mr. Smith`, `Define a function called 'myName'\nIt returns the string 'Jeff'`, `def myName():\n\treturn 'Jeff'`, '0'},
-      {`Mr. Smith`, `Define a function called 'kick'\nIt prints the string 'Ouch!'`, `def kick():\n\tprint('Ouch!')`, '0'},
-      {`Mr. Smith`, `Define a function called 'kick'\nIt takes one argument called targetHP\nIt returns targetHP - 2`, `def kick(targetHP):\n\treturn targetHP - 2`, '0'},
-      {`Mr. Smith`, `Call a function called 'kick'\nIt takes the object Player1 as its argument.\nStore its return value to the property 'Player1.hp'`, `Player1.hp = kick(Player1)`, '0'},
-      {`Mr. Smith`, `Call a function called 'myName'\nPrint its return value.`, `print(myName())`, '0'},
-      {`Mr. Smith`, `Call a function called 'getScore'\nIt takes the string 'Player1' as its argument.\Convert its return value to an integer and store it to a variable called 'score'.`, `score = int(getScore('Player1'))`, '0'},
-      {`Mr. Smith`, `Call a function called 'getScore'\nIt takes the object Player1 as its argument\nPrint its return value.`, `print(getScore(Player1))`, '0'},
-      {`Mr. Smith`, `Define a function called 'doNothing'\nIt returns nothing`, `def doNothing():\n\treturn`, '0'},
-      {`Mr. Smith`, `Call a function called rollDice\nStore its return value in a variable called 'dieResult'`, `dieResult = rollDice()`, '0'},
-      {`Mr. Smith`, `Define a function called sayMessage\nIt takes an argument called 'msg'\nIt prints the 'msg' argument`, `def sayMessage(msg):\n\tprint(msg)`, '0'},
-      {`Mr. Smith`, `Define a function called convertAdd()\nIt takes two arguments called 'a' and 'b'\nIt returns 'a' converted to an integer plus 'b' converted to an integer `, `def convertAdd(a, b):\n\treturn int(a) + int(b)`, '0'},
+      {author: "Mr. Smith", question: `Define a function called 'kick'\nIt prints the string 'Ouch!'`, answers: `def kick():\n\tprint('Ouch!')`, type: "text", key:0},
+      {author: "Mr. Smith", question: `Define a function called 'myName'\nIt returns the string 'Jeff'`, answers: `def myName():\n\treturn 'Jeff'`, type: "text", key:0},
+      {author: "Mr. Smith", question: `Define a function called 'kick'\nIt prints the string 'Ouch!'`, answers: `def kick():\n\tprint('Ouch!')`, type: "text", key:0},
+      {author: "Mr. Smith", question: `Define a function called 'kick'\nIt takes one argument called targetHP\nIt returns targetHP - 2`, answers: `def kick(targetHP):\n\treturn targetHP - 2`, type: "text", key:0},
+      {author: "Mr. Smith", question: `Call a function called 'kick'\nIt takes the object Player1 as its argument.\nStore its return value to the property 'Player1.hp'`, answers: `Player1.hp = kick(Player1)`, type: "text", key:0},
+      {author: "Mr. Smith", question: `Call a function called 'myName'\nPrint its return value.`, answers: `print(myName())`, type: "text",},
+      {author: "Mr. Smith", question: `Call a function called 'getScore'\nIt takes the string 'Player1' as its argument.\Convert its return value to an integer and store it to a variable called 'score'.`, answers: `score = int(getScore('Player1'))`, type: "text", key:0},
+      {author: "Mr. Smith", question: `Call a function called 'getScore'\nIt takes the object Player1 as its argument\nPrint its return value.`, `print(getScore(Player1))`, type: "text", key:0},
+      {author: "Mr. Smith", question: `Define a function called 'doNothing'\nIt returns nothing`, answers: `def doNothing():\n\treturn`, type: "text", key:0},
+      {author: "Mr. Smith", question: `Call a function called rollDice\nStore its return value in a variable called 'dieResult'`, answers: `dieResult = rollDice()`, type: "text", key:0},
+      {author: "Mr. Smith", question: `Define a function called sayMessage\nIt takes an argument called 'msg'\nIt prints the 'msg' argument`, answers: `def sayMessage(msg):\n\tprint(msg)`, type: "text", key:0},
+      {author: "Mr. Smith", question: `Define a function called convertAdd()\nIt takes two arguments called 'a' and 'b'\nIt returns 'a' converted to an integer plus 'b' converted to an integer `, answers: `def convertAdd(a, b):\n\treturn int(a) + int(b)`, type: "text", key:0},
     ]
 
     var data_html = [
 
-      {`Mr. Smith`, `Create a variable called 'x' and store the value 5 into it.`, `x = 5`, '0'}
+      {author: "Mr. Smith", question: `Create a variable called 'x' and store the value 5 into it.`, answers: `x = 5`, type: "text", key:0}
     ]
 
 
