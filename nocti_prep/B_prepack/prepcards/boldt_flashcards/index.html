@@ -79,7 +79,7 @@
       {author: "Christian", question: "Use the fs module to write a JS object named 'newData' into a JSON file named 'newData.json'", answers: "JSON.stringify(newData);\nfs.writeFileSync('newData.JSON')", type: "text"},
       {author: "Christian", question: "Use the fs module to read a file called 'oldData.json' and convert it to a JS object named 'oldData", answers: "let rawdata = fs.readFileSync('oldData.json');\nlet oldData = JSON.parse(rawdata);", type: "text"},
       {author: "Christian", question: "How do you start an ExpressJS app listen server?", answers: "app.listen()", type: "text"},
-      {author: "Christian", question: "How do you set the view engine to EJS?" answers: "app.set('view engine', 'ejs');", type: "text"},
+      {author: "Christian", question: "How do you set the view engine to EJS?", answers: "app.set('view engine', 'ejs');", type: "text"},
       {author: "Christian", question: "How do you initialize an NodeJS server in command prompt?", answers: "npm init", type: "text"},
       {author: "Christian", question: "How do you use the fs module to read a JSON file named \"json\" and save it with a let named \"rawdata\"?", answers: "let rawdata = fs.readFileSync('json.json');", type: "text"},
       {author: "Christian", question: "How do you convert a data object to a JSON string?", answers: "JSON.stringify()", type: "text"},
@@ -379,6 +379,8 @@
       </div>
       <div id="text">
         <li>Type the lines of code described in the prompt.</li>
+        <li>If the description talks about something that would use </li>
+        <li id="line2">a code block (function, conditional statement, etc), only use the first line of code.</li>
         <li>If you need to use quotes, please use <b>single quotes ( ' ' )</b></li>
         <li>The ExpressJS application will always be named <b>"app"</b></li>
         <li>Request arguments in callbacks will always be named<b>"res" and "req"</b></li>
