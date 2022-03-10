@@ -16,105 +16,122 @@
       // ['Ethan', '', ['', '', '', ''], '', ''],
       // ['Jayson', '', ['', '', '', ''], '', ''],
       //['Will', 'What Does HTML Mean', ['HyperText Markup Language', 'HyperTest Magic Language', 'HypoText', 'HTML has no meaning'], '1', '1'],
-      ['Will', 'What Do Tags Do', ['They Do Nothing', 'They Properly Format Content', 'They Are The Content', '<'], '1', '2'],
+      {author:'Will', question:'What Do Tags Do', answers:['They Do Nothing', 'They Properly Format Content', 'They Are The Content', '<'], type:'multi', key:1},
       //['Will', 'What Are Some Common HTML Tags', ["'l'", "'kd'", "'vc'", "'br'"], '1', '4'],
-      ['Will', 'Which Is Not A Coding Language', ['Javascript', 'Erlang', 'Ruby', 'Unit'], '1', '4'],
-      ['Will', 'Which Is Not A Javascript Datatype', ['Find', 'String', 'Boolean', 'Undefined'], '1', '1'],
-      ['Will', 'Which Symbol Is Used For Multi-Line Comments In Javascript', ['./', '*/', '/.', '-'], '1', '2'],
+      {author:'Will', question:'Which Is Not A Coding Language', answers:['Javascript', 'Erlang', 'Ruby', 'Unit'], type:'multi', key:3},
+      {author:'Will', question:'Which Is Not A Javascript Datatype', answers:['Find', 'String', 'Boolean', 'Undefined'], type:'multi', key:0},
+      {author:'Will', question:'Which Symbol Is Used For Multi-Line Comments In Javascript', answers:['./', '*/', '/.', '-'], type:'multi', key:1},
       //['Will', 'How Many Types Of Heading Does A HTML Contain', ['2', '8', '4', '6'], '1', '4'],
-      ['Jayson', 'Which assignment operator assigns a variable/object to a value?', ['+=', '=', '/=', '**='], '1', '2'],
-      ['Jayson', 'Which is the proper use of camel case?', ['CamelCase', 'cAmelcAse', 'camelCase', 'CameLCasE'], '1', '3'],
-      ['Jayson', 'How do you create a function?', ['function == myfunction(){}', 'function myFunction(){}', 'myFunction():function{}', 'function:myFunction(){}'], '1', '2'],
-      ['Jayson', 'What is a string?', ['A string is just one line of code', 'A string is a list of Non-human-readable letters that are code', 'A string is a list of human-readable letters that are not code', 'A string is a list of objects that are assigned to a variable'], '1', '3'],
-      ['Jayson', 'How would you log (Hello World!!) to the console?', `console.log(\'Hello World!!\');`, '0'],
-      ['Jayson', 'What does API stand for?', 'Application Programming Interface', '0'],
-      ['Jayson', 'Create a variable called applesInBasket that has 5 apples in it, then log it to the console.', 'let applesInBasket = 5; \nconsole.log(applesInBasket)', '0'],
+      {author:'Jayson', question:'Which assignment operator assigns a variable/object to a value?', answers:['+=', '=', '/=', '**='], type:'multi', key:2},
+      {author:'Jayson', question:'Which is the proper use of camel case?', answers:['CamelCase', 'cAmelcAse', 'camelCase', 'CameLCasE'], type:'multi', key:2},
+      {author:'Jayson', question:'How do you create a function?', answers:['function == myfunction(){}', 'function myFunction(){}', 'myFunction():function{}', 'function:myFunction(){}'], type:'multi', key:1},
+      {author:'Jayson', question:'What is a string?', answers:['A string is just one line of code', 'A string is a list of Non-human-readable letters that are code', 'A string is a list of human-readable letters that are not code', 'A string is a list of objects that are assigned to a variable'], type:'multi', key:2},
+      {author:'Jayson', question:'How would you log (Hello World!!) to the console?', answers:`console.log(\'Hello World!!\');`, type:'text'},
+      {author:'Jayson', question:'What does API stand for?', answers:'Application Programming Interface', type:'text'},
+      {author:'Jayson', question:'Create a variable called applesInBasket that has 5 apples in it, then log it to the console.', answers:'let applesInBasket = 5; \nconsole.log(applesInBasket)', type:'text'}
       //['Jayson', ''],
     ]
 
     var data_python = [
-      [`Mr. Smith`, `Define a function called 'kick'\nIt prints the string 'Ouch!'`, `def kick():\n\tprint('Ouch!')`, '0'],
-      [`Mr. Smith`, `Define a function called 'myName'\nIt returns the string 'Jeff'`, `def myName():\n\treturn 'Jeff'`, '0'],
-      [`Mr. Smith`, `Define a function called 'kick'\nIt prints the string 'Ouch!'`, `def kick():\n\tprint('Ouch!')`, '0'],
-      [`Mr. Smith`, `Define a function called 'kick'\nIt takes one argument called targetHP\nIt returns targetHP - 2`, `def kick(targetHP):\n\treturn targetHP - 2`, '0'],
-      [`Mr. Smith`, `Call a function called 'kick'\nIt takes the object Player1 as its argument.\nStore its return value to the property 'Player1.hp'`, `Player1.hp = kick(Player1)`, '0'],
-      [`Mr. Smith`, `Call a function called 'myName'\nPrint its return value.`, `print(myName())`, '0'],
-      [`Mr. Smith`, `Call a function called 'getScore'\nIt takes the string 'Player1' as its argument.\Convert its return value to an integer and store it to a variable called 'score'.`, `score = int(getScore('Player1'))`, '0'],
-      [`Mr. Smith`, `Call a function called 'getScore'\nIt takes the object Player1 as its argument\nPrint its return value.`, `print(getScore(Player1))`, '0'],
-      [`Mr. Smith`, `Define a function called 'doNothing'\nIt returns nothing`, `def doNothing():\n\treturn`, '0'],
-      [`Mr. Smith`, `Call a function called rollDice\nStore its return value in a variable called 'dieResult'`, `dieResult = rollDice()`, '0'],
-      [`Mr. Smith`, `Define a function called sayMessage\nIt takes an argument called 'msg'\nIt prints the 'msg' argument`, `def sayMessage(msg):\n\tprint(msg)`, '0'],
-      [`Mr. Smith`, `Define a function called convertAdd()\nIt takes two arguments called 'a' and 'b'\nIt returns 'a' converted to an integer plus 'b' converted to an integer `, `def convertAdd(a, b):\n\treturn int(a) + int(b)`, '0'],
+      {author:`Mr. Smith`, question:`Define a function called 'kick'\nIt prints the string 'Ouch!'`, answers:`def kick():\n\tprint('Ouch!')`, type:'text'},
+      {author:`Mr. Smith`, question:`Define a function called 'myName'\nIt returns the string 'Jeff'`, answers:`def myName():\n\treturn 'Jeff'`, type:'text'},
+      {author:`Mr. Smith`, question:`Define a function called 'kick'\nIt prints the string 'Ouch!'`, answers:`def kick():\n\tprint('Ouch!')`, type:'text'},
+      {author:`Mr. Smith`, question:`Define a function called 'kick'\nIt takes one argument called targetHP\nIt returns targetHP - 2`, answers:`def kick(targetHP):\n\treturn targetHP - 2`, type:'text'},
+      {author:`Mr. Smith`, question:`Call a function called 'kick'\nIt takes the object Player1 as its argument.\nStore its return value to the property 'Player1.hp'`, answers:`Player1.hp = kick(Player1)`, type:'text'},
+      {author:`Mr. Smith`, question:`Call a function called 'myName'\nPrint its return value.`, answers:`print(myName())`, type:'text'},
+      {author:`Mr. Smith`, question:`Call a function called 'getScore'\nIt takes the string 'Player1' as its argument.\Convert its return value to an integer and store it to a variable called 'score'.`, answers:`score = int(getScore('Player1'))`, type:'text'},
+      {author:`Mr. Smith`, question:`Call a function called 'getScore'\nIt takes the object Player1 as its argument\nPrint its return value.`, answers:`print(getScore(Player1))`, type:'text'},
+      {author:`Mr. Smith`, question:`Define a function called 'doNothing'\nIt returns nothing`, answers:`def doNothing():\n\treturn`, type:'text'},
+      {author:`Mr. Smith`, question:`Call a function called rollDice\nStore its return value in a variable called 'dieResult'`, answers:`dieResult = rollDice()`, type:'text'},
+      {author:`Mr. Smith`, question:`Define a function called sayMessage\nIt takes an argument called 'msg'\nIt prints the 'msg' argument`, answers:`def sayMessage(msg):\n\tprint(msg)`, type:'text'},
+      {author:`Mr. Smith`, question:`Define a function called convertAdd()\nIt takes two arguments called 'a' and 'b'\nIt returns 'a' converted to an integer plus 'b' converted to an integer `, answers:`def convertAdd(a, b):\n\treturn int(a) + int(b)`, type:'text'},
     ]
 
     var data_basics = [
 
-      [`Mr. Smith`, `Create a variable called 'x' and store the value 5 into it.`, `x = 5`, '0'],
-      [`Mr. Smith`, `Start a conditional statement that runs if 'x' is greater than 'y'`, `if x > y:`, '0'],
-      [`Mr. Smith`, `Start a conditional statement that loops while 'turnCounter' is greater than 0.`, `while turnCounter > 0:`, '0'],
-      [`Mr. Smith`, `Start a conditional statement that runs if 'userAge' is equal to 16'`, `if userAge == 16:`, '0'],
-      [`Mr. Smith`, `Start a conditional statement that loops forever.`, `while True:`, '0'],
-      [`Mr. Smith`, `Start a conditional statement that loops while 'userChoice' is not equal to 'exit'.`, `while not userChoice == 'exit':`, '0'],
-      [`Mr. Smith`, `Start a conditional statement that runs if 'targetHP' is less than or equal to 0.`, `if targetHP <= 0:`, '0'],
-      [`Mr. Smith`, `Define a function named 'countUsers' that takes one argument called 'userList'`, `def counterUsers(userList):`, '0'],
-      [`Mr. Smith`, `Define a function named 'addNumbers' that takes two arugments called 'num1' and 'num2'`, `def addNumbers(num1, num2):`, '0'],
-      [`Mr. Smith`, `Use a print function to print 'Gucci Gang' four times (you may only type the words once).`, `print('Gucci Gang ' * 4)`, '0'],
-      [`Mr. Smith`, `Use a print function to print 'Your number is ' and the variable integer 'userPos'.`, `print('Your number is ' + str(userPos))`, '0'],
-      [`Mr. Smith`, `Ask the user to 'Enter your name:', and store it to the variable 'userName'.`, `userName = input('Enter your name:')`],
-      [`Mr. Smith`, `Ask the user to 'Enter your age:', and store it to the variable 'userAge' as an integer.`, `userAge = int(input('Enter your age:'))`, '0'],
-      [`Mr. Smith`, `Ask the user to 'Enter your choice:', and store it to the variable 'userChoice'.`, `userChoice = input('Enter your choice:')`, '0'],
-      [`Mr. Smith`, `Convert 'x' to an integer, and store back into 'x'.`, `x = int(x)`, '0'],
-      [`Mr. Smith`, `Convert 'userAge' to an integer, and store back into 'userAge'.`, `userAge = int(userAge)`, '0'],
-      [`Mr. Smith`, `Convert 'x' to a string, and store back into 'x'.`, `x = str(x)`, '0'],
-      [`Mr. Smith`, `Convert this to code: "Otherwise, if 'userAge' is greater than 21, then..."`, `elif userAge > 21:`, '0'],
-      [`Mr. Smith`, `Convert this to code: "Otherwise, then..."`, `else:`, '0'],
-      [`Mr. Smith`, `Convert this to code: "Otherwise, if 'userChoice' is 'Cancel', then..."`, `elif userChoice == 'Cancel':`, '0'],
-      [`Mr. Smith`, `Convert this to code: "If 'userName' is 'Bob', then..."`, `if userName == 'Bob':`, '0']
+      {author:`Mr. Smith`, question:`Create a variable called 'x' and store the value 5 into it.`, answers:`x = 5`, type:'text'},
+      {author:`Mr. Smith`, question:`Start a conditional statement that runs if 'x' is greater than 'y'`, answers:`if x > y:`, type:'text'},
+      {author:`Mr. Smith`, question:`Start a conditional statement that loops while 'turnCounter' is greater than 0.`, answers:`while turnCounter > 0:`, type:'text'},
+      {author:`Mr. Smith`, question:`Start a conditional statement that runs if 'userAge' is equal to 16'`, answers:`if userAge == 16:`, type:'text'},
+      {author:`Mr. Smith`, question:`Start a conditional statement that loops forever.`, answers:`while True:`, type:'text'},
+      {author:`Mr. Smith`, question:`Start a conditional statement that loops while 'userChoice' is not equal to 'exit'.`, answers:`while not userChoice == 'exit':`, type:'text'},
+      {author:`Mr. Smith`, question:`Start a conditional statement that runs if 'targetHP' is less than or equal to 0.`, answers:`if targetHP <= 0:`, type:'text'},
+      {author:`Mr. Smith`, question:`Define a function named 'countUsers' that takes one argument called 'userList'`, answers:`def counterUsers(userList):`, type:'text'},
+      {author:`Mr. Smith`, question:`Define a function named 'addNumbers' that takes two arugments called 'num1' and 'num2'`, answers:`def addNumbers(num1, num2):`, type:'text'},
+      {author:`Mr. Smith`, question:`Use a print function to print 'Gucci Gang' four times (you may only type the words once).`, answers:`print('Gucci Gang ' * 4)`, type:'text'},
+      {author:`Mr. Smith`, question:`Use a print function to print 'Your number is ' and the variable integer 'userPos'.`, answers:`print('Your number is ' + str(userPos))`, type:'text'},
+      {author:`Mr. Smith`, question:`Ask the user to 'Enter your name:', and store it to the variable 'userName'.`, answers:`userName = input('Enter your name:')`, type:'text'},
+      {author:`Mr. Smith`, question:`Ask the user to 'Enter your age:', and store it to the variable 'userAge' as an integer.`, answers:`userAge = int(input('Enter your age:'))`, type:'text'},
+      {author:`Mr. Smith`, question:`Ask the user to 'Enter your choice:', and store it to the variable 'userChoice'.`, answers:`userChoice = input('Enter your choice:')`, type:'text'},
+      {author:`Mr. Smith`, question:`Convert 'x' to an integer, and store back into 'x'.`, answers:`x = int(x)`, type:'text'},
+      {author:`Mr. Smith`, question:`Convert 'userAge' to an integer, and store back into 'userAge'.`, answers:`userAge = int(userAge)`, type:'text'},
+      {author:`Mr. Smith`, question:`Convert 'x' to a string, and store back into 'x'.`, answers:`x = str(x)`, type:'text'},
+      {author:`Mr. Smith`, question:`Convert this to code: "Otherwise, if 'userAge' is greater than 21, then..."`, answers:`elif userAge > 21:`, type:'text'},
+      {author:`Mr. Smith`, question:`Convert this to code: "Otherwise, then..."`, answers:`else:`, type:'text'},
+      {author:`Mr. Smith`, question:`Convert this to code: "Otherwise, if 'userChoice' is 'Cancel', then..."`, answers:`elif userChoice == 'Cancel':`, type:'text'},
+      {author:`Mr. Smith`, question:`Convert this to code: "If 'userName' is 'Bob', then..."`, answers:`if userName == 'Bob':`, type:'text'}
 
     ]
 
     var data_html = [
       //['Chris', '', ['', '', '', ''], '', ''],
-      ['Chris', 'Indicates the beginning and end of an html document', ["&lthtml>", "&lt/html>", "&lthtml> &lt/html>", "None"], '1', '3'],
-      ['Chris', 'What tag bolds the Text?', ["&ltb>", "&ltB>", "&ltBold> &ltbold>", "None"], '1', '1'],
+      {author:'Chris Mooney', question:'Indicates the beginning and end of an html document', answers:["&lthtml>", "&lt/html>", "&lthtml> &lt/html>", "None"], type:'multi', key:2},
+      {author:'Chris Mooney', question:'What tag bolds the Text?', answers:["&ltb>", "&ltB>", "&ltBold> &ltbold>", "None"], type:'multi', key:0}
     ]
 
-    var data_nocti = [
-      ["Ethan Shimmel", "Which of the following errors is caused by a calculation error?", ["Logical", "Arithmetic", "Truncation", "Semantic"], "1" , "2"],
-      ["Ethan Shimmel", "Which of the following uses three basic control structures to form highly structured units of code", ["structured programming", "circular connector", "modular construction", "loop structure"], "1" , "1"],
-      ["Ethan Shimmel", "What type of principle is used for configuring preferences that allow the user to personalize an application", ["CLI", "GUI", "API", "DOS"], , "2"],
-      ["Ethan Shimmel", "All computer instructions are based on four basic logic patterns. These patterns are simple sequence, selection, loop, and... ", ["Trailer", "Modular", "Top-Down", "Branch"], "1", "4"],
-      ["Ethan Shimmel", "If the memory speed of the bus is 750MHz, and the CPU is operating at twice the speed of the bus, what is the processor speed?", ["375MHz", "750MHz", "1.5GHz", "2GHz"], "1", "3"],
-      ["Ethan Shimmel", "Two types of programs that create machine codes are the interpreter and the...", ["Assembler", "Object", "Compiler", "Source"], "1", "3"],
-      ["Ethan Shimmel", "In the order of calculations in a program", ["Addition Precedes Division", "Parentheses Precede Exponentiation", "Subtraction Precedes Addition", "Multiplication Precedes Exponentiation"], "1", "2"],
-      ["Ethan Shimmel", "When the code below is executed, strAdd will be equal to? \n\t strFirst = 123 \n\t strSecond = 456 \n\t strAdd = strFirst + strSecond", ["579", "123+456", "123456", "strFirst+strSecond"], "1", "3"],
-      ["Ethan Shimmel", "If a programmer downloads a copy of Microsoft SQL Server from a file sharing website without paying for it, the programmer has committed an offence called", ["Piracy", "Larceny", "Felony", "Spyware"], "1", "1"],
-      ["Ethan Shimmel", "The Sarbanes-Oxley Act (SOX) requires monitoring and documentation of transactions. How could a programmer mistakenly setup a program that would cause problems with compliance with SOX", ["Create system logs of the transactions taken in the session", "require a user to click three times when they are sure they want to proceed", "help a user to request assistance from the system administrators", "utilize system credentials instead of pass through credentials"], "1", "4"],
-      ["Ethan Shimmel", "The following programming flowchart is a/an ________ symbol. (Rhombus)", ["processing", "input/output", "decision", "connector"], "1", "3"],
-      ["Ethan Shimmel", "One of the main goals is analyzing user requirements is to", ["Troubleshoot the Problem", "Shutdown and Maintain the system", "Keep the customer happy", "Elicit requirements from a user's point of view."], "1", "4"],
-      ["Ethan Shimmel", "If a record has the following field lengths, what is the record length? \n\t Name=35, Zipcode=5, District=7", ["42", "47", "54", "56"], "1", "2"],
-      ["Ethan Shimmel", "The following programming flowchart symbol is a/an ________ symbol. (Parallelogram)", ["processing", "input/output", "decision", "connector"], "1", "2"],
-      ["Ethan Shimmel", "A programmer is starting a new programming project. During what phase of the programming project should the programmer begin planning for data storage", ["Billing", "Documentation", "Implementation", "Test"], "1", "3"],
-      ["Ethan Shimmel", "A programmer needs to manipulate data that consists of a sequence of numbers that must be used as both an individual object and a set of data", ["array", "constant", "string", "field"], "1", "3"],
-      ["Ethan Shimmel", "When a programmer is ready to create executable code, what process is used?", ["debugging", "editing", "compiling", "disassembling"], "1", "1"],
-      ["Ethan Shimmel", "The source document and ______ should follow the same order.", ["input screen design", "output screen design", "decision-type operator symbols", "processing function symbols"], "1", "3"],
-      ["Ethan Shimmel", "Which of the following is a correct name for a variable?", ["State_Zipcode", "State+Zipcode", "State Zipcode", "State=Zipcode"], "1", "1"],
-      ["Ethan Shimmel", "Why is the following expression invalid? A=10 + 'New Data'", ["Variable 5 is not defined", "data types are mixed", "'New Data' is not a string", "'New Data' equals zero"], "1", "1"],
-      ["Ethan Shimmel", "An output field has 'Los Angeles' moved to it and when examined contains 'Los Angel'. This indicates a/an _____ error.", ["Logical", "Arithmetic", "Truncation", "Semantic"], "1", "2"],
-      ["Ethan Shimmel", "A programmer needs to define the type of value for a variable. What pre-defined set of characteristics for a variable can the programmer choose?", ["storage location", "return value", "method modifier", "data type"], "1", "3"],
-      ["Ethan Shimmel", "One example of scripting (text processing) language is ", ["Perl", "C++", "Fortran", "Beta"], "1", "4"],
-      ["Ethan Shimmel", "Which of the following enables the use of 'plain English' queries?", ["BASIC", "FORTRAN", "SQL", "C++"], "1", "1"],
-      ["Ethan Shimmel", "An example of loop structure is ", ["DO UNTIL", "SELECT IF", "EXECUTE", "NEXT"], "1", "3"],
-      ["Ethan Shimmel", "Compile errors can be caused by", ["bad syntax", "input data", "insufficient test data", "incorrect user specification"], "1", "1"],
-      ["Ethan Shimmel", "Typically after successful integration testing, a ____ test is performed to complete a front-to-back execution of the entire application.", ["system", "unit", "fuzz", "beta"], "1", "1"],
-      ["Ethan Shimmel", "The implementation phase consists of coding, testing, and ", ["designing", "building prototype programs", "establishing requirements", "integration"], "1", "1"],
-      ["Ethan Shimmel", "When TEXT1.VALUE='March 7', TEXT1_LEN= \n\t\t Sample \n Sub Form_Click() \n IN = TEXT1.VALUE \n TEXT1_len = LEN$(IN) \n For I = TEXT_len to 1 step -1 \n TEMP = TEMP & mid (in, I, 1) \n NEXT \n OUT = TEMP & right (in, text_len -n)", ["7", "8", "9", "10"], "1", "4"],
-      ["Ethan Shimmel", "A data element is intended to contain a range from 15 to 30 and after testing it contains 32. What kind of error is this?", ["truncation", "rounding", "run time", "boundary"], "1", "1"],
-      ["Ethan Shimmel", "Which of the following cosists of a sequence of events to follow so they can be repeated?", ["runtime", "test files", "trace route", "script"], "1", "4"],
-      ["Ethan Shimmel", "Maintenance refers to chnages to a system in operating arising from error corrections, performance improvements, changes in the business environment and ", ["enhancements in functions", "application requirements", "referencing software", "material requirements"], "1", "1"],
-      ["Ethan Shimmel", "One method of ensuring that updates to documentation are efficiently distributed is to", ["send customers printed documentation annually regardless of whether ther have been changes", "make changes in an online help system rather than printed sources", "send fliers containing only the changes rather than new printed volumes", "make changes only on a pre-specific schedule"], "1", "2"],
-      ["Ethan Shimmel", "A programmer has to make programming changes to an existing program. Therefore the comments in the existing program mus also be updated. The comments are referred to as ____ documentation.", ["external", "internal", "primary", "secondary"], "1", "2"],
-      ["Ethan Shimmel", "A programmer has decided to create a pop-up window that will display a brief description of a control's purpose when the mouse hovers over it. This pop-up window is known as a ", ["hyper clip", "tool tip", "task bar", "help bar"], "1", "2"]
+    var data_nocti_written = [
+      {author:"Ethan Shimmel", question:"Which of the following errors is caused by a calculation error?", answers:["Logical", "Arithmetic", "Truncation", "Semantic"], type:"multi", key:1},
+      {author:"Ethan Shimmel", question:"Which of the following uses three basic control structures to form highly structured units of code", answers:["structured programming", "circular connector", "modular construction", "loop structure"], type:"multi", key:0},
+      {author:"Ethan Shimmel", question:"What type of principle is used for configuring preferences that allow the user to personalize an application", answers:["CLI", "GUI", "API", "DOS"], type:"multi", key:1},
+      {author:"Ethan Shimmel", question:"All computer instructions are based on four basic logic patterns. These patterns are simple sequence, selection, loop, and... ", answers:["Trailer", "Modular", "Top-Down", "Branch"], type:"multi", key:3},
+      {author:"Ethan Shimmel", question:"If the memory speed of the bus is 750MHz, and the CPU is operating at twice the speed of the bus, what is the processor speed?", answers:["375MHz", "750MHz", "1.5GHz", "2GHz"], type:"multi", key:2},
+      {author:"Ethan Shimmel", question:"Two types of programs that create machine codes are the interpreter and the...", answers:["Assembler", "Object", "Compiler", "Source"], type:"multi", key:2},
+      {author:"Ethan Shimmel", question:"In the order of calculations in a program", answers:["Addition Precedes Division", "Parentheses Precede Exponentiation", "Subtraction Precedes Addition", "Multiplication Precedes Exponentiation"], type:"multi", key:1},
+      {author:"Ethan Shimmel", question:"When the code below is executed, strAdd will be equal to? \n\t strFirst = 123 \n\t strSecond = 456 \n\t strAdd = strFirst + strSecond", answers:["579", "123+456", "123456", "strFirst+strSecond"], type:"multi", key:2},
+      {author:"Ethan Shimmel", question:"If a programmer downloads a copy of Microsoft SQL Server from a file sharing website without paying for it, the programmer has committed an offence called", answers:["Piracy", "Larceny", "Felony", "Spyware"], type:"multi", key:0},
+      {author:"Ethan Shimmel", question:"The Sarbanes-Oxley Act (SOX) requires monitoring and documentation of transactions. How could a programmer mistakenly setup a program that would cause problems with compliance with SOX", answers:["Create system logs of the transactions taken in the session", "require a user to click three times when they are sure they want to proceed", "help a user to request assistance from the system administrators", "utilize system credentials instead of pass through credentials"], type:"multi", key:3},
+      {author:"Ethan Shimmel", question:"The following programming flowchart is a/an ________ symbol. (Rhombus)", answers:["processing", "input/output", "decision", "connector"], type:"multi", key:2},
+      {author:"Ethan Shimmel", question:"One of the main goals is analyzing user requirements is to", answers:["Troubleshoot the Problem", "Shutdown and Maintain the system", "Keep the customer happy", "Elicit requirements from a user's point of view."], type:"multi", key:3},
+      {author:"Ethan Shimmel", question:"If a record has the following field lengths, what is the record length? \n\t Name=35, Zipcode=5, District=7", answers:["42", "47", "54", "56"], type:"multi", key:1},
+      {author:"Ethan Shimmel", question:"The following programming flowchart symbol is a/an ________ symbol. (Parallelogram)", answers:["processing", "input/output", "decision", "connector"], type:"multi", key:1},
+      {author:"Ethan Shimmel", question:"A programmer is starting a new programming project. During what phase of the programming project should the programmer begin planning for data storage", answers:["Billing", "Documentation", "Implementation", "Test"], type:"multi", key:2},
+      {author:"Ethan Shimmel", question:"A programmer needs to manipulate data that consists of a sequence of numbers that must be used as both an individual object and a set of data", answers:["array", "constant", "string", "field"], type:"multi", key:2},
+      {author:"Ethan Shimmel", question:"When a programmer is ready to create executable code, what process is used?", answers:["debugging", "editing", "compiling", "disassembling"], type:"multi", key:0},
+      {author:"Ethan Shimmel", question:"The source document and ______ should follow the same order.", answers:["input screen design", "output screen design", "decision-type operator symbols", "processing function symbols"], type:"multi", key:2},
+      {author:"Ethan Shimmel", question:"Which of the following is a correct name for a variable?", answers:["State_Zipcode", "State+Zipcode", "State Zipcode", "State=Zipcode"], type:"multi", key:0},
+      {author:"Ethan Shimmel", question:"Why is the following expression invalid? A=10 + 'New Data'", answers:["Variable 5 is not defined", "data types are mixed", "'New Data' is not a string", "'New Data' equals zero"], type:"multi", key:0},
+      {author:"Ethan Shimmel", question:"An output field has 'Los Angeles' moved to it and when examined contains 'Los Angel'. This indicates a/an _____ error.", answers:["Logical", "Arithmetic", "Truncation", "Semantic"], type:"multi", key:1},
+      {author:"Ethan Shimmel", question:"A programmer needs to define the type of value for a variable. What pre-defined set of characteristics for a variable can the programmer choose?", answers:["storage location", "return value", "method modifier", "data type"], type:"multi", key:2},
+      {author:"Ethan Shimmel", question:"One example of scripting (text processing) language is ", answers:["Perl", "C++", "Fortran", "Beta"], type:"multi", key:3},
+      {author:"Ethan Shimmel", question:"Which of the following enables the use of 'plain English' queries?", answers:["BASIC", "FORTRAN", "SQL", "C++"], type:"multi", key:0},
+      {author:"Ethan Shimmel", question:"An example of loop structure is ", answers:["DO UNTIL", "SELECT IF", "EXECUTE", "NEXT"], type:"multi", key:2},
+      {author:"Ethan Shimmel", question:"Compile errors can be caused by", answers:["bad syntax", "input data", "insufficient test data", "incorrect user specification"], type:"multi", key:0},
+      {author:"Ethan Shimmel", question:"Typically after successful integration testing, a ____ test is performed to complete a front-to-back execution of the entire application.", answers:["system", "unit", "fuzz", "beta"], type:"multi", key:0},
+      {author:"Ethan Shimmel", question:"The implementation phase consists of coding, testing, and ", answers:["designing", "building prototype programs", "establishing requirements", "integration"], type:"multi", key:0},
+      {author:"Ethan Shimmel", question:"When TEXT1.VALUE='March 7', TEXT1_LEN= \n\t\t Sample \n Sub Form_Click() \n IN = TEXT1.VALUE \n TEXT1_len = LEN$(IN) \n For I = TEXT_len to 1 step -1 \n TEMP = TEMP & mid (in, I, 1) \n NEXT \n OUT = TEMP & right (in, text_len -n)", answers:["7", "8", "9", "10"], type:"multi", key:3},
+      {author:"Ethan Shimmel", question:"A data element is intended to contain a range from 15 to 30 and after testing it contains 32. What kind of error is this?", answers:["truncation", "rounding", "run time", "boundary"], type:"multi", key:0},
+      {author:"Ethan Shimmel", question:"Which of the following cosists of a sequence of events to follow so they can be repeated?", answers:["runtime", "test files", "trace route", "script"], type:"multi", key:3},
+      {author:"Ethan Shimmel", question:"Maintenance refers to chnages to a system in operating arising from error corrections, performance improvements, changes in the business environment and ", answers:["enhancements in functions", "application requirements", "referencing software", "material requirements"], type:"multi", key:0},
+      {author:"Ethan Shimmel", question:"One method of ensuring that updates to documentation are efficiently distributed is to", answers:["send customers printed documentation annually regardless of whether ther have been changes", "make changes in an online help system rather than printed sources", "send fliers containing only the changes rather than new printed volumes", "make changes only on a pre-specific schedule"], type:"multi", key:1},
+      {author:"Ethan Shimmel", question:"A programmer has to make programming changes to an existing program. Therefore the comments in the existing program mus also be updated. The comments are referred to as ____ documentation.", answers:["external", "internal", "primary", "secondary"], type:"multi", key:1},
+      {author:"Ethan Shimmel", question:"A programmer has decided to create a pop-up window that will display a brief description of a control's purpose when the mouse hovers over it. This pop-up window is known as a ", answers:["hyper clip", "tool tip", "task bar", "help bar"], type:"multi", key:1}
+    ]
+    var data_nocti_performance = [
+      {author:`Ethan Shimmel`, question:`What code do you use to tell an ExpressJS to read URL-encoded data?`, answers:`app.use(express.urlencoded({ extended: true}));`, type:'text'},
+      {author:`Ethan Shimmel`, question:`Create a GET endpoint at '/' that sends back "Hello"`, answers:`app.get('/', (req, res) => {\n\tres.send('Hello')\n});`, type:'text'},
+      {author:`Ethan Shimmel`, question:`Create a POST endpoint at '/new' that sends back the content of the request body paramter named "name"`, answers:`app.post('/new', (req, res) => {\n\tres.send(req.body.name)\n});`, type:'text'},
+      {author:`Ethan Shimmel`, question:`Create an if statement that checks if the content of the request body parameter named "ordernumber" exists, and logs "Found" if it does`, answers:`if (req.body.ordernumber) {\n\tconsole.log('Found');\n};`, type:'text'},
+      {author:`Ethan Shimmel`, question:`Use the fs module to write a JS object named "newData" into a JSON file named "newData.json"`, answers:`fs.writeFile('newData.json', newData, 'utf8', () => {\n\tconsole.log('Write Successful');\n})`, type:'text'},
+      {author:`Ethan Shimmel`, question:`Use the fs module to read a file called "oldData.json" and convert it to a JS object named "oldData"`, answers:`oldData = fs.readFileSync('oldData.json')`, type:'text'},
+      {author:`Ethan Shimmel`, question:`Start an ExpressJS app listen server`, answers:`app.listen(port);`, type:'text'},
+      {author:`Ethan Shimmel`, question:`Set EJS as your view engine`, answers:`app.set('view engine', 'ejs');`, type:'text'},
+      {author:`Ethan Shimmel`, question:`Run the file 'app.js' using node`, answers:`node app.js`, type:'text'},
+      {author:`Ethan Shimmel`, question:`Render the 'home.ejs' file file with no properties`, answers:`res.render('home', {});`, type:'text'},
+      {author:`Ethan Shimmel`, question:`Use the urlencoded data with the name 'user' and turn it into a variable username`, answers:`var username = req.body.user;`, type:'text'},
+      {author:`Ethan Shimmel`, question:`Change the javascript object 'newData' into a string that is ready to wrote to a '.json' file(The variable will still be the same name)`, answers:`newData = JSON.stringify(newData)`, type:'text'},
+      {author:`Ethan Shimmel`, question:`Import fs module into 'app.js'`, answers:`const fs = require('fs');`, type:'text'},
+      {author:`Ethan Shimmel`, question:`Parse 'oldData' from a '.json' string into the object 'data'`, answers:`data = JSON.parse(oldData);`, type:'text'},
+      {author:`Ethan Shimmel`, question:`Install express using command prompt`, answers:`npm i express`, type:'text'}
     ]
 
     var languageType = "";
@@ -177,15 +194,32 @@
           data.push(dataList.splice(Math.floor(Math.random() * dataList.length), 1)[0])
         }
         return data;
-      }  else if (languageType == "data_nocti") {
+      } else if (languageType == "data_nocti_written") {
         data = [];
         mistakePile = [];
         discardPile = 0;
         var cardIndex = 0;
         dataList = [];
-        var numberOfCards = data_nocti.length;
+        var numberOfCards = data_nocti_written.length;
         for (let i = 0; i < numberOfCards; i++) {
-          dataList.push(data_nocti[i])
+          dataList.push(data_nocti_written[i])
+        }
+        console.log(dataList);
+
+        //Pick out a certain number of cards
+        for (let i = 0; i < numberOfCards; i++) {
+          data.push(dataList.splice(Math.floor(Math.random() * dataList.length), 1)[0])
+        }
+        return data;
+      } else if (languageType == "data_nocti_performance") {
+        data = [];
+        mistakePile = [];
+        discardPile = 0;
+        var cardIndex = 0;
+        dataList = [];
+        var numberOfCards = data_nocti_performance.length;
+        for (let i = 0; i < numberOfCards; i++) {
+          dataList.push(data_nocti_performance[i])
         }
         console.log(dataList);
 
@@ -235,16 +269,14 @@
         if (data.length) {
           cardIndex = Math.floor(Math.random() * data.length);
           questionType(data);
-          cardPrompt.innerHTML = '<b>' + data[cardIndex][0] + ':</b><br>' + parseMeta(data[cardIndex][1]);
+          cardPrompt.innerHTML = '<b>' + data[cardIndex].author + ':</b><br>' + parseMeta(data[cardIndex].question);
         } else if (mistakePile.length) {
           cardIndex = Math.floor(Math.random() * mistakePile.length);
           questionType(mistakePile);
-          console.log(mistakePile[cardIndex]);
-          console.log(mistakePile[cardIndex][0][1]);
-          cardPrompt.innerHTML = '<b>' + mistakePile[cardIndex][0] + ':</b><br>' + parseMeta(mistakePile[cardIndex][1]);
+          cardPrompt.innerHTML = '<b>' + mistakePile[cardIndex].author + ':</b><br>' + parseMeta(mistakePile[cardIndex].question);
 
         } else {
-          cardPrompt.innerHTML = '<h1><b>You win!</b></h1>' + '<button type="button" onclick="resetCards()">Reset</button>'
+          cardPrompt.innerHTML = '<h1><b>You win!</b></h1>' + '<button type="button" id="submit" onclick="resetCards()">Reset</button>'
           answerBox.style.display = "none"
           multChoiceBtn.style.display = "none"
         }
@@ -265,22 +297,22 @@
         let cardCheck = cardAnswer.replaceAll(' ', '')
         cardCheck = cardCheck.replaceAll('\"', '\'')
         if (data.length) {
-          if (cardCheck == data[cardIndex][2].replaceAll(' ', '')) {
+          if (cardCheck == data[cardIndex].answers.replaceAll(' ', '')) {
             discardPile++;
-            results.innerHTML = `<span style="color: lime; font-family: system, consolas;">` + data[cardIndex][2] + `</span>`;
+            results.innerHTML = `<span style="color: cyan; font-family: system, consolas;">` + data[cardIndex].answers + `</span>`;
             data.splice(cardIndex, 1)
           } else {
-            console.log(data[cardIndex][2]);
-            results.innerHTML = `<span style="color: red; font-family: system, consolas;">` + data[cardIndex][2] + `</span>`;
+            console.log(data[cardIndex].answers);
+            results.innerHTML = `<span style="color: red; font-family: system, consolas;">` + data[cardIndex].answers + `</span>`;
             mistakePile.push(data.splice(cardIndex, 1)[0]);
           }
         } else if (mistakePile.length) {
-          if (cardCheck == mistakePile[cardIndex][2].replaceAll(' ', '')) {
+          if (cardCheck == mistakePile[cardIndex].answers.replaceAll(' ', '')) {
             discardPile++;
-            results.innerHTML = `<span style="color: lime; font-family: system, consolas;">` + parseMeta(mistakePile[cardIndex][2]) + `</span>`;
+            results.innerHTML = `<span style="color: cyan; font-family: system, consolas;">` + parseMeta(mistakePile[cardIndex].answers) + `</span>`;
             mistakePile.splice(cardIndex, 1)
           } else {
-            results.innerHTML = `<span style="color: red; font-family: system, consolas;">` + parseMeta(mistakePile[cardIndex][2]) + `</span>`;
+            results.innerHTML = `<span style="color: red; font-family: system, consolas;">` + parseMeta(mistakePile[cardIndex].answers) + `</span>`;
             mistakePile.push(mistakePile.splice(cardIndex, 1)[0]);
           }
         }
@@ -295,28 +327,28 @@
         var ele = document.getElementsByName('choice')
         for (i = 0; i < ele.length; i++) {
           if (ele[i].checked)
-            var eleValue = ele[i].value
+            var eleValue = parseInt(ele[i].value)
         }
         if (data.length) {
-          if (data[cardIndex][4] === eleValue) {
+          if (data[cardIndex].key === eleValue) {
             console.log("Correct")
-            results.innerHTML = `<span style="color: lime; font-family: system, consolas;">` + data[cardIndex][2][data[cardIndex][4] - 1] + `</span>`;
+            results.innerHTML = `<span style="color: cyan; font-family: system, consolas;">` + data[cardIndex].answers[data[cardIndex].key] + `</span>`;
             discardPile++;
             data.splice(cardIndex, 1)
           } else {
             console.log("You SUCK")
-            results.innerHTML = `<span style="color: red; font-family: system, consolas;">` + data[cardIndex][2][data[cardIndex][4] - 1] + `</span>`;
+            results.innerHTML = `<span style="color: red; font-family: system, consolas;">` + data[cardIndex].answers[data[cardIndex].key] + `</span>`;
             mistakePile.push(data.splice(cardIndex, 1)[0]);
           }
         } else if (mistakePile.length) {
-          if (mistakePile[cardIndex][4] === eleValue) {
+          if (mistakePile[cardIndex].key === eleValue) {
             console.log("Correct")
-            results.innerHTML = `<span style="color: lime; font-family: system, consolas;">` + mistakePile[cardIndex][2][mistakePile[cardIndex][4] - 1] + `</span>`;
+            results.innerHTML = `<span style="color: cyan; font-family: system, consolas;">` + mistakePile[cardIndex].answers[mistakePile[cardIndex].key] + `</span>`;
             discardPile++;
             mistakePile.splice(cardIndex, 1)
           } else {
             console.log("You SUCK")
-            results.innerHTML = `<span style="color: red; font-family: system, consolas;">` + mistakePile[cardIndex][0][2][mistakePile[cardIndex][0][4] - 1] + `</span>`;
+            results.innerHTML = `<span style="color: red; font-family: system, consolas;">` + mistakePile[cardIndex][0].answers[mistakePile[cardIndex][0].key] + `</span>`;
             mistakePile.push(mistakePile.splice(cardIndex, 1)[0]);
           }
         }
@@ -332,17 +364,17 @@
       let multchoice4 = document.getElementById("mult4choice");
       let choose = document.getElementById('choose');
       let dropdown = document.getElementById('dropMenu');
-      if (questionList[cardIndex][3] === '0') {
+      if (questionList[cardIndex].type === 'text') {
         answerBox.style.display = "block"
         multChoiceBtn.style.display = "none"
         choose.style.display = "none"
         dropMenu.style.display = "block"
-      } else if (questionList[cardIndex][3] === '1') {
+      } else if (questionList[cardIndex].type === 'multi') {
         answerBox.style.display = "none"
         multChoiceBtn.style.display = "block"
         choose.style.display = "none"
         dropMenu.style.display = "block"
-        xyz = questionList[cardIndex][2]
+        xyz = questionList[cardIndex].answers
         multchoice1.innerHTML = xyz[0];
         multchoice2.innerHTML = xyz[1];
         multchoice3.innerHTML = xyz[2];
@@ -387,7 +419,8 @@
             <a onclick="languageTypePicker('data_java')" href="#">Javascript</a>
             <a onclick="languageTypePicker('data_py')" href="#">Python</a>
             <a onclick="languageTypePicker('data_html')" href="#">HTML</a>
-            <a onclick="languageTypePicker('data_nocti')" href="#">Nocti</a>
+            <a onclick="languageTypePicker('data_nocti_written')" href="#">Nocti Written</a>
+            <a onclick="languageTypePicker('data_nocti_performance')" href="#">Nocti Performance</a>
           </div>
         </div>
       </div>
@@ -412,10 +445,10 @@
       <br>
 
       <div id="answerbox">
-        <textarea rows=4 cols=40 id="cardAnswer" class="answerBoxFormat" style="white-space: pre-wrap; font-family: system, consolas;"></textarea><br>
+        <textarea onkeydown="if(event.keyCode===9){var v=this.value,s=this.selectionStart,e=this.selectionEnd;this.value=v.substring(0, s)+'\t'+v.substring(e);this.selectionStart=this.selectionEnd=s+1;return false;}" rows=4 cols=40 id="cardAnswer" class="answerBoxFormat" style="white-space: pre-wrap; font-family: system, consolas;"></textarea><br>
         <div id="buttons">
-          <button type="button" onclick="submitCard()">Submit</button>
-          <button type="button" onclick="nextCard()">Next Card</button>
+          <button type="button" id="submit" onclick="submitCard()">Submit</button>
+          <button type="button" id="submit" onclick="nextCard()">Next Card</button>
         </div>
       </div>
       <div id="choose">
@@ -426,28 +459,29 @@
               <a onclick="languageTypePicker('data_java')" href="#">Javascript</a>
               <a onclick="languageTypePicker('data_py')" href="#">Python</a>
               <a onclick="languageTypePicker('data_html')" href="#">HTML</a>
-              <a onclick="languageTypePicker('data_nocti')" href="#">Nocti</a>
+              <a onclick="languageTypePicker('data_nocti_written')" href="#">Nocti Written</a>
+              <a onclick="languageTypePicker('data_nocti_performance')" href="#">Nocti Performance</a>
             </div>
           </div>
         </div>
       </div>
       <div id="multiplechoice">
         <form id="choiceAnswer">
-          <input type="radio" name="choice" id="mult1" value="1">
+          <input type="radio" name="choice" id="mult1" value="0">
           <label for="mult1" id=mult1choice>hey</label>
           <br>
-          <input type="radio" name="choice" id="mult2" value="2">
+          <input type="radio" name="choice" id="mult2" value="1">
           <label for="mult2" id=mult2choice>hey</label>
           <br>
-          <input type="radio" name="choice" id="mult3" value="3">
+          <input type="radio" name="choice" id="mult3" value="2">
           <label for="mult3" id=mult3choice>hey</label>
           <br>
-          <input type="radio" name="choice" id="mult4" value="4">
+          <input type="radio" name="choice" id="mult4" value="3">
           <label for="mult4" id=mult4choice>hey</label>
         </form>
         <div id="buttons">
-          <button type="button" onclick="submitChoice()">Submit</button>
-          <button type="button" onclick="nextCard()">Next Card</button>
+          <button type="button" id="submit" onclick="submitChoice()">Submit</button>
+          <button type="button" id="submit" onclick="nextCard()">Next Card</button>
 
         </div>
 
