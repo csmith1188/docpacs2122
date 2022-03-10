@@ -15,89 +15,90 @@
       // ['Chris', '', ['', '', '', ''], '', ''],
       // ['Ethan', '', ['', '', '', ''], '', ''],
       // ['Jayson', '', ['', '', '', ''], '', ''],
-      ['Will', 'What Does HTML Mean', ['HyperText Markup Language', 'HyperTest Magic Language', 'HypoText', 'HTML has no meaning'], '1', '1'],
-      ['Will', 'What Do Tags Do', ['They Do Nothing', 'They Properly Format Content', 'They Are The Content', '<'], '1', '2'],
-      ['Will', 'What Are Some Common HTML Tags', ["'l'", "'kd'", "'vc'", "'br'"], '1', '4'],
-      ['Will', 'Which Is Not A Coding Language', ['Javascript', 'Erlang', 'Ruby', 'Unit'], '1', '4'],
-      ['Will', 'Which Is Not A Javascript Datatype', ['Find', 'String', 'Boolean', 'Undefined'], '1', '1'],
-      ['Will', 'Which Symbol Is Used For Multi-Line Comments In Javascript', ['./', '*/', '/.', '-'], '1', '2'],
-      ['Will', 'How Many Types Of Heading Does A HTML Contain', ['2', '8', '4', '6'], '1', '4'],
-      ['Jayson', 'Which assignment operator assigns a variable/object to a value?', ['+=', '=', '/=', '**='], '1', '2'],
-      ['Jayson', 'Which is the proper use of camel case?', ['CamelCase', 'cAmelcAse', 'camelCase', 'CameLCasE'], '1', '3'],
-      ['Jayson', 'How do you create a function?', ['function == myfunction(){}', 'function myFunction(){}', 'myFunction():function{}', 'function:myFunction(){}'], '1', '2'],
-      ['Jayson', 'What is a string?', ['A string is just one line of code', 'A string is a list of Non-human-readable letters that are code', 'A string is a list of human-readable letters that are not code','A string is a list of objects that are assigned to a variable'], '1', '3'],
-      ['Jayson', 'How would you log (Hello World!!) to the console>?', 'console.log(Hello World!!);', '0'],
+        { author:'Will', question: 'What Does HTML Mean', answers: ['HyperText Markup Language', 'HyperTest Magic Language', 'HypoText', 'HTML has no meaning'], type: 'multi', key: 0},
+        { author:'Will', question: 'What Do Tags Do', answers: ['They Do Nothing', 'They Properly Format Content', 'They Are The Content', '<'], type: 'multi', key: 1},
+        { author:'Will', question: 'What Are Some Common HTML Tags', answers: ["'l'", "'kd'", "'vc'", "'br'"], type: 'multi', key: 3},
+        { author:'Will', question: 'Which Is Not A Coding Language', answers: ['Javascript', 'Erlang', 'Ruby', 'Unit'], type: 'multi', key: 3},
+        { author:'Will', question: 'Which Is Not A Javascript Datatype', answers: ['Find', 'String', 'Boolean', 'Undefined'], type: 'multi', key: 0},
+        { author:'Will', question: 'Which Symbol Is Used For Multi-Line Comments In Javascript', answers: ['./', '*/', '/.', '-'], type: 'multi', key: 1},
+        { author:'Will', question: 'How Many Types Of Heading Does A HTML Contain', answers: ['2', '8', '4', '6'], type: 'multi', key: 3},
+        { author:'Jayson', question: 'Which assignment operator assigns a variable/object to a value?', answers: ['+=', '=', '/=', '**='], type: 'multi', key: 1},
+        { author:'Jayson', question: 'Which is the proper use of camel case?', answers: ['CamelCase', 'cAmelcAse', 'camelCase', 'CameLCasE'], type: 'multi', key: 2},
+        { author:'Jayson', question: 'How do you create a function?', answers: ['function == myfunction(){}', 'function myFunction(){}', 'myFunction():function{}', 'function:myFunction(){}'], type: 'multi', key: 1},
+        { author:'Jayson', question: 'What is a string?', answers: ['A string is just one line of code', 'A string is a list of Non-human-readable letters that are code', 'A string is a list of human-readable letters that are not code','A string is a list of objects that are assigned to a variable'], type: 'multi', key: 2},
+        { author:'Jayson', question: 'How would you log (Hello World!!) to the console>?', answers: 'console.log(Hello World!!);', type: 'text', key: 0},
+        //['Jayson', '']
       //['Jayson', '']
     ]
 
     var data_python = [
-      [`Mr. Smith`, `Define a function called 'kick'\nIt prints the string 'Ouch!'`, `def kick():\n\tprint('Ouch!')`, '0'],
-      [`Mr. Smith`, `Define a function called 'myName'\nIt returns the string 'Jeff'`, `def myName():\n\treturn 'Jeff'`, '0'],
-      [`Mr. Smith`, `Define a function called 'kick'\nIt prints the string 'Ouch!'`, `def kick():\n\tprint('Ouch!')`, '0'],
-      [`Mr. Smith`, `Define a function called 'kick'\nIt takes one argument called targetHP\nIt returns targetHP - 2`, `def kick(targetHP):\n\treturn targetHP - 2`, '0'],
-      [`Mr. Smith`, `Call a function called 'kick'\nIt takes the object Player1 as its argument.\nStore its return value to the property 'Player1.hp'`, `Player1.hp = kick(Player1)`, '0'],
-      [`Mr. Smith`, `Call a function called 'myName'\nPrint its return value.`, `print(myName())`, '0'],
-      [`Mr. Smith`, `Call a function called 'getScore'\nIt takes the string 'Player1' as its argument.\Convert its return value to an integer and store it to a variable called 'score'.`, `score = int(getScore('Player1'))`, '0'],
-      [`Mr. Smith`, `Call a function called 'getScore'\nIt takes the object Player1 as its argument\nPrint its return value.`, `print(getScore(Player1))`, '0'],
-      [`Mr. Smith`, `Define a function called 'doNothing'\nIt returns nothing`, `def doNothing():\n\treturn`, '0'],
-      [`Mr. Smith`, `Call a function called rollDice\nStore its return value in a variable called 'dieResult'`, `dieResult = rollDice()`, '0'],
-      [`Mr. Smith`, `Define a function called sayMessage\nIt takes an argument called 'msg'\nIt prints the 'msg' argument`, `def sayMessage(msg):\n\tprint(msg)`, '0'],
-      [`Mr. Smith`, `Define a function called convertAdd()\nIt takes two arguments called 'a' and 'b'\nIt returns 'a' converted to an integer plus 'b' converted to an integer `, `def convertAdd(a, b):\n\treturn int(a) + int(b)`, '0'],
+      { author: `Mr. Smith`, question: `Define a function called 'kick'\nIt prints the string 'Ouch!'`, answers:`def kick():\n\tprint('Ouch!')`, type: 'text', key: 0},
+      { author: `Mr. Smith`, question: `Define a function called 'myName'\nIt returns the string 'Jeff'`, answers:`def myName():\n\treturn 'Jeff'`, type: 'text', key: 0},
+      { author: `Mr. Smith`, question: `Define a function called 'kick'\nIt prints the string 'Ouch!'`, answers:`def kick():\n\tprint('Ouch!')`, type: 'text', key: 0},
+      { author: `Mr. Smith`, question: `Define a function called 'kick'\nIt takes one argument called targetHP\nIt returns targetHP - 2`, answers:`def kick(targetHP):\n\treturn targetHP - 2`, type: 'text', key: 0},
+      { author: `Mr. Smith`, question: `Call a function called 'kick'\nIt takes the object Player1 as its argument.\nStore its return value to the property 'Player1.hp'`, answers:`Player1.hp = kick(Player1)`, type: 'text', key: 0},
+      { author: `Mr. Smith`, question: `Call a function called 'myName'\nPrint its return value.`, answers:`print(myName())`, type: 'text', key: 0},
+      { author: `Mr. Smith`, question: `Call a function called 'getScore'\nIt takes the string 'Player1' as its argument.\Convert its return value to an integer and store it to a variable called 'score'.`, answers:`score = int(getScore('Player1'))`, type: 'text', key: 0},
+      { author: `Mr. Smith`, question: `Call a function called 'getScore'\nIt takes the object Player1 as its argument\nPrint its return value.`, answers:`print(getScore(Player1))`, type: 'text', key: 0},
+      { author: `Mr. Smith`, question: `Define a function called 'doNothing'\nIt returns nothing`, answers:`def doNothing():\n\treturn`, type: 'text', key: 0},
+      { author: `Mr. Smith`, question: `Call a function called rollDice\nStore its return value in a variable called 'dieResult'`, answers:`dieResult = rollDice()`, type: 'text', key: 0},
+      { author: `Mr. Smith`, question: `Define a function called sayMessage\nIt takes an argument called 'msg'\nIt prints the 'msg' argument`, answers:`def sayMessage(msg):\n\tprint(msg)`, type: 'text', key: 0},
+      { author: `Mr. Smith`, question: `Define a function called convertAdd()\nIt takes two arguments called 'a' and 'b'\nIt returns 'a' converted to an integer plus 'b' converted to an integer `, answers:`def convertAdd(a, b):\n\treturn int(a) + int(b)`, type: 'text', key: 0},
     ]
 
     var data_html = [
 
-      [`Mr. Smith`, `Create a variable called 'x' and store the value 5 into it.`, `x = 5`, '0']
+      { author: `Mr. Smith`, question: `Create a variable called 'x' and store the value 5 into it.`, amswers: `x = 5`, type: 'text' key: 0 }
     ]
 
     var nocti_written = [
-      { author: 'Leniece', question: "What is the following errors is caused by  calculation error?", answers: ["logical", "Arithmatic", "truncation", "semantic"], type: "1", key: "2"}
-      { author: 'Leniece', question: "Which of the following uses the three basic control structures to form highly structured units of code?", answers: ["structured programming", "circular connector", "modular construction", "loop structure"], type: "1", key: "1"}
-      { author: 'Leniece', question: "what type of principle is used for configuring preferences that allow the user to personalise an application", answers: ["CLI", "GUI", "API", "DOS"], type: "1", key: "2"}
-      { author: 'Leniece', question: "All computer instructions are based on four basic logic patterns. these patterns are simple sequence, selection, loop, and...", answers: ["trailer", "modular", "top-down", "branch"], type: "1", key: "2"}
-      { author: 'Leniece', question: "if the memory speed of the bus is 750MHz, and the CPU is operating at twice the speec of the bus, what is the speed of the processor?", answers: ["375MHz", "750MHz", "1.5GHz", "2GHz"], type: "1", key: "3"}
-      { author: 'Leniece', question: "two types of programs that create machine code are the interpreter and the...", answers: ["assembler", "object", "compiler", "source"], type: "1", key: "1"}
-      { author: 'Leniece', question: "in the order of calculations in a program", answers: ["addition precedes division", "parenthesis precedes exponentation", "subtraction precedes addition", "multiplication precedes exponentation"], type: "1", key: "2"}
-      { author: 'Leniece', question: "when the code below is excecuted, strAdd will be equal to", answers: ["579", "123 + 456", "123456", "strFirst + strSecond"], type: "1", key: "1"}
-      { author: 'Leniece', question: "if a programmer downloads a copy of Microsoft SQL server from a file-sharing server website without paying for it, the programmer has commited an offense called...", answers: ["piracy", "larceny", "felony", "spyware"], type: "1", key: "1"}
-      { author: 'Leniece', question: "The Sarbanes-Oxley Act requires monitoring and documentation of transactions. How could a programmer mistakenly set up a program that would cause problems with compliance with SOX", answers: ["create system logs of the transactions taken in the session", "require a user to click three times when they are sure they want to precede", "help a user to request assistance from the system administrators", "utilize system credentials instead of pass-through credentials"], type: "1", key: "4"}
-      { author: 'Leniece', question: "The following programming flowchart symbol is a/an...", answers: ["processing", "input/output", "decision", "connector"], type: "1", key: "3"}
-      { author: 'Leniece', question: "one of the main goals in analyzing user requirements is to...", answers: ["troubleshoot the problem,", "shutdown and maintain the system", "keep the customer happy", "elicit requirements from a users point of view"], type: "1", key: "3"}
-      { author: 'Leniece', question: "if a record has the following field lengths, what is the record length", answers: ["42", "47", "54", "56"], type: "1", key: "2"}
-      { author: 'Leniece', question: "The following programming flowchart symbol is a/an...", answers: ["processing", "input/output", "decision", "test"], type: "1", key: "2"}
-      { author: 'Leniece', question: "a programmer is starting a new programming project. during what phase of the programming project should the programmer begin with planning for data storage", answers: ["billing", "documentation", "implementation", "test"], type: "1", key: "3"}
-      { author: 'Leniece', question: "a progammer needs to manipulate data that consists of a sequence of numbers that must be used as both an individual object and a set of data. what is the best data structure the programmer can use", answers: ["array", "constant", "string", "field"], type: "1", key: "1"}
-      { author: 'Leniece', question: "when a programmer is ready to create an excecutable code, what process is used", answers: ["debugging", "editing", "compiling", "dissasembling"], type: "1", key: "3"}
-      { author: 'Leniece', question: "the source document and _____ should follow the same order", answers: ["input screen design", "output screen design", "decision- type operator symbols", "processing function symbols"], type: "1", key: "1"}
-      { author: 'Leniece', question: "which of the following is a correct name for a variable", answers: ["State_Zipcode", "State+Zipcode", "State Zipcode", "State=Zipcode"], type: "1", key: "1"}
-      { author: 'Leniece', question: "which of the following expression is invalid? A=10 + New Data", answers: ["variable 5 is not defined", "data types are mixed", "New Data is not a string", "New Data = 0"], type: "1", key: "2"}
-      { author: 'Leniece', question: "an output field has Los Angeles moved to it and when examined contains Los Angeles. This indicates a/an _____ error", answers: ["logical", "arithmatic", "truncation", "semantic"],type: "1", key: "3"}
-      { author: 'Leniece', question: "A programmer needs to define the type of value for a variable. what pre-defined set of characteristics for a variable can the programmer choose", answers: ["storage location", "return value", "method modifier", "data type"], type: "1", key: "2"}
-      { author: 'Leniece', question: "one example of scripting language is...", answers: ["Perl", "C++", "Fortran", "Beta"], type: "1", key: "2"}
-      { author: 'Leniece', question: "which of the following use plain english queries", answers: ["BASIC", "FORTRAN", "SQL", "C++"], type: "1", key: "4"}
-      { author: 'Leniece', question: "an example of a loop structure is? ", answers: ["DO UNTIL", "SLELECT IF", "EXCECUTE", "NEXT"], type: "1", key: "1"}
-      { author: 'Leniece', question: "compile errors can be caused by ", answers: ["bad syntax", "input data", "insufficient test data", "incorrect user specification"], type: "1", key: "1"}
-      { author: 'Leniece', question: "Typically after successful integration testing, a ______ test is performed to compile a fromt to back ececution of the entire application", answers: ["system", "unit", "fuzz", "beta"], type: "1", key: "2"}
-      { author: 'Leniece', question: "the implementation phase consists of coding, testing, and...", answers: ["designing", "building prototype programs", "establish requirements", "integration"], type: "1", key: "3"}
-      { author: 'Leniece', question: "when TEXT1.VALUE= March 7, TEXT1_LEN= ", answers: ["7", "8", "9", "10"], type: "1", key: "4"}
-      { author: 'Leniece', question: "A data element is intended to contain a range from 15 to 30 and after testing it contains 32. what kind of error is this", answers: ["truncation", "rounding", "run time", "boundary"],type: "1", key: "4"}
-      { author: 'Leniece', question: "which of the following consists of a sequence of events to follow so they can be repeated.", answers: ["runtime", "test files", "trace route", "script"], type: "1", key: "1"}
-      { author: 'Leniece', question: "maintinence refers to changes to a system in operating arising from error corrections, performance improvements, changes in business enviroment and...", answers: ["enhancements in function", "application requirements", "referencing software", "material requirements"], type: "1", key: "1"}
-      { author: 'Leniece', question: "one method of ensuring that updates to documentation are efficiently distributed is to", answers: ["send customers printed documentation annually reguardless of whether there have been changes", "make changes in an online help system rather than printed sources", "send fliers containing only the changes rather than new printed volumes", "make changes only on a pre-specific schedule"], type: "1", key: "1"}
-      { author: 'Leniece', question: "a programmer has to make programming changes to an existing program. therefore the comments in the existing program must also be updated. the comments are refered to as _____ documentation. ", answers: ["external", "internal", "primary", "secondary"], type: "1", key: "4"}
-      { author: 'Leniece', question: "a programmer has decided to create a pop up window that will display a brief description of a control purpose when the mouse hovers over it. this popup is known as a...", answers: ["hyper clip", "too tip", "task bar", "help bar"], type: "1", key: "2"}
+      { author: 'Leniece', question: "What is the following errors is caused by  calculation error?", answers: ["logical", "Arithmatic", "truncation", "semantic"], type: "1", key: 2}
+      { author: 'Leniece', question: "Which of the following uses the three basic control structures to form highly structured units of code?", answers: ["structured programming", "circular connector", "modular construction", "loop structure"], type: "1", key: 1}
+      { author: 'Leniece', question: "what type of principle is used for configuring preferences that allow the user to personalise an application", answers: ["CLI", "GUI", "API", "DOS"], type: "1", key: 2}
+      { author: 'Leniece', question: "All computer instructions are based on four basic logic patterns. these patterns are simple sequence, selection, loop, and...", answers: ["trailer", "modular", "top-down", "branch"], type: "1", key: 2}
+      { author: 'Leniece', question: "if the memory speed of the bus is 750MHz, and the CPU is operating at twice the speec of the bus, what is the speed of the processor?", answers: ["375MHz", "750MHz", "1.5GHz", "2GHz"], type: "1", key: 3}
+      { author: 'Leniece', question: "two types of programs that create machine code are the interpreter and the...", answers: ["assembler", "object", "compiler", "source"], type: "1", key: 1}
+      { author: 'Leniece', question: "in the order of calculations in a program", answers: ["addition precedes division", "parenthesis precedes exponentation", "subtraction precedes addition", "multiplication precedes exponentation"], type: "1", key: 2}
+      { author: 'Leniece', question: "when the code below is excecuted, strAdd will be equal to", answers: ["579", "123 + 456", "123456", "strFirst + strSecond"], type: "1", key: 1}
+      { author: 'Leniece', question: "if a programmer downloads a copy of Microsoft SQL server from a file-sharing server website without paying for it, the programmer has commited an offense called...", answers: ["piracy", "larceny", "felony", "spyware"], type: "1", key: 1}
+      { author: 'Leniece', question: "The Sarbanes-Oxley Act requires monitoring and documentation of transactions. How could a programmer mistakenly set up a program that would cause problems with compliance with SOX", answers: ["create system logs of the transactions taken in the session", "require a user to click three times when they are sure they want to precede", "help a user to request assistance from the system administrators", "utilize system credentials instead of pass-through credentials"], type: "1", key: 4}
+      { author: 'Leniece', question: "The following programming flowchart symbol is a/an...", answers: ["processing", "input/output", "decision", "connector"], type: "1", key: 3}
+      { author: 'Leniece', question: "one of the main goals in analyzing user requirements is to...", answers: ["troubleshoot the problem,", "shutdown and maintain the system", "keep the customer happy", "elicit requirements from a users point of view"], type: "1", key: 3}
+      { author: 'Leniece', question: "if a record has the following field lengths, what is the record length", answers: ["42", "47", "54", "56"], type: "1", key: 2}
+      { author: 'Leniece', question: "The following programming flowchart symbol is a/an...", answers: ["processing", "input/output", "decision", "test"], type: "1", key: 2}
+      { author: 'Leniece', question: "a programmer is starting a new programming project. during what phase of the programming project should the programmer begin with planning for data storage", answers: ["billing", "documentation", "implementation", "test"], type: "1", key: 3}
+      { author: 'Leniece', question: "a progammer needs to manipulate data that consists of a sequence of numbers that must be used as both an individual object and a set of data. what is the best data structure the programmer can use", answers: ["array", "constant", "string", "field"], type: "1", key: 1}
+      { author: 'Leniece', question: "when a programmer is ready to create an excecutable code, what process is used", answers: ["debugging", "editing", "compiling", "dissasembling"], type: "1", key: 3}
+      { author: 'Leniece', question: "the source document and _____ should follow the same order", answers: ["input screen design", "output screen design", "decision- type operator symbols", "processing function symbols"], type: "1", key: 1}
+      { author: 'Leniece', question: "which of the following is a correct name for a variable", answers: ["State_Zipcode", "State+Zipcode", "State Zipcode", "State=Zipcode"], type: "1", key: 1}
+      { author: 'Leniece', question: "which of the following expression is invalid? A=10 + New Data", answers: ["variable 5 is not defined", "data types are mixed", "New Data is not a string", "New Data = 0"], type: "1", key: 2}
+      { author: 'Leniece', question: "an output field has Los Angeles moved to it and when examined contains Los Angeles. This indicates a/an _____ error", answers: ["logical", "arithmatic", "truncation", "semantic"],type: "1", key: 3}
+      { author: 'Leniece', question: "A programmer needs to define the type of value for a variable. what pre-defined set of characteristics for a variable can the programmer choose", answers: ["storage location", "return value", "method modifier", "data type"], type: "1", key: 2}
+      { author: 'Leniece', question: "one example of scripting language is...", answers: ["Perl", "C++", "Fortran", "Beta"], type: "1", key: 2}
+      { author: 'Leniece', question: "which of the following use plain english queries", answers: ["BASIC", "FORTRAN", "SQL", "C++"], type: "1", key: 4}
+      { author: 'Leniece', question: "an example of a loop structure is? ", answers: ["DO UNTIL", "SLELECT IF", "EXCECUTE", "NEXT"], type: "1", key: 1}
+      { author: 'Leniece', question: "compile errors can be caused by ", answers: ["bad syntax", "input data", "insufficient test data", "incorrect user specification"], type: "1", key: 1}
+      { author: 'Leniece', question: "Typically after successful integration testing, a ______ test is performed to compile a fromt to back ececution of the entire application", answers: ["system", "unit", "fuzz", "beta"], type: "1", key: 2}
+      { author: 'Leniece', question: "the implementation phase consists of coding, testing, and...", answers: ["designing", "building prototype programs", "establish requirements", "integration"], type: "1", key: 3}
+      { author: 'Leniece', question: "when TEXT1.VALUE= March 7, TEXT1_LEN= ", answers: ["7", "8", "9", "10"], type: "1", key: 4}
+      { author: 'Leniece', question: "A data element is intended to contain a range from 15 to 30 and after testing it contains 32. what kind of error is this", answers: ["truncation", "rounding", "run time", "boundary"], type: "1", key: 4}
+      { author: 'Leniece', question: "which of the following consists of a sequence of events to follow so they can be repeated.", answers: ["runtime", "test files", "trace route", "script"], type: "1", key: 1}
+      { author: 'Leniece', question: "maintinence refers to changes to a system in operating arising from error corrections, performance improvements, changes in business enviroment and...", answers: ["enhancements in function", "application requirements", "referencing software", "material requirements"], type: "1", key: 1}
+      { author: 'Leniece', question: "one method of ensuring that updates to documentation are efficiently distributed is to", answers: ["send customers printed documentation annually reguardless of whether there have been changes", "make changes in an online help system rather than printed sources", "send fliers containing only the changes rather than new printed volumes", "make changes only on a pre-specific schedule"], type: "1", key: 1}
+      { author: 'Leniece', question: "a programmer has to make programming changes to an existing program. therefore the comments in the existing program must also be updated. the comments are refered to as _____ documentation. ", answers: ["external", "internal", "primary", "secondary"], type: "1", key: 4}
+      { author: 'Leniece', question: "a programmer has decided to create a pop up window that will display a brief description of a control purpose when the mouse hovers over it. this popup is known as a...", answers: ["hyper clip", "too tip", "task bar", "help bar"], type: "1", key: 2}
 
     ]
 
     var nocti_performance = [
-      { author: 'Leniece', question: 'What code do you use to tell an ExpressJS to read URL-encoded data?', answers: ['app.use(express.urlencoded({extended: true}));', 'var urlencoded = expressJS', 'expressJS(urlencoded)', 'urlencoded.app.use()'], type: 'multi', key: '1'}
-      { author: 'Leniece', question: 'Create a GET endpoint at ‘/’ the sends back “Hello”', answers: 'app.get( function(req, res){}', type: 'text', key: '0'}
-      { author: 'Leniece', question: 'Create a POST endpoint at ‘/new’ that sends back the content of the request body parameter named “name”', answers: 'app.post(‘/new’, function (req, res){}', type: 'text', key: '0'}
-      { author: 'Leniece', question: 'Create and if statement that checks if the content of the request body parameter named “ordernumber” exists, and logs “Found” if it does.', answers: [], type: 'text', key: '0' }
-      { author: 'Leniece', question: 'Use the fs module to write a JS object named “newData” into a JSON file named “newData.json”', answers: [], type: 'text', key: '0' }
-      { author: 'Leniece', question: 'Use the fs module to read a file called “oldData.json” and convert it to a JS object named “oldData”', answers: [], type: 'text', key: '0' }
-      { author: 'Leniece', question: 'Start an ExpressJS app listen server', answers:'app.listen();', type: 'text', key: '0' }
-      { author: 'Leniece', question: 'Read a data.json file and parse it to a JSON object', answers: [], type: 'text', key: '0' }
+      { author: 'Leniece', question: 'What code do you use to tell an ExpressJS to read URL-encoded data?', answers: ['app.use(express.urlencoded({extended: true}));', 'var urlencoded = expressJS', 'expressJS(urlencoded)', 'urlencoded.app.use()'], type: 'multi', key: 1}
+      { author: 'Leniece', question: 'Create a GET endpoint at ‘/’ the sends back “Hello”', answers: 'app.get( function(req, res){}', type: 'text', key: 0}
+      { author: 'Leniece', question: 'Create a POST endpoint at ‘/new’ that sends back the content of the request body parameter named “name”', answers: 'app.post(‘/new’, function (req, res){}', type: 'text', key: 0}
+      { author: 'Leniece', question: 'Create and if statement that checks if the content of the request body parameter named “ordernumber” exists, and logs “Found” if it does.', answers: "if(req.body.ordernumber){console.log('found')", type: 'text', key: 0 }
+      { author: 'Leniece', question: 'Use the fs module to write a JS object named “newData” into a JSON file named “newData.json”', answers: 'fs.writeFile("newData.json", JSON.stringify(newData)', type: 'text', key: 0 }
+      { author: 'Leniece', question: 'Use the fs module to read a file called “oldData.json” and convert it to a JS object named “oldData”', answers: 'fs.readFile(oldData.json, function(err, data){var OldData = data}', type: 'text', key: 0 }
+      { author: 'Leniece', question: 'Start an ExpressJS app listen server', answers:'app.listen();', type: 'text', key: 0 }
+      { author: 'Leniece', question: 'Read a data.json file and parse it to a JSON object', answers: [], type: 'text', key: 0 }
     ]
 
     /*
@@ -111,6 +112,7 @@
           data.push(dataList.splice(Math.floor(Math.random() * dataList.length), 1)[0])
         }
     */
+
     var languageType = "data_java";
 
     function changeLanguage() {
@@ -152,7 +154,60 @@
           data.push(dataList.splice(Math.floor(Math.random() * dataList.length), 1)[0])
         }
         return data;
-      } else {
+      } else if (languageType == "data_html") {
+        data = [];
+        mistakePile = [];
+        discardPile = 0;
+        var cardIndex = 0;
+        dataList = [];
+        var numberOfCards = data_html.length;
+        // var dataList = data_html;
+        for (let i = 0; i < numberOfCards; i++) {
+          dataList.push(data_html[i])
+        }
+        console.log(dataList);
+
+        //Pick out a certain number of cards
+        for (let i = 0; i < numberOfCards; i++) {
+          data.push(dataList.splice(Math.floor(Math.random() * dataList.length), 1)[0])
+        }
+        return data;
+      } else if (languageType == "nocti_written") {
+        data = [];
+        mistakePile = [];
+        discardPile = 0;
+        var cardIndex = 0;
+        var numberOfCards = nocti_written.length;
+        // var dataList = data_python;
+        for (let i = 0; i < numberOfCards; i++) {
+          dataList.push(data_nocti_written[i])
+        }
+        console.log(dataList);
+
+        //Pick out a certain number of cards
+        for (let i = 0; i < numberOfCards; i++) {
+          data.push(dataList.splice(Math.floor(Math.random() * dataList.length), 1)[0])
+        }
+        return data;
+      } else if (languageType == "nocti_performance") {
+        data = [];
+        mistakePile = [];
+        discardPile = 0;
+        var cardIndex = 0;
+        var numberOfCards = nocti_performance.length;
+        // var dataList = data_python;
+        for (let i = 0; i < numberOfCards; i++) {
+          dataList.push(data_nocti_proformace[i])
+        }
+        console.log(dataList);
+
+        //Pick out a certain number of cards
+        for (let i = 0; i < numberOfCards; i++) {
+          data.push(dataList.splice(Math.floor(Math.random() * dataList.length), 1)[0])
+        }
+        return data;}
+        } else {
+
         console.log("It broke");
       }
 
@@ -193,13 +248,13 @@
         if (data.length) {
           cardIndex = Math.floor(Math.random() * data.length);
           questionType(data);
-          cardPrompt.innerHTML = '<b>' + data[cardIndex][0] + ':</b><br>' + parseMeta(data[cardIndex][1]);
+          cardPrompt.innerHTML = '<b>' + data[cardIndex].author + ':</b><br>' + parseMeta(data[cardIndex].question);
         } else if (mistakePile.length) {
           cardIndex = Math.floor(Math.random() * mistakePile.length);
           questionType(mistakePile);
           console.log(mistakePile[cardIndex]);
-          console.log(mistakePile[cardIndex][0][1]);
-          cardPrompt.innerHTML = '<b>' + mistakePile[cardIndex][0] + ':</b><br>' + parseMeta(mistakePile[cardIndex][1]);
+          console.log(mistakePile[cardIndex].author[1]);
+          cardPrompt.innerHTML = '<b>' + mistakePile[cardIndex].author + ':</b><br>' + parseMeta(mistakePile[cardIndex].question);
 
         } else {
           cardPrompt.innerHTML = '<h1><b>You win!</b></h1>' + '<button type="button" onclick="resetCards()">Reset</button>'
@@ -223,22 +278,22 @@
         let cardCheck = cardAnswer.replaceAll(' ', '')
         cardCheck = cardCheck.replaceAll('\"', '\'')
         if (data.length) {
-          if (cardCheck == data[cardIndex][2].replaceAll(' ', '')) {
+          if (cardCheck == data[cardIndex].answers.replaceAll(' ', '')) {
             discardPile++;
-            results.innerHTML = `<span style="color: lime; font-family: system, consolas;">` + data[cardIndex][2] + `</span>`;
+            results.innerHTML = `<span style="color: lime; font-family: system, consolas;">` + data[cardIndex].answers + `</span>`;
             data.splice(cardIndex, 1)
           } else {
-            console.log(data[cardIndex][2]);
-            results.innerHTML = `<span style="color: red; font-family: system, consolas;">` + data[cardIndex][2] + `</span>`;
+            console.log(data[cardIndex].answers);
+            results.innerHTML = `<span style="color: red; font-family: system, consolas;">` + data[cardIndex].answers + `</span>`;
             mistakePile.push(data.splice(cardIndex, 1)[0]);
           }
         } else if (mistakePile.length) {
-          if (cardCheck == mistakePile[cardIndex][2].replaceAll(' ', '')) {
+          if (cardCheck == mistakePile[cardIndex].answers.replaceAll(' ', '')) {
             discardPile++;
-            results.innerHTML = `<span style="color: lime; font-family: system, consolas;">` + parseMeta(mistakePile[cardIndex][2]) + `</span>`;
+            results.innerHTML = `<span style="color: lime; font-family: system, consolas;">` + parseMeta(mistakePile[cardIndex].answers) + `</span>`;
             mistakePile.splice(cardIndex, 1)
           } else {
-            results.innerHTML = `<span style="color: red; font-family: system, consolas;">` + parseMeta(mistakePile[cardIndex][2]) + `</span>`;
+            results.innerHTML = `<span style="color: red; font-family: system, consolas;">` + parseMeta(mistakePile[cardIndex].answers) + `</span>`;
             mistakePile.push(mistakePile.splice(cardIndex, 1)[0]);
           }
         }
@@ -256,25 +311,27 @@
             var eleValue = ele[i].value
         }
         if (data.length) {
-          if (data[cardIndex][4] === eleValue) {
+          if (data[cardIndex].key === eleValue - 1) {
             console.log("Correct")
-            results.innerHTML = `<span style="color: lime; font-family: system, consolas;">` + data[cardIndex][2][data[cardIndex][4] - 1] + `</span>`;
+            results.innerHTML = `<span style="color: lime; font-family: system, consolas;">` + data[cardIndex].answers[data[cardIndex].key] + `</span>`;
             discardPile++;
             data.splice(cardIndex, 1)
           } else {
             console.log("You SUCK")
-            results.innerHTML = `<span style="color: red; font-family: system, consolas;">` + data[cardIndex][2][data[cardIndex][4] - 1] + `</span>`;
+            console.log(data[cardIndex].answers);
+            console.log(data[cardIndex].key);
+            results.innerHTML = `<span style="color: red; font-family: system, consolas;">` + data[cardIndex].answers[data[cardIndex].key] + `</span>`;
             mistakePile.push(data.splice(cardIndex, 1)[0]);
           }
         } else if (mistakePile.length) {
-          if (mistakePile[cardIndex][4] === eleValue) {
+          if (mistakePile[cardIndex].key === eleValue - 1) {
             console.log("Correct")
-            results.innerHTML = `<span style="color: lime; font-family: system, consolas;">` + mistakePile[cardIndex][2][mistakePile[cardIndex][4] - 1] + `</span>`;
+            results.innerHTML = `<span style="color: lime; font-family: system, consolas;">` + mistakePile[cardIndex].answers[mistakePile[cardIndex].key] + `</span>`;
             discardPile++;
             mistakePile.splice(cardIndex, 1)
           } else {
             console.log("You SUCK")
-            results.innerHTML = `<span style="color: red; font-family: system, consolas;">` + mistakePile[cardIndex][0][2][mistakePile[cardIndex][0][4] - 1] + `</span>`;
+            results.innerHTML = `<span style="color: red; font-family: system, consolas;">` + mistakePile[cardIndex].answers[mistakePile[cardIndex].key] + `</span>`;
             mistakePile.push(mistakePile.splice(cardIndex, 1)[0]);
           }
         }
@@ -288,13 +345,13 @@
       let multchoice2 = document.getElementById("mult2choice");
       let multchoice3 = document.getElementById("mult3choice");
       let multchoice4 = document.getElementById("mult4choice");
-      if (questionList[cardIndex][3] === '0') {
+      if (questionList[cardIndex].type === 'text') {
         answerBox.style.display = "block"
         multChoiceBtn.style.display = "none"
-      } else if (questionList[cardIndex][3] === '1') {
+      } else if (questionList[cardIndex].type === 'multi') {
         answerBox.style.display = "none"
         multChoiceBtn.style.display = "block"
-        xyz = questionList[cardIndex][2]
+        xyz = questionList[cardIndex].answers
         multchoice1.innerHTML = xyz[0];
         multchoice2.innerHTML = xyz[1];
         multchoice3.innerHTML = xyz[2];
@@ -327,9 +384,9 @@
           <div class="dropdown-content">
             <a onclick="languageTypePicker('data_java')" href="#">Javascript</a>
             <a onclick="languageTypePicker('data_py')" href="#">Python</a>
-            <a onclick="languageTypePicker('nocti_written')" href="#">Nocti written</a>
-            <a onclick="languageTypePicker('nocti_performance')" href="#">Nocti performance</a>
-            <a href="#">HTML</a>
+            <a onclick="languageTypePicker('data_html')" href="#">HTML</a>
+            <a onclick="languageTypePicker('nocti_written')" href="#">Nocti Written</a>
+            <a onclick="languageTypePicker('nocti_preformance')" href="#">Nocti Preformance</a>
           </div>
         </div>
       </div>
@@ -341,6 +398,7 @@
       </div>
     </div>
     <div id="mainBody">
+      <br>
       <div id="scoreBox">
         <div id="score">
 
