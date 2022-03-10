@@ -97,6 +97,8 @@ p {
   text-align: center;
   width: 50%;
   left: 25%;
+  padding-top: 15%;
+  padding-bottom: 15%;
 }
 
 .answerBoxFormat {
