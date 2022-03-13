@@ -39,11 +39,9 @@ p {
   text-align: left;
   margin: auto;
   width: 50%;
-  padding-top: 50px;
   padding-bottom: 50px;
   top: 100px;
   left: 25%;
-  position: absolute;
 }
 
 #answerbox {
@@ -70,7 +68,7 @@ p {
 
 #cardPrompt {
   text-align: center;
-  position: absolute;
+  margin: 20px auto;
   width: 50%;
   color: white;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
@@ -86,11 +84,9 @@ p {
 #results {
   text-align: center;
   margin: auto;
-  top: 350px;
   left: 25%;
   width: 50%;
   text-align: center;
-  position: absolute;
 }
 
 #mainBody {
