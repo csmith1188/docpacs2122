@@ -1,0 +1,263 @@
+{
+    "genInfo": [
+        [
+            "Seth Martin",
+            "Which of the following errors is caused by a calculation error?",
+            ["Logical", "Arithmetic", "Truncation", "Semantic"],
+            "1",
+            "2"
+        ],
+        [
+            "Seth Martin",
+            "Which of the following uses three basic control structures to form highly structured units of code?",
+            ["Structured Programming", "Circular Connector", "Modular Construction", "Loop Structure"],
+            "1",
+            "1"
+        ],
+        [
+            "Seth Martin",
+            "What type of principle is used for configuring preferences that allow the user to personalize an application?",
+            ["CLI", "GUI", "API", "DOS"],
+            "1",
+            "2"
+        ],
+        [
+            "Seth Martin",
+            "All computer instructions are based on four basic logic patterns. These patterns are simple sequence, selection, loop, and ___",
+            ["Trailer", "Modular", "Top-down", "Branch"],
+            "1",
+            "4"
+        ],
+        [
+            "Seth Martin",
+            "If the memory speed of the bus is 750 MHz, and the CPU is operating at twice the speed of the bus, what is the processor speed?",
+            ["375 MHz", "750 MHz", "1.5 GHz", "2 GHz"],
+            "1",
+            "3"
+        ],
+        [
+            "Seth Martin",
+            "Two types of programs that create machine codes are the interpreter and the ___",
+            ["Assembler", "Object", "Compiler", "Source"],
+            "1",
+            "3"
+        ],
+        [
+            "Seth Martin",
+            "In the order of calculations in a program",
+            ["Addition precedes division", "Parentheses precede exponentiation", "Subtraction precedes addition", "Multiplication precedes exponentiation"],
+            "1",
+            "2"
+        ],
+        [
+            "Seth Martin",
+            "When the code below is executed strAdd will be equal to \nstrFirst = '123' \nstrSecond = '456' \nstrAdd = strFirst + strSecond",
+            ["579", "123 + 456", "123456", "strFirst + strSecond"],
+            "1",
+            "3"
+        ]
+    ],
+    "ethics": [
+        [
+            "Seth Martin",
+            "If a programmer downloads a copy of Microsoft SQL Server from a file-sharing website without paying for it, the programmer has commited and offense called",
+            ["Piracy", "Larceny", "Felony", "Spyware"],
+            "1",
+            "1"
+        ],
+        [
+            "Seth Martin",
+            "The Sarbanes-Oxley Act (SOX) requires monitoring and doucmentation of transactions. How could a programmer mistakenly setup a program that would cause problems with compliance with SOX?",
+            ["Create system logs of the transactions taken in the session", "Require a user to click three times when they are sure they want to proceed", "Help a user to request assistance from the system administrators", "Utilize system credentials instead of passthrough credentials"],
+            "1",
+            "4"
+        ]
+    ],
+    "flowcharts": [
+        [
+            "Seth Martin",
+            "The following programming flowchart symbol is a/an ___ symbol. \n Diamond Shape",
+            ["Processing", "Input/output", "Decision", "Connector"],
+            "1",
+            "3"
+        ],
+        [
+            "Seth Martin",
+            "One of the main goals in analyzing user requirements is to",
+            ["Troubleshoot the problem", "Shutdown and maintain the system", "Keep the customer happy", "Elicit requirements from a user's point of view"],
+            "1",
+            "4"
+        ],
+        [
+            "Seth Martin",
+            "If a record has the following field lengths, what is the record length? \n Name=35,ZipCode=5,District=7",
+            ["42", "47", "54", "56"],
+            "1",
+            "2"
+        ],
+        [
+            "Seth Martin",
+            "The following programming flowchart symbol is a/an ___ symbol. \n Paralellogram",
+            ["Processing", "Input/output", "Decision", "Connector"],
+            "1",
+            "2"
+        ],
+        [
+            "Seth Martin",
+            "A programmer is starting a ne wprogramming project. During what phase of the programming project should the programmer begin planning for data storage?",
+            ["Billing", "Documentation", "Implementation", "Test"],
+            "1",
+            "3"
+        ],
+        [
+            "Seth Martin",
+            "A programmer needs to manipulate data that consists of a sequence of number sthat must be used as both an individual object and a set of data. What is the best data structure the programmre can use?",
+            ["Array", "Constant", "String", "Field"],
+            "1",
+            "1"
+        ],
+        [
+            "Seth Martin",
+            "When a programmer is ready to create executable code, what process is used?",
+            ["Debugging", "Editing", "Compiling", "Disassembling"],
+            "1",
+            "3"
+        ]
+    ],
+    "solutionDesign": [
+        [
+            "Seth Martin",
+            "The source document and ____ should follow the same order.",
+            ["Input screen design", "Output screen design", "Decision-type operator symbols", "Processing function symbols"],
+            "1",
+            "1"
+        ],
+        [
+            "Seth Martin",
+            "Which of the following is a correct name for a variable",
+            ["State_Zipcode", "State+Zipcode", "State Zipcode", "State=Zipcode"],
+            "1",
+            "1"
+        ],
+        [
+            "Seth Martin",
+            "Why is the following expression invalid? A=10 + 'New Data'",
+            ["Variable 5 is not defined", "Data types are mixed", "'New Data' is not a string", "'New Data' equals zero"],
+            "1",
+            "2"
+        ],
+        [
+            "Seth Martin",
+            "An output field has 'Los Angeles' moved to it and when examined contains 'Los Angel.' This indicates a/an ___ error.",
+            ["Logical", "Arithmetic", "Truncation", "Semantic"],
+            "1",
+            "3"
+        ],
+        [
+            "Seth Martin",
+            "A programmer needs to define the type of value for a variable. What pre-defined set of characteristics for a variable can the programmer choose?",
+            ["Storage location", "Return value", "Method modifier", "Data type"],
+            "1",
+            "4"
+        ]
+    ],
+    "codePrograms": [
+        [
+            "Seth Martin",
+            "One example of scripting (text processing) language is ___",
+            ["Perl", "C++", "Fortran", "Beta"],
+            "1",
+            "1"
+        ],
+        [
+            "Seth Martin",
+            "Which of the following enables the use of 'plain English' queries?",
+            ["BASIC", "FORTRAN", "SQL", "C++"],
+            "1",
+            "3"
+        ],
+        [
+            "Seth Martin",
+            "An example of loop structure is",
+            ["DO UNTIL", "SELECT IF", "EXECUTE", "NEXT"],
+            "1",
+            "1"
+        ],
+        [
+            "Seth Martin",
+            "Compile errors can be caused by",
+            ["Bad syntax", "Input data", "Insufficient test data", "Incorrect user specification"],
+            "1",
+            "1"
+        ]
+    ],
+    "testPrograms": [
+        [
+            "Seth Martin",
+            "Typically after successful integration testing, a ____ test is performed to complete a front-to-back execution of the entire application.",
+            ["System", "Unit", "Fuzz", "Beta"],
+            "1",
+            "1"
+        ],
+        [
+            "Seth Martin",
+            "The implementation phase consists of coding, testing, and",
+            ["Designing", "Building prototype programs", "Establishing requirements", "Integration"],
+            "1",
+            "4"
+        ],
+        [
+            "Seth Martin",
+            "When TEXT1.VALUE = 'March 7', TEXT1_LEN= \nSub Form_Click() \nIN = TEXT1.VALUE \nTEXT1_len = LEN$(IN) \nFor I = TEXT_len to 1 step -1 \nTEMP = TEMP & mid (in, I, 1) \nNEXT \nOUT = TEMP & right (in, text_len -n)",
+            ["7", "8", "9", "10"],
+            "1",
+            "1"
+        ],
+        [
+            "Seth Martin",
+            "A data element is intended to contain a range from 15 to 30 and after testing it contains 32. What kind of error is this?",
+            ["Truncation", "Rounding", "Run time", "Boundary"],
+            "1",
+            "4"
+        ],
+        [
+            "Seth Martin",
+            "Which of the following consists of a sequence of events to follow so they can be repeated?",
+            ["Runtime", "Test files", "Trace route", "Script"],
+            "1",
+            "4"
+        ]
+    ],
+    "maintainPrograms": [
+        [
+            "Seth Martin",
+            "Maintenance refers to changes to a system in operating arising from error corrections, performance improvements, changes in the business environment and",
+            ["Enhancements in functions", "Application requirements", "Referencing software", "Material requirements"],
+            "1",
+            "1"
+        ],
+        [
+            "Seth Martin",
+            "One method of ensuring that updates to documentation are efficiently distributed is to",
+            ["Send customers printed documentation annually regardless of whether there have been changes", "Make changes in an online help system rather than printed sources", "Send fliers containing only the changes rather than the new printed volumes", "Make changes only on a pre-specified schedule"],
+            "1",
+            "2"
+        ],
+    ],
+    "documentation": [
+        [
+            "Seth Martin",
+            "A programmer has to make programming changes to an existing program. Therefor the comments in the existing program must also be updated. The comments are referred to as ____ documentation",
+            ["External", "Internal", "Primary", "Secondary"],
+            "1",
+            "2"
+        ],
+        [
+            "Seth Martin",
+            "A programmer has decided to create a pop-up window that will display a brief description of a controls purpose when the mouse hovers over it. This pop-up window is known as a ___",
+            ["Hyper clip", "Tool tip", "Task bar", "Help bar"],
+            "1",
+            "2"
+        ]
+    ]
+}
