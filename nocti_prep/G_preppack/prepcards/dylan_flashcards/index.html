@@ -11,62 +11,525 @@
     var discardPile = 0;
     var mistakePile = []
     var data_javascript = [
-          ["Dylan Martin", "Which of the following is caused by a calculation error?", ["Logical", "Arithmetic", "Truncation", "Semantic"], "1", "2"],
-          ["Dylan Martin", "Which of the following uses three basic control structures to form highly structured units of code?", ["Structured Programming", "Circular Connector", "Modular Construction", "D"], "1", "1"],
-          ["Dylan Martin", "What type of principle is used for configuring preferences that allow the user to personalize an application?", ["CLI", "GUI", "API", "DOS"], "1", "2"],
-          ["Dylan Martin", "All computer instructions are based on 4 basic logic patterns. These paterns are simple sequence, selection, loop and ____.", ["trailer", "modular", "top-down", "branch"], "1", "4"],
-          ["Dylan Martin", "If the memory speed of the bus is 750MHz and the CPU operates at twice the speed of the bus, what is the processor speed?", ["375MHz", "750MHz", "1.5GHz", "2GHz"], "1", "3"],
-          ["Dylan Martin", "Two types of programs that create machine codes are the interpreter and ______.", ["assembler", "object", "compiler", "source"], "1", "3"],
-          ["Dylan Martin", "In the order of calculations in a program...", ["addition preceds division", "parentheses precede exponentation", "subtraction preceds addition", "multiplication precedes exponentation"], "1", "2"],
-          ["Dylan Martin", "When the code below is executed, strAdd will be equal to: (strFirst = '123'; strSecond = '456'; strAdd = strFirst + strSecond;)", ["579", "123 + 456", "123456", "strFirst + strSecond"], "1", "3"],
-          ["Dylan Martin", "if a programmer downloads a copy of Microsoft SQL Server from a file-sharing website without paying for it, the programmer has committed an offense called: ", ["piracy", "larceny", "felony", "spyware"], "1", "1"],
-          ["Dylan Martin", "The Sarbanes-Loxley Act requires monitoring and documentation of transactions. How could a programmer mistakenly set up a program that could cause problems with compliance with SOX?", ["create system logs of transactions taken in the session", "requure a user to click 3 times when they are sure they want to proceed", "help a user to request assistance from the system administrators", "utilize system credentials instead of pass-through credentials"], "1", "4"],
-          ["Dylan Martin", "The following programming symbol is a ______ symbol.", ["processing", "I/O", "decision", "connector"], "1", "3"],
-          ["Dylan Martin", "One of the main goals in analyzing user requirements is to:", ["troubleshoot the problem", "shutdown and maintain the system", "keep the user happy", "elicit requirement from the users point of view"], "1", "4"],
-          ["Dylan Martin", "If a record has the following field lengths, what is the record length? (name=35,zipcode=5,district=7)", ["42", "47", "54", "56"], "1", "2"],
-          ["Dylan Martin", "The following programming flowchart is a ____  symbol", ["processing", "input/output", "decision", "connector"], "1", "2"],
-          ["Dylan Martin", "A programmer is starting a new programming project. During what phase of the programming phase project should the programmer begin planning for data storage?", ["billing", "documentation", "implementation", "testing"], "1", "3"],
-          ["Dylan Martin", "A programmer needs to manipulate data that consists of a sequence of numbers that must be used as both an individual object and a set of data. What is the best data structure that the programmer can use?", ["array", "constant", "string", "field"], "1", "1"],
-          ["Dylan Martin", "When a programmer is ready to create executable code, what process is used?", ["debugging", "editing", "compiling", "disassembling"], "1", "3"],
-          ["Dylan Martin", "The source document and _____ should follow the same order.", ["input screen design", "output screen design", "decision-type operator symbols", "processing function symbols"], "1", "1"],
-          ["Dylan Martin", "Which of the following is a correct name for a variable?", ["State_Zipcode", "State+Zipcode", "State Zipcode", "State=Zipcode"], "1", "1"],
-          ["Dylan Martin", "Why is the following expression invalid? (a=10+'New Data')", ["Variable 5 is not defined", "Mixed data types", "New Data is not a string", "New Data equals zero"], "1", "2"],
-          ["Dylan Martin", "An output field has Los Angeles moved to it, and when examined contains Los Angel. This indicates a ______ error.", ["logical", "arithmetic", "truncation", "semantic"], "1", "3"],
-          ["Dylan Martin", "A programmer needs to define the type of value for a variable. What pre-defined set of characteristics for a variable can the programmer choose?", ["storage location", "return value", "method modifier", "data type"], "1", "4"],
-          ["Dylan Martin", "One example of scripting (text processing) language is", ["Perl", "C++", "Fortran", "Beta"], "1", "1"],
-          ["Dylan Martin", "Which of the following enables the use of 'plain english' queries?", ["A", "B", "C", "D"], "1", "3"],
-          ["Dylan Martin", "An example of loop structure is", ["DO UNTIL", "SELECT IF", "EXECUTE", "NEXT"], "1", "1"],
-          ["Dylan Martin", "Compile errors can be caused by ____.", ["bad syntax", "input data", "insufficent test data", "incorrect user specification"], "1", "1"],
-          ["Dylan Martin", "Typically after successful integration testing, a _____ test is performed to complete a front-to-back execution of the entire application", ["system", "unit", "fuzz", "beta"], "1", "1"],
-          ["Dylan Martin", "The implementation phase consists of coding, testing, and ______.", ["designing", "building prototype exams", "establishing requirements", "integration"], "1", "4"],
-          ["Dylan Martin", "When TEXT1.VALUE='March 7', TEXT1_LEN = (IN=TEXT1.VALUE; TEXT1_Len= LEN$(IN); FOR I TEXT_Len to 1 step -1; TEMP = TEMP & mid (in, I, 1); NEXT; OUT = TEMP & right)", ["7", "8", "9", "10"], "1", "1"],
-          ["Dylan Martin", "A data element is intended to contain a range from 15 to 30 and after testing contains 32. What type of error is this?", ["truncation", "rounding", "run-time", "boundary"], "1", "4"],
-          ["Dylan Martin", "Which of the following consists of a sequence of events to follow so they can be repeated?", ["runtime", "test files", "trace route", "script"], "1", "4"],
-          ["Dylan Martin", "Maintenance refers to changes to a system in operating arising from error corrections, performance improvements, changes in the business environment and ______.", ["enhancements in functions", "application requirements", "referencing software", "material requirements"], "1", "1"],
-          ["Dylan Martin", "One method of ensuring that updates to documentation are efficently distributed to", ["send customers documentation annually, regardless if there has been any changes", "make changes in an online help system rather than printed sources", "send fliers containing only the changes, rather than a printed volume", "make changes on a pre-specified schedule"], "1", "2"],
-          ["Dylan Martin", "A programmer has to make programming changes to an existing program. Therefore, the comments in the existing program must also be updated. These comments are referred to as ______ documentation", ["external", "internal", "primary", "secondary"], "1", "2"],
-          ["Dylan Martin", "A programmer has decided to create a pop-up window that will display a brief description of a controls purpose when the mouse hovers over it. This pop-up window is known as a", ["hyper clip", "tool tip", "task bar", "help bar"], "1", "2"],
+      // ['Will', '', ['', '', '', ''], '', ''],
+      // ['Chris', '', ['', '', '', ''], '', ''],
+      // ['Ethan', '', ['', '', '', ''], '', ''],
+      // ['Jayson', '', ['', '', '', ''], '', ''],
+      {
+        author: 'Will',
+        question: 'What Does HTML Mean',
+        answers: ['HyperText Markup Language', 'HyperTest Magic Language', 'HypoText', 'HTML has no meaning'],
+        type: 'multi',
+        key: 0
+      },
+      {
+        author: 'Will',
+        question: 'What Do Tags Do',
+        answers: ['They Do Nothing', 'They Properly Format Content', 'They Are The Content', '<'],
+        type: 'multi',
+        key: 1
+      },
+      {
+        author: 'Will',
+        question: 'What Are Some Common HTML Tags',
+        answers: ["'l'", "'kd'", "'vc'", "'br'"],
+        type: 'multi',
+        key: 3
+      },
+      {
+        author: 'Will',
+        question: 'Which Is Not A Coding Language',
+        answers: ['Javascript', 'Erlang', 'Ruby', 'Unit'],
+        type: 'multi',
+        key: 3
+      },
+      {
+        author: 'Will',
+        question: 'Which Is Not A Javascript Datatype',
+        answers: ['Find', 'String', 'Boolean', 'Undefined'],
+        type: 'multi',
+        key: 0
+      },
+      {
+        author: 'Will',
+        question: 'Which symbol is used to begin and end multiline comments?',
+        answers: ['./', '*/', '/.', '-'],
+        type: 'multi',
+        key: 1
+      },
+      {
+        author: 'Will',
+        question: 'How many heading types does HTML contain?',
+        answers: ['2', '8', '4', '6'],
+        type: 'multi',
+        key: 3
+      },
+      {
+        author: 'Jayson',
+        question: 'Which assignment operator assigns a variable/object to a value?',
+        answers: ['+=', '=', '/=', '**='],
+        type: 'multi',
+        key: 1
+      },
+      {
+        author: 'Jayson',
+        question: 'Which is the proper use of camel case?',
+        answers: ['CamelCase', 'cAmelcAse', 'camelCase', 'CameLCasE'],
+        type: 'multi',
+        key: 2
+      },
+      {
+        author: 'Jayson',
+        question: 'How do you create a function?',
+        answers: ['function == myfunction(){}', 'function myFunction(){}', 'myFunction():function{}', 'function:myFunction(){}'],
+        type: 'multi',
+        key: 1
+      },
+      {
+        author: 'Jayson',
+        question: 'What is a string?',
+        answers: ['A string is just one line of code', 'A string is a list of Non-human-readable letters that are code', 'A string is a list of human-readable letters that are not code',
+          'A string is a list of objects that are assigned to a variable'
+        ],
+        type: 'multi',
+        key: 2
+      },
+      {
+        author: 'Jayson',
+        question: 'How would you log (Hello World!!) to the console>?',
+        answers: 'console.log(Hello World!!);',
+        type: 'text'
+      }
+      //['Jayson', '']
+    ]
+    var data_noctiWritten = [{
+        author: "Dylan Martin",
+        question: "Which of the following is caused by a calculation error?",
+        answers: ["Logical", "Arithmetic", "Truncation", "Semantic"],
+        type: "multi",
+        key: 1
+      },
+      {
+        author: "Dylan Martin",
+        question: "Which of the following uses three basic control structures to form highly structured units of code?",
+        answers: ["Structured Programming", "Circular Connector", "Modular Construction", "D"],
+        type: "multi",
+        key: 0
+      },
+      {
+        author: "Dylan Martin",
+        question: "What type of principle is used for configuring preferences that allow the user to personalize an application?",
+        answers: ["CLI", "GUI", "API", "DOS"],
+        type: "multi",
+        key: 1
+      },
+      {
+        author: "Dylan Martin",
+        question: "All computer instructions are based on 4 basic logic patterns. These paterns are simple sequence, selection, loop and ____.",
+        answers: ["trailer", "modular", "top-down", "branch"],
+        type: "multi",
+        key: 3
+      },
+      {
+        author: "Dylan Martin",
+        question: "If the memory speed of the bus is 750MHz and the CPU operates at twice the speed of the bus, what is the processor speed?",
+        answers: ["375MHz", "750MHz", "1.5GHz", "2GHz"],
+        type: "multi",
+        key: 2
+      },
+      {
+        author: "Dylan Martin",
+        question: "Two types of programs that create machine codes are the interpreter and ______.",
+        answers: ["assembler", "object", "compiler", "source"],
+        type: "multi",
+        key: 2
+      },
+      {
+        author: "Dylan Martin",
+        question: "In the order of calculations in a program...",
+        answers: ["addition preceds division", "parentheses precede exponentation", "subtraction preceds addition", "multiplication precedes exponentation"],
+        type: "multi",
+        key: 1
+      },
+      {
+        author: "Dylan Martin",
+        question: "When the code below is executed, strAdd will be equal to: (strFirst = '123'; strSecond = '456'; strAdd = strFirst + strSecond;)",
+        answers: ["579", "123 + 456", "123456", "strFirst + strSecond"],
+        type: "multi",
+        key: 2
+      },
+      {
+        author: "Dylan Martin",
+        question: "if a programmer downloads a copy of Microsoft SQL Server from a file-sharing website without paying for it, the programmer has committed an offense called: ",
+        answers: ["piracy", "larceny", "felony", "spyware"],
+        type: "multi",
+        key: 0
+      },
+      {
+        author: "Dylan Martin",
+        question: "The Sarbanes-Loxley Act requires monitoring and documentation of transactions. How could a programmer mistakenly set up a program that could cause problems with compliance with SOX?",
+        answers: ["create system logs of transactions taken in the session", "requure a user to click 3 times when they are sure they want to proceed", "help a user to request assistance from the system administrators",
+          "utilize system credentials instead of pass-through credentials"
+        ],
+        type: "multi",
+        key: 3
+      },
+      {
+        author: "Dylan Martin",
+        question: "The following programming symbol is a ______ symbol.",
+        answers: ["processing", "I/O", "decision", "connector"],
+        type: "multi",
+        key: 2
+      },
+      {
+        author: "Dylan Martin",
+        question: "One of the main goals in analyzing user requirements is to:",
+        answers: ["troubleshoot the problem", "shutdown and maintain the system", "keep the user happy", "elicit requirement from the users point of view"],
+        type: "multi",
+        key: 3
+      },
+      {
+        author: "Dylan Martin",
+        question: "If a record has the following field lengths, what is the record length? (name=35,zipcode=5,district=7)",
+        answers: ["42", "47", "54", "56"],
+        type: "multi",
+        key: 1
+      },
+      {
+        author: "Dylan Martin",
+        question: "The following programming flowchart is a ____  symbol",
+        answers: ["processing", "input/output", "decision", "connector"],
+        type: "multi",
+        key: 1
+      },
+      {
+        author: "Dylan Martin",
+        question: "A programmer is starting a new programming project. During what phase of the programming phase project should the programmer begin planning for data storage?",
+        answers: ["billing", "documentation", "implementation", "testing"],
+        type: "multi",
+        key: 2
+      },
+      {
+        author: "Dylan Martin",
+        question: "A programmer needs to manipulate data that consists of a sequence of numbers that must be used as both an individual object and a set of data. What is the best data structure that the programmer can use?",
+        answers: ["array", "constant", "string", "field"],
+        type: "multi",
+        key: 0
+      },
+      {
+        author: "Dylan Martin",
+        question: "When a programmer is ready to create executable code, what process is used?",
+        answers: ["debugging", "editing", "compiling", "disassembling"],
+        type: "multi",
+        key: 2
+      },
+      {
+        author: "Dylan Martin",
+        question: "The source document and _____ should follow the same order.",
+        answers: ["input screen design", "output screen design", "decision-type operator symbols", "processing function symbols"],
+        type: "multi",
+        key: 0
+      },
+      {
+        author: "Dylan Martin",
+        question: "Which of the following is a correct name for a variable?",
+        answers: ["State_Zipcode", "State+Zipcode", "State Zipcode", "State=Zipcode"],
+        type: "multi",
+        key: 0
+      },
+      {
+        author: "Dylan Martin",
+        question: "Why is the following expression invalid? (a=10+'New Data')",
+        answers: ["Variable 5 is not defined", "Mixed data types", "New Data is not a string", "New Data equals zero"],
+        type: "multi",
+        key: 1
+      },
+      {
+        author: "Dylan Martin",
+        question: "An output field has Los Angeles moved to it, and when examined contains Los Angel. This indicates a ______ error.",
+        answers: ["logical", "arithmetic", "truncation", "semantic"],
+        type: "multi",
+        key: 2
+      },
+      {
+        author: "Dylan Martin",
+        question: "A programmer needs to define the type of value for a variable. What pre-defined set of characteristics for a variable can the programmer choose?",
+        answers: ["storage location", "return value", "method modifier", "data type"],
+        type: "multi",
+        key: 3
+      },
+      {
+        author: "Dylan Martin",
+        question: "One example of scripting (text processing) language is",
+        answers: ["Perl", "C++", "Fortran", "Beta"],
+        type: "multi",
+        key: 0
+      },
+      {
+        author: "Dylan Martin",
+        question: "Which of the following enables the use of 'plain english' queries?",
+        answers: ["A", "B", "C", "D"],
+        type: "multi",
+        key: 2
+      },
+      {
+        author: "Dylan Martin",
+        question: "An example +f loop structure is",
+        answers: ["DO UNTIL", "SELECT IF", "EXECUTE", "NEXT"],
+        type: "multi",
+        key: 0
+      },
+      {
+        author: "Dylan Martin",
+        question: "Compile errors can be caused by ____.",
+        answers: ["bad syntax", "input data", "insufficent test data", "incorrect user specification"],
+        type: "multi",
+        key: 0
+      },
+      {
+        author: "Dylan Martin",
+        question: "Typically after successful integration testing, a _____ test is performed to complete a front-to-back execution of the entire application",
+        answers: ["system", "unit", "fuzz", "beta"],
+        type: "multi",
+        key: 0
+      },
+      {
+        author: "Dylan Martin",
+        question: "The implementation phase consists of coding, testing, and ______.",
+        answers: ["designing", "building prototype exams", "establishing requirements", "integration"],
+        type: "multi",
+        key: 3
+      },
+      {
+        author: "Dylan Martin",
+        question: "When TEXT1.VALUE='March 7', TEXT1_LEN = (IN=TEXT1.VALUE; TEXT1_Len= LEN$(IN); FOR I TEXT_Len to 1 step -1; TEMP = TEMP & mid (in, I, 1); NEXT; OUT = TEMP & right)",
+        answers: ["7", "8", "9", "10"],
+        type: "multi",
+        key: 0
+      },
+      {
+        author: "Dylan Martin",
+        question: "A data element is intended to contain a range from 15 to 30 and after testing contains 32. What type of error is this?",
+        answers: ["truncation", "rounding", "run-time", "boundary"],
+        type: "multi",
+        key: 3
+      },
+      {
+        author: "Dylan Martin",
+        question: "Which of the following consists of a sequence of events to follow so they can be repeated?",
+        answers: ["runtime", "test files", "trace route", "script"],
+        type: "multi",
+        key: 3
+      },
+      {
+        author: "Dylan Martin",
+        question: "Maintenance refers to changes to a system in operating arising from error corrections, performance improvements, changes in the business environment and ______.",
+        answers: ["enhancements in functions", "application requirements", "referencing software", "material requirements"],
+        type: "multi",
+        key: 0
+      },
+      {
+        author: "Dylan Martin",
+        question: "One method of ensuring that updates to documentation are efficently distributed to",
+        answers: ["send customers documentation annually, regardless if there has been any changes", "make changes in an online help system rather than printed sources", "send fliers containing only the changes, rather than a printed volume",
+          "make changes on a pre-specified schedule"
+        ],
+        type: "multi",
+        key: 1
+      },
+      {
+        author: "Dylan Martin",
+        question: "A programmer has to make programming changes to an existing program. Therefore, the comments in the existing program must also be updated. These comments are referred to as ______ documentation",
+        answers: ["external", "internal", "primary", "secondary"],
+        type: "multi",
+        key: 1
+      },
+      {
+        author: "Dylan Martin",
+        question: "A programmer has decided to create a pop-up window that will display a brief description of a controls purpose when the mouse hovers over it. This pop-up window is known as a",
+        answers: ["hyper clip", "tool tip", "task bar", "help bar"],
+        type: "multi",
+        key: 1
+      },
 
     ]
 
-    var data_python = [
-      [`Mr. Smith`, `Define a function called 'kick'\nIt prints the string 'Ouch!'`, `def kick():\n\tprint('Ouch!')`, '0'],
-      [`Mr. Smith`, `Define a function called 'myName'\nIt returns the string 'Jeff'`, `def myName():\n\treturn 'Jeff'`, '0'],
-      [`Mr. Smith`, `Define a function called 'kick'\nIt prints the string 'Ouch!'`, `def kick():\n\tprint('Ouch!')`, '0'],
-      [`Mr. Smith`, `Define a function called 'kick'\nIt takes one argument called targetHP\nIt returns targetHP - 2`, `def kick(targetHP):\n\treturn targetHP - 2`, '0'],
-      [`Mr. Smith`, `Call a function called 'kick'\nIt takes the object Player1 as its argument.\nStore its return value to the property 'Player1.hp'`, `Player1.hp = kick(Player1)`, '0'],
-      [`Mr. Smith`, `Call a function called 'myName'\nPrint its return value.`, `print(myName())`, '0'],
-      [`Mr. Smith`, `Call a function called 'getScore'\nIt takes the string 'Player1' as its argument.\Convert its return value to an integer and store it to a variable called 'score'.`, `score = int(getScore('Player1'))`, '0'],
-      [`Mr. Smith`, `Call a function called 'getScore'\nIt takes the object Player1 as its argument\nPrint its return value.`, `print(getScore(Player1))`, '0'],
-      [`Mr. Smith`, `Define a function called 'doNothing'\nIt returns nothing`, `def doNothing():\n\treturn`, '0'],
-      [`Mr. Smith`, `Call a function called rollDice\nStore its return value in a variable called 'dieResult'`, `dieResult = rollDice()`, '0'],
-      [`Mr. Smith`, `Define a function called sayMessage\nIt takes an argument called 'msg'\nIt prints the 'msg' argument`, `def sayMessage(msg):\n\tprint(msg)`, '0'],
-      [`Mr. Smith`, `Define a function called convertAdd()\nIt takes two arguments called 'a' and 'b'\nIt returns 'a' converted to an integer plus 'b' converted to an integer `, `def convertAdd(a, b):\n\treturn int(a) + int(b)`, '0'],
+    var data_noctiPerformance = [{
+        author: "Dylan Martin",
+        question: "What code do you use to tell ExpressJS to read URL-encoded data? (with extended: true)",
+        answers: "app.use(express.urlencoded({extended: true}))",
+        type: "text",
+      },
+      {
+        author: "Dylan Martin",
+        question: "Create a GET endpoint at '/' that sends 'hello'.",
+        answers: "app.get('/' (req, res) => {res.send('hello')})",
+        type: "text",
+      },
+      {
+        author: "Dylan Martin",
+        question: "Create a POST endpoint at '/new' that sends back the content of the request body parameter 'name'.",
+        answers: "app.post('/new', (req, res) {res.send(req.body.name)})",
+        type: "text",
+      },
+      {
+        author: "Dylan Martin",
+        question: "Create an if statement that checks if the content of the request body parameter named 'ordernumber' exists, and logs 'Found.' if it does.",
+        answers: "if (req.body.ordernumber) {console.log('Found.')}",
+        type: "text",
+      },
+      {
+        author: "Dylan Martin",
+        question: "Use the fs module to write a JS object named 'newData into a JSON file named newData.json'",
+        answers: "fs.writeFile('newData.json', newData);",
+        type: "text",
+      },
+      {
+        author: "Dylan Martin",
+        question: "Use the fs module to to read a file called 'oldData.json' and covert it to a JS object named oldData.",
+        answers: "fs.readFile(oldData.json, JSON.stringify(oldData) ,'utf8')",
+        type: "text",
+      },
+      {
+        author: "Dylan Martin",
+        question: "Start an ExpressJS app listen server.",
+        answers: "app.listen(port)",
+        type: "text",
+      },
+      {
+        author: "Dylan Martin",
+        question: "Use a const variable to require EJS.",
+        answers: "const ejs = require('ejs');",
+        type: "text",
+      },
+      {
+        author: "Dylan Martin",
+        question: "Create a GET endpoint called /view that would bring back the file 'view.ejs'.",
+        answers: "app.get('/' (req, res) => {res.render('view.ejs')});",
+        type: "text",
+      },
+      {
+        author: "Dylan Martin",
+        question: "Set the view engine to EJS.",
+        answers: "app.set('view engine', 'ejs');",
+        type: "text",
+      },
+      {
+        author: "Dylan Martin",
+        question: "Create a Customer class with a constructor that has a name and ordernumber. These will be equal to the request body's name and ordernumber variables.",
+        answers: "class Customer {constructor(name, ordernumber); this.name: req.body.name, this.ordernumber: req.body.ordernumber}",
+        type: "text",
+      },
+      {
+        author: "Dylan Martin",
+        question: "Create an empty array called 'info' that exists inside a JSON file.",
+        answers: '{"info" : []}',
+        type: "text",
+      },
+      {
+        author: "Dylan Martin",
+        question: "Create a get endpoint called '/' that returns an EJS template named home.ejs with a data insertion point with a variable name which equals Bob.",
+        answers: "app.get('/', (req, res) => {res.render('home.ejs', {name: 'Bob'})})",
+        type: "text",
+      },
+      {
+        author: "Dylan Martin",
+        question: "What is the difference between a GET endpoint and a POST endpoint?",
+        answers: ["GET renders HTML files, POST renders EJS files.", "POST and GET are identical.", "GET renders files, and POST renders data.", "None of the above."],
+        type: "multi",
+        key: 3
+      },
+      {
+        author: "Dylan Martin",
+        question: "Create a POST request called '/view' that checks for a request body called 'name'. If data is found, send it's contents, else, return 'Not found.'",
+        answers: "app.post('view' (req, res) => {if (req.body.name){res.send(req.body.name)} else {res.send('Not found.')}})",
+        type: "text",
+      }
+
+    ]
+
+    var data_python = [{
+        author: `Mr. Smith`,
+        question: `Define a function called 'kick'\nIt prints the string 'Ouch!'`,
+        answers: `def kick():\n\tprint('Ouch!')`,
+        type: 'text'
+      },
+      {
+        author: `Mr. Smith`,
+        question: `Define a function called 'myName'\nIt returns the string 'Jeff'`,
+        answers: `def myName():\n\treturn 'Jeff'`,
+        type: 'text'
+      },
+      {
+        author: `Mr. Smith`,
+        question: `Define a function called 'kick'\nIt prints the string 'Ouch!'`,
+        answers: `def kick():\n\tprint('Ouch!')`,
+        type: 'text'
+      },
+      {
+        author: `Mr. Smith`,
+        question: `Define a function called 'kick'\nIt takes one argument called targetHP\nIt returns targetHP - 2`,
+        answers: `def kick(targetHP):\n\treturn targetHP - 2`,
+        type: 'text'
+      },
+      {
+        author: `Mr. Smith`,
+        question: `Call a function called 'kick'\nIt takes the object Player1 as its argument.\nStore its return value to the property 'Player1.hp'`,
+        answers: `Player1.hp = kick(Player1)`,
+        type: 'text'
+      },
+      {
+        author: `Mr. Smith`,
+        question: `Call a function called 'myName'\nPrint its return value.`,
+        answers: `print(myName())`,
+        type: 'text'
+      },
+      {
+        author: `Mr. Smith`,
+        question: `Call a function called 'getScore'\nIt takes the string 'Player1' as its argument.\Convert its return value to an integer and store it to a variable called 'score'.`,
+        answers: `score = int(getScore('Player1'))`,
+        type: 'text'
+      },
+      {
+        author: `Mr. Smith`,
+        question: `Call a function called 'getScore'\nIt takes the object Player1 as its argument\nPrint its return value.`,
+        answers: `print(getScore(Player1))`,
+        type: 'text'
+      },
+      {
+        author: `Mr. Smith`,
+        question: `Define a function called 'doNothing'\nIt returns nothing`,
+        answers: `def doNothing():\n\treturn`,
+        type: 'text'
+      },
+      {
+        author: `Mr. Smith`,
+        question: `Call a function called rollDice\nStore its return value in a variable called 'dieResult'`,
+        answers: `dieResult = rollDice()`,
+        type: 'text'
+      },
+      {
+        author: `Mr. Smith`,
+        question: `Define a function called sayMessage\nIt takes an argument called 'msg'\nIt prints the 'msg' argument`,
+        answers: `def sayMessage(msg):\n\tprint(msg)`,
+        type: 'text'
+      },
+      {
+        author: `Mr. Smith`,
+        question: `Define a function called convertAdd()\nIt takes two arguments called 'a' and 'b'\nIt returns 'a' converted to an integer plus 'b' converted to an integer `,
+        answers: `def convertAdd(a, b):\n\treturn int(a) + int(b)`,
+        type: 'text'
+      }
     ]
 
     var data_html = [
 
-      [`Mr. Smith`, `Create a variable called 'x' and store the value 5 into it.`, `x = 5`, '0']
+      {
+        author: `Mr. Smith`,
+        question: `Create a variable called 'x' and store the value 5 into it.`,
+        answers: `x = 5`,
+        key: '0'
+      }
     ]
 
     /*
@@ -121,6 +584,42 @@
           data.push(dataList.splice(Math.floor(Math.random() * dataList.length), 1)[0])
         }
         return data;
+      } else if (languageType == "data_noctiPerformance") {
+        data = [];
+        mistakePile = [];
+        discardPile = 0;
+        var cardIndex = 0;
+        dataList = [];
+        var numberOfCards = data_noctiPerformance.length;
+        // var dataList = data_python;
+        for (let i = 0; i < numberOfCards; i++) {
+          dataList.push(data_noctiPerformance[i])
+        }
+        console.log(dataList);
+
+        //Pick out a certain number of cards
+        for (let i = 0; i < numberOfCards; i++) {
+          data.push(dataList.splice(Math.floor(Math.random() * dataList.length), 1)[0])
+        }
+        return data;
+      } else if (languageType == "data_noctiWritten") {
+        data = [];
+        mistakePile = [];
+        discardPile = 0;
+        var cardIndex = 0;
+        dataList = [];
+        var numberOfCards = data_noctiWritten.length;
+        // var dataList = data_python;
+        for (let i = 0; i < numberOfCards; i++) {
+          dataList.push(data_noctiWritten[i])
+        }
+        console.log(dataList);
+
+        //Pick out a certain number of cards
+        for (let i = 0; i < numberOfCards; i++) {
+          data.push(dataList.splice(Math.floor(Math.random() * dataList.length), 1)[0])
+        }
+        return data;
       } else {
         console.log("It broke");
       }
@@ -162,13 +661,13 @@
         if (data.length) {
           cardIndex = Math.floor(Math.random() * data.length);
           questionType(data);
-          cardPrompt.innerHTML = '<b>' + data[cardIndex][0] + ':</b><br>' + parseMeta(data[cardIndex][1]);
+          cardPrompt.innerHTML = '<b>' + data[cardIndex].author + ':</b><br>' + parseMeta(data[cardIndex].question);
         } else if (mistakePile.length) {
           cardIndex = Math.floor(Math.random() * mistakePile.length);
           questionType(mistakePile);
           console.log(mistakePile[cardIndex]);
-          console.log(mistakePile[cardIndex][0][1]);
-          cardPrompt.innerHTML = '<b>' + mistakePile[cardIndex][0] + ':</b><br>' + parseMeta(mistakePile[cardIndex][1]);
+          console.log(mistakePile[cardIndex].author.question);
+          cardPrompt.innerHTML = '<b>' + mistakePile[cardIndex].author + ':</b><br>' + parseMeta(mistakePile[cardIndex].question);
 
         } else {
           cardPrompt.innerHTML = '<h1><b>You win!</b></h1>' + '<button type="button" onclick="resetCards()">Reset</button>'
@@ -192,23 +691,23 @@
         let cardCheck = cardAnswer.replaceAll(' ', '')
         cardCheck = cardCheck.replaceAll('\"', '\'')
         if (data.length) {
-          if (cardCheck == data[cardIndex][2].replaceAll(' ', '')) {
+          if (cardCheck == data[cardIndex].answers.replaceAll(' ', '')) {
             discardPile++;
-            results.innerHTML = `<span style="color: lime; font-family: system, consolas;">` + data[cardIndex][2] + `</span>`;
+            results.innerHTML = `<span style="color: lime; font-family: system, consolas;">` + data[cardIndex].answers + `</span>`;
             data.splice(cardIndex, 1)
           } else {
-            console.log(data[cardIndex][2]);
-            results.innerHTML = `<span style="color: red; font-family: system, consolas;">` + data[cardIndex][2] + `</span>`;
-            mistakePile.push(data.splice(cardIndex, 1)[0]);
+            console.log(data[cardIndex].answers);
+            results.innerHTML = `<span style="color: red; font-family: system, consolas;">` + data[cardIndex].answers + `</span>`;
+            mistakePile.push(data.splice(cardIndex, 1).author);
           }
         } else if (mistakePile.length) {
-          if (cardCheck == mistakePile[cardIndex][2].replaceAll(' ', '')) {
+          if (cardCheck == mistakePile[cardIndex].answers.replaceAll(' ', '')) {
             discardPile++;
-            results.innerHTML = `<span style="color: lime; font-family: system, consolas;">` + parseMeta(mistakePile[cardIndex][2]) + `</span>`;
+            results.innerHTML = `<span style="color: lime; font-family: system, consolas;">` + parseMeta(mistakePile[cardIndex].answers) + `</span>`;
             mistakePile.splice(cardIndex, 1)
           } else {
-            results.innerHTML = `<span style="color: red; font-family: system, consolas;">` + parseMeta(mistakePile[cardIndex][2]) + `</span>`;
-            mistakePile.push(mistakePile.splice(cardIndex, 1)[0]);
+            results.innerHTML = `<span style="color: red; font-family: system, consolas;">` + parseMeta(mistakePile[cardIndex].answers) + `</span>`;
+            mistakePile.push(mistakePile.splice(cardIndex, 1).author);
           }
         }
       }
@@ -225,26 +724,26 @@
             var eleValue = ele[i].value
         }
         if (data.length) {
-          if (data[cardIndex][4] === eleValue) {
+          if (data[cardIndex].key === eleValue) {
             console.log("Correct")
-            results.innerHTML = `<span style="color: lime; font-family: system, consolas;">` + data[cardIndex][2][data[cardIndex][4] - 1] + `</span>`;
+            results.innerHTML = `<span style="color: lime; font-family: system, consolas;">` + data[cardIndex].answers[data[cardIndex].key] + `</span>`;
             discardPile++;
             data.splice(cardIndex, 1)
           } else {
             console.log("You SUCK")
-            results.innerHTML = `<span style="color: red; font-family: system, consolas;">` + data[cardIndex][2][data[cardIndex][4] - 1] + `</span>`;
-            mistakePile.push(data.splice(cardIndex, 1)[0]);
+            results.innerHTML = `<span style="color: red; font-family: system, consolas;">` + data[cardIndex].answers[data[cardIndex].key] + `</span>`;
+            mistakePile.push(data.splice(cardIndex, 1).author);
           }
         } else if (mistakePile.length) {
-          if (mistakePile[cardIndex][4] === eleValue) {
+          if (mistakePile[cardIndex].key === eleValue) {
             console.log("Correct")
-            results.innerHTML = `<span style="color: lime; font-family: system, consolas;">` + mistakePile[cardIndex][2][mistakePile[cardIndex][4] - 1] + `</span>`;
+            results.innerHTML = `<span style="color: lime; font-family: system, consolas;">` + mistakePile[cardIndex].answers[mistakePile[cardIndex].key] + `</span>`;
             discardPile++;
             mistakePile.splice(cardIndex, 1)
           } else {
             console.log("You SUCK")
-            results.innerHTML = `<span style="color: red; font-family: system, consolas;">` + mistakePile[cardIndex][0][2][mistakePile[cardIndex][0][4] - 1] + `</span>`;
-            mistakePile.push(mistakePile.splice(cardIndex, 1)[0]);
+            results.innerHTML = `<span style="color: red; font-family: system, consolas;">` + mistakePile[cardIndex].answers[mistakePile[cardIndex].key] + `</span>`;
+            mistakePile.push(mistakePile.splice(cardIndex, 1).author);
           }
         }
       }
@@ -257,13 +756,13 @@
       let multchoice2 = document.getElementById("mult2choice");
       let multchoice3 = document.getElementById("mult3choice");
       let multchoice4 = document.getElementById("mult4choice");
-      if (questionList[cardIndex][3] === '0') {
+      if (questionList[cardIndex].type === 'text') {
         answerBox.style.display = "block"
         multChoiceBtn.style.display = "none"
-      } else if (questionList[cardIndex][3] === '1') {
+      } else if (questionList[cardIndex].type === 'multi') {
         answerBox.style.display = "none"
         multChoiceBtn.style.display = "block"
-        xyz = questionList[cardIndex][2]
+        xyz = questionList[cardIndex].answers
         multchoice1.innerHTML = xyz[0];
         multchoice2.innerHTML = xyz[1];
         multchoice3.innerHTML = xyz[2];
@@ -296,6 +795,8 @@
           <div class="dropdown-content">
             <a onclick="languageTypePicker('data_java')" href="#">Javascript</a>
             <a onclick="languageTypePicker('data_py')" href="#">Python</a>
+            <a onclick="languageTypePicker('data_noctiWritten')" href="#">Written NOCTI</a>
+            <a onclick="languageTypePicker('data_noctiPerformance')" href="#">Performance NOCTI</a>
             <a href="#">HTML</a>
           </div>
         </div>
@@ -305,6 +806,8 @@
         <li>If the description talks about something that would use </li>
         <li id="line2">a code block (function, conditional statement, etc), only use the first line of code.</li>
         <li>If you need to use quotes, please use <b>single quotes ( ' ' )</b></li>
+        <li>ExpressJS application objects will always be named 'app'.</li>
+        <li>The request and response in callback functions will always be req and res respectively.</li>
       </div>
     </div>
     <div id="mainBody">
@@ -329,16 +832,16 @@
       </div>
       <div id="multiplechoice">
         <form id="choiceAnswer">
-          <input type="radio" name="choice" id="mult1" value="1">
+          <input type="radio" name="choice" id="mult1" value="0">
           <label for="mult1" id=mult1choice>hey</label>
           <br>
-          <input type="radio" name="choice" id="mult2" value="2">
+          <input type="radio" name="choice" id="mult2" value="1">
           <label for="mult2" id=mult2choice>hey</label>
           <br>
-          <input type="radio" name="choice" id="mult3" value="3">
+          <input type="radio" name="choice" id="mult3" value="2">
           <label for="mult3" id=mult3choice>hey</label>
           <br>
-          <input type="radio" name="choice" id="mult4" value="4">
+          <input type="radio" name="choice" id="mult4" value="3">
           <label for="mult4" id=mult4choice>hey</label>
         </form>
         <div id="buttons">
