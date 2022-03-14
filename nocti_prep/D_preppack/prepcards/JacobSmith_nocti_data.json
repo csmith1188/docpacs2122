@@ -1,0 +1,231 @@
+{
+    "generalInfo":
+[   'Jacob Smith',
+    'Which of the following errors is caused by a calculation error?',
+    ['logical', 'arithmetic', 'truncation', 'semantic'],
+    '1', 
+    '2'
+    ],
+[   'Jacob Smith',
+    'Which of the following uses three basic control structures to form highly structured units of code?',
+    ['structured programming', 'circular connector', 'modular construction', 'loop structure'],
+    '1',
+    '1' 
+    ],
+[   'Jacob Smith',
+    'What type of principle is used for configuring preferences that allow the user to personalize an application?',
+    ['CLI', 'GUI', 'API', 'DOS'],
+    '1', 
+    '2' 
+    ],
+[   'Jacob Smith',
+    'All computer instructions are based on four basic logic patterns. These patterns are simple sequence, selection, loop, and',
+    ['Answer 1', 'Answer 2', 'Answer 3', 'Answer 4'],
+    '1',
+    '4' 
+    ],
+[   'Jacob Smith',
+    'If the memory speed of the bus is 750MHz, and the CPU is operating at twice the speed of the bus, what is the processor speed?',
+    ['Answer 1', 'Answer 2', 'Answer 3', 'Answer 4'],
+    '1', 
+    '1, 2, 3, or 4' // Corresponding to the correct answer above
+    ],
+[   'Jacob Smith',
+    'Two types of programs that create machine codes are the interpreter and the',
+    ['Answer 1', 'Answer 2', 'Answer 3', 'Answer 4'],
+    '1', 
+    '1, 2, 3, or 4' // Corresponding to the correct answer above
+    ],
+[   'Jacob Smith',
+    'In the order of calcuations in a program',
+    ['Answer 1', 'Answer 2', 'Answer 3', 'Answer 4'],
+    '1', 
+    '1, 2, 3, or 4' // Corresponding to the correct answer above
+    ],
+[   'Jacob Smith',
+    'When the code below is executed, strAdd will be equal to',
+    ['Answer 1', 'Answer 2', 'Answer 3', 'Answer 4'],
+    '1', 
+    '1, 2, 3, or 4' // Corresponding to the correct answer above
+    ]
+}
+{
+    "ethicsLegalSecurity":
+[   'Jacob Smith',
+    'If a programmer downloads a copy of microsoft SQL Server froma file-sharing website without paying for it, the programmer has committed an offense called',
+    ['Answer 1', 'Answer 2', 'Answer 3', 'Answer 4'],
+    '1', 
+    '1, 2, 3, or 4' // Corresponding to the correct answer above
+    ],
+[   'Jacob Smith',
+    'The Sarbanes-Oxley Act (SOX) requires monitoring and documentation of transactions. How could a programmer mistakenly setup a program that would cause problems with compliance with SOX?',
+    ['Answer 1', 'Answer 2', 'Answer 3', 'Answer 4'],
+    '1', 
+    '1, 2, 3, or 4' // Corresponding to the correct answer above
+    ],
+[   'Jacob Smith',
+    'The following programming flowchart symbol is a/an ____ symbol.',
+    ['Answer 1', 'Answer 2', 'Answer 3', 'Answer 4'],
+    '1', 
+    '1, 2, 3, or 4' // Corresponding to the correct answer above
+    ],
+[   'Jacob Smith',
+    'One of the main goals in analyzing user requirements is to',
+    ['Answer 1', 'Answer 2', 'Answer 3', 'Answer 4'],
+    '1', 
+    '1, 2, 3, or 4' // Corresponding to the correct answer above
+    ],
+[   'Jacob Smith',
+    'If a record has the following field lengths, what is the record length?',
+    ['Answer 1', 'Answer 2', 'Answer 3', 'Answer 4'],
+    '1', 
+    '1, 2, 3, or 4' // Corresponding to the correct answer above
+    ],
+[   'Jacob Smith',
+    'The following programming flowchart symbol is a/an ____ symbol.',
+    ['Answer 1', 'Answer 2', 'Answer 3', 'Answer 4'],
+    '1', 
+    '1, 2, 3, or 4' // Corresponding to the correct answer above
+    ],
+[   'Jacob Smith',
+    'A programmer is starting a new programming project. During what phase of the programming project should the programmer begin planning for data storage?',
+    ['Answer 1', 'Answer 2', 'Answer 3', 'Answer 4'],
+    '1', 
+    '1, 2, 3, or 4' // Corresponding to the correct answer above
+    ],
+[   'Jacob Smith',
+    'A programmer needs to manipulate data that consists of a sequence of numbers that must be used as both an individual object and a set of data. What is the best data structure the programmer can use?',
+    ['Answer 1', 'Answer 2', 'Answer 3', 'Answer 4'],
+    '1', 
+    '1, 2, 3, or 4' // Corresponding to the correct answer above
+    ],
+[   'Jacob Smith',
+    'When a programmer is ready to create executable code, what process is used?',
+    ['Answer 1', 'Answer 2', 'Answer 3', 'Answer 4'],
+    '1', //Will always be '1', to symbolize multiple choice
+    '1, 2, 3, or 4' // Corresponding to the correct answer above
+    ]
+}
+{
+    "designProgramSolutions":
+[   'Jacob Smith',
+    'The source document and ____ should follow the same order.',
+    ['Answer 1', 'Answer 2', 'Answer 3', 'Answer 4'],
+    '1', //Will always be '1', to symbolize multiple choice
+    '1, 2, 3, or 4' // Corresponding to the correct answer above
+    ],
+[   'Jacob Smith',
+    'Which of the following is a correct name for a variable?',
+    ['Answer 1', 'Answer 2', 'Answer 3', 'Answer 4'],
+    '1', //Will always be '1', to symbolize multiple choice
+    '1, 2, 3, or 4' // Corresponding to the correct answer above
+    ],
+[   'Jacob Smith',
+    'why is the following expression invalid? A=10 + "New Data"',
+    ['Answer 1', 'Answer 2', 'Answer 3', 'Answer 4'],
+    '1', //Will always be '1', to symbolize multiple choice
+    '1, 2, 3, or 4' // Corresponding to the correct answer above
+    ],
+[   'Jacob Smith',
+    'An output field has "Los Angeles" moved toit and when examined contains "Los Angel" This indicates a/an ____ error.',
+    ['Answer 1', 'Answer 2', 'Answer 3', 'Answer 4'],
+    '1', //Will always be '1', to symbolize multiple choice
+    '1, 2, 3, or 4' // Corresponding to the correct answer above
+    ],
+[   'Jacob Smith',
+    'A programmer needs to define the type of value for a variable. What pre-determined set of characteristics for a variable can the programmer choose?',
+    ['Answer 1', 'Answer 2', 'Answer 3', 'Answer 4'],
+    '1', //Will always be '1', to symbolize multiple choice
+    '1, 2, 3, or 4' // Corresponding to the correct answer above
+    ]
+}
+{
+    "codePrograms":
+[   'Jacob Smith',
+    'One example of scripting (text processing) language is',
+    ['Answer 1', 'Answer 2', 'Answer 3', 'Answer 4'],
+    '1', //Will always be '1', to symbolize multiple choice
+    '1, 2, 3, or 4' // Corresponding to the correct answer above
+    ],
+[   'Jacob Smith',
+    'Which of the following enables the use of "plain English" queries?',
+    ['Answer 1', 'Answer 2', 'Answer 3', 'Answer 4'],
+    '1', //Will always be '1', to symbolize multiple choice
+    '1, 2, 3, or 4' // Corresponding to the correct answer above
+    ],
+[   'Jacob Smith',
+    'An example of loop structure is',
+    ['Answer 1', 'Answer 2', 'Answer 3', 'Answer 4'],
+    '1', //Will always be '1', to symbolize multiple choice
+    '1, 2, 3, or 4' // Corresponding to the correct answer above
+    ],
+[   'Jacob Smith',
+    'Compile errors can be caused by',
+    ['Answer 1', 'Answer 2', 'Answer 3', 'Answer 4'],
+    '1', //Will always be '1', to symbolize multiple choice
+    '1, 2, 3, or 4' // Corresponding to the correct answer above
+    ]
+}
+{
+    "testPrograms":
+[   'Jacob Smith',
+    'Typically after successful integration testing, a ____ test is performed to complete a front-to-back execution of the entire application',
+    ['Answer 1', 'Answer 2', 'Answer 3', 'Answer 4'],
+    '1', //Will always be '1', to symbolize multiple choice
+    '1, 2, 3, or 4' // Corresponding to the correct answer above
+    ],
+[   'Jacob Smith',
+    'The implementation phase consists of coding, testing, and',
+    ['Answer 1', 'Answer 2', 'Answer 3', 'Answer 4'],
+    '1', //Will always be '1', to symbolize multiple choice
+    '1, 2, 3, or 4' // Corresponding to the correct answer above
+    ],
+[   'Jacob Smith',
+    'When TEXT1.VALUE="March 7".TEXT1_LEN=',
+    ['Answer 1', 'Answer 2', 'Answer 3', 'Answer 4'],
+    '1', //Will always be '1', to symbolize multiple choice
+    '1, 2, 3, or 4' // Corresponding to the correct answer above
+    ],
+[   'Jacob Smith',
+    'A data element is intended to contain a range from 15 to 30 and after testing it contains 32. What kind of error is this?',
+    ['Answer 1', 'Answer 2', 'Answer 3', 'Answer 4'],
+    '1', //Will always be '1', to symbolize multiple choice
+    '1, 2, 3, or 4' // Corresponding to the correct answer above
+    ],
+[   'Jacob Smith',
+    'Which of the following consists of a sequence of events to follow so they can be repeated?',
+    ['Answer 1', 'Answer 2', 'Answer 3', 'Answer 4'],
+    '1', //Will always be '1', to symbolize multiple choice
+    '1, 2, 3, or 4' // Corresponding to the correct answer above
+    ]
+}
+{
+    "maintainProgramImplementChange":
+[   'Jacob Smith',
+    'Maintenance refers to changes to a system in operating arising from error corrections, performance improvements, changes in the buisness enviroment and',
+    ['Answer 1', 'Answer 2', 'Answer 3', 'Answer 4'],
+    '1', //Will always be '1', to symbolize multiple choice
+    '1, 2, 3, or 4' // Corresponding to the correct answer above
+    ],
+[   'Jacob Smith',
+    'One method of ensuring that updates to documentation are efficiently distributed is to',
+    ['Answer 1', 'Answer 2', 'Answer 3', 'Answer 4'],
+    '1', //Will always be '1', to symbolize multiple choice
+    '1, 2, 3, or 4' // Corresponding to the correct answer above
+    ]
+}
+{
+    "completeUserDocumentation":
+[   'Jacob Smith',
+    'A programmer has to make programming changes to an existing program. Therefore the comments in the existing program must also be updated. The comments are referred to as ____ documentation',
+    ['Answer 1', 'Answer 2', 'Answer 3', 'Answer 4'],
+    '1', //Will always be '1', to symbolize multiple choice
+    '1, 2, 3, or 4' // Corresponding to the correct answer above
+    ],
+[   'Jacob Smith',
+    'A programmer has decided to create a pop-up window that will display a brief description of a control's purpose when the mouse hovers over it. This pop-up window is known as a',
+    ['Answer 1', 'Answer 2', 'Answer 3', 'Answer 4'],
+    '1', //Will always be '1', to symbolize multiple choice
+    '1, 2, 3, or 4' // Corresponding to the correct answer above
+    ]
+}
