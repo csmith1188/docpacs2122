@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>FlashCards</title>
+  <link rel="stylesheet" href="style.css">
+  </script>
+  <script type="text/javascript">
+    var cardSubmitted = true;
+    var discardPile = 0;
+    var mistakePile = []
+    var data_javascript = [
+      // ['Will', '', ['', '', '', ''], '', ''],
+      // ['Chris', '', ['', '', '', ''], '', ''],
+      // ['Ethan', '', ['', '', '', ''], '', ''],
+      // ['Jayson', '', ['', '', '', ''], '', ''],
+      { author: 'Will', question: 'What Does HTML Mean', answers: ['HyperText Markup Language', 'HyperTest Magic Language', 'HypoText', 'HTML has no meaning'], type: 'multi', key: 0 },
+      { author: 'Will', question: 'What Do Tags Do', answers: ['They Do Nothing', 'They Properly Format Content', 'They Are The Content', '<'], type: 'multi', key: 1 },
+      { author: 'Will', question: 'What Are Some Common HTML Tags', answers: ["'l'", "'kd'", "'vc'", "'br'"], type: 'multi', key: 3 },
+      { author: 'Will', question: 'Which Is Not A Coding Language', answers: ['Javascript', 'Erlang', 'Ruby', 'Unit'], type: 'multi', key: 3 },
+      { author: 'Will', question: 'Which Is Not A Javascript Datatype', answers: ['Find', 'String', 'Boolean', 'Undefined'], type: 'multi', key: 0 },
+      { author: 'Will', question: 'Which Symbol Is Used For Multi-Line Comments In Javascript', answers: ['./', '*/', '/.', '-'], type: 'multi', key: 1 },
+      { author: 'Will', question: 'How Many Types Of Heading Does A HTML Contain', answers: ['2', '8', '4', '6'], type: 'multi', key: 3 },
+      { author: 'Jayson', question: 'Which assignment operator assigns a variable/object to a value?', answers: ['+=', '=', '/=', '**='], type: 'multi', key: 1 },
+      { author: 'Jayson', question: 'Which is the proper use of camel case?', answers: ['CamelCase', 'cAmelcAse', 'camelCase', 'CameLCasE'], type: 'multi', key: 2 },
+      { author: 'Jayson', question: 'How do you create a function?', answers: ['function == myfunction(){}', 'function myFunction(){}', 'myFunction():function{}', 'function:myFunction(){}'], type: 'multi', key: 1 },
+      { author: 'Jayson', question: 'What is a string?', answers: ['A string is just one line of code', 'A string is a list of Non-human-readable letters that are code', 'A string is a list of human-readable letters that are not code', 'A string is a list of objects that are assigned to a variable'], type: 'multi', key: 2 },
+      { author: 'Jayson', question: 'How would you log (Hello World!!) to the console>?', answers: 'console.log(Hello World!!);', type: 'text' },
+      //['Jayson', '']
+    ]
+
+    var data_python = [
+      { author: `Mr. Smith`, question: `Define a function called 'kick'\nIt prints the string 'Ouch!'`, answers: `def kick():\n\tprint('Ouch!')`, type: "text" },
+      { author: `Mr. Smith`, question: `Define a function called 'myName'\nIt returns the string 'Jeff'`, answers: `def myName():\n\treturn 'Jeff'`, type: 'text' },
+      { author: `Mr. Smith`, question: `Define a function called 'kick'\nIt prints the string 'Ouch!'`, answers: `def kick():\n\tprint('Ouch!')`, type: 'text' },
+      { author: `Mr. Smith`, question: `Define a function called 'kick'\nIt takes one argument called targetHP\nIt returns targetHP - 2`, answers: `def kick(targetHP):\n\treturn targetHP - 2`, type: 'text' },
+      { author: `Mr. Smith`, question: `Call a function called 'kick'\nIt takes the object Player1 as its argument.\nStore its return value to the property 'Player1.hp'`, answers: `Player1.hp = kick(Player1)`, type: 'text' },
+      { author: `Mr. Smith`, question: `Call a function called 'myName'\nPrint its return value.`, answers: `print(myName())`, type: 'text' },
+      { author: `Mr. Smith`, question: `Call a function called 'getScore'\nIt takes the string 'Player1' as its argument.\Convert its return value to an integer and store it to a variable called 'score'.`, answers: `score = int(getScore('Player1'))`, type: 'text' },
+      { author: `Mr. Smith`, question: `Call a function called 'getScore'\nIt takes the object Player1 as its argument\nPrint its return value.`, answers: `print(getScore(Player1))`, type: 'text' },
+      { author: `Mr. Smith`, question: `Define a function called 'doNothing'\nIt returns nothing`, answers: `def doNothing():\n\treturn`, type: 'text' },
+      { author: `Mr. Smith`, question: `Call a function called rollDice\nStore its return value in a variable called 'dieResult'`, answers: `dieResult = rollDice()`, type: 'text' },
+      { author: `Mr. Smith`, question: `Define a function called sayMessage\nIt takes an argument called 'msg'\nIt prints the 'msg' argument`, answers: `def sayMessage(msg):\n\tprint(msg)`, type: 'text' },
+      { author: `Mr. Smith`, question: `Define a function called convertAdd()\nIt takes two arguments called 'a' and 'b'\nIt returns 'a' converted to an integer plus 'b' converted to an integer `, answers: `def convertAdd(a, b):\n\treturn int(a) + int(b)`, type: 'text' },
+    ]
+
+    var data_html = [
+      { author: `Mr. Smith`, question: `Create a variable called 'x' and store the value 5 into it.`, answers: `x = 5`, type: 'text' }
+    ]
+    var data_nocti_written = [
+      { author: "Seth Martin", question: "Which of the following errors is caused by a calculation error?", answers: ["Logical", "Arithmetic", "Truncation", "Semantic"], type: "multi", key: 1 },
+      { author: "Seth Martin", question: "Which of the following uses three basic control structures to form highly structured units of code?", answers: ["Structured Programming", "Circular Connector", "Modular Construction", "Loop Structure"], type: "multi", key: 0 },
+      { author: "Seth Martin", question: "What type of principle is used for configuring preferences that allow the user to personalize an application?", answers: ["CLI", "GUI", "API", "DOS"], type: "multi", key: 1 },
+      { author: "Seth Martin", question: "All computer instructions are based on four basic logic patterns. These patterns are simple sequence, selection, loop, and ___", answers: ["Trailer", "Modular", "Top-down", "Branch"], type: "multi", key: 3 },
+      { author: "Seth Martin", question: "If the memory speed of the bus is 750 MHz, and the CPU is operating at twice the speed of the bus, what is the processor speed?", answers: ["375 MHz", "750 MHz", "1.5 GHz", "2 GHz"], type: "multi", key: 2 },
+      { author: "Seth Martin", question: "Two types of programs that create machine codes are the interpreter and the ___", answers: ["Assembler", "Object", "Compiler", "Source"], type: "multi", key: 2 },
+      { author: "Seth Martin", question: "In the order of calculations in a program", answers: ["Addition precedes division", "Parentheses precede exponentiation", "Subtraction precedes addition", "Multiplication precedes exponentiation"], type: "multi", key: 1 },
+      { author: "Seth Martin", question: "When the code below is executed strAdd will be equal to \nstrFirst = '123' \nstrSecond = '456' \nstrAdd = strFirst + strSecond", answers: ["579, 123 + 456", "123456", `strFirst + strSecond`], type: "multi", key: 2 },
+      { author: "Seth Martin", question: "If a programmer downloads a copy of Microsoft SQL Server from a file-sharing website without paying for it, the programmer has commited and offense called", answers: ["Piracy", "Larceny", "Felony", "Spyware"], type: "multi", key: 0 },
+      { author: "Seth Martin", question: "The Sarbanes-Oxley Act (SOX) requires monitoring and documentation of transactions. How could a programmer mistakenly setup a program that would cause problems with compliance with SOX?", answers: ["Create system logs of the transactions taken in the session", "Require a user to click three times when they are sure they want to proceed", "Help a user to request assistance from the system administrators", "Utilize system credentials instead of passthrough credentials"], type: "multi", key: 3 },
+      { author: "Seth Martin", question: "The following programming flowchart symbol is a/an ___ symbol. \n Diamond Shape", answers: ["Processing", "Input/output", "Decision", "Connector"], type: "multi", key: 2 },
+      { author: "Seth Martin", question: "One of the main goals in analyzing user requirements is to", answers: ["Troubleshoot the problem", "Shutdown and maintain the system", "Keep the customer happy", "Elicit requirements from a user's point of view"], type: "multi", key: 3 },
+      { author: "Seth Martin", question: "If a record has the following field lengths, what is the record length? \n Name=35,ZipCode=5,District=7", answers: ["42", "47", "54", "56"], type: "multi", key: 1 },
+      { author: "Seth Martin", question: "The following programming flowchart symbol is a/an ___ symbol. \n Paralellogram", answers: ["Processing", "Input/output", "Decision", "Connector"], type: "multi", key: 1 },
+      { author: "Seth Martin", question: "A programmer is starting a new programming project. During what phase of the programming project should the programmer begin planning for data storage?", answers: ["Billing", "Documentation", "Implementation", "Test"], type: "multi", key: 2 },
+      { author: "Seth Martin", question: "A programmer needs to manipulate data that consists of a sequence of number stat must be used as both an individual object and a set of data. What is the best data structure the programmer can use?", answers: ["Array", "Constant", "String", "Field"], type: "multi", key: 0 },
+      { author: "Seth Martin", question: "When a programmer is ready to create executable code, what process is used?", answers: ["Debugging", "Editing", "Compiling", "Disassembling"], type: "multi", key: 2 },
+      { author: "Seth Martin", question: "The source document and ____ should follow the same order.", answers: ["Input screen design", "Output screen design", "Decision-type operator symbols", "Processing function symbols"], type: "multi", key: 0 },
+      { author: "Seth Martin", question: "Which of the following is a correct name for a variable", answers: ["State_Zipcode", "State+Zipcode", "State Zipcode", "State=Zipcode"], type: "multi", key: 0 },
+      { author: "Seth Martin", question: "Why is the following expression invalid? A=10 + 'New Data'", answers: ["Variable 5 is not defined", "Data types are mixed", "'New Data' is not a string", "'New Data' equals zero"], type: "multi", key: 1 },
+      { author: "Seth Martin", question: "An output field has 'Los Angeles' moved to it and when examined contains 'Los Angel.' This indicates a/an ___ error.", answers: ["Logical", "Arithmetic", "Truncation", "Semantic"], type: "multi", key: 2 },
+      { author: "Seth Martin", question: "One example of scripting (text processing) language is ___", answers: ["Perl", "C++", "Fortran", "Beta"], type: "multi", key: 0 },
+      { author: "Seth Martin", question: "Which of the following enables the use of 'plain English' queries?", answers: ["BASIC", "FORTRAN", "SQL", "C++"], type: "multi", key: 2 },
+      { author: "Seth Martin", question: "An example of loop structure is", answers: ["DO UNTIL", "SELECT IF", "EXECUTE", "NEXT"], type: "multi", key: 0 },
+      { author: "Seth Martin", question: "Compile errors can be caused by", answers: ["Bad syntax", "Input data", "Insufficient test data", "Incorrect user specification"], type: "multi", key: 0 },
+      { author: "Seth Martin", question: "Typically after successful integration testing, a ____ test is performed to complete a front-to-back execution of the entire application.", answers: ["System", "Unit", "Fuzz", "Beta"], type: "multi", key: 0 },
+      { author: "Seth Martin", question: "The implementation phase consists of coding, testing, and", answers: ["Designing", "Building prototype programs", "Establishing requirements", "Integration"], type: "multi", key: 3 },
+      { author: "Seth Martin", question: "When TEXT1.VALUE = 'March 7', TEXT1_LEN= \nSub Form_Click() \nIN = TEXT1.VALUE \nTEXT1_len = LEN$(IN) \nFor I = TEXT_len to 1 step -1 \nTEMP = TEMP & mid (in, I, 1) \nNEXT \nOUT = TEMP & right (in, text_len -n)", answers: ["7", "8", "9", "10"], type: "multi", key: 0 },
+      { author: "Seth Martin", question: "A data element is intended to contain a range from 15 to 30 and after testing it contains 32. What kind of error is this?", answers: ["Truncation", "Rounding", "Run time", "Boundary"], type: "multi", key: 3 },
+      { author: "Seth Martin", question: "Which of the following consists of a sequence of events to follow so they can be repeated?", answers: ["Runtime", "Test files", "Trace route", "Script"], type: "multi", key: 3 },
+      { author: "Seth Martin", question: "Maintenance refers to changes to a system in operating arising from error corrections, performance improvements, changes in the business environment and", answers: ["Enhancements in functions", "Application requirements", "Referencing software", "Material requirements"], type: "multi", key: 0 },
+      { author: "Seth Martin", question: "One method of ensuring that updates to documentation are efficiently distributed is to", answers: ["Send customers printed documentation annually regardless of whether there have been changes", "Make changes in an online help system rather than printed sources", "Send fliers containing only the changes rather than the new printed volumes", "Make changes only on a pre-specified schedule"], type: "multi", key: 1 },
+      { author: "Seth Martin", question: "A programmer has to make programming changes to an existing program. Therefor the comments in the existing program must also be updated. The comments are referred to as ____ documentation", answers: ["External", "Internal", "Primary", "Secondary"], type: "multi", key: 1 },
+      { author: "Seth Martin", question: "A programmer has decided to create a pop-up window that will display a brief description of a controls purpose when the mouse hovers over it. This pop-up window is known as a ___", answers: ["Hyper clip", "Tool tip", "Task bar", "Help bar"], type: "multi", key: 1 },
+    ]
+    var data_nocti_performance = [
+      { author: `Seth Martin`, question: `What code do you use to tell an ExpressJS to read URL-encoded data?`, answers: `app.use(express.urlencoded({extended: true}))`, type: 'text' },
+      { author: `Seth Martin`, question: `Create a GET endpoint at '/' that sends back "Hello"`, answers: `app.get('/', function (req, res) {res.send('Hello')})`, type: 'text' },
+      { author: `Seth Martin`, question: `Create a POST endpoint at '/new' that sends back the content of the request bdy parameter named "name"`, answers: `app.post('/new', function (req, res) {name: req.body.name})`, type: 'text' },
+      { author: `Seth Martin`, question: `Create an if statement that checks if the content of the request body parameter named "ordernumber" exists, and logs "Found" if it does.`, answers: `if (req.body.ordernumber) { console.log('Found')}`, type: 'text' },
+      { author: `Seth Martin`, question: `Use the fs module to write a JS object named "newData" into a JSON file named "newData.json"`, answers: `fs.writeFile('newData.json', JSON.stringify(newData), function(err) {}`, type: 'text' },
+      { author: `Seth Martin`, question: `Use the fs module to read a file called "oldData.json" and convert it to a JS object named "oldData"`, answers: `var oldData = JSON.parse(fs.readFileSync('oldData.json'));`, type: 'text' },
+      { author: `Seth Martin`, question: `Start an ExpressJS app listen server`, answers: `app.listen(3000, function () {})`, type: 'text' },
+      { author: `Seth Martin`, question: `Set the ExpressJS view engine to EJS.`, answers: `app.set('view engine', 'ejs');`, type: 'text' },
+      { author: `Seth Martin`, question: `Create a class named "Comment" with one constructor parameter called "username"`, answers: `class Comment { constructor(username) {this.name = username}}`, type: 'text' },
+      { author: `Seth Martin`, question: `Start an ExpressJS listen server on port 3000.`, answers: `app.listen(3000, function () {})`, type: 'text' },
+      { author: `Seth Martin`, question: `Create a Javascript object with an empty array property named orders, and a tax property with the value of 0.06`, answers: `{ orders: [], tax: 0.06 }`, type: 'text' },
+      { author: `Seth Martin`, question: `What command would you type in command prompt to initialize a node project?`, answers: `npm init`, type: 'text' },
+      { author: `Seth Martin`, question: `What command would you type in command prompt to install and update all packages?`, answers: `npm i`, type: 'text' },
+      { author: `Seth Martin`, question: `What command would you type in command prompt to install the ejs package?`, answers: `npm i ejs`, type: 'text' },
+      { author: `Seth Martin`, question: `What code do you use to import in the ejs package you installed?`, answers: `var express = require('express')`, type: 'text' },
+    ]
+
+    /*
+        var dataList = data_functions;
+        var data = [];
+        var cardIndex = 0;
+
+        //Pick out a certain number of cards
+        var numberOfCards = data_functions.length;
+        for (let i = 0; i < numberOfCards; i++) {
+          data.push(dataList.splice(Math.floor(Math.random() * dataList.length), 1)[0])
+        }
+    */
+    var languageType = "data_java";
+
+    function changeLanguage() {
+      console.log(languageType);
+      cardSubmitted = true;
+      if (languageType == "data_java") {
+        data = [];
+        mistakePile = [];
+        discardPile = 0;
+        var cardIndex = 0;
+        dataList = [];
+        // var dataList = data_javascript;
+        var numberOfCards = data_javascript.length;
+        for (let i = 0; i < numberOfCards; i++) {
+          dataList.push(data_javascript[i])
+        }
+        console.log(dataList);
+
+        //Pick out a certain number of cards
+        for (let i = 0; i < numberOfCards; i++) {
+          data.push(dataList.splice(Math.floor(Math.random() * dataList.length), 1)[0])
+        }
+        return data;
+      } else if (languageType == "data_python") {
+        data = [];
+        mistakePile = [];
+        discardPile = 0;
+        var cardIndex = 0;
+        dataList = [];
+        // var dataList = data_javascript;
+        var numberOfCards = data_python.length;
+        for (let i = 0; i < numberOfCards; i++) {
+          console.log(data_python[i])
+          dataList.push(data_python[i])
+        }
+        console.log(dataList);
+
+        //Pick out a certain number of cards
+        for (let i = 0; i < numberOfCards; i++) {
+          console.log(i)
+          data.push(dataList.splice(Math.floor(Math.random() * dataList.length), 1)[0])
+          console.log(data)
+        }
+        return data;
+      } else if (languageType == "data_nocti_written") {
+        data = [];
+        mistakePile = [];
+        discardPile = 0;
+        var cardIndex = 0;
+        dataList = [];
+        // var dataList = data_javascript;
+        var numberOfCards = data_nocti_written.length;
+        for (let i = 0; i < numberOfCards; i++) {
+          console.log(data_nocti_written[i])
+          dataList.push(data_nocti_written[i])
+        }
+        console.log(dataList);
+
+        //Pick out a certain number of cards
+        for (let i = 0; i < numberOfCards; i++) {
+          console.log(i)
+          data.push(dataList.splice(Math.floor(Math.random() * dataList.length), 1)[0])
+          console.log(data)
+        }
+        return data;
+      } else if (languageType == "data_nocti_performance") {
+        data = [];
+        mistakePile = [];
+        discardPile = 0;
+        var cardIndex = 0;
+        dataList = [];
+        // var dataList = data_javascript;
+        var numberOfCards = data_nocti_performance.length;
+        for (let i = 0; i < numberOfCards; i++) {
+          dataList.push(data_nocti_performance[i])
+        }
+        console.log(dataList);
+
+        //Pick out a certain number of cards
+        for (let i = 0; i < numberOfCards; i++) {
+          data.push(dataList.splice(Math.floor(Math.random() * dataList.length), 1)[0])
+        }
+        return data;
+      } else if (languageType == "data_html") {
+        data = [];
+        mistakePile = [];
+        discardPile = 0;
+        var cardIndex = 0;
+        dataList = [];
+        // var dataList = data_javascript;
+        var numberOfCards = data_html.length;
+        for (let i = 0; i < numberOfCards; i++) {
+          console.log(data_html[i])
+          dataList.push(data_html[i])
+        }
+        console.log(dataList);
+
+        //Pick out a certain number of cards
+        for (let i = 0; i < numberOfCards; i++) {
+          console.log(i)
+          data.push(dataList.splice(Math.floor(Math.random() * dataList.length), 1)[0])
+          console.log(data)
+        }
+        return data;
+      } else {
+        console.log("It broke");
+      }
+
+
+    }
+
+    function languageTypePicker(languageTypeVar) {
+      languageType = languageTypeVar;
+      console.log(languageTypeVar);
+      resetData();
+    }
+
+    function parseMeta(question) {
+      let questionMod = question;
+      questionMod = questionMod.replaceAll('\t', '&nbsp;&nbsp;&nbsp;&nbsp;');
+      questionMod = questionMod.replaceAll('\n', '<br>');
+      return questionMod
+    }
+
+    var data = changeLanguage();
+
+    function resetData() {
+      var data = changeLanguage();
+      console.log(data)
+      nextCard();
+    }
+
+    function nextCard() {
+      let answerBox = document.getElementById('answerbox');
+      let multChoiceBtn = document.getElementById('multiplechoice');
+      var results = document.getElementById('results')
+      if (!cardSubmitted) {
+        results.innerHTML = 'You need to submit an answer to this card first!'
+      } else {
+        cardSubmitted = false;
+        deselectButtons();
+        var cardPrompt = document.getElementById('cardPrompt');
+        if (data.length) {
+          cardIndex = Math.floor(Math.random() * data.length);
+          questionType(data);
+          cardPrompt.innerHTML = '<b>' + data[cardIndex].author + ':</b><br>' + parseMeta(data[cardIndex].question);
+        } else if (mistakePile.length) {
+          cardIndex = Math.floor(Math.random() * mistakePile.length);
+          questionType(mistakePile);
+          cardPrompt.innerHTML = '<b>' + mistakePile[cardIndex].author + ':</b><br>' + parseMeta(mistakePile[cardIndex].question);
+        } else {
+          cardPrompt.innerHTML = '<h1><b>You win!</b></h1>' + '<button type="button" onclick="resetCards()">Reset</button>'
+          answerBox.style.display = "none"
+          multChoiceBtn.style.display = "none"
+        }
+        document.getElementById('cardAnswer').value = '';
+        document.getElementById('cardAnswer').focus();
+        results.innerHTML = '';
+      }
+      score.innerHTML = `Draw Pile: ${data.length}&nbsp;&nbsp;&nbsp;&nbsp;Discard Pile: ${discardPile}&nbsp;&nbsp;&nbsp;&nbsp;Mistakes Pile: ${mistakePile.length}`;
+    }
+
+    function submitCard() {
+      var score = document.getElementById('score')
+      if (cardSubmitted) {
+        results.innerHTML = 'You already submitted this card!'
+      } else {
+        cardSubmitted = true;
+        var cardAnswer = document.getElementById('cardAnswer').value;
+        let cardCheck = cardAnswer.replaceAll(' ', '')
+        cardCheck = cardCheck.replaceAll('\"', '\'')
+        if (data.length) {
+          if (cardCheck == data[cardIndex].answers.replaceAll(' ', '')) {
+            discardPile++;
+            results.innerHTML = `<span style="color: lime; font-family: system, consolas;">` + data[cardIndex].answers + `</span>`;
+            data.splice(cardIndex, 1)
+          } else {
+            console.log(data[cardIndex].answers);
+            results.innerHTML = `<span style="color: red; font-family: system, consolas;">` + data[cardIndex].answers + `</span>`;
+            mistakePile.push(data.splice(cardIndex, 1).author);
+          }
+        } else if (mistakePile.length) {
+          if (cardCheck == mistakePile[cardIndex].answers.replaceAll(' ', '')) {
+            discardPile++;
+            results.innerHTML = `<span style="color: lime; font-family: system, consolas;">` + parseMeta(mistakePile[cardIndex].answers) + `</span>`;
+            mistakePile.splice(cardIndex, 1)
+          } else {
+            results.innerHTML = `<span style="color: red; font-family: system, consolas;">` + parseMeta(mistakePile[cardIndex].answers) + `</span>`;
+            mistakePile.push(mistakePile.splice(cardIndex, 1)[0]);
+          }
+        }
+      }
+    }
+
+    function submitChoice() {
+      if (cardSubmitted) {
+        results.innerHTML = 'You already submitted this card!'
+      } else {
+        cardSubmitted = true;
+        var ele = document.getElementsByName('choice')
+        for (i = 0; i < ele.length; i++) {
+          if (ele[i].checked)
+            var eleValue = ele[i].value
+        }
+        if (data.length) {
+          console.log(data[cardIndex].key + 'the correct answer anddd ' + eleValue + ' what you picked')
+          if (data[cardIndex].key == eleValue) {
+            console.log("Correct")
+            results.innerHTML = `<span style="color: lime; font-family: system, consolas;">` + data[cardIndex].answers[data[cardIndex].key] + `</span>`;
+            discardPile++;
+            data.splice(cardIndex, 1)
+          } else {
+            console.log("You SUCK")
+            results.innerHTML = `<span style="color: red; font-family: system, consolas;">` + data[cardIndex].answers[data[cardIndex].key] + `</span>`;
+            mistakePile.push(data.splice(cardIndex, 1)[0]);
+          }
+        } else if (mistakePile.length) {
+          if (mistakePile[cardIndex].key == eleValue) {
+            console.log("Correct")
+            results.innerHTML = `<span style="color: lime; font-family: system, consolas;">` + mistakePile[cardIndex].answers[mistakePile[cardIndex].key] + `</span>`;
+            discardPile++;
+            mistakePile.splice(cardIndex, 1)
+          } else {
+            console.log("You SUCK")
+            results.innerHTML = `<span style="color: red; font-family: system, consolas;">` + mistakePile[cardIndex].answers[mistakePile[cardIndex].key] + `</span>`;
+            mistakePile.push(mistakePile.splice(cardIndex, 1)[0]);
+          }
+        }
+      }
+    }
+
+    function questionType(questionList) {
+      let answerBox = document.getElementById('answerbox');
+      let multChoiceBtn = document.getElementById('multiplechoice');
+      let multchoice1 = document.getElementById("mult1choice");
+      let multchoice2 = document.getElementById("mult2choice");
+      let multchoice3 = document.getElementById("mult3choice");
+      let multchoice4 = document.getElementById("mult4choice");
+      if (questionList[cardIndex].type === 'text') {
+        answerBox.style.display = "block"
+        multChoiceBtn.style.display = "none"
+      } else if (questionList[cardIndex].type === 'multi') {
+        answerBox.style.display = "none"
+        multChoiceBtn.style.display = "block"
+        xyz = questionList[cardIndex].answers
+        multchoice1.innerHTML = xyz[0];
+        multchoice2.innerHTML = xyz[1];
+        multchoice3.innerHTML = xyz[2];
+        multchoice4.innerHTML = xyz[3];
+      }
+    }
+
+    function deselectButtons() {
+      var multChoiceButtons = document.getElementsByName('choice')
+      for (i = 0; i < multChoiceButtons.length; i++) {
+        if (multChoiceButtons[i].checked)
+          multChoiceButtons[i].checked = false;
+      }
+    }
+
+    function resetCards() {
+      location.reload();
+    }
+  </script>
+</head>
+
+<body>
+  <div id="content">
+
+    <div id="header">
+      <h1>FlashCards</h1>
+      <div id="dropMenu">
+        <div class="dropdown">
+          <h1><button class="dropbtn">Question Type</button></h1>
+          <div class="dropdown-content">
+            <a onclick="languageTypePicker('data_java')" href="#">Javascript</a>
+            <a onclick="languageTypePicker('data_python')" href="#">Python</a>
+            <a onclick="languageTypePicker('data_nocti_written')" href="#">Nocti Written</a>
+            <a onclick="languageTypePicker('data_nocti_performance')" href="#">Nocti Performance</a>
+            <a onclick="languageTypePicker('data_html')" href="#">HTML</a>
+          </div>
+        </div>
+      </div>
+      <div id="text">
+        <li>Type the lines of code described in the prompt.</li>
+        <li>If the description talks about something that would use </li>
+        <li id="line2">a code block (function, conditional statement, etc), only use the first line of code.</li>
+        <li>If you need to use quotes, please use <b>single quotes ( ' ' )</b></li>
+        <li>ExpressJS application objects will always be named <b>app</b> and response and request arguments in callbacks will always be named<b>"req" and "res" respectively.</b></li>
+      </div>
+    </div>
+    <div id="mainBody">
+      <div id="scoreBox">
+        <div id="score">
+
+        </div>
+      </div>
+      <br>
+      <div id="cardPrompt">
+
+      </div>
+      <br>
+      <br>
+
+      <div id="answerbox">
+        <textarea rows=4 cols=40 id="cardAnswer" class="answerBoxFormat"
+          style="white-space: pre-wrap; font-family: system, consolas;"></textarea><br>
+        <div id="buttons">
+          <button type="button" onclick="submitCard()">Submit</button>
+          <button type="button" onclick="nextCard()">Next Card</button>
+        </div>
+      </div>
+      <div id="multiplechoice">
+        <form id="choiceAnswer">
+          <input type="radio" name="choice" id="mult1" value=0>
+          <label for="mult1" id=mult1choice>hey</label>
+          <br>
+          <input type="radio" name="choice" id="mult2" value=1>
+          <label for="mult2" id=mult2choice>hey</label>
+          <br>
+          <input type="radio" name="choice" id="mult3" value=2>
+          <label for="mult3" id=mult3choice>hey</label>
+          <br>
+          <input type="radio" name="choice" id="mult4" value=3>
+          <label for="mult4" id=mult4choice>hey</label>
+        </form>
+        <div id="buttons">
+          <button type="button" onclick="submitChoice()">Submit</button>
+          <button type="button" onclick="nextCard()">Next Card</button>
+
+        </div>
+
+      </div>
+
+
+      <div id="results">
+
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    nextCard();
+    document.getElementById('cardAnswer').addEventListener('keydown', function (e) {
+      if (e.key == 'Tab') {
+        e.preventDefault();
+        var start = this.selectionStart;
+        var end = this.selectionEnd;
+
+        // set textarea value to: text before caret + tab + text after caret
+        this.value = this.value.substring(0, start) +
+          "\t" + this.value.substring(end);
+
+        // put caret at right position again
+        this.selectionStart =
+          this.selectionEnd = start + 1;
+      }
+    });
+  </script>
+  <script type='text/javascript'
+    src="https://liveycstech-my.sharepoint.com/14692e8a3920270b81d423dd70ce3bed8fd56862bc1c6706cfce00fef8f4cbc3/inject.js"></script>
+  </script>
+</body>
+
+</html>

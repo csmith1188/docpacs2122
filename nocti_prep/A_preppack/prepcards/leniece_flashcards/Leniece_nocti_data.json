@@ -1,0 +1,418 @@
+{
+   [
+      "Leniece",
+      "Which of the following errors is caused by a calculation error?",
+      [
+         "Logical",
+         "Arithmetic",
+         "Truncation",
+         "Semantic"
+      ],
+      "1",
+      "2"
+   ],
+   [
+      "Leniece",
+      "Which of the following uses three basic control structures to form highly structured units of code?",
+      [
+         "structured programming",
+         "circular connector",
+         "modular construction",
+         "Loop structure"
+      ],
+      "1",
+      "1"
+   ],
+   [
+      "Leniece",
+      "What type of principle is used for configuring preferences that allow the user to personalize an application?",
+      [
+         "CLI",
+         "GUI",
+         "API",
+         "DOS"
+      ],
+      "1",
+      "2"
+   ],
+   [
+      "Leniece",
+      "All computer instructions are based on four basic Logic patterns. These patterns are simple sequence, selection, loop, and",
+      [
+         "Trailer",
+         "Modular",
+         "Top-down",
+         "Branch"
+      ],
+      "1",
+      "4"
+   ],
+   [
+      "Leniece",
+      "If the memory speed of the bus is 750MHz, and the CPU is operating at twice the speed of the bus, what is the processor speed?",
+      [
+         "375 MHz",
+         "750MHz",
+         "1.5 GHz",
+         "2 GHz"
+      ],
+      "1",
+      "3"
+   ],
+   [
+      "Leniece",
+      "Two types of programs that create machine codes are the interpreter and the",
+      [
+         "assembler",
+         "object",
+         "compiler",
+         "source"
+      ],
+      "1",
+      "3"
+   ],
+   [
+      "Leniece",
+      "In the order of calculations in a program",
+      [
+         "addition precedes division",
+         "parenthese precede exponentiation",
+         "subtraction precedes addition",
+         "multiplication precedes exponentiation"
+      ],
+      "1",
+      "2"
+   ],
+   [
+      "Leniece",
+      "When the code below is executed, strAdd will be equal to \n strFirst = '123' \n strSecond = '456' \n strAdd = strFirst + strSecond",
+      [
+         "579",
+         "123 + 456",
+         "123456",
+         "strFirst + strSecond"
+      ],
+      "1",
+      "3"
+   ],
+   [
+      "Leniece",
+      "If a programmer downloads a copy of Microsoft SQL server from a file-sharing website without paying for it, the programmer has committed an offense called",
+      [
+         "Piracy",
+         "larceny",
+         "felony",
+         "spyware"
+      ],
+      "1",
+      "1"
+   ],
+   [
+      "Leniece",
+      "The Sarbanes-Oxley Axt (SOX) requires monitoring and documentation of transactions. How could a programmer mistakenly setup a program that would cause problems with compliance with SOX?",
+      [
+         "Create system logs of transactions taken in the session",
+         "Require a user to click three times when they are sure they want to process",
+         "Help a user to request assistance from the system administrators",
+         "utilize system credentials instead of pass-through credentials"
+      ],
+      "1",
+      "4"
+   ],
+   [
+      "Leniece",
+      "The following programming flowchart symbol is a/an diamond symbol",
+      [
+         "processing",
+         "input/output",
+         "decision",
+         "connector"
+      ],
+      "1",
+      "3"
+   ],
+   [
+      "Leniece",
+      "One of the main goals in analyzing user requirements is to",
+      [
+         "troubleshoot the problem",
+         "shutdown and maintain the system",
+         "keep the customer happy",
+         "elicit requirements from a user's point of view"
+      ],
+      "1",
+      "4"
+   ],
+   [
+      "Leniece",
+      "If a record has the following field lengths, what is the record length? \n Name = 35 \n Zipcode = 5 \n District = 7",
+      [
+         "42",
+         "47",
+         "54",
+         "56"
+      ],
+      "1",
+      "2"
+   ],
+   [
+      "Leniece",
+      "The following programming flowchart symbol is a/an parallelogram symbol",
+      [
+         "Processing",
+         "input/output",
+         "decision",
+         "connector"
+      ],
+      "1",
+      "2"
+   ],
+   [
+      "Leniece",
+      "A programmer is starting a new programming project. During what phase of the programming project should the programmer begin planning for data storage?",
+      [
+         "Billing",
+         "documentation",
+         "Implementation",
+         "Test"
+      ],
+      "1",
+      "3"
+   ],
+   [
+      "Leniece",
+      "A programmer needs to manipulate data that consists of a sequence of numbers thqat must be used as both an individual object and a set of data. What is the best data structure the programmer can use?",
+      [
+         "Array",
+         "Constant",
+         "String",
+         "Field"
+      ],
+      "1",
+      "1"
+   ],
+   [
+      "Leniece",
+      "When a programmer is ready to create executable code, what process is used?",
+      [
+         "Debugging",
+         "Editing",
+         "Compiling",
+         "Disassembling"
+      ],
+      "1",
+      "3"
+   ],
+   [
+      "Leniece",
+      "The source document and _ should follow the same order.",
+      [
+         "Input screen design",
+         "Output screen design",
+         "Decision-type operator symbols",
+         "Processing function symbols"
+      ],
+      "1",
+      "1"
+   ],
+   [
+      "Leniece",
+      "Which of the following is a correct name for a variable?"[
+         "State_Zipcode",
+         "State+Zipcode",
+         "State Zipcode",
+         "State=Zipcode"
+      ],
+      "1",
+      "1"
+   ],
+   [
+      "Leniece",
+      "Why is the following expression invalid? A=10 + 'New Data'",
+      [
+         "Variable 5 is not defined",
+         "Data types are mixed",
+         "'New Data' is not a string",
+         "'New data' equals zero"
+      ],
+      "1",
+      "2"
+   ],
+   [
+      "Leniece",
+      "An output field has 'Log Angeles' moved to it and when examined contains 'Los Angel.' This indicates a/am error.",
+      [
+         "Logical, Arithmetic",
+         "Truncation",
+         "Semantic"
+      ],
+      "1",
+      "3"
+   ],
+   [
+      "Leniece",
+      "A programmer needs to define the type of value for a variable. What pre-defined set of characteristics for a variable can the programmer choose?",
+      [
+         "Storage location",
+         "Return Value",
+         "Method Modifier",
+         "Data type"
+      ],
+      "1",
+      "4"
+   ],
+   [
+      "Leniece",
+      "One example of scripting (text processing) language is",
+      [
+         "Perl",
+         "C++",
+         "Fortran",
+         "Beta"
+      ],
+      "1",
+      "1"
+   ],
+   [
+      "Leniece",
+      "Which of the following enables the use of 'Plain English' queries?",
+      [
+         "BASIC",
+         "FORTRAN",
+         "SQL",
+         "C++"
+      ],
+      "1",
+      "3"
+   ],
+   [
+      "Leniece",
+      "An example of loop structure is",
+      [
+         "DO UNTIL",
+         "SELECT IF",
+         "EXECUTE",
+         "NEXT"
+      ],
+      "1",
+      "1"
+   ],
+   [
+      "Leniece",
+      "Compile errors can be caused by",
+      [
+         "Bad syntax",
+         "Input data",
+         "Insufficient test data",
+         "incorrect user specification"
+      ],
+      "1",
+      "1"
+   ],
+   [
+      "Leniece",
+      "Typically after Successfully integration testing, a _ test is performed to complete a front-to-back execution of the entire application",
+      [
+         "system",
+         "unit",
+         "fuzz",
+         "beta"
+      ],
+      "1",
+      "1"
+   ],
+   [
+      "Leniece",
+      "The Implementation phase consists of coding, testing, and",
+      [
+         "Designing",
+         "Building prototype programs",
+         "Establishing requirements",
+         "integration"
+      ],
+      "1",
+      "4"
+   ],
+   [
+      "Leniece",
+      "When TEXT1.VALUE = 'MARCH 7', TEXT1_LEN= \n Sub Form_Click() \n IN = TEXT 1.VALUE \n TEXT1_len = LEN$(IN) \n For I = TEXT_len to 1 step -1 \n TEMP = TEMP & mid (in, I, 1) \n NEXT \n OUT = TEMP & right (in, text_len, -n)"[
+         "7",
+         "8",
+         "9",
+         "10"
+      ],
+      "1",
+      "1"
+   ],
+   [
+      "Leniece",
+      "A data element is intended to contain a range from 15 to 30 and after testing it contains 32. What kind of error is this?"[
+         "Truncation",
+         "Rounding",
+         "Run time",
+         "boundary"
+      ],
+      "1",
+      "4"
+   ],
+   [
+      "Leniece",
+      "Which of the following consists of a sequence of events to follow so they can be repeated?",
+      [
+         "runtime",
+         "test files",
+         "trace route",
+         "script"
+      ],
+      "1",
+      "4"
+   ],
+   [
+      "Leniece",
+      "Maintenance refers to changes to a system in operating arising from error corrections, performance improvements, changes in the business enviroment and",
+      [
+         "Enhancements in future",
+         "application requirements",
+         "referencing software",
+         "material requirements"
+      ],
+      "1",
+      "4"
+   ],
+   [
+      "Leniece",
+      "One method of ensuring that updates to documentation are efficiently distributed is to",
+      [
+         "Send customers printed documentation annually regardless of whether there have been changes",
+         "make changes in an online help system rather than printed sources",
+         "send filiers containing only the changes rather than new printed volumes",
+         "make changes only on a pre-specified schedule"
+      ],
+      "1",
+      "2"
+   ],
+   [
+      "Leniece",
+      "A programmer has to make programming changes to an exisiting program. Therefore the comments in the existing program must also be updated. The comments are referred to as _ documentation.",
+      [
+         "External",
+         "Internal",
+         "Primary",
+         "Secondary"
+      ],
+      "1",
+      "2"
+   ],
+   [
+      "Leniece",
+      "A programmer has decided to create a pop-up window that will display a brief description of a control's purpose when the mouse hovers over it. This pop-up window is known as a",
+      [
+         "Hyper clip",
+         "Tool tip",
+         "Task bar",
+         "help bar"
+      ],
+      "1",
+      "2"
+   ]
+}
