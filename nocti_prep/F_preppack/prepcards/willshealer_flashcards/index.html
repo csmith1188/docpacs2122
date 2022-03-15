@@ -11,74 +11,76 @@
     var cardSubmitted = true;
     var discardPile = 0;
     var mistakePile = []
-    // var data_javascript = [
     //   // ['Will', '', ['', '', '', ''], '', ''],
     //   // ['Chris', '', ['', '', '', ''], '', ''],
     //   // ['Ethan', '', ['', '', '', ''], '', ''],
     //   // ['Jayson', '', ['', '', '', ''], '', ''],
-    //   //['Will', 'What Does HTML Mean', ['HyperText Markup Language', 'HyperTest Magic Language', 'HypoText', 'HTML has no meaning'], '1', '1'],
-    //   ['Will', 'What Do Tags Do', ['They Do Nothing', 'They Properly Format Content', 'They Are The Content', '<'], '1', '2'],
-    //   //['Will', 'What Are Some Common HTML Tags', ["'l'", "'kd'", "'vc'", "'br'"], '1', '4'],
-    //   ['Will', 'Which Is Not A Coding Language', ['Javascript', 'Erlang', 'Ruby', 'Unit'], '1', '4'],
-    //   ['Will', 'Which Is Not A Javascript Datatype', ['Find', 'String', 'Boolean', 'Undefined'], '1', '1'],
-    //   ['Will', 'Which Symbol Is Used For Multi-Line Comments In Javascript', ['./', '*/', '/.', '-'], '1', '2'],
-    //   //['Will', 'How Many Types Of Heading Does A HTML Contain', ['2', '8', '4', '6'], '1', '4'],
-    //   ['Jayson', 'Which assignment operator assigns a variable/object to a value?', ['+=', '=', '/=', '**='], '1', '2'],
-    //   ['Jayson', 'Which is the proper use of camel case?', ['CamelCase', 'cAmelcAse', 'camelCase', 'CameLCasE'], '1', '3'],
-    //   ['Jayson', 'How do you create a function?', ['function == myfunction(){}', 'function myFunction(){}', 'myFunction():function{}', 'function:myFunction(){}'], '1', '2'],
-    //   ['Jayson', 'What is a string?', ['A string is just one line of code', 'A string is a list of Non-human-readable letters that are code', 'A string is a list of human-readable letters that are not code', 'A string is a list of objects that are assigned to a variable'], '1', '3'],
-    //   ['Jayson', 'How would you log (Hello World!!) to the console?', `console.log(\'Hello World!!\');`, '0'],
-    //   ['Jayson', 'What does API stand for?', 'Application Programming Interface', '0'],
+    //  {author: " ", question:" ",answers: ,type: "multi", key: },
+    //
+
+    //
     //   ['Jayson', 'Create a variable called applesInBasket that has 5 apples in it, then log it to the console.', 'let applesInBasket = 5; \nconsole.log(applesInBasket)', '0'],
-    //   //['Jayson', ''],
-    // ]
+    var data_javascript = [
+        {author: "Will ", question:"What Does HTML Mean ",answers:['HyperText Markup Language', 'HyperTest Magic Language', 'HypoText', 'HTML has no meaning'] ,type: "multi", key:0 },
+        {author: "Will ", question:"What Do Tags Do ",answers:['They Do Nothing', 'They Properly Format Content', 'They Are The Content', '<'] ,type: "multi", key:1 },
+        {author: "Will ", question:"What Are Some Common HTML Tags ",answers:["'l'", "'kd'", "'vc'", "'br'"] ,type: "multi", key:3 },
+        {author: "Will ", question:"Which Is Not A Coding Language ",answers:['Javascript', 'Erlang', 'Ruby', 'Unit'] ,type: "multi", key:3 },
+        {author: "Will ", question:"Which Is Not A Javascript Datatype ",answers:['Find', 'String', 'Boolean', 'Undefined'] ,type: "multi", key:0 },
+        {author: "Will ", question:"Which Symbol Is Used For Multi-Line Comments In Javascript ",answers:['./', '*/', '/.', '-'] ,type: "multi", key:1 },
+        {author: "Will ", question:"How Many Types Of Heading Does A HTML Contain ",answers:['2', '8', '4', '6'] ,type: "multi", key:3 },
+        {author: "Jayson ", question:"Which assignment operator assigns a variable/object to a value? ",answers:['+=', '=', '/=', '**='] ,type: "multi", key:1 },
+        {author: "Jayson ", question:"Which is the proper use of camel case? ",answers:['CamelCase', 'cAmelcAse', 'camelCase', 'CameLCasE'] ,type: "multi", key:2 },
+        {author: "Jayson ", question:"How do you create a function? ",answers:['function == myfunction(){}', 'function myFunction(){}', 'myFunction():function{}', 'function:myFunction(){}'] ,type: "multi", key:1 },
+        {author: "Jayson ", question:"What is a string ",answers:['A string is just one line of code', 'A string is a list of Non-human-readable letters that are code', 'A string is a list of human-readable letters that are not code', 'A string is a list of objects that are assigned to a variable'] ,type: "multi", key:2 },
+        {author: "Jayson ", question:"What does API stand for? ",answers:[ "Application Programming Interface"] ,type: "text"},
+        {author: "Jayson ", question:"Create a variable called applesInBasket that has 5 apples in it, then log it to the console. ",answers: 'let applesInBasket = 5; \nconsole.log(applesInBasket)',type: "text"},
+ ]
+
+    var data_python = [
+      {author: `Mr. Smith`, question: `Define a function called 'kick'\nIt prints the string 'Ouch!'`,answers: `def kick():\n\tprint('Ouch!')`,type: 'text'},
+      {author: `Mr. Smith`, question: `Define a function called 'myName'\nIt returns the string 'Jeff'`,answers: `def myName():\n\treturn 'Jeff'`,type: "text"},
+      {author: `Mr. Smith`, question: `Define a function called 'kick'\nIt prints the string 'Ouch!'`,answers: `def kick():\n\tprint('Ouch!')`, type: "text"},
+      {author: `Mr. Smith`, question: `Define a function called 'kick'\nIt takes one argument called targetHP\nIt returns targetHP - 2`,answers: `def kick(targetHP):\n\treturn targetHP - 2`,type: 'text'},
+      {author: `Mr. Smith`, question: `Call a function called 'kick'\nIt takes the object Player1 as its argument.\nStore its return value to the property 'Player1.hp'`,answers: `Player1.hp = kick(Player1)`,type: 'text'},
+      {author: `Mr. Smith`, question: `Call a function called 'myName'\nPrint its return value.`,answers: `print(myName())`,type: 'text'},
+      {author: `Mr. Smith`, question: `Call a function called 'getScore'\nIt takes the string 'Player1' as its argument.\Convert its return value to an integer and store it to a variable called 'score'.`,answers: `score = int(getScore('Player1'))`,type: "text"},
+      {author: `Mr. Smith`, question: `Call a function called 'getScore'\nIt takes the object Player1 as its argument\nPrint its return value.`,answers: `print(getScore(Player1))`,type: "text"},
+      {author: `Mr. Smith`, question: `Define a function called 'doNothing'\nIt returns nothing`,answers: `def doNothing():\n\treturn`,type: "text"},
+      {author: `Mr. Smith`, question: `Call a function called rollDice\nStore its return value in a variable called 'dieResult'`,answers: `dieResult = rollDice()`,type: 'text'},
+      {author: `Mr. Smith`, question: `Define a function called sayMessage\nIt takes an argument called 'msg'\nIt prints the 'msg' argument`,answers: `def sayMessage(msg):\n\tprint(msg)`,type: 'text'},
+      {author: `Mr. Smith`, question: `Define a function called convertAdd()\nIt takes two arguments called 'a' and 'b'\nIt returns 'a' converted to an integer plus 'b' converted to an integer `,answers: `def convertAdd(a, b):\n\treturn int(a) + int(b)`,type: 'text'},
+    ]
     //
-    // var data_python = [
-    //   [`Mr. Smith`, `Define a function called 'kick'\nIt prints the string 'Ouch!'`, `def kick():\n\tprint('Ouch!')`, '0'],
-    //   [`Mr. Smith`, `Define a function called 'myName'\nIt returns the string 'Jeff'`, `def myName():\n\treturn 'Jeff'`, '0'],
-    //   [`Mr. Smith`, `Define a function called 'kick'\nIt prints the string 'Ouch!'`, `def kick():\n\tprint('Ouch!')`, '0'],
-    //   [`Mr. Smith`, `Define a function called 'kick'\nIt takes one argument called targetHP\nIt returns targetHP - 2`, `def kick(targetHP):\n\treturn targetHP - 2`, '0'],
-    //   [`Mr. Smith`, `Call a function called 'kick'\nIt takes the object Player1 as its argument.\nStore its return value to the property 'Player1.hp'`, `Player1.hp = kick(Player1)`, '0'],
-    //   [`Mr. Smith`, `Call a function called 'myName'\nPrint its return value.`, `print(myName())`, '0'],
-    //   [`Mr. Smith`, `Call a function called 'getScore'\nIt takes the string 'Player1' as its argument.\Convert its return value to an integer and store it to a variable called 'score'.`, `score = int(getScore('Player1'))`, '0'],
-    //   [`Mr. Smith`, `Call a function called 'getScore'\nIt takes the object Player1 as its argument\nPrint its return value.`, `print(getScore(Player1))`, '0'],
-    //   [`Mr. Smith`, `Define a function called 'doNothing'\nIt returns nothing`, `def doNothing():\n\treturn`, '0'],
-    //   [`Mr. Smith`, `Call a function called rollDice\nStore its return value in a variable called 'dieResult'`, `dieResult = rollDice()`, '0'],
-    //   [`Mr. Smith`, `Define a function called sayMessage\nIt takes an argument called 'msg'\nIt prints the 'msg' argument`, `def sayMessage(msg):\n\tprint(msg)`, '0'],
-    //   [`Mr. Smith`, `Define a function called convertAdd()\nIt takes two arguments called 'a' and 'b'\nIt returns 'a' converted to an integer plus 'b' converted to an integer `, `def convertAdd(a, b):\n\treturn int(a) + int(b)`, '0'],
-    // ]
+//      var data_basics = [
+//
+//       {`Mr. Smith`, `Create a variable called 'x' and store the value 5 into it.`, `x = 5`, '0'],
+//       {`Mr. Smith`, `Start a conditional statement that runs if 'x' is greater than 'y'`, `if x > y:`, '0'],
+//       {`Mr. Smith`, `Start a conditional statement that loops while 'turnCounter' is greater than 0.`, `while turnCounter > 0:`, '0'],
+//       {`Mr. Smith`, `Start a conditional statement that runs if 'userAge' is equal to 16'`, `if userAge == 16:`, '0'],
+//       {`Mr. Smith`, `Start a conditional statement that loops forever.`, `while True:`, '0'],
+//       {`Mr. Smith`, `Start a conditional statement that loops while 'userChoice' is not equal to 'exit'.`, `while not userChoice == 'exit':`, '0'],
+//       {`Mr. Smith`, `Start a conditional statement that runs if 'targetHP' is less than or equal to 0.`, `if targetHP <= 0:`, '0'],
+//       {`Mr. Smith`, `Define a function named 'countUsers' that takes one argument called 'userList'`, `def counterUsers(userList):`, '0'],
+//       {`Mr. Smith`, `Define a function named 'addNumbers' that takes two arugments called 'num1' and 'num2'`, `def addNumbers(num1, num2):`, '0'],
+//       {`Mr. Smith`, `Use a print function to print 'Gucci Gang' four times (you may only type the words once).`, `print('Gucci Gang ' * 4)`, '0'],
+//       {`Mr. Smith`, `Use a print function to print 'Your number is ' and the variable integer 'userPos'.`, `print('Your number is ' + str(userPos))`, '0'],
+//       {`Mr. Smith`, `Ask the user to 'Enter your name:', and store it to the variable 'userName'.`, `userName = input('Enter your name:')`],
+//       {`Mr. Smith`, `Ask the user to 'Enter your age:', and store it to the variable 'userAge' as an integer.`, `userAge = int(input('Enter your age:'))`, '0'],
+//       { `Mr. Smith`, `Ask the user to 'Enter your choice:', and store it to the variable 'userChoice'.`, `userChoice = input('Enter your choice:')`, '0'],
+//       {`Mr. Smith`, `Convert 'x' to an integer, and store back into 'x'.`, `x = int(x)`, '0'],
+//       {`Mr. Smith`, `Convert 'userAge' to an integer, and store back into 'userAge'.`, `userAge = int(userAge)`, '0'],
+//       {`Mr. Smith`, `Convert 'x' to a string, and store back into 'x'.`, `x = str(x)`, '0'],
+//       {`Mr. Smith`, `Convert this to code: "Otherwise, if 'userAge' is greater than 21, then..."`, `elif userAge > 21:`, '0'],
+//       {`Mr. Smith`, `Convert this to code: "Otherwise, then..."`, `else:`, '0'],
+//       {`Mr. Smith`, `Convert this to code: "Otherwise, if 'userChoice' is 'Cancel', then..."`, `elif userChoice == 'Cancel':`, '0'],
+//       {`Mr. Smith`, `Convert this to code: "If 'userName' is 'Bob', then..."`, `if userName == 'Bob':`, '0']
+//
+//     // ]
     //
-    // var data_basics = [
-    //
-    //   [`Mr. Smith`, `Create a variable called 'x' and store the value 5 into it.`, `x = 5`, '0'],
-    //   [`Mr. Smith`, `Start a conditional statement that runs if 'x' is greater than 'y'`, `if x > y:`, '0'],
-    //   [`Mr. Smith`, `Start a conditional statement that loops while 'turnCounter' is greater than 0.`, `while turnCounter > 0:`, '0'],
-    //   [`Mr. Smith`, `Start a conditional statement that runs if 'userAge' is equal to 16'`, `if userAge == 16:`, '0'],
-    //   [`Mr. Smith`, `Start a conditional statement that loops forever.`, `while True:`, '0'],
-    //   [`Mr. Smith`, `Start a conditional statement that loops while 'userChoice' is not equal to 'exit'.`, `while not userChoice == 'exit':`, '0'],
-    //   [`Mr. Smith`, `Start a conditional statement that runs if 'targetHP' is less than or equal to 0.`, `if targetHP <= 0:`, '0'],
-    //   [`Mr. Smith`, `Define a function named 'countUsers' that takes one argument called 'userList'`, `def counterUsers(userList):`, '0'],
-    //   [`Mr. Smith`, `Define a function named 'addNumbers' that takes two arugments called 'num1' and 'num2'`, `def addNumbers(num1, num2):`, '0'],
-    //   [`Mr. Smith`, `Use a print function to print 'Gucci Gang' four times (you may only type the words once).`, `print('Gucci Gang ' * 4)`, '0'],
-    //   [`Mr. Smith`, `Use a print function to print 'Your number is ' and the variable integer 'userPos'.`, `print('Your number is ' + str(userPos))`, '0'],
-    //   [`Mr. Smith`, `Ask the user to 'Enter your name:', and store it to the variable 'userName'.`, `userName = input('Enter your name:')`],
-    //   [`Mr. Smith`, `Ask the user to 'Enter your age:', and store it to the variable 'userAge' as an integer.`, `userAge = int(input('Enter your age:'))`, '0'],
-    //   [`Mr. Smith`, `Ask the user to 'Enter your choice:', and store it to the variable 'userChoice'.`, `userChoice = input('Enter your choice:')`, '0'],
-    //   [`Mr. Smith`, `Convert 'x' to an integer, and store back into 'x'.`, `x = int(x)`, '0'],
-    //   [`Mr. Smith`, `Convert 'userAge' to an integer, and store back into 'userAge'.`, `userAge = int(userAge)`, '0'],
-    //   [`Mr. Smith`, `Convert 'x' to a string, and store back into 'x'.`, `x = str(x)`, '0'],
-    //   [`Mr. Smith`, `Convert this to code: "Otherwise, if 'userAge' is greater than 21, then..."`, `elif userAge > 21:`, '0'],
-    //   [`Mr. Smith`, `Convert this to code: "Otherwise, then..."`, `else:`, '0'],
-    //   [`Mr. Smith`, `Convert this to code: "Otherwise, if 'userChoice' is 'Cancel', then..."`, `elif userChoice == 'Cancel':`, '0'],
-    //   [`Mr. Smith`, `Convert this to code: "If 'userName' is 'Bob', then..."`, `if userName == 'Bob':`, '0']
-    //
-    // ]
-    //
-    // var data_html = [
-    //   //['Chris', '', ['', '', '', ''], '', ''],
-    //   ['Chris', 'Indicates the beginning and end of an html document', ["&lthtml>", "&lt/html>", "&lthtml> &lt/html>", "None"], '1', '3'],
-    //   ['Chris', 'What tag bolds the Text?', ["&ltb>", "&ltB>", "&ltBold> &ltbold>", "None"], '1', '1'],
-    // ]
+    var data_html = [
+    {author: 'Chris', question: 'Indicates the beginning and end of an html document',answers: ["&lthtml>", "&lt/html>", "&lthtml> &lt/html>", "None"],type: 'mutli', key: 2},
+    {author: 'Chris', question: 'What tag bolds the Text?',answers: ["&ltb>", "&ltB>", "&ltBold> &ltbold>", "None"], type: "mutli", key:0},
+     ]
 
     var data_nocti_written = [
         {author: "Will Shealer", question:"Which of the following errors is caused by a calculation error?",answers:  ["Logical", "Arithmetic", "Truncation", "Semantic"],type: "multi", key: 1 },
@@ -478,16 +480,16 @@
       </div>
       <div id="multiplechoice">
         <form id="choiceAnswer">
-          <input type="radio" name="choice" id="mult1" value="1">
+          <input type="radio" name="choice" id="mult1" value="0">
           <label for="mult1" id=mult1choice>hey</label>
           <br>
-          <input type="radio" name="choice" id="mult2" value="2">
+          <input type="radio" name="choice" id="mult2" value="1">
           <label for="mult2" id=mult2choice>hey</label>
           <br>
-          <input type="radio" name="choice" id="mult3" value="3">
+          <input type="radio" name="choice" id="mult3" value="2">
           <label for="mult3" id=mult3choice>hey</label>
           <br>
-          <input type="radio" name="choice" id="mult4" value="4">
+          <input type="radio" name="choice" id="mult4" value="3">
           <label for="mult4" id=mult4choice>hey</label>
         </form>
         <div id="buttons">
