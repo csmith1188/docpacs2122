@@ -11,7 +11,7 @@
     var discardPile = 0;
     var mistakePile = []
 
-    var json_nocti = `{
+    var json_nocti_written = `{
       "generalInformationAndConcepts": [
         ["Oley Birkeland", "Which of the following errors is caused by a calculation error?", ["logical", "arithmetic", "truncation", "semantic"], "1", "2"],
         ["Oley Birkeland", "Which of the following uses three basic control structures to form highly structured units of code?", ["structured programming", "circular connector", "modular construction", "loop structure"], "1", "1"],
@@ -19,12 +19,12 @@
         ["Oley Birkeland", "All computer instructions are based on four basic logic patterns. These patterns are simple sequence, selection, loop, and", ["trailer", "modular", "top-down", "branch"], "1", "4"],
         ["Oley Birkeland", "If the memory speed of the bus is 750MHz, and the CPU is operating at twice the speed of the bus, what is the processor speed?", ["375 MHz", "750 MHz", "1.5 GHz", "2 GHz"], "1", "3"],
         ["Oley Birkeland", "Two types of programs that create machine codes are the interpreter and the", ["assembler", "object", "compiler", "source"], "1", "3"],
-        ["Oley Birkeland", "In the order of calculations in a program?", ["addition precedes division", "parentheses preced exponentation", "subtraction precedes addition", "multiplication precedes exponentation"], "1", "2"],
+        ["Oley Birkeland", "In the order of calculations in a program?", ["addition precedes division", "parentheses precedes exponentation", "subtraction precedes addition", "multiplication precedes exponentation"], "1", "2"],
         ["Oley Birkeland", "When the code below is executed, strAdd will be equal to\\nstrFirst = \\"123\\"\\nstrSeconds = \\"456\\"\\nstrAdd = strFirst + strSecond", ["579", "123 + 456", "123456", "strFirst + strSecond"], "1", "3"]
       ],
       "ethicsLegalComplianceAndSecurity": [
         ["Oley Birkeland", "If a programmer downloads a copy of Minecraft SQL Server from a file-sharing website without paying for it, the programmer has commited and offense called?", ["piracy", "larceny", "felony", "spyware"], "1", "1"],
-        ["Oley Birkeland", "The Sarbanes-Oxley Act (SOX) requires monitoring and documentation of transactions. How could a programmer mistakenly setup a program that would cause problems with compliance with SOX?", ["create system logs of the transactions taken in the session", "require a user to click three times when they are sure they want to prceed", "help a user to request assistance from the system administrators", "multiplication preced exponentation"], "1", "4"]
+        ["Oley Birkeland", "The Sarbanes-Oxley Act (SOX) requires monitoring and documentation of transactions. How could a programmer mistakenly setup a program that would cause problems with compliance with SOX?", ["create system logs of the transactions taken in the session", "require a user to click three times when they are sure they want to prceed", "help a user to request assistance from the system administrators", "multiplication precedes exponentation"], "1", "4"]
       ],
       "analyzeProgrammingProblemsManageProjectsAndCreateFlowchartSolutions": [
         ["Oley Birkeland", "The following programming flowchart symbol is a/an _____ symbol.\\n◇", ["processing", "input/output", "decision", "connector"], "1", "3"],
@@ -64,10 +64,28 @@
         ["Oley Birkeland", "A programmer has decided to create a pop-up window that will display a brief description of a control's purpose when the mouse hovers over it. This pop-up window is known as a", ["hyper clip", "tool tip", "task bar", "help bar"], "1", "2"]
       ]
     }`
-    var object_nocti = JSON.parse(json_nocti);
-    var data_nocti = Object.values(object_nocti).flat();
+    var object_nocti_written = JSON.parse(json_nocti_written);
+    var arr_nocti_written = Object.values(object_nocti_written).flat();
 
-    var data_javascript = [
+    var arr_nocti_performance = [
+      ['Oley', 'What code do you use to tell an ExpressJS to read URL-encoded data?', 'app.use(express.urlencoded());', '0'],
+      ['Oley', 'Create a GET endpoint at \'/\' that sends back \"Hello\"', 'app.get(\'/\', (req, res) => res.send(\'Hello\'));', '0'],
+      ['Oley', 'Create a POST endpoint at \'/new\' that sends back the content of the request body parameter named \"name\"', 'app.post(\'/new\', (req, res) => res.send(req.body.name));', '0'],
+      ['Oley', 'Create and if statement that checks if the content of the request body parameter named \"ordernumber\" exists, and logs \"Found\" if it does.', 'if (req.body.ordernumber) console.log(\'Found\');', '0'],
+      ['Oley', 'Use the fs module to write a JS object named \"newData\" into a JSON file named \"newData.json\"', 'fs.writeFile(\'newData.json\', newData);', '0'],
+      ['Oley', 'Use the fs module to read a file called \"oldData.json\" and convert it to a JS object named \"oldData\"', 'let oldData = JSON.parse(fs.readFile(\'oldData.json\', \'utf8\'));', '0'],
+      ['Oley', 'Start an ExpressJS app listen server at port 1000', 'app.listen(1000);', '0'],
+      ['Oley', 'What would you type into the console to install Express.js?', ['npm init express', 'install express.js', 'node install express', 'npm i express'], '1', '4'],
+      ['Oley', 'Create a GET endpoint at \'/home\' that renders \'index.ejs\'', 'app.get(\'/home\', (req, res) => res.render(\'index\'));', '0'],
+      ['Oley', 'What would you type into the console to initialize a Node.js project?', 'npm init', '0'],
+      ['Oley', 'Which of these is an EJS insert point?', ['<< text >>', '<%- text %>', '< text />', '<% text %>'], '1', '2'],
+      ['Oley', 'What method converts an object to a JSON string?', 'JSON.stringify()', '0'],
+      ['Oley', 'What method converts a JSON string to a JavaScript object?', 'JSON.parse()', '0'],
+      ['Oley', 'Which module do you use to read and write to files?', ['fs', 'http', 'ejs', 'express'], '1', '1'],
+      ['Oley', 'Use EJS as the view engine.', 'app.set(\'view engine\', \'ejs\');', '0'],
+    ];
+
+    var arr_javascript = [
       // ['Will', '', ['', '', '', ''], '', ''],
       // ['Chris', '', ['', '', '', ''], '', ''],
       // ['Ethan', '', ['', '', '', ''], '', ''],
@@ -87,7 +105,7 @@
       //['Jayson', '']
     ]
 
-    var data_python = [
+    var arr_python = [
       [`Mr. Smith`, `Define a function called 'kick'\nIt prints the string 'Ouch!'`, `def kick():\n\tprint('Ouch!')`, '0'],
       [`Mr. Smith`, `Define a function called 'myName'\nIt returns the string 'Jeff'`, `def myName():\n\treturn 'Jeff'`, '0'],
       [`Mr. Smith`, `Define a function called 'kick'\nIt prints the string 'Ouch!'`, `def kick():\n\tprint('Ouch!')`, '0'],
@@ -102,10 +120,26 @@
       [`Mr. Smith`, `Define a function called convertAdd()\nIt takes two arguments called 'a' and 'b'\nIt returns 'a' converted to an integer plus 'b' converted to an integer `, `def convertAdd(a, b):\n\treturn int(a) + int(b)`, '0'],
     ]
 
-    var data_html = [
+    var arr_html = [
 
       [`Mr. Smith`, `Create a variable called 'x' and store the value 5 into it.`, `x = 5`, '0']
     ]
+
+    function convertToObj(category) {
+      return category.map(arr => ({
+        author: arr[0],
+        question: arr[1],
+        answers: arr[2],
+        type: +arr[3] ? "multi" : "text",
+        key: +arr[4] - 1
+      }));
+    }
+
+    var data_javascript = convertToObj(arr_javascript);
+    var data_python = convertToObj(arr_python);
+    var data_html = convertToObj(arr_html);
+    var data_nocti_written = convertToObj(arr_nocti_written);
+    var data_nocti_performance = convertToObj(arr_nocti_performance);
 
     /*
         var dataList = data_functions;
@@ -113,12 +147,12 @@
         var cardIndex = 0;
 
         //Pick out a certain number of cards
-        var numberOfCards = data_functions.length;
+        var numberOfCards = Object.keys(data_functions).length;
         for (let i = 0; i < numberOfCards; i++) {
           data.push(dataList.splice(Math.floor(Math.random() * dataList.length), 1)[0])
         }
     */
-    var languageType = "data_nocti";
+    var languageType = "data_nocti_performance";
 
     function changeLanguage() {
       console.log(languageType);
@@ -130,7 +164,7 @@
         var cardIndex = 0;
         dataList = [];
         // var dataList = data_javascript;
-        var numberOfCards = data_javascript.length;
+        var numberOfCards = Object.keys(data_javascript).length;
         for (let i = 0; i < numberOfCards; i++) {
           dataList.push(data_javascript[i])
         }
@@ -147,7 +181,7 @@
         discardPile = 0;
         var cardIndex = 0;
         dataList = [];
-        var numberOfCards = data_python.length;
+        var numberOfCards = Object.keys(data_python).length;
         // var dataList = data_python;
         for (let i = 0; i < numberOfCards; i++) {
           dataList.push(data_python[i])
@@ -159,16 +193,34 @@
           data.push(dataList.splice(Math.floor(Math.random() * dataList.length), 1)[0])
         }
         return data;
-      } else if (languageType == "data_nocti") {
+      } else if (languageType == "data_nocti_written") {
         data = [];
         mistakePile = [];
         discardPile = 0;
         var cardIndex = 0;
         dataList = [];
-        var numberOfCards = data_nocti.length;
-        // var dataList = data_nocti;
+        var numberOfCards = Object.keys(data_nocti_written).length;
+        // var dataList = data_nocti_written;
         for (let i = 0; i < numberOfCards; i++) {
-          dataList.push(data_nocti[i])
+          dataList.push(data_nocti_written[i])
+        }
+        console.log(dataList);
+
+        //Pick out a certain number of cards
+        for (let i = 0; i < numberOfCards; i++) {
+          data.push(dataList.splice(Math.floor(Math.random() * dataList.length), 1)[0])
+        }
+        return data;
+      } else if (languageType == "data_nocti_performance") {
+        data = [];
+        mistakePile = [];
+        discardPile = 0;
+        var cardIndex = 0;
+        dataList = [];
+        var numberOfCards = Object.keys(data_nocti_performance).length;
+        // var dataList = data_nocti_performance;
+        for (let i = 0; i < numberOfCards; i++) {
+          dataList.push(data_nocti_performance[i])
         }
         console.log(dataList);
 
@@ -218,13 +270,13 @@
         if (data.length) {
           cardIndex = Math.floor(Math.random() * data.length);
           questionType(data);
-          cardPrompt.innerHTML = '<b>' + data[cardIndex][0] + ':</b><br>' + parseMeta(data[cardIndex][1]);
+          cardPrompt.innerHTML = '<b>' + data[cardIndex].author + ':</b><br>' + parseMeta(data[cardIndex].question);
         } else if (mistakePile.length) {
           cardIndex = Math.floor(Math.random() * mistakePile.length);
           questionType(mistakePile);
           console.log(mistakePile[cardIndex]);
-          console.log(mistakePile[cardIndex][0][1]);
-          cardPrompt.innerHTML = '<b>' + mistakePile[cardIndex][0] + ':</b><br>' + parseMeta(mistakePile[cardIndex][1]);
+          console.log(mistakePile[cardIndex].author[1]);
+          cardPrompt.innerHTML = '<b>' + mistakePile[cardIndex].author + ':</b><br>' + parseMeta(mistakePile[cardIndex].question);
 
         } else {
           cardPrompt.innerHTML = '<h1><b>You win!</b></h1>' + '<button type="button" onclick="resetCards()">Reset</button>'
@@ -248,22 +300,22 @@
         let cardCheck = cardAnswer.replaceAll(' ', '')
         cardCheck = cardCheck.replaceAll('\"', '\'')
         if (data.length) {
-          if (cardCheck == data[cardIndex][2].replaceAll(' ', '')) {
+          if (cardCheck == data[cardIndex].answers.replaceAll(' ', '')) {
             discardPile++;
-            results.innerHTML = `<span style="color: lime; font-family: system, consolas;">` + data[cardIndex][2] + `</span>`;
+            results.innerHTML = `<span style="color: lime; font-family: system, consolas;">` + data[cardIndex].answers + `</span>`;
             data.splice(cardIndex, 1)
           } else {
-            console.log(data[cardIndex][2]);
-            results.innerHTML = `<span style="color: red; font-family: system, consolas;">` + data[cardIndex][2] + `</span>`;
+            console.log(data[cardIndex].answers);
+            results.innerHTML = `<span style="color: red; font-family: system, consolas;">` + data[cardIndex].answers + `</span>`;
             mistakePile.push(data.splice(cardIndex, 1)[0]);
           }
         } else if (mistakePile.length) {
-          if (cardCheck == mistakePile[cardIndex][2].replaceAll(' ', '')) {
+          if (cardCheck == mistakePile[cardIndex].answers.replaceAll(' ', '')) {
             discardPile++;
-            results.innerHTML = `<span style="color: lime; font-family: system, consolas;">` + parseMeta(mistakePile[cardIndex][2]) + `</span>`;
+            results.innerHTML = `<span style="color: lime; font-family: system, consolas;">` + parseMeta(mistakePile[cardIndex].answers) + `</span>`;
             mistakePile.splice(cardIndex, 1)
           } else {
-            results.innerHTML = `<span style="color: red; font-family: system, consolas;">` + parseMeta(mistakePile[cardIndex][2]) + `</span>`;
+            results.innerHTML = `<span style="color: red; font-family: system, consolas;">` + parseMeta(mistakePile[cardIndex].answers) + `</span>`;
             mistakePile.push(mistakePile.splice(cardIndex, 1)[0]);
           }
         }
@@ -278,28 +330,28 @@
         var ele = document.getElementsByName('choice')
         for (i = 0; i < ele.length; i++) {
           if (ele[i].checked)
-            var eleValue = ele[i].value
+            var eleValue = +ele[i].value - 1;
         }
         if (data.length) {
-          if (data[cardIndex][4] === eleValue) {
+          if (data[cardIndex].key === eleValue) {
             console.log("Correct")
-            results.innerHTML = `<span style="color: lime; font-family: system, consolas;">` + data[cardIndex][2][data[cardIndex][4] - 1] + `</span>`;
+            results.innerHTML = `<span style="color: lime; font-family: system, consolas;">` + data[cardIndex].answers[data[cardIndex].key] + `</span>`;
             discardPile++;
             data.splice(cardIndex, 1)
           } else {
             console.log("You SUCK")
-            results.innerHTML = `<span style="color: red; font-family: system, consolas;">` + data[cardIndex][2][data[cardIndex][4] - 1] + `</span>`;
+            results.innerHTML = `<span style="color: red; font-family: system, consolas;">` + data[cardIndex].answers[data[cardIndex].key] + `</span>`;
             mistakePile.push(data.splice(cardIndex, 1)[0]);
           }
         } else if (mistakePile.length) {
-          if (mistakePile[cardIndex][4] === eleValue) {
+          if (mistakePile[cardIndex].key === eleValue) {
             console.log("Correct")
-            results.innerHTML = `<span style="color: lime; font-family: system, consolas;">` + mistakePile[cardIndex][2][mistakePile[cardIndex][4] - 1] + `</span>`;
+            results.innerHTML = `<span style="color: lime; font-family: system, consolas;">` + mistakePile[cardIndex].answers[mistakePile[cardIndex].key] + `</span>`;
             discardPile++;
             mistakePile.splice(cardIndex, 1)
           } else {
             console.log("You SUCK")
-            results.innerHTML = `<span style="color: red; font-family: system, consolas;">` + mistakePile[cardIndex][0][2][mistakePile[cardIndex][0][4] - 1] + `</span>`;
+            results.innerHTML = `<span style="color: red; font-family: system, consolas;">` + mistakePile[cardIndex].author[2][mistakePile[cardIndex].author[4]] + `</span>`;
             mistakePile.push(mistakePile.splice(cardIndex, 1)[0]);
           }
         }
@@ -313,13 +365,13 @@
       let multchoice2 = document.getElementById("mult2choice");
       let multchoice3 = document.getElementById("mult3choice");
       let multchoice4 = document.getElementById("mult4choice");
-      if (questionList[cardIndex][3] === '0') {
+      if (questionList[cardIndex].type === 'text') {
         answerBox.style.display = "block"
         multChoiceBtn.style.display = "none"
-      } else if (questionList[cardIndex][3] === '1') {
+      } else if (questionList[cardIndex].type === 'multi') {
         answerBox.style.display = "none"
         multChoiceBtn.style.display = "block"
-        xyz = questionList[cardIndex][2]
+        xyz = questionList[cardIndex].answers
         multchoice1.innerHTML = xyz[0];
         multchoice2.innerHTML = xyz[1];
         multchoice3.innerHTML = xyz[2];
@@ -353,15 +405,19 @@
             <a onclick="languageTypePicker('data_java')" href="#">Javascript</a>
             <a onclick="languageTypePicker('data_py')" href="#">Python</a>
             <a onclick="languageTypePicker('data_html')" href="#">HTML</a>
-            <a onclick="languageTypePicker('data_nocti')" href="#">NOCTI prep</a>
+            <a onclick="languageTypePicker('data_nocti_written')" href="#">NOCTI Written</a>
+            <a onclick="languageTypePicker('data_nocti_performance')" href="#">NOCTI Performance</a>
           </div>
         </div>
       </div>
       <div id="text">
         <li>Type the lines of code described in the prompt.</li>
         <li>If the description talks about something that would use </li>
-        <li id="line2">a code block (function, conditional statement, etc), only use the first line of code.</li>
+        <li class="line2">a code block (function, conditional statement, etc), only use the first line of code.</li>
         <li>If you need to use quotes, please use <b>single quotes ( ' ' )</b></li>
+        <li>The Express.js application object will always be named "app".</li>
+        <li class="line2">The response and request arguments in callbacks will always be named "res" and "req".</li>
+        <li>When possible, keep code on one line.</li>
       </div>
     </div>
     <div id="mainBody">
