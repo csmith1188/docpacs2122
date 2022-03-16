@@ -38,6 +38,10 @@ p {
   display: inline-block;
 }
 
+#submit:hover {
+  box-shadow: 0 0 5px 5px #39FF14;
+}
+
 #line2 {
   display: block;
   text-align: left;
@@ -235,7 +239,9 @@ input[type='radio']:checked:before {
 
 /* Change color of dropdown links on hover */
 .dropdown-content a:hover {
-  background-color: black;
+  background-color: #39FF14;
+  color: black;
+  font-size: 25px;
 }
 
 /* Show the dropdown menu on hover */
@@ -245,5 +251,6 @@ input[type='radio']:checked:before {
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
-  background-color: lightgrey;
+  background-color: #39FF14;
+  color: black;
 }
