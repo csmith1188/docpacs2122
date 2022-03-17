@@ -1,0 +1,85 @@
+Date,Goals
+"""Aug27""",Establish classroom expectations for Year ‘21-‘22
+"""Aug27""",Review knowledge of basic programming
+"""Aug27""",Assess knowledge of Javascript
+"""Sep3""",Understand different ways of sharing files and data with teammates
+"""Sep3""",Review using github to complete projects together
+"""Sep3""",Understand how basic nodejs applications work
+"""Sep10""","Successfully fork, clone, edit, commit, push, and pull request the DocPac git repository on GitHub"
+"""Sep10""",Begin compiling notebook by writing instructions for initializing a Nodejs project and creating an HTTP server in Nodejs
+"""Sep10""",Begin compiling your portfolio by printing out your Nodejs HTTP Server code
+"""Sep17""",Import ExpressJS middleware into your Nodejs HTTP server project
+"""Sep17""",Create “endpoints” users can navigate to in ExpressJS
+"""Sep17""",Serve HTML files with CSS stylesheets and Javascript files from ExpressJS
+"""Sep17""",Create a complete website using ExpressJS and the goals abov
+"""Sep17""","Learn how to update, replace missing, and print DocPacs"
+"""Sep17""",Create a schedule and track it over time
+"""Sep24""",Successfully use EJS to create templates to serve with ExpressJS (Change the output of a webpage before sending to the user)
+"""Sep24""",Use repository branching to organize complex Git projects
+"""Sep24""",Review the basics of Javascript and prepare to study the language
+"""Oct1""",Consolidate and organize all Notebook tutorials to this point
+"""Oct1""",Learn how to use KanBan boards to manage projects
+"""Oct1""",Be able to create an ExpressJS HTTP server from memory
+"""Oct8""",Establish and document standards for Notebook entries for your team.
+"""Oct8""",Create JSON files to store Javascript Objects on the hard disk.
+"""Oct8""",Read JSON files in NodeJS as parse into a Javascript Object
+"""Oct8""",Convert Javascript Objects to a string to save in a JSON file
+"""Oct8""",Use data from a JSON file to populate EJS Templates with data
+"""Oct8""",Read Query Parameters with ExpressJS
+"""Oct8""",Save data passed by Query Parameters to a JSON file
+"""Oct15""",Ensure your Codecademy is up to date
+"""Oct15""",Analyze Meritocracy and Team Composition
+"""Oct15""",Understand the difference between HTTP GET and HTTP POST requests
+"""Oct15""",Accept and handle POST requests and parameters in ExpressJS
+"""Oct15""",Send POST requests w/ parameters via Postman
+"""Oct15""",Create an HTML form that can submit form data as a POST request
+"""Oct22""",Prepare a Cover Letter and Resumes for your team
+"""Oct22""",Prepare for a group interview to receive your choice of team project
+"""Oct22""",Complete the “Scope” chapter of Codecademy “Learn Javascript” course
+"""Oct22""",Upgrade Team Website for show comments left by others
+"""Oct29""",Prepare for DocPac Binder Audit
+"""Oct29""",Prepare for Team Project Interviews
+"""Oct29""",Prepare for nodeJS/ExpressJS/EJS exam
+"""Nov5""",Learn to send professional Emails
+"""Nov5""",Develop a Personal Improvement Plan
+"""Nov5""",Learn about Contracts
+"""Nov5""",Pass the ExpressJS Exam
+"""Nov5""",Continue Codecademy
+"""Nov12""",Receive projects and sign contracts
+"""Nov12""",Analyze project requirements and design an MVP
+"""Nov12""","Break plans down into smaller pieces, set goals and timelines"
+"""Nov12""",Begin preparing for Quarter 2 Exam
+"""Nov19""",Design an MVP
+"""Nov19""",Break MVP down into steps and assign on a KanBan board
+"""Nov19""",Schedule meetings
+"""Nov19""",Continue Codecademy
+"""Nov19""",Progress Exam Preparation Plan
+"""Nov19""",Produce First Prototype
+"""Dec3""",Bootcamp Javascript every day to build coding skills
+"""Dec10""",Use the skills you built in JS Bootcamp to hit your first Team Project goal
+"""Dec10""",Practice writing JS syntax to solve problems
+"""Dec10""",Finish Codecademy
+"""Dec10""",Wrap up JS Bootcamp git repos
+"""Dec17""",Submit Codecademy screenshots in Schoology
+"""Dec17""",Analyze comments and code review on issues and Pull Requests
+"""Dec17""",Submit a Pull Request to your team project that completes a set goal
+"""Dec17""",Configure .gitignore and readme.md
+"""Dec17""","Determine when to use for, forin, forof, foreach()"
+"""Dec17""",Learn basic Javascript graphics generation
+"""Dec22""",Print and submit/resubmit all missing DocPacs or DocPacs with missing documents
+"""Dec22""",Break JS Bootcamp Game down into a flow chart
+"""Jan7""",Examine requirements for the NOCTI
+"""Jan7""",Develop a plan to pass the performance NOCTI
+"""Jan7""",Practiced the skills required in our plan
+"""Jan14""",Develop a Daily Routine
+"""Jan14""",Design a flow chart for the Exam
+"""Jan14""",Practice the skills required to pass the Exam
+"""Jan14""",Present Team Projects to Teacher
+"""Jan21""",Prepare for Exam
+"""Jan21""",Pass Exam
+"""Jan28""",Review Reading/Writing to JSON files for Exam
+"""Jan28""",Pass Exam
+"""Jan28""",Prepare DocPac Binders for grading and review
+"""Feb4""",Understand requirements for flow charts for Nocti
+"""Feb4""",Solve a variety of Javascript problems that may appear on the Nocti
+"""Feb4""",Prepare DocPac Data for analysis
