@@ -1,3 +1,4 @@
+//imports and
 const express = require('express');
 const app = express()
 app.set('view engine', 'ejs')
@@ -20,10 +21,9 @@ app.post('/', function(req,res){
     aboutYourSelf: req.body.PerInfo
   }
   const stringData = JSON.stringify(usr)
-  fs.writeFileSync('usr_data.json', stringData, function(){
-    console.log("Data Saved: ");
-  })
+  fs.writeFileSync('usr_data.json', stringData)
   console.log(usr);
+  INSERT INTO 'usr_data' VALUES (usr.name, usr.age, usr.aboutYourSelf);
 })
 
 
