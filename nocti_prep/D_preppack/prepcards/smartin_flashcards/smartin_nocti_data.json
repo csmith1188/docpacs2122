@@ -242,7 +242,7 @@
             ["Send customers printed documentation annually regardless of whether there have been changes", "Make changes in an online help system rather than printed sources", "Send fliers containing only the changes rather than the new printed volumes", "Make changes only on a pre-specified schedule"],
             "1",
             "2"
-        ],
+        ]
     ],
     "documentation": [
         [
