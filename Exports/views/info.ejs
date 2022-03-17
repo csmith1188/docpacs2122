@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<style media="screen">
+body {
+background-color: black;
+color: #39FF14;
+}
+
+h1 {
+background-color: black;
+color: #39FF14;
+}
+
+div {
+background-color: #010203;
+color: #39FF14;
+}
+</style>
+<html lang="en" dir="ltr">
+
+<style media="screen">
+  .goal {
+    border-color: black;
+    border-style: double;
+  }
+
+  .type {
+    border-color: black;
+    border-style: double;
+    width: 25%;
+    float: left;
+    padding: 20px;
+    overflow-y: scroll;
+    height: 55px;
+
+  }
+
+  .info {
+    border-color: black;
+    border-style: double;
+    margin: auto;
+    padding-left: 15%;
+  }
+
+  .assignment {
+    border-color: white;
+    border-style: double;
+  }
+</style>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+  <div class="info">
+    <% for (var x in docpacDate) {%>
+    <% for (var y in docpacDate[x]) {%>
+    <div class="type">
+      <% if (info == "goals" || info == "changes") {%>
+      Date: <%-JSON.stringify(docpacDate[x][y]['date'])%>
+      <br>
+      Text: <%-JSON.stringify(docpacDate[x][y]['text'])%>
+      <%}%>
+      <% if (info == "included" || info == "required") {%>
+      Date: <%-JSON.stringify(docpacDate[x][y]['date'])%>
+      <br>
+      Type: <%-JSON.stringify(docpacDate[x][y]['type'])%>
+      <br>
+      Text: <%-JSON.stringify(docpacDate[x][y]['name'])%>
+      <%}%>
+      <% if (info == "events") {%>
+      Date: <%-JSON.stringify(docpacDate[x][y]['date'])%>
+      <br>
+      Event: <%-JSON.stringify(docpacDate[x][y]['event'])%>
+      <br>
+      Type: <%-JSON.stringify(docpacDate[x][y]['type'])%>
+      <br>
+      Text: <%-JSON.stringify(docpacDate[x][y]['text'])%>
+      <%}%>
+      </div>
+    <%}%>
+      <%}%>
+  </div>
+
+</body>
+
+</html>
