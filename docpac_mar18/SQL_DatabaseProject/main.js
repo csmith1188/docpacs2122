@@ -4,10 +4,11 @@ const app = express()
 app.set('view engine', 'ejs')
 const port = 8080
 const ip = '127.0.0.1'
-const sqlite3 = require('sqlite3');
+const sqlite3 = require('sqlite3').verbose();
 const fs = require('fs');
 app.use(express.urlencoded({extended:true}))
 
+const db = new sqlite3.Database('usr_data.db')
 
 
 app.get('/', function(req,res){
@@ -20,10 +21,10 @@ app.post('/', function(req,res){
     age: req.body.Age,
     aboutYourSelf: req.body.PerInfo
   }
-  const stringData = JSON.stringify(usr)
-  fs.writeFileSync('usr_data.json', stringData)
-  console.log(usr);
-  INSERT INTO 'usr_data' VALUES (usr.name, usr.age, usr.aboutYourSelf);
+
+  db.run(`INSERT INTO usr_data (Name, Age, abtYou) VALUES (?,?,?)`, [usr.name, usr.age, usr.aboutYourSelf], function(){
+    res.render('index.ejs')
+  })
 })
 
 
