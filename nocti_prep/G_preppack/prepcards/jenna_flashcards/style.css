@@ -97,6 +97,7 @@ p {
   text-align: center;
   width: 50%;
   left: 25%;
+
 }
 
 .answerBoxFormat {
@@ -117,6 +118,7 @@ p {
   margin-left: 750px;
   margin-right: 750px;
   top: 50px;
+  padding: 20px
 }
 
 #mainBody {

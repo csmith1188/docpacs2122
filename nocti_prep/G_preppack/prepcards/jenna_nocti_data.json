@@ -9,7 +9,7 @@
   ["Jenna Mellen", "In the order of calculations in a program", ["addition precedes division", "parentheses precede exponentiation", "subtraction preceds addition", "multiplication precedes exponentiation"], "1", "2" ],
   ["Jenna Mellen", "When the code below is executed. strAdd will be equal to", ["579", "123 + 456", "123456", "strFirst + strSecond"], "1", "3" ]
 ],
-
+}
 "ethicsInfo": [
   ["Jenna Mellen", "If a programmer downloads a copy of Microsoft SQL Server from a file-sharing website without paying for it, the programmer has committed an offense called", ["piracy", "larceny", "felony", "spyware"], "1", "1" ],
   ["Jenna Mellen", "The Sarbanes-Oxley Act (SOX) requires monitoring and documentation of transactions. How could a programmer mistakenly setup a program that would cause problems with compliance with SOX?", ["create system logs of the transactions taken in the session", "require a user to click three times when they are sure they want to proceed", "help a user to request assistance from the system administrators", "utilize system credentials instead of pass-through credentials"], "1", "4" ]
