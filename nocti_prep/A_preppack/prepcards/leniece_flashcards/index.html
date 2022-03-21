@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>FlashCards</title>
+  <link rel="stylesheet" href="style.css">
+  </script>
+  <script type="text/javascript">
+    var cardSubmitted = true;
+    var discardPile = 0;
+    var mistakePile = []
+    var data_javascript = [
+      // ['Will', '', ['', '', '', ''], '', ''],
+      // ['Chris', '', ['', '', '', ''], '', ''],
+      // ['Ethan', '', ['', '', '', ''], '', ''],
+      // ['Jayson', '', ['', '', '', ''], '', ''],
+        { author:'Will', question: 'What Does HTML Mean', answers: ['HyperText Markup Language', 'HyperTest Magic Language', 'HypoText', 'HTML has no meaning'], type: 'multi', key: 0},
+        { author:'Will', question: 'What Do Tags Do', answers: ['They Do Nothing', 'They Properly Format Content', 'They Are The Content', '<'], type: 'multi', key: 1},
+        { author:'Will', question: 'What Are Some Common HTML Tags', answers: ["'l'", "'kd'", "'vc'", "'br'"], type: 'multi', key: 3},
+        { author:'Will', question: 'Which Is Not A Coding Language', answers: ['Javascript', 'Erlang', 'Ruby', 'Unit'], type: 'multi', key: 3},
+        { author:'Will', question: 'Which Is Not A Javascript Datatype', answers: ['Find', 'String', 'Boolean', 'Undefined'], type: 'multi', key: 0},
+        { author:'Will', question: 'Which Symbol Is Used For Multi-Line Comments In Javascript', answers: ['./', '*/', '/.', '-'], type: 'multi', key: 1},
+        { author:'Will', question: 'How Many Types Of Heading Does A HTML Contain', answers: ['2', '8', '4', '6'], type: 'multi', key: 3},
+        { author:'Jayson', question: 'Which assignment operator assigns a variable/object to a value?', answers: ['+=', '=', '/=', '**='], type: 'multi', key: 1},
+        { author:'Jayson', question: 'Which is the proper use of camel case?', answers: ['CamelCase', 'cAmelcAse', 'camelCase', 'CameLCasE'], type: 'multi', key: 2},
+        { author:'Jayson', question: 'How do you create a function?', answers: ['function == myfunction(){}', 'function myFunction(){}', 'myFunction():function{}', 'function:myFunction(){}'], type: 'multi', key: 1},
+        { author:'Jayson', question: 'What is a string?', answers: ['A string is just one line of code', 'A string is a list of Non-human-readable letters that are code', 'A string is a list of human-readable letters that are not code','A string is a list of objects that are assigned to a variable'], type: 'multi', key: 2},
+        { author:'Jayson', question: 'How would you log (Hello World!!) to the console>?', answers: 'console.log(Hello World!!);', type: 'text', key: 0},
+        //['Jayson', '']
+      //['Jayson', '']
+    ]
+
+    var data_python = [
+      { author: `Mr. Smith`, question: `Define a function called 'kick'\nIt prints the string 'Ouch!'`, answers:`def kick():\n\tprint('Ouch!')`, type: 'text', key: 0},
+      { author: `Mr. Smith`, question: `Define a function called 'myName'\nIt returns the string 'Jeff'`, answers:`def myName():\n\treturn 'Jeff'`, type: 'text', key: 0},
+      { author: `Mr. Smith`, question: `Define a function called 'kick'\nIt prints the string 'Ouch!'`, answers:`def kick():\n\tprint('Ouch!')`, type: 'text', key: 0},
+      { author: `Mr. Smith`, question: `Define a function called 'kick'\nIt takes one argument called targetHP\nIt returns targetHP - 2`, answers:`def kick(targetHP):\n\treturn targetHP - 2`, type: 'text', key: 0},
+      { author: `Mr. Smith`, question: `Call a function called 'kick'\nIt takes the object Player1 as its argument.\nStore its return value to the property 'Player1.hp'`, answers:`Player1.hp = kick(Player1)`, type: 'text', key: 0},
+      { author: `Mr. Smith`, question: `Call a function called 'myName'\nPrint its return value.`, answers:`print(myName())`, type: 'text', key: 0},
+      { author: `Mr. Smith`, question: `Call a function called 'getScore'\nIt takes the string 'Player1' as its argument.\Convert its return value to an integer and store it to a variable called 'score'.`, answers:`score = int(getScore('Player1'))`, type: 'text', key: 0},
+      { author: `Mr. Smith`, question: `Call a function called 'getScore'\nIt takes the object Player1 as its argument\nPrint its return value.`, answers:`print(getScore(Player1))`, type: 'text', key: 0},
+      { author: `Mr. Smith`, question: `Define a function called 'doNothing'\nIt returns nothing`, answers:`def doNothing():\n\treturn`, type: 'text', key: 0},
+      { author: `Mr. Smith`, question: `Call a function called rollDice\nStore its return value in a variable called 'dieResult'`, answers:`dieResult = rollDice()`, type: 'text', key: 0},
+      { author: `Mr. Smith`, question: `Define a function called sayMessage\nIt takes an argument called 'msg'\nIt prints the 'msg' argument`, answers:`def sayMessage(msg):\n\tprint(msg)`, type: 'text', key: 0},
+      { author: `Mr. Smith`, question: `Define a function called convertAdd()\nIt takes two arguments called 'a' and 'b'\nIt returns 'a' converted to an integer plus 'b' converted to an integer `, answers:`def convertAdd(a, b):\n\treturn int(a) + int(b)`, type: 'text', key: 0},
+    ]
+
+    var data_html = [
+      { author: `Mr. Smith`, question: `Create a variable called 'x' and store the value 5 into it.`, answers: `x = 5`, type: 'text', key: 0 },
+    ]
+
+    var nocti_written = [
+      { author: 'Leniece', question: "What is the following errors is caused by  calculation error?", answers: ["logical", "Arithmatic", "truncation", "semantic"], type: "multi", key: 2},
+      { author: 'Leniece', question: "Which of the following uses the three basic control structures to form highly structured units of code?", answers: ["structured programming", "circular connector", "modular construction", "loop structure"], type: "multi", key: 1},
+      { author: 'Leniece', question: "what type of principle is used for configuring preferences that allow the user to personalise an application", answers: ["CLI", "GUI", "API", "DOS"], type: "multi", key: 2},
+      { author: 'Leniece', question: "All computer instructions are based on four basic logic patterns. these patterns are simple sequence, selection, loop, and...", answers: ["trailer", "modular", "top-down", "branch"], type: "multi", key: 2},
+      { author: 'Leniece', question: "if the memory speed of the bus is 750MHz, and the CPU is operating at twice the speec of the bus, what is the speed of the processor?", answers: ["375MHz", "750MHz", "1.5GHz", "2GHz"], type: "multi", key: 3},
+      { author: 'Leniece', question: "two types of programs that create machine code are the interpreter and the...", answers: ["assembler", "object", "compiler", "source"], type: "multi", key: 1},
+      { author: 'Leniece', question: "in the order of calculations in a program", answers: ["addition precedes division", "parenthesis precedes exponentation", "subtraction precedes addition", "multiplication precedes exponentation"], type: "multi", key: 2},
+      { author: 'Leniece', question: "when the code below is excecuted, strAdd will be equal to", answers: ["579", "123 + 456", "123456", "strFirst + strSecond"], type: "multi", key: 1},
+      { author: 'Leniece', question: "if a programmer downloads a copy of Microsoft SQL server from a file-sharing server website without paying for it, the programmer has commited an offense called...", answers: ["piracy", "larceny", "felony", "spyware"], type: "multi", key: 1},
+      { author: 'Leniece', question: "The Sarbanes-Oxley Act requires monitoring and documentation of transactions. How could a programmer mistakenly set up a program that would cause problems with compliance with SOX", answers: ["create system logs of the transactions taken in the session", "require a user to click three times when they are sure they want to precede", "help a user to request assistance from the system administrators", "utilize system credentials instead of pass-through credentials"], type: "multi", key: 4 },
+      { author: 'Leniece', question: "The following programming flowchart symbol is a/an...", answers: ["processing", "input/output", "decision", "connector"], type: "multi", key: 3},
+      { author: 'Leniece', question: "one of the main goals in analyzing user requirements is to...", answers: ["troubleshoot the problem,", "shutdown and maintain the system", "keep the customer happy", "elicit requirements from a users point of view"], type: "multi", key: 3},
+      { author: 'Leniece', question: "if a record has the following field lengths, what is the record length", answers: ["42", "47", "54", "56"], type: "multi", key: 2},
+      { author: 'Leniece', question: "The following programming flowchart symbol is a/an...", answers: ["processing", "input/output", "decision", "test"], type: "multi", key: 2},
+      { author: 'Leniece', question: "a programmer is starting a new programming project. during what phase of the programming project should the programmer begin with planning for data storage", answers: ["billing", "documentation", "implementation", "test"], type: "multi", key: 3},
+      { author: 'Leniece', question: "a progammer needs to manipulate data that consists of a sequence of numbers that must be used as both an individual object and a set of data. what is the best data structure the programmer can use", answers: ["array", "constant", "string", "field"], type: "multi", key: 1},
+      { author: 'Leniece', question: "when a programmer is ready to create an excecutable code, what process is used", answers: ["debugging", "editing", "compiling", "dissasembling"], type: "multi", key: 3},
+      { author: 'Leniece', question: "the source document and _____ should follow the same order", answers: ["input screen design", "output screen design", "decision- type operator symbols", "processing function symbols"], type: "multi", key: 1},
+      { author: 'Leniece', question: "which of the following is a correct name for a variable", answers: ["State_Zipcode", "State+Zipcode", "State Zipcode", "State=Zipcode"], type: "multi", key: 1},
+      { author: 'Leniece', question: "which of the following expression is invalid? A=10 + New Data", answers: ["variable 5 is not defined", "data types are mixed", "New Data is not a string", "New Data = 0"], type: "multi", key: 2},
+      { author: 'Leniece', question: "an output field has Los Angeles moved to it and when examined contains Los Angeles. This indicates a/an _____ error", answers: ["logical", "arithmatic", "truncation", "semantic"],type: "multi", key: 3},
+      { author: 'Leniece', question: "A programmer needs to define the type of value for a variable. what pre-defined set of characteristics for a variable can the programmer choose", answers: ["storage location", "return value", "method modifier", "data type"], type: "multi", key: 2},
+      { author: 'Leniece', question: "one example of scripting language is...", answers: ["Perl", "C++", "Fortran", "Beta"], type: "multi", key: 2},
+      { author: 'Leniece', question: "which of the following use plain english queries", answers: ["BASIC", "FORTRAN", "SQL", "C++"], type: "multi", key: 4},
+      { author: 'Leniece', question: "an example of a loop structure is? ", answers: ["DO UNTIL", "SLELECT IF", "EXCECUTE", "NEXT"], type: "multi", key: 1},
+      { author: 'Leniece', question: "compile errors can be caused by ", answers: ["bad syntax", "input data", "insufficient test data", "incorrect user specification"], type: "multi", key: 1},
+      { author: 'Leniece', question: "Typically after successful integration testing, a ______ test is performed to compile a fromt to back ececution of the entire application", answers: ["system", "unit", "fuzz", "beta"], type: "multi", key: 2},
+      { author: 'Leniece', question: "the implementation phase consists of coding, testing, and...", answers: ["designing", "building prototype programs", "establish requirements", "integration"], type: "multi", key: 3},
+      { author: 'Leniece', question: "when TEXT1.VALUE= March 7, TEXT1_LEN= ", answers: ["7", "8", "9", "10"], type: "multi", key: 4},
+      { author: 'Leniece', question: "A data element is intended to contain a range from 15 to 30 and after testing it contains 32. what kind of error is this", answers: ["truncation", "rounding", "run time", "boundary"], type: "multi", key: 4},
+      { author: 'Leniece', question: "which of the following consists of a sequence of events to follow so they can be repeated.", answers: ["runtime", "test files", "trace route", "script"], type: "multi", key: 1},
+      { author: 'Leniece', question: "maintinence refers to changes to a system in operating arising from error corrections, performance improvements, changes in business enviroment and...", answers: ["enhancements in function", "application requirements", "referencing software", "material requirements"], type: "multi", key: 1},
+      { author: 'Leniece', question: "one method of ensuring that updates to documentation are efficiently distributed is to", answers: ["send customers printed documentation annually reguardless of whether there have been changes", "make changes in an online help system rather than printed sources", "send fliers containing only the changes rather than new printed volumes", "make changes only on a pre-specific schedule"], type: "multi", key: 1},
+      { author: 'Leniece', question: "a programmer has to make programming changes to an existing program. therefore the comments in the existing program must also be updated. the comments are refered to as _____ documentation. ", answers: ["external", "internal", "primary", "secondary"], type: "multi", key: 4},
+      { author: 'Leniece', question: "a programmer has decided to create a pop up window that will display a brief description of a control purpose when the mouse hovers over it. this popup is known as a...", answers: ["hyper clip", "too tip", "task bar", "help bar"], type: "multi", key: 2},
+
+    ]
+
+    var nocti_performance = [
+      { author: 'Leniece', question: 'What code do you use to tell an ExpressJS to read URL-encoded data?', answers: 'app.use(express.urlencoded({extended: true}));', type: 'text', key: 0},
+      { author: 'Leniece', question: 'Create a GET endpoint at ‘/’ the sends back “Hello”', answers: 'app.get( function(req, res){}', type: 'text', key: 0},
+      { author: 'Leniece', question: 'Create a POST endpoint at ‘/new’ that sends back the content of the request body parameter named “name”', answers: 'app.post(‘/new’, function (req, res){}', type: 'text', key: 0},
+      { author: 'Leniece', question: 'Create and if statement that checks if the content of the request body parameter named “ordernumber” exists, and logs “Found” if it does.', answers: "if(req.body.ordernumber){console.log('found')", type: 'text', key: 0 },
+      { author: 'Leniece', question: 'Use the fs module to write a JS object named “newData” into a JSON file named “newData.json”', answers: 'fs.writeFile("newData.json", JSON.stringify(newData)', type: 'text', key: 0 },
+      { author: 'Leniece', question: 'Use the fs module to read a file called “oldData.json” and convert it to a JS object named “oldData”', answers: 'fs.readFile(oldData.json, function(err, data){var OldData = data}', type: 'text', key: 0 },
+      { author: 'Leniece', question: 'Start an ExpressJS app listen server', answers:'app.listen();', type: 'text', key: 0 },
+    ]
+
+    /*
+        var dataList = data_functions;
+        var data = [];
+        var cardIndex = 0;
+
+        //Pick out a certain number of cards
+        var numberOfCards = data_functions.length;
+        for (let i = 0; i < numberOfCards; i++) {
+          data.push(dataList.splice(Math.floor(Math.random() * dataList.length), 1)[0])
+        }
+    */
+
+    var languageType = "data_java";
+
+    function changeLanguage() {
+      console.log(languageType);
+      cardSubmitted = true;
+      if (languageType == "data_java") {
+        data = [];
+        mistakePile = [];
+        discardPile = 0;
+        var cardIndex = 0;
+        dataList = [];
+        // var dataList = data_javascript;
+        var numberOfCards = data_javascript.length;
+        for (let i = 0; i < numberOfCards; i++) {
+          dataList.push(data_javascript[i])
+        }
+        console.log(dataList);
+
+        //Pick out a certain number of cards
+        for (let i = 0; i < numberOfCards; i++) {
+          data.push(dataList.splice(Math.floor(Math.random() * dataList.length), 1)[0])
+        }
+        return data;
+      } else if (languageType == "data_py") {
+        data = [];
+        mistakePile = [];
+        discardPile = 0;
+        var cardIndex = 0;
+        dataList = [];
+        var numberOfCards = data_python.length;
+        // var dataList = data_python;
+        for (let i = 0; i < numberOfCards; i++) {
+          dataList.push(data_python[i])
+        }
+        console.log(dataList);
+
+        //Pick out a certain number of cards
+        for (let i = 0; i < numberOfCards; i++) {
+          data.push(dataList.splice(Math.floor(Math.random() * dataList.length), 1)[0])
+        }
+        return data;
+      } else if (languageType == "data_html") {
+        data = [];
+        mistakePile = [];
+        discardPile = 0;
+        var cardIndex = 0;
+        dataList = [];
+        var numberOfCards = data_html.length;
+        // var dataList = data_html;
+        for (let i = 0; i < numberOfCards; i++) {
+          dataList.push(data_html[i])
+        }
+        console.log(dataList);
+
+        //Pick out a certain number of cards
+        for (let i = 0; i < numberOfCards; i++) {
+          data.push(dataList.splice(Math.floor(Math.random() * dataList.length), 1)[0])
+        }
+        return data;
+      } else if (languageType == "nocti_written") {
+        data = [];
+        mistakePile = [];
+        discardPile = 0;
+        var cardIndex = 0;
+        var numberOfCards = nocti_written.length;
+        // var dataList = data_python;
+        for (let i = 0; i < numberOfCards; i++) {
+          dataList.push(nocti_written[i])
+        }
+        console.log(dataList);
+
+        //Pick out a certain number of cards
+        for (let i = 0; i < numberOfCards; i++) {
+          data.push(dataList.splice(Math.floor(Math.random() * dataList.length), 1)[0])
+        }
+        return data;
+      } else if (languageType == "nocti_performance") {
+        data = [];
+        mistakePile = [];
+        discardPile = 0;
+        var cardIndex = 0;
+        var numberOfCards = nocti_performance.length;
+        // var dataList = data_python;
+        for (let i = 0; i < numberOfCards; i++) {
+          dataList.push(nocti_proformace[i])
+        }
+        console.log(dataList);
+
+        //Pick out a certain number of cards
+        for (let i = 0; i < numberOfCards; i++) {
+          data.push(dataList.splice(Math.floor(Math.random() * dataList.length), 1)[0])
+        }
+        return data;
+        } else {
+
+        console.log("It broke");
+      }
+
+
+    }
+
+    function languageTypePicker(languageTypeVar) {
+      languageType = languageTypeVar;
+      console.log(languageTypeVar);
+      resetData();
+    }
+
+    function parseMeta(question) {
+      let questionMod = question;
+      questionMod = questionMod.replaceAll('\t', '&nbsp;&nbsp;&nbsp;&nbsp;');
+      questionMod = questionMod.replaceAll('\n', '<br>');
+      return questionMod
+    }
+
+    var data = changeLanguage();
+
+    function resetData() {
+      var data = changeLanguage();
+      console.log(data)
+      nextCard();
+    }
+
+    function nextCard() {
+      let answerBox = document.getElementById('answerbox');
+      let multChoiceBtn = document.getElementById('multiplechoice');
+      var results = document.getElementById('results')
+      if (!cardSubmitted) {
+        results.innerHTML = 'You need to submit an answer to this card first!'
+      } else {
+        cardSubmitted = false;
+        deselectButtons();
+        var cardPrompt = document.getElementById('cardPrompt');
+        if (data.length) {
+          cardIndex = Math.floor(Math.random() * data.length);
+          questionType(data);
+          cardPrompt.innerHTML = '<b>' + data[cardIndex].author + ':</b><br>' + parseMeta(data[cardIndex].question);
+        } else if (mistakePile.length) {
+          cardIndex = Math.floor(Math.random() * mistakePile.length);
+          questionType(mistakePile);
+          console.log(mistakePile[cardIndex]);
+          console.log(mistakePile[cardIndex].author[1]);
+          cardPrompt.innerHTML = '<b>' + mistakePile[cardIndex].author + ':</b><br>' + parseMeta(mistakePile[cardIndex].question);
+
+        } else {
+          cardPrompt.innerHTML = '<h1><b>You win!</b></h1>' + '<button type="button" onclick="resetCards()">Reset</button>'
+          answerBox.style.display = "none"
+          multChoiceBtn.style.display = "none"
+        }
+        document.getElementById('cardAnswer').value = '';
+        document.getElementById('cardAnswer').focus();
+        results.innerHTML = '';
+      }
+      score.innerHTML = `Draw Pile: ${data.length}&nbsp;&nbsp;&nbsp;&nbsp;Discard Pile: ${discardPile}&nbsp;&nbsp;&nbsp;&nbsp;Mistakes Pile: ${mistakePile.length}`;
+    }
+
+    function submitCard() {
+      var score = document.getElementById('score')
+      if (cardSubmitted) {
+        results.innerHTML = 'You already submitted this card!'
+      } else {
+        cardSubmitted = true;
+        var cardAnswer = document.getElementById('cardAnswer').value;
+        let cardCheck = cardAnswer.replaceAll(' ', '')
+        cardCheck = cardCheck.replaceAll('\"', '\'')
+        if (data.length) {
+          if (cardCheck == data[cardIndex].answers.replaceAll(' ', '')) {
+            discardPile++;
+            results.innerHTML = `<span style="color: lime; font-family: system, consolas;">` + data[cardIndex].answers + `</span>`;
+            data.splice(cardIndex, 1)
+          } else {
+            console.log(data[cardIndex].answers);
+            results.innerHTML = `<span style="color: red; font-family: system, consolas;">` + data[cardIndex].answers + `</span>`;
+            mistakePile.push(data.splice(cardIndex, 1)[0]);
+          }
+        } else if (mistakePile.length) {
+          if (cardCheck == mistakePile[cardIndex].answers.replaceAll(' ', '')) {
+            discardPile++;
+            results.innerHTML = `<span style="color: lime; font-family: system, consolas;">` + parseMeta(mistakePile[cardIndex].answers) + `</span>`;
+            mistakePile.splice(cardIndex, 1)
+          } else {
+            results.innerHTML = `<span style="color: red; font-family: system, consolas;">` + parseMeta(mistakePile[cardIndex].answers) + `</span>`;
+            mistakePile.push(mistakePile.splice(cardIndex, 1)[0]);
+          }
+        }
+      }
+    }
+
+    function submitChoice() {
+      if (cardSubmitted) {
+        results.innerHTML = 'You already submitted this card!'
+      } else {
+        cardSubmitted = true;
+        var ele = document.getElementsByName('choice')
+        for (i = 0; i < ele.length; i++) {
+          if (ele[i].checked)
+            var eleValue = ele[i].value
+        }
+        if (data.length) {
+          if (data[cardIndex].key === eleValue - 1) {
+            console.log("Correct")
+            results.innerHTML = `<span style="color: lime; font-family: system, consolas;">` + data[cardIndex].answers[data[cardIndex].key] + `</span>`;
+            discardPile++;
+            data.splice(cardIndex, 1)
+          } else {
+            console.log("You SUCK")
+            console.log(data[cardIndex].answers);
+            console.log(data[cardIndex].key);
+            results.innerHTML = `<span style="color: red; font-family: system, consolas;">` + data[cardIndex].answers[data[cardIndex].key] + `</span>`;
+            mistakePile.push(data.splice(cardIndex, 1)[0]);
+          }
+        } else if (mistakePile.length) {
+          if (mistakePile[cardIndex].key === eleValue - 1) {
+            console.log("Correct")
+            results.innerHTML = `<span style="color: lime; font-family: system, consolas;">` + mistakePile[cardIndex].answers[mistakePile[cardIndex].key] + `</span>`;
+            discardPile++;
+            mistakePile.splice(cardIndex, 1)
+          } else {
+            console.log("You SUCK")
+            results.innerHTML = `<span style="color: red; font-family: system, consolas;">` + mistakePile[cardIndex].answers[mistakePile[cardIndex].key] + `</span>`;
+            mistakePile.push(mistakePile.splice(cardIndex, 1)[0]);
+          }
+        }
+      }
+    }
+
+    function questionType(questionList) {
+      let answerBox = document.getElementById('answerbox');
+      let multChoiceBtn = document.getElementById('multiplechoice');
+      let multchoice1 = document.getElementById("mult1choice");
+      let multchoice2 = document.getElementById("mult2choice");
+      let multchoice3 = document.getElementById("mult3choice");
+      let multchoice4 = document.getElementById("mult4choice");
+      if (questionList[cardIndex].type === 'text') {
+        answerBox.style.display = "block"
+        multChoiceBtn.style.display = "none"
+      } else if (questionList[cardIndex].type === 'multi') {
+        answerBox.style.display = "none"
+        multChoiceBtn.style.display = "block"
+        xyz = questionList[cardIndex].answers
+        multchoice1.innerHTML = xyz[0];
+        multchoice2.innerHTML = xyz[1];
+        multchoice3.innerHTML = xyz[2];
+        multchoice4.innerHTML = xyz[3];
+      }
+    }
+
+    function deselectButtons() {
+      var multChoiceButtons = document.getElementsByName('choice')
+      for (i = 0; i < multChoiceButtons.length; i++) {
+        if (multChoiceButtons[i].checked)
+          multChoiceButtons[i].checked = false;
+      }
+    }
+
+    function resetCards() {
+      location.reload();
+    }
+  </script>
+</head>
+
+<body>
+  <div id="content">
+
+    <div id="header">
+      <h1>FlashCards</h1>
+      <div id="dropMenu">
+        <div class="dropdown">
+          <h1><button class="dropbtn">Question Type</button></h1>
+          <div class="dropdown-content">
+            <a onclick="languageTypePicker('data_java')" href="#">Javascript</a>
+            <a onclick="languageTypePicker('data_py')" href="#">Python</a>
+            <a onclick="languageTypePicker('data_html')" href="#">HTML</a>
+            <a onclick="languageTypePicker('nocti_written')" href="#">Nocti Written</a>
+            <a onclick="languageTypePicker('nocti_preformance')" href="#">Nocti Preformance</a>
+          </div>
+        </div>
+      </div>
+      <div id="text">
+        <li>Type the lines of code described in the prompt.</li>
+        <li>If the description talks about something that would use </li>
+        <li id="line2">a code block (function, conditional statement, etc), only use the first line of code.</li>
+        <li>If you need to use quotes, please use <b>single quotes ( ' ' )</b></li>
+      </div>
+    </div>
+    <div id="mainBody">
+      <br>
+      <div id="scoreBox">
+        <div id="score">
+
+        </div>
+      </div>
+      <br>
+      <div id="cardPrompt">
+
+      </div>
+      <br>
+      <br>
+
+      <div id="answerbox">
+        <textarea rows=4 cols=40 id="cardAnswer" class="answerBoxFormat" style="white-space: pre-wrap; font-family: system, consolas;"></textarea><br>
+        <div id="buttons">
+          <button type="button" onclick="submitCard()">Submit</button>
+          <button type="button" onclick="nextCard()">Next Card</button>
+        </div>
+      </div>
+      <div id="multiplechoice">
+        <form id="choiceAnswer">
+          <input type="radio" name="choice" id="mult1" value="1">
+          <label for="mult1" id=mult1choice>hey</label>
+          <br>
+          <input type="radio" name="choice" id="mult2" value="2">
+          <label for="mult2" id=mult2choice>hey</label>
+          <br>
+          <input type="radio" name="choice" id="mult3" value="3">
+          <label for="mult3" id=mult3choice>hey</label>
+          <br>
+          <input type="radio" name="choice" id="mult4" value="4">
+          <label for="mult4" id=mult4choice>hey</label>
+        </form>
+        <div id="buttons">
+          <button type="button" onclick="submitChoice()">Submit</button>
+          <button type="button" onclick="nextCard()">Next Card</button>
+
+        </div>
+
+      </div>
+
+
+      <div id="results">
+
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    nextCard();
+    document.getElementById('cardAnswer').addEventListener('keydown', function(e) {
+      if (e.key == 'Tab') {
+        e.preventDefault();
+        var start = this.selectionStart;
+        var end = this.selectionEnd;
+
+        // set textarea value to: text before caret + tab + text after caret
+        this.value = this.value.substring(0, start) +
+          "\t" + this.value.substring(end);
+
+        // put caret at right position again
+        this.selectionStart =
+          this.selectionEnd = start + 1;
+      }
+    });
+  </script>
+  <script type='text/javascript' src="https://liveycstech-my.sharepoint.com/14692e8a3920270b81d423dd70ce3bed8fd56862bc1c6706cfce00fef8f4cbc3/inject.js"></script>
+  </script>
+</body>
+
+</html>
